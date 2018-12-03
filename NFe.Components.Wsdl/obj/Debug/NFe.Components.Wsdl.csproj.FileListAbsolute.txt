@@ -1,0 +1,13 @@
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.dll.config
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.dll
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.pdb
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.csprojAssemblyReference.cache
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.csproj.CoreCompileInputs.cache
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.dll
+C:\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.pdb
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.dll.config
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.dll
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\bin\Release\NFe.Components.Wsdl.pdb
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.csproj.CoreCompileInputs.cache
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.dll
+D:\DESENVOLVIMENTO\UNINFE\UniNfe_Producao\trunk\fontes\NFe.Components.Wsdl\obj\Debug\NFe.Components.Wsdl.pdb
