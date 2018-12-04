@@ -685,6 +685,12 @@ namespace NFe.Components
                     "-substnfse.err",
                     "Substituir Nfse"));
 
+                ListaExtensoes.Add(TipoEnvio.PedStaNFse, new ExtensaoClass(
+                    "-ped-stanfse.xml", "",
+                    "-stanfse.xml", "",
+                    "",
+                    "Pedido de Status da nota (NFSe)"));
+
                 #endregion Extensoes da NFSe
 
                 #region Extensões CFSe
