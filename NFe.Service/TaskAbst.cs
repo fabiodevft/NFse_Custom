@@ -841,6 +841,10 @@ namespace NFe.Service
                         case Servicos.NFSeRecepcionarLoteRps:
                             retorna = "EnviarLoteRPS";
                             break;
+
+                        case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
+                            retorna = "ConsultarSituacaoNfse";
+                            break;
                     }
                     break;
 

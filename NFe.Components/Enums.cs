@@ -273,6 +273,13 @@ namespace NFe.Components
         [Description("Substituir NFS-e")]
         NFSeSubstituirNfse,
 
+        //FULLTIME - FABIO
+        /// <summary>
+        /// Consultar Status NFS-e
+        /// </summary>
+        [Description("Consultar Status da NFS-e")]
+        NFSeConsultarStatusNota,
+
         #endregion NFSe
 
         #region CFSe

@@ -400,7 +400,7 @@ namespace NFe.Service.NFSe
                                                             ConfiguracaoApp.ProxyUsuario,
                                                             ConfiguracaoApp.ProxySenha,
                                                             ConfiguracaoApp.ProxyServidor);
-                        //parei aqui - fabio
+
                         AssinaturaDigital adgovdig = new AssinaturaDigital();
                         adgovdig.Assinar(NomeArquivoXML, emp, oDadosEnvLoteRps.cMunicipio);
 

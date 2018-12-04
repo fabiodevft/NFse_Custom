@@ -1181,6 +1181,8 @@
       <ConsultarLoteRps>wsdl\homologacao\HSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
+	<!--FABIO FULLTIME-->
+	  <ConsultarStatusNFse>wsdl\homologacao\HSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSalvadorBAEnvioLoteRPS.wsdl</RecepcionarLoteRps>
@@ -1190,6 +1192,8 @@
       <ConsultarLoteRps>wsdl\producao\PSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
+	<!--FABIO FULLTIME-->	
+  	<ConsultarStatusNFse>wsdl\producao\PSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalProducao>
   </Estado>
   <Estado ID="4304606" Nome="Canoas - RS" UF="RS" Padrao="CANOAS_RS">

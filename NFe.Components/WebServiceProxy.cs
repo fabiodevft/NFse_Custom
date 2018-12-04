@@ -1046,6 +1046,8 @@ namespace NFe.Components
             InutilizarNFSe =
             RecepcionarLoteRps =
             ConsultaSequenciaLoteNotaRPS =
+            ConsultarStatusNFse =
+            //FABIO - FULLTIME
 
             ///
             /// CFS-e
@@ -1204,6 +1206,12 @@ namespace NFe.Components
         /// Substituir Nfse
         /// </summary>
         public string SubstituirNfse { get; set; }
+
+        //FABIO - FULLTIME
+        /// <summary>
+        /// Substituir Nfse
+        /// </summary>
+        public string ConsultarStatusNFse { get; set; }
 
         #endregion NFS-e
 

@@ -320,6 +320,7 @@ namespace NFe.Components
             PedURLNFSeSerie,
             PedSeqLoteNotaRPS,
             PedSubstNfse,
+            PedStaNFse,//FABIO - FULLTIME
 
             /// <summary>
             /// CFSe

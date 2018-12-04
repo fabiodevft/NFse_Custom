@@ -1,2 +1,0 @@
-sc delete UniNFeServico
-pause

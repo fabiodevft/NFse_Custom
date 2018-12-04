@@ -719,6 +719,29 @@ namespace NFe.Service
                     strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cnpjcpfprestador, docXML.OuterXml, versaoXml });
                     break;
 
+                case PadroesNFSe.SALVADOR_BA://FABIO - FULLTIME
+
+                    switch (metodo)
+                    {
+                        case "ConsultarStatusNfse":
+                            //XmlNode resultado = wsProxy.InvokeXML(servicoWS, metodo, new object[] { docXML });
+                            //strRetorno = resultado.OuterXml;
+
+                            strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { docXML.OuterXml });
+                            
+                            break;
+
+                        default:
+                            if (string.IsNullOrEmpty(cabecMsg))
+                                strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { docXML.OuterXml });
+                            else
+                                strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cabecMsg.ToString(), docXML.OuterXml });
+                            break;
+
+                    }
+
+                    break;
+
                 default:
 
                     #region Demais padrões

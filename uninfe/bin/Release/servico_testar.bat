@@ -1,4 +1,0 @@
-call servico_instalar
-call servico_iniciar
-call servico_parar
-call servico_remover

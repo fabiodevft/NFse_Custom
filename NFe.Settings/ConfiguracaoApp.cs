@@ -1040,6 +1040,10 @@ namespace NFe.Settings
                             WSDL = (tipoAmbiente == (int)TipoAmbiente.taHomologacao ? list.LocalHomologacao.SubstituirNfse : list.LocalProducao.SubstituirNfse);
                             break;
 
+                        case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
+                            WSDL = (tipoAmbiente == (int)TipoAmbiente.taHomologacao ? list.LocalHomologacao.ConsultarStatusNFse : list.LocalProducao.ConsultarStatusNFse);
+                            break;
+
                         #endregion NFS-e
 
                         #region CFS-e
@@ -1210,6 +1214,7 @@ namespace NFe.Settings
                             case Servicos.NFSeConsultarPorRps:
                             case Servicos.NFSeConsultarSituacaoLoteRps:
                             case Servicos.NFSeRecepcionarLoteRps:
+                            case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
                                 throw new Exception(string.Format(errorStr, "da NFS-e"));
                         }
                         throw new Exception(string.Format(errorStr, "da NF-e"));
