@@ -1527,8 +1527,8 @@
       <ConsultarNfsePorRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
+      <ConsultaNFSeRecebidas>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultaNFSeRecebidas>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</RecepcionarLoteRps>
@@ -1536,8 +1536,8 @@
       <ConsultarNfsePorRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
+    <ConsultaNFSeRecebidas>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultaNFSeRecebidas>
     </LocalProducao>
   </Estado>
   <Estado ID="1100205" Nome="Porto Velho - RO" UF="RO" Padrao="PORTOVELHENSE">
@@ -2295,13 +2295,13 @@
   </Estado>
   <Estado ID="3530607" Nome="Mogi das Cruzes - SP" UF="SP" Padrao="SMARAPD">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
+      <ConsultarNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSSaida.wsdl</ConsultarNfse>
       <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <ConsultarURLNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PMogidasCruzesSP-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
@@ -6971,7 +6971,7 @@
       <ConsultarNfsePorRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
-
+      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>

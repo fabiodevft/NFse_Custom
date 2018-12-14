@@ -280,6 +280,12 @@ namespace NFe.Components
         [Description("Consultar Status da NFS-e")]
         NFSeConsultarStatusNota,
 
+		// <summary>
+        /// Consultar as notas fiscais de serviço recebidas
+        /// </summary>
+        [Description("Consultar NFS-e recebidas")]
+        NFSeConsultarNFSeRecebidas,
+
         #endregion NFSe
 
         #region CFSe

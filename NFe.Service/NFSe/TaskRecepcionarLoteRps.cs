@@ -638,10 +638,7 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.SOFTPLAN:
                         Components.SOFTPLAN.SOFTPLAN softplan = new Components.SOFTPLAN.SOFTPLAN((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                                         Empresas.Configuracoes[emp].PastaXmlRetorno,
-                                                        Empresas.Configuracoes[emp].UsuarioWS,
-                                                        Empresas.Configuracoes[emp].SenhaWS,
-                                                        Empresas.Configuracoes[emp].ClientID,
-                                                        Empresas.Configuracoes[emp].ClientSecret);
+                                                        Empresas.Configuracoes[emp].TokenNFse);
 
                         AssinaturaDigital softplanAssinatura = new AssinaturaDigital();
                         softplanAssinatura.Assinar(NomeArquivoXML, emp, oDadosEnvLoteRps.cMunicipio);

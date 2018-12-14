@@ -184,7 +184,7 @@ namespace NFe.Certificado
                                 signedXml.SignedInfo.SignatureMethod = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256";
                                 signedXml.SigningKey = x509Cert.GetRSAPrivateKey();
                             }
-#endif                  
+#endif
 
                             if (algorithmType.Equals(AlgorithmType.Sha1))
                             {

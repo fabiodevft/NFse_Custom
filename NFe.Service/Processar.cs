@@ -109,6 +109,10 @@ namespace NFe.Service
                             DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskSubstituirNfse(arquivo));
                             break;
 
+						case Servicos.NFSeConsultarNFSeRecebidas:
+                            DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskConsultarNfseRecebidas(arquivo));
+                            break;						
+
                         case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
                             DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskConsultarStatusNFse());
                             break;
@@ -985,6 +989,10 @@ namespace NFe.Service
                                 else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedSubstNfse).EnvioXML) >= 0)
                                 {
                                     tipoServico = Servicos.NFSeSubstituirNfse;
+                                }
+								else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeRec).EnvioXML) >= 0)
+                                {
+                                    tipoServico = Servicos.NFSeConsultarNFSeRecebidas;
                                 }
 								//FABIO - FULLTIME
                                 else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedStaNFse).EnvioXML) >= 0)

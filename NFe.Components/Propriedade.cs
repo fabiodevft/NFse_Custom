@@ -685,6 +685,12 @@ namespace NFe.Components
                     "-substnfse.err",
                     "Substituir Nfse"));
 
+				ListaExtensoes.Add(TipoEnvio.PedSitNFSeRec, new ExtensaoClass(
+                    "-ped-sitnfserec.xml", "",
+                    "-sitnfserec.xml", "",
+                    "-sitnfserec.err",
+                    "Consultar NFSe recebidas"));
+
                 ListaExtensoes.Add(TipoEnvio.PedStaNFse, new ExtensaoClass(
                     "-ped-stanfse.xml", "",
                     "-stanfse.xml", "",

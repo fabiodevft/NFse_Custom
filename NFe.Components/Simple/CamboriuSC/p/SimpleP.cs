@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 using NFe.Components.Abstract;
 using NFe.Components.PCamboriuSC;
 using System.Net;
@@ -50,7 +41,6 @@ namespace NFe.Components.Simple.CamboriuSC.p
 
         public override void EmiteNF(string file)
         {
-
             LeRPSeGravaNota oLeRPSeGravaNota = new LeRPSeGravaNota();
             oLeRPSeGravaNota = DeserializarObjeto<LeRPSeGravaNota>(file);
             Nota[] NotaAux = { oLeRPSeGravaNota.tNota.Nota };

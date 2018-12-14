@@ -1049,7 +1049,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\HSaoJoaoMeritiRJ\Reference.cs" />
+    <Compile Include="Web References\HSaoJoaoMeritiRJ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HSerafinaCorreaRS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1096,7 +1100,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\PCamboriuSC\Reference.cs" />
+    <Compile Include="Web References\PCamboriuSC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\PCampoNovoDoParecisMT\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1307,8 +1315,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\PSaoJoaoMeritiRJ\Reference.cs" />
-    <Compile Include="Web References\PSaoJoaoParaisoMG\Reference.cs" />
+    <Compile Include="Web References\PSaoJoaoMeritiRJ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PSaoJoaoParaisoMG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\PSaoPauloSP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1324,7 +1340,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\PTaiobeirasMG\Reference.cs" />
+    <Compile Include="Web References\PTaiobeirasMG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\PVacariRS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1387,7 +1407,6 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\HAmargosaBA\NFe.Components.HAmargosaBA.CancelarNfseResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -3545,10 +3564,19 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\HSaoJoaoMeritiRJ\HSaoJoaoMeritiRJ-SIGCORP.wsdl" />
-    <None Include="Web References\HSaoJoaoMeritiRJ\Reference.map" />
-    <None Include="Web References\HSaoJoaoMeritiRJ\tcDadosNota.datasource" />
-    <None Include="Web References\HSaoJoaoMeritiRJ\tcEstruturaDescricaoErros.datasource" />
-    <None Include="Web References\HSaoJoaoMeritiRJ\tcRetornoNota.datasource" />
+    <None Include="Web References\HSaoJoaoMeritiRJ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HSaoJoaoMeritiRJ\tcDadosNota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HSaoJoaoMeritiRJ\tcEstruturaDescricaoErros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HSaoJoaoMeritiRJ\tcRetornoNota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\HSerafinaCorreaRS\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -3770,10 +3798,17 @@
     <None Include="Web References\PCachoeiraSulRS\Services0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\PCamboriuSC\CancelamentoNota.datasource" />
+    <None Include="Web References\PCamboriuSC\CancelamentoNota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\PCamboriuSC\NFSePrefeituraCamboriu.wsdl" />
-    <None Include="Web References\PCamboriuSC\Nota.datasource" />
-    <None Include="Web References\PCamboriuSC\Reference.map" />
+    <None Include="Web References\PCamboriuSC\Nota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCamboriuSC\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\PCampoNovoDoParecisMT\nfse_web_service.wsdl" />
     <None Include="Web References\PCampoNovoDoParecisMT\output1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -4278,24 +4313,54 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\PSaoJoaoMeritiRJ\PSaoJoaoMeritiRJ-SIGCORP.wsdl" />
-    <None Include="Web References\PSaoJoaoMeritiRJ\Reference.map" />
-    <None Include="Web References\PSaoJoaoMeritiRJ\tcDadosNota.datasource" />
-    <None Include="Web References\PSaoJoaoMeritiRJ\tcEstruturaDescricaoErros.datasource" />
-    <None Include="Web References\PSaoJoaoMeritiRJ\tcRetornoNota.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\cnae.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\empresa.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\loteRpsResposta.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\nfseContribuinte.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\nfseResposta.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\nfseRpsResposta.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\Reference.map" />
+    <None Include="Web References\PSaoJoaoMeritiRJ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PSaoJoaoMeritiRJ\tcDadosNota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoMeritiRJ\tcEstruturaDescricaoErros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoMeritiRJ\tcRetornoNota.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\cnae.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\empresa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\loteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\nfseContribuinte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\nfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\nfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\PSaoJoaoParaisoMG\RpsService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PSaoJoaoParaisoMG\RpsServiceService.wsdl" />
-    <None Include="Web References\PSaoJoaoParaisoMG\servico116Municipal.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\servicoMunic.datasource" />
-    <None Include="Web References\PSaoJoaoParaisoMG\situacaoLoteRps.datasource" />
+    <None Include="Web References\PSaoJoaoParaisoMG\servico116Municipal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\servicoMunic.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSaoJoaoParaisoMG\situacaoLoteRps.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\PSaoPauloSP\PSaoPauloSP-PAULISTANA.wsdl" />
     <None Include="Web References\PSaoPauloSP\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -4344,20 +4409,41 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\PTaiobeirasMG\cnae.datasource" />
-    <None Include="Web References\PTaiobeirasMG\empresa.datasource" />
-    <None Include="Web References\PTaiobeirasMG\loteRpsResposta.datasource" />
-    <None Include="Web References\PTaiobeirasMG\nfseContribuinte.datasource" />
-    <None Include="Web References\PTaiobeirasMG\nfseResposta.datasource" />
-    <None Include="Web References\PTaiobeirasMG\nfseRpsResposta.datasource" />
-    <None Include="Web References\PTaiobeirasMG\Reference.map" />
+    <None Include="Web References\PTaiobeirasMG\cnae.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\empresa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\loteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\nfseContribuinte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\nfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\nfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\PTaiobeirasMG\RpsService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PTaiobeirasMG\RpsServiceService.wsdl" />
-    <None Include="Web References\PTaiobeirasMG\servico116Municipal.datasource" />
-    <None Include="Web References\PTaiobeirasMG\servicoMunic.datasource" />
-    <None Include="Web References\PTaiobeirasMG\situacaoLoteRps.datasource" />
+    <None Include="Web References\PTaiobeirasMG\servico116Municipal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\servicoMunic.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PTaiobeirasMG\situacaoLoteRps.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\PVacariRS\NFSeIntegracao.wsdl" />
     <None Include="Web References\PVacariRS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -5239,6 +5325,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_metropolisweb_lftributos_p_Nfse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://simple.camboriu.sc.gov.br/LISIPMC/NFSePrefeituraCamboriu.wso%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCamboriuSC\</RelPath>
+      <UpdateFromURL>http://simple.camboriu.sc.gov.br/LISIPMC/NFSePrefeituraCamboriu.wso%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCamboriuSC_NFSePrefeituraCamboriu</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://wsastorga.simplissweb.com.br/nfseservice.svc%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -6230,6 +6327,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HPatoBrancoPR_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HSaoJoaoMeritiRJ\</RelPath>
+      <UpdateFromURL>Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HSaoJoaoMeritiRJ_WebService_SigISS</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PBaraoDeCotegipeRS-SystemPro.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PBaraoDeCotegipeRS\</RelPath>
@@ -6328,6 +6436,39 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PPatoBrancoPR_NFSeIntegracao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PSaoJoaoMeritiRJ\</RelPath>
+      <UpdateFromURL>Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PSaoJoaoMeritiRJ_WebService_SigISS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoaoParaisoMG-EL.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PSaoJoaoParaisoMG\</RelPath>
+      <UpdateFromURL>Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoaoParaisoMG-EL.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PSaoJoaoParaisoMG_RpsServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PTaiobeirasMG-EL.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PTaiobeirasMG\</RelPath>
+      <UpdateFromURL>Z:\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PTaiobeirasMG-EL.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PTaiobeirasMG_RpsServiceService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>

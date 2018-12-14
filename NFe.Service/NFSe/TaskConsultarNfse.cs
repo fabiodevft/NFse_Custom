@@ -466,12 +466,9 @@ namespace NFe.Service.NFSe
 
 #if _fw46
                     case PadroesNFSe.SOFTPLAN:
-                        NFe.Components.SOFTPLAN.SOFTPLAN softplan = new NFe.Components.SOFTPLAN.SOFTPLAN((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                        NFe.Components.SOFTPLAN.SOFTPLAN softplan = new Components.SOFTPLAN.SOFTPLAN((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                                         Empresas.Configuracoes[emp].PastaXmlRetorno,
-                                                        Empresas.Configuracoes[emp].UsuarioWS,
-                                                        Empresas.Configuracoes[emp].SenhaWS,
-                                                        Empresas.Configuracoes[emp].ClientID,
-                                                        Empresas.Configuracoes[emp].ClientSecret);
+                                                        Empresas.Configuracoes[emp].TokenNFse);
 
                         if (ConfiguracaoApp.Proxy)
                             softplan.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
