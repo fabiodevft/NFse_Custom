@@ -306,7 +306,6 @@ namespace NFe.Components
             /// NFSe
             /// </summary>
             EnvLoteRps,
-
             PedCanNFSe,
             PedInuNFSe,
             PedLoteRps,
@@ -320,6 +319,7 @@ namespace NFe.Components
             PedURLNFSeSerie,
             PedSeqLoteNotaRPS,
             PedSubstNfse,
+            PedSitNFSeRec,
             PedStaNFse,//FABIO - FULLTIME
 
             /// <summary>
