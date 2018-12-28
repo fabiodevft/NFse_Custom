@@ -1124,7 +1124,13 @@ namespace NFe.Components
         /// Padrão utilizado pela prefeitura de Camboriú-SC
         /// </summary>
         [Description("SIMPLE")]
-        SIMPLE
+        SIMPLE,
+
+        /// <summary>
+        /// Padrão utilizado pela prefeitura de João Pessoa-PB
+        /// </summary>
+        [Description("SISPMJP")]
+        SISPMJP
 
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao

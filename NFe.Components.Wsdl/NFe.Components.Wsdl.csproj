@@ -4390,6 +4390,14 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSSaida.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSUtil.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamboriuSC-SIMPLE.wsdl" />
+    <None Include="NFse\schemas\NFSe\SISPMJP\nfse v2 02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\schemas\NFSe\SISPMJP\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\WSDL\Homologacao\HJoaoPessoaPB_SISPMJP.wsdl" />
+    <None Include="NFse\WSDL\Producao\PJoaoPessoaPB_SISPMJP.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

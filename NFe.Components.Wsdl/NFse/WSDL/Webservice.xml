@@ -520,22 +520,22 @@
       <CancelarNfse>wsdl\producao\PFortaleza-Ginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="2507507" Nome="João Pessoa - PB" UF="PB" Padrao="GINFES">
+  <Estado ID="2507507" Nome="João Pessoa - PB" UF="PB" Padrao="SISPMJP">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HJoaoPessoaPB_SISPMJP.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PJoaoPessoaPB_SISPMJP.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="2704302" Nome="Maceió - AL" UF="AL" Padrao="GINFES">
@@ -7060,7 +7060,7 @@
       <CancelarNfse>wsdl\producao\PGoianaPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="4203204" Nome="Cambori� - SC" UF="SC" Padrao="SIMPLE">
+  <Estado ID="4203204" Nome="Camboriú - SC" UF="SC" Padrao="SIMPLE">
     <LocalHomologacao>
       <RecepcionarLoteRps></RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
@@ -7077,5 +7077,5 @@
       <ConsultarLoteRps>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</ConsultarLoteRps>
       <CancelarNfse>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado> 
+  </Estado>
 </Webservice>

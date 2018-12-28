@@ -146,6 +146,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Channels" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -202,6 +203,7 @@
     <Compile Include="Interface\IGetRequest.cs" />
     <Compile Include="Interface\IPostRequest.cs" />
     <Compile Include="Interface\IRequest.cs" />
+    <Compile Include="ISISPMJP.cs" />
     <Compile Include="Pronin\BastosSP\h\ProninH.cs" />
     <Compile Include="Pronin\BastosSP\p\ProninP.cs" />
     <Compile Include="Pronin\CosmopolisSP\p\ProninP.cs" />
@@ -228,6 +230,7 @@
     <Compile Include="Schemas\SchemaXMLNFSe_MANAUS_AM.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_AVMB_ASTEN.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SOFTPLAN.cs" />
+    <Compile Include="Schemas\SchemaXMLNFSe_SISPMJP﻿.cs" />
     <Compile Include="Service References\HAmargosaBA\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
