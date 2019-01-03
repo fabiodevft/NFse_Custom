@@ -203,7 +203,6 @@
     <Compile Include="Interface\IGetRequest.cs" />
     <Compile Include="Interface\IPostRequest.cs" />
     <Compile Include="Interface\IRequest.cs" />
-    <Compile Include="ISISPMJP.cs" />
     <Compile Include="Pronin\BastosSP\h\ProninH.cs" />
     <Compile Include="Pronin\BastosSP\p\ProninP.cs" />
     <Compile Include="Pronin\CosmopolisSP\p\ProninP.cs" />
