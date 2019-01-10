@@ -213,11 +213,31 @@ namespace NFe.Service.NFSe
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.BSITBR);
 
                         wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
-
+                        
                         if (oDadosEnvLoteRps.tpAmb == 1)
-                            envLoteRps = new Components.PJaraguaGO.nfseWS();
+                        {
+                            switch (oDadosEnvLoteRps.cMunicipio)
+                            {
+                                case 5211800: //Jaraguá - GO
+                                    envLoteRps = new Components.PJaraguaGO.nfseWS();
+                                    break;
+                                case 5220454: //Senador Canedo - GO
+                                    envLoteRps = new Components.PSenadorCanedoGO.nfseWS();
+                                    break;
+                            }
+
+                        }
                         else
-                            throw new Exception("Município de Jaraguá-GO não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                        {
+                            switch (oDadosEnvLoteRps.cMunicipio)
+                            {
+                                case 5211800: //Jaraguá - GO
+                                    throw new Exception("Município de Jaraguá-GO não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                                    
+                                case 5220454: //Senador Canedo - GO
+                                    throw new Exception("Município de Senador Canedo-GO não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                            }
+                        }                            
                         break;
 
                     case PadroesNFSe.PORTOVELHENSE:

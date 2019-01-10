@@ -554,5 +554,8 @@
     <Setting Name="NFe_Components_PCamboriuSC_NFSePrefeituraCamboriu" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://simple.camboriu.sc.gov.br/LISIPMC/NFSePrefeituraCamboriu.wso</Value>
     </Setting>
+    <Setting Name="NFe_Components_PSenadorCanedoGO_nfseWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://canedo.bsit-br.com.br/integracao/services/nfseWS</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
