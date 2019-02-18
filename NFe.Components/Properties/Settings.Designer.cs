@@ -1895,5 +1895,15 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PSenadorCanedoGO_nfseWS"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://191.209.11.231:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS {
+            get {
+                return ((string)(this["NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS"]));
+            }
+        }
     }
 }

@@ -53,3 +53,8 @@
 /uninfe_ws
 /NFe.Service/obj/Debug
 /NFe.Components/obj/Debug
+/.vs
+/NFe.Core/obj
+/UniNFeServico/obj
+/NFe.Service/.vs/NFe.Service/v15
+/NFe.Service/obj

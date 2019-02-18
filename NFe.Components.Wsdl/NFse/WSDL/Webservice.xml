@@ -7078,4 +7078,24 @@
       <CancelarNfse>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3500501" Nome="Águas de Lindóia - SP" UF="SP" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

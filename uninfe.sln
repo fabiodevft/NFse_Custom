@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNFeServico", "UniNFeServico\UniNFeServico.csproj", "{E808B9BD-C6F6-467E-BA52-E5681C55AFFF}"
 EndProject
@@ -36,7 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uninfe_ws", "uninfe_ws\unin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Demo", "MetroFramework\MetroFramework.Demo\MetroFramework.Demo.csproj", "{AF988819-4618-4852-9506-C1D06D04F6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uninfe", "uninfe\UniNFe.csproj", "{347CF3C4-EE18-4D46-AABF-479B73BF85D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNFe", "uninfe\UniNFe.csproj", "{347CF3C4-EE18-4D46-AABF-479B73BF85D6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22362DF8-4026-4964-8975-ED87871BA07E} = {22362DF8-4026-4964-8975-ED87871BA07E}
 	EndProjectSection
@@ -44,10 +44,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFe.SAT", "NFe.ConvertCFe\NFe.SAT.csproj", "{5632878D-C7E7-4CFF-9FE1-06E7222532AF}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -800,5 +796,12 @@ Global
 		{7316584D-9A16-4280-A8AB-6D45198C6E4D} = {E1EDF029-0BE4-42A7-9068-5D0AEFD671CC}
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26} = {E1EDF029-0BE4-42A7-9068-5D0AEFD671CC}
 		{AF988819-4618-4852-9506-C1D06D04F6B2} = {E1EDF029-0BE4-42A7-9068-5D0AEFD671CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94FA730C-3A42-4AAF-952D-A488B4553C53}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
