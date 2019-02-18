@@ -121,7 +121,7 @@ namespace NFe.Service.NFSe
                         if (ConfiguracaoApp.Proxy)
                             ipm.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
 
-                        ipm.EmiteNF(NomeArquivoXML, true);
+                        ipm.CancelarNfse(NomeArquivoXML);
 
                         break;
 
@@ -375,10 +375,11 @@ namespace NFe.Service.NFSe
                         {
                             switch (oDadosPedCanNfse.cMunicipio)
                             {
-                                case 5211800: //Jaraguá - GO
+                                case 5211800:
                                     pedCanNfse = new Components.PJaraguaGO.nfseWS();
                                     break;
-                                case 5220454: //Senador Canedo - GO
+
+                                case 5220454:
                                     pedCanNfse = new Components.PSenadorCanedoGO.nfseWS();
                                     break;
                             }
@@ -396,8 +397,6 @@ namespace NFe.Service.NFSe
                             }
                         }
                         break;
-
-
 
                     case PadroesNFSe.EQUIPLANO:
                         cabecMsg = "1";
@@ -490,7 +489,8 @@ namespace NFe.Service.NFSe
                             oDadosPedCanNfse.cMunicipio == 3505807 ||
                             oDadosPedCanNfse.cMunicipio == 3530300 ||
                             oDadosPedCanNfse.cMunicipio == 4308904 ||
-                            oDadosPedCanNfse.cMunicipio == 4118501)
+                            oDadosPedCanNfse.cMunicipio == 4118501 ||
+                            oDadosPedCanNfse.cMunicipio == 3554300)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -633,6 +633,7 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.TIPLAN_203:
+                    case PadroesNFSe.INDAIATUBA_SP:
                         cabecMsg = "<cabecalho versao=\"2.03\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.03</versaoDados></cabecalho>";
                         break;
 #if _fw46
@@ -670,7 +671,6 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.SISPMJP:
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
-
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))

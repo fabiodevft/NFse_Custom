@@ -109,12 +109,12 @@ namespace NFe.Service
                             DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskSubstituirNfse(arquivo));
                             break;
 
-						case Servicos.NFSeConsultarNFSeRecebidas:
+                        case Servicos.NFSeConsultarNFSeRecebidas:
                             DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskConsultarNfseRecebidas(arquivo));
-                            break;						
+                            break;
 
-                        case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
-                            DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskConsultarStatusNFse());
+                        case Servicos.NFSeConsultarNFSeTomados:
+                            DirecionarArquivo(emp, true, true, arquivo, new NFSe.TaskConsultarNfseTomados(arquivo));
                             break;
 
                         #endregion NFS-e
@@ -440,6 +440,10 @@ namespace NFe.Service
                             DirecionarArquivo(emp, true, true, arquivo, new TaskConsultarLoteReinf(arquivo));
                             break;
 
+                        case Servicos.ConsultasReinf:
+                            DirecionarArquivo(emp, true, true, arquivo, new TaskConsultasReinf(arquivo));
+                            break;
+
                         #endregion EFDReinf
 
                         #region eSocial
@@ -454,6 +458,10 @@ namespace NFe.Service
 
                         case Servicos.ConsultarIdentificadoresEventoseSocial:
                             DirecionarArquivo(emp, true, true, arquivo, new TaskConsultarIdentificadoresEventoseSocial(arquivo));
+                            break;
+
+                        case Servicos.DownloadEventoseSocial:
+                            DirecionarArquivo(emp, true, true, arquivo, new TaskDownloadEventoseSocial(arquivo));
                             break;
 
                             #endregion eSocial
@@ -614,6 +622,11 @@ namespace NFe.Service
                      arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.Update).EnvioTXT) >= 0)
             {
                 tipoServico = Servicos.UniNFeUpdate;
+            }
+            else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioXML) >= 0 ||
+                     arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioTXT) >= 0)
+            {
+                tipoServico = Servicos.UniNFeConsultaInformacoes;
             }
 
             #endregion Serviços que funcionam tanto na pasta Geral como na pasta da Empresa
@@ -883,6 +896,11 @@ namespace NFe.Service
                                         tipoServico = Servicos.ConsultarLoteReinf;
                                         break;
 
+                                    case "ConsultaTotalizadores":
+                                    case "ConsultaReciboEvento":
+                                        tipoServico = Servicos.ConsultasReinf;
+                                        break;
+
                                     case "loteEventos":
                                         tipoServico = Servicos.RecepcaoLoteReinf;
                                         break;
@@ -911,6 +929,10 @@ namespace NFe.Service
 
                                     case "consultaIdentificadoresEvts":
                                         tipoServico = Servicos.ConsultarIdentificadoresEventoseSocial;
+                                        break;
+
+                                    case "download":
+                                        tipoServico = Servicos.DownloadEventoseSocial;
                                         break;
 
                                     default:
@@ -990,15 +1012,20 @@ namespace NFe.Service
                                 {
                                     tipoServico = Servicos.NFSeSubstituirNfse;
                                 }
-								else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeRec).EnvioXML) >= 0)
+                                else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeRec).EnvioXML) >= 0)
                                 {
                                     tipoServico = Servicos.NFSeConsultarNFSeRecebidas;
+                                }
+                                else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeTom).EnvioXML) >= 0)
+                                {
+                                    tipoServico = Servicos.NFSeConsultarNFSeTomados;
                                 }
 								//FABIO - FULLTIME
                                 else if (arq.IndexOf(Propriedade.Extensao(Propriedade.TipoEnvio.PedStaNFse).EnvioXML) >= 0)
                                 {
                                     tipoServico = Servicos.NFSeConsultarStatusNota;
                                 }
+
 
                                 #endregion NFS-e
 
@@ -1498,7 +1525,8 @@ namespace NFe.Service
                         nfe is TaskRecepcaoLoteeSocial ||
                         nfe is TaskConsultarLoteeSocial ||
                         nfe is TaskConsultarLoteReinf ||
-                        nfe is TaskConsultarIdentificadoresEventoseSocial)
+                        nfe is TaskConsultarIdentificadoresEventoseSocial ||
+                        nfe is TaskDownloadEventoseSocial)
                     {
                         doExecute = true;
                     }
@@ -1524,15 +1552,31 @@ namespace NFe.Service
             string sArqRetorno = string.Empty;
 
             Auxiliar oAux = new Auxiliar();
+            bool somenteConfigGeral = false;
 
-            if (Path.GetExtension(ArquivoXml).ToLower() == ".txt")
-                sArqRetorno = Empresas.Configuracoes[emp].PastaXmlRetorno + "\\" +
-                              Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioTXT) +
-                              Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoTXT;
+            if (Path.GetDirectoryName(ArquivoXml).ToLower() == Components.Propriedade.PastaGeralTemporaria.ToLower())
+            {
+                somenteConfigGeral = true;
+                if (Path.GetExtension(ArquivoXml).ToLower() == ".txt")
+                    sArqRetorno = Propriedade.PastaGeralRetorno + "\\" +
+                                  Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioTXT) +
+                                  Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoTXT;
+                else
+                    sArqRetorno = Propriedade.PastaGeralRetorno + "\\" +
+                                  Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioXML) +
+                                  Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoXML;
+            }
             else
-                sArqRetorno = Empresas.Configuracoes[emp].PastaXmlRetorno + "\\" +
-                              Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioXML) +
-                              Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoXML;
+            {
+                if (Path.GetExtension(ArquivoXml).ToLower() == ".txt")
+                    sArqRetorno = Empresas.Configuracoes[emp].PastaXmlRetorno + "\\" +
+                                  Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioTXT) +
+                                  Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoTXT;
+                else
+                    sArqRetorno = Empresas.Configuracoes[emp].PastaXmlRetorno + "\\" +
+                                  Functions.ExtrairNomeArq(ArquivoXml, Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).EnvioXML) +
+                                  Propriedade.Extensao(Propriedade.TipoEnvio.ConsInf).RetornoXML;
+            }
 
             try
             {
@@ -1546,7 +1590,7 @@ namespace NFe.Service
                 if (oArquivo.Exists)
                     oArquivo.Delete();
 
-                app.GravarXMLInformacoes(sArqRetorno);
+                app.GravarXMLInformacoes(sArqRetorno, somenteConfigGeral);
             }
             catch (Exception ex)
             {

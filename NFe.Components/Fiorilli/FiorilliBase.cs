@@ -62,6 +62,14 @@ namespace NFe.Components.Fiorilli
                                 fiorilliService = new ItaitubaPA.h.FiorilliH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
+                            case 3515509: //Fernandopópolis-SP
+                                fiorilliService = new FernandopolisSP.h.FiorilliH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+
+                            case 3544004: //Rio das Pedras-SP
+                                fiorilliService = new RioPedrasSP.h.FiorilliH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+                            
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
@@ -116,8 +124,16 @@ namespace NFe.Components.Fiorilli
                                 fiorilliService = new ItaitubaPA.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
+                            case 3515509: //Fernandopópolis-SP
+                                fiorilliService = new FernandopolisSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+
                             case 3500501: //Águas de Lindóia - SP
                                 fiorilliService = new AguasDeLindoiaSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+							
+							case 3544004: //Rio das Pedras-SP
+                                fiorilliService = new RioPedrasSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
                             default:

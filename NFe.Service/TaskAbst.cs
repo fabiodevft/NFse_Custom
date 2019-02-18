@@ -1418,9 +1418,9 @@ namespace NFe.Service
                     }
                     break;
 
-                #endregion FISSLEX
+                #endregion VVISS
 
-                #region VVISS
+                #region FISSLEX
 
                 case PadroesNFSe.FISSLEX:
                     retorna = "Execute";
@@ -2183,7 +2183,7 @@ namespace NFe.Service
                         case Servicos.NFSeConsultar:
                             retorna = "ConsultarNotaFiscal";
                             break;
-                   
+
                         case Servicos.NFSeRecepcionarLoteRps:
                             if (Empresas.Configuracoes[Empresas.FindEmpresaByThread()].AmbienteCodigo == (int)NFe.Components.TipoAmbiente.taHomologacao)
                                 retorna = "EnviarLoteNotaFiscalDeTeste";
@@ -2191,13 +2191,57 @@ namespace NFe.Service
                                 retorna = "EnviarLoteNotaFiscal";
                             break;
 
-
                         case Servicos.NFSeCancelar:
                             retorna = "CancelarNotaFiscalEletronica";
                             break;
                     }
                     break;
                 #endregion CECAM
+
+                #region INDAIATUBA_SP
+
+                case PadroesNFSe.INDAIATUBA_SP:
+                    switch (servico)
+                    {
+                        case Servicos.NFSeCancelar:
+                            retorna = "CancelarNfse";
+                            break;
+
+                        case Servicos.NFSeConsultarLoteRps:
+                            retorna = "ConsultarLoteRps";
+                            break;
+
+                        case Servicos.NFSeConsultarPorRps:
+                            retorna = "ConsultarNfsePorRps";
+                            break;
+
+                        case Servicos.NFSeConsultar:
+                            retorna = "ConsultarNfsePorFaixa";
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRps:
+                            retorna = "RecepcionarLoteRps";
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRpsSincrono:
+                            retorna = "RecepcionarLoteRpsSincrono";
+                            break;
+
+                        case Servicos.NFSeGerarNfse:
+                            retorna = "GerarNfse";
+                            break;
+
+                        case Servicos.NFSeSubstituirNfse:
+                            retorna = "SubstituirNfse";
+                            break;
+
+                        case Servicos.NFSeConsultarNFSeTomados:
+                            retorna = "ConsultarNfseServicoTomado";
+                            break;
+                    }
+                    break;
+
+                    #endregion INDAIATUBA_SP
 
                 #region SISPMJP
 
@@ -2236,7 +2280,6 @@ namespace NFe.Service
                     break;
 
                     #endregion SISPMJP
-
             }
 
             return retorna;
@@ -2732,6 +2775,14 @@ namespace NFe.Service
             #endregion Verificar se os valores das tag´s que compõe a chave da nfe estão batendo com as informadas na chave
         }
 
+        private bool ValidarInformacaoContingencia(DadosNFeClass dadosNFe)
+        {
+            if (String.IsNullOrEmpty(dadosNFe.dhCont) || String.IsNullOrEmpty(dadosNFe.xJust))
+                return false;
+
+            return true;
+        }
+
         #endregion ValidacoesGerais()
 
         #region LoteNfe()
@@ -2907,7 +2958,8 @@ namespace NFe.Service
                         cMunicipio == 3505807 ||
                         cMunicipio == 3530300 ||
                         cMunicipio == 4308904 ||
-                        cMunicipio == 4118501)
+                        cMunicipio == 4118501 ||
+                        cMunicipio == 3554300)
                         retorno = false;
                     break;
 
@@ -3030,6 +3082,7 @@ namespace NFe.Service
                 case PadroesNFSe.PUBLIC_SOFT:
                 case PadroesNFSe.TIPLAN_203:
                 case PadroesNFSe.MEGASOFT:
+                case PadroesNFSe.INDAIATUBA_SP:
                     if (servico == Servicos.NFSeRecepcionarLoteRps)
                     {
                         switch (doc.DocumentElement.Name)
@@ -3037,6 +3090,7 @@ namespace NFe.Service
                             case "EnviarLoteRpsEnvio":
                                 result = Servicos.NFSeRecepcionarLoteRps;
                                 break;
+
                             case "EnviarLoteRpsSincronoEnvio":
                                 result = Servicos.NFSeRecepcionarLoteRpsSincrono;
                                 break;

@@ -168,10 +168,12 @@
     <Compile Include="CTe\TaskRetRecepcaoCTe.cs" />
     <Compile Include="DFe\TaskRecepcaoDFeCTe.cs" />
     <Compile Include="DFe\TaskRecepcaoDFe.cs" />
+    <Compile Include="EFDReinf\TaskConsultasReinf.cs" />
     <Compile Include="EFDReinf\TaskConsultarLoteReinf.cs" />
     <Compile Include="EFDReinf\TaskRecepcaoLoteReinf.cs" />
     <Compile Include="eSocial\TaskConsultarIdentificadoresEventoseSocial.cs" />
     <Compile Include="eSocial\TaskConsultarLoteeSocial.cs" />
+    <Compile Include="eSocial\TaskDownloadEventoseSocial.cs" />
     <Compile Include="eSocial\TaskRecepcaoLoteeSocial.cs" />
     <Compile Include="LMC\LMCAutorizacao.cs" />
     <Compile Include="MDFe\TaskAssinarValidarMDFe.cs" />
@@ -189,8 +191,8 @@
     <Compile Include="InvocarObjeto.cs" />
     <Compile Include="LerXML.cs" />
     <Compile Include="NFeEmProcessamento.cs" />
-	<Compile Include="NFSe\TaskConsultarNfseRecebidas.cs" />
-    <Compile Include="NFSe\TaskConsultarStatusNFse.cs" />
+    <Compile Include="NFSe\TaskConsultarNfseTomados.cs" />
+    <Compile Include="NFSe\TaskConsultarNfseRecebidas.cs" />
     <Compile Include="NFSe\TaskSubstituirNfse.cs" />
     <Compile Include="NFSe\TaskConsultaSequenciaLoteNotaRPS.cs" />
     <Compile Include="NFSe\TaskObterNotaFiscal.cs" />

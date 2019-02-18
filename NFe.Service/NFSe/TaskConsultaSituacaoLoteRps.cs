@@ -278,7 +278,8 @@ namespace NFe.Service.NFSe
                             oDadosPedSitLoteRps.cMunicipio == 3505807 || 
                             oDadosPedSitLoteRps.cMunicipio == 3530300 ||
                             oDadosPedSitLoteRps.cMunicipio == 4308904 ||
-                            oDadosPedSitLoteRps.cMunicipio == 4118501)
+                            oDadosPedSitLoteRps.cMunicipio == 4118501 ||
+                            oDadosPedSitLoteRps.cMunicipio == 3554300)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -338,6 +339,7 @@ namespace NFe.Service.NFSe
                         break;
                     case PadroesNFSe.SISPMJP:
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
+
                         break;
                 }
 

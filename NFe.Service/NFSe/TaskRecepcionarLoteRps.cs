@@ -99,7 +99,7 @@ namespace NFe.Service.NFSe
                         if (ConfiguracaoApp.Proxy)
                             ipm.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
 
-                        ipm.EmiteNF(NomeArquivoXML, false);
+                        ipm.EmiteNF(NomeArquivoXML);
                         break;
 
                     case PadroesNFSe.GINFES:
@@ -189,10 +189,10 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.PAULISTANA:
                         wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
 
-                        if (oDadosEnvLoteRps.tpAmb == 1)
+                        //if (oDadosEnvLoteRps.tpAmb == 1)
                             envLoteRps = new Components.PSaoPauloSP.LoteNFe();
-                        else
-                            throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                        //else
+                        //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
 
                         EncryptAssinatura();
                         break;
@@ -213,15 +213,16 @@ namespace NFe.Service.NFSe
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.BSITBR);
 
                         wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
-                        
+
                         if (oDadosEnvLoteRps.tpAmb == 1)
                         {
                             switch (oDadosEnvLoteRps.cMunicipio)
                             {
-                                case 5211800: //Jaraguá - GO
+                                case 5211800:
                                     envLoteRps = new Components.PJaraguaGO.nfseWS();
                                     break;
-                                case 5220454: //Senador Canedo - GO
+
+                                case 5220454:
                                     envLoteRps = new Components.PSenadorCanedoGO.nfseWS();
                                     break;
                             }
@@ -577,7 +578,8 @@ namespace NFe.Service.NFSe
                             oDadosEnvLoteRps.cMunicipio == 3505807 ||
                             oDadosEnvLoteRps.cMunicipio == 3530300 ||
                             oDadosEnvLoteRps.cMunicipio == 4308904 ||
-                            oDadosEnvLoteRps.cMunicipio == 4118501)
+                            oDadosEnvLoteRps.cMunicipio == 4118501 ||
+                            oDadosEnvLoteRps.cMunicipio == 3554300)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -773,11 +775,14 @@ namespace NFe.Service.NFSe
                         simple.EmiteNF(NomeArquivoXML);
                         break;
 
-                    case PadroesNFSe.SISPMJP:
-                        
+                    case PadroesNFSe.INDAIATUBA_SP:
+                        Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.INDAIATUBA_SP);
+                        cabecMsg = "<cabecalho versao=\"2.03\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.03</versaoDados></cabecalho>";
+                        break;
+
+                    case PadroesNFSe.SISPMJP:                        
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.SISPMJP);
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
-
                         break;
                 }
 

@@ -320,8 +320,8 @@ namespace NFe.Components
             PedSeqLoteNotaRPS,
             PedSubstNfse,
             PedSitNFSeRec,
-            PedStaNFse,//FABIO - FULLTIME
-
+            PedSitNFSeTom,
+			PedStaNFse,//FABIO - FULLTIME
             /// <summary>
             /// CFSe
             /// </summary>
@@ -388,9 +388,9 @@ namespace NFe.Components
             /// EFDReinf
             ///
             Reinf_evt,
-
             Reinf_loteevt,
             Reinf_consloteevt,
+            Reinf_cons,
 
             ///
             /// eSocial
@@ -399,7 +399,8 @@ namespace NFe.Components
 
             eSocial_loteevt,
             eSocial_consloteevt,
-            eSocial_considevt
+            eSocial_considevt,
+            eSocial_downevt
         }
 
         private static Dictionary<TipoEnvio, ExtensaoClass> ListaExtensoes = new Dictionary<TipoEnvio, ExtensaoClass>();
@@ -685,17 +686,24 @@ namespace NFe.Components
                     "-substnfse.err",
                     "Substituir Nfse"));
 
-				ListaExtensoes.Add(TipoEnvio.PedSitNFSeRec, new ExtensaoClass(
+                ListaExtensoes.Add(TipoEnvio.PedSitNFSeRec, new ExtensaoClass(
                     "-ped-sitnfserec.xml", "",
                     "-sitnfserec.xml", "",
                     "-sitnfserec.err",
                     "Consultar NFSe recebidas"));
 
-                ListaExtensoes.Add(TipoEnvio.PedStaNFse, new ExtensaoClass(
+                ListaExtensoes.Add(TipoEnvio.PedSitNFSeTom, new ExtensaoClass(
+                    "-ped-sitnfsetom.xml", "",
+                    "-sitnfsetom.xml", "",
+                    "-sitnfsetom.err",
+                    "Consultar NFSe recebidas"));
+				
+				ListaExtensoes.Add(TipoEnvio.PedStaNFse, new ExtensaoClass(
                     "-ped-stanfse.xml", "",
                     "-stanfse.xml", "",
                     "",
                     "Pedido de Status da nota (NFSe)"));
+
 
                 #endregion Extensoes da NFSe
 
@@ -771,6 +779,12 @@ namespace NFe.Components
                     "-ret-reinf-consloteevt.err",
                     "XML EFDReinf - Consultar Lote de Eventos"));
 
+                ListaExtensoes.Add(TipoEnvio.Reinf_cons, new ExtensaoClass(
+                    "-reinf-cons.xml", "",
+                    "-ret-reinf-cons.xml", "",
+                    "-ret-reinf-cons.err",
+                    "XML EFDReinf - Consultas"));
+
                 #endregion Extensões EFDReinf
 
                 #region Extensões eSocial
@@ -798,6 +812,12 @@ namespace NFe.Components
                     "-ret-esocial-considevt.xml", "",
                     "-ret-esocial-considevt.err",
                     "XML eSocial - Consultar Identificadores dos Eventos"));
+
+                ListaExtensoes.Add(TipoEnvio.eSocial_downevt, new ExtensaoClass(
+                    "-esocial-downevt.xml", "",
+                    "-ret-esocial-downevt.xml", "",
+                    "-ret-esocial-downevt.err",
+                    "XML eSocial - Download dos Eventos"));
 
                 #endregion Extensões eSocial
 
