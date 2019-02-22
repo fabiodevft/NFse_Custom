@@ -58,3 +58,6 @@
 /UniNFeServico/obj
 /NFe.Service/.vs/NFe.Service/v15
 /NFe.Service/obj
+/NFe.Components/bin/Release
+/NFe.Components/obj/Release
+/NFe.Service/bin/Release

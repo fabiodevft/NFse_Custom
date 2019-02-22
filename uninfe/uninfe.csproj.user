@@ -14,4 +14,7 @@
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartWorkingDirectory>C:\Unimake\UniNFe\</StartWorkingDirectory>
+  </PropertyGroup>
 </Project>

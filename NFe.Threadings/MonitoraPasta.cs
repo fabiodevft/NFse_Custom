@@ -88,7 +88,8 @@ namespace NFe.Threadings
 
                 #region Pasta impressão dfe em contingência
 
-                if (Directory.Exists(Empresas.Configuracoes[i].PastaContingencia))
+                if (Directory.Exists(Empresas.Configuracoes[i].PastaContingencia) &&
+                    Empresas.Configuracoes[i].tpEmis != (int)Components.TipoEmissao.teNormal)
                 {
                     pastas.Add(Empresas.Configuracoes[i].PastaContingencia);
                 }

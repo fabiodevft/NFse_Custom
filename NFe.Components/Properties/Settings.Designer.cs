@@ -2019,8 +2019,7 @@ namespace NFe.Components.Properties {
             }
         }
         
-
-		[global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://canedo.bsit-br.com.br/integracao/services/nfseWS")]
@@ -2029,7 +2028,7 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PSenadorCanedoGO_nfseWS"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
@@ -2037,6 +2036,26 @@ namespace NFe.Components.Properties {
         public string NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS {
             get {
                 return ((string)(this["NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/saoRoque")]
+        public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
+            get {
+                return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/saoRoque")]
+        public string NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService {
+            get {
+                return ((string)(this["NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
             }
         }
     }
