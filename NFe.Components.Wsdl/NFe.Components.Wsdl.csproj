@@ -4433,12 +4433,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PLinsSP-ISSONLINE.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HTeodoroSampaioSP-PRONIN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PTeodoroSampaioSP-PRONIN.wsdl" />
-    <EmbeddedResource Include="NFse\schemas\NFSe\INDAIATUBA_SP\nfse_v2-03 2016.xsd">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NFse\schemas\NFSe\INDAIATUBA_SP\xmldsig-core-schema20020212.xsd">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HIndaiatubaSP-INDAIATUBA_SP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PIndaiatubaSP-INDAIATUBA_SP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PDracenaSP-ISSONLINE.wsdl" />
@@ -4465,6 +4459,12 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoBorjaRS-DBSELLER.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HGuaraSP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PGuaraSP.wsdl" />
+    <None Include="NFse\schemas\NFSe\INDAIATUBA_SP\nfse_v2-03 2016.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\schemas\NFSe\INDAIATUBA_SP\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl" />
     <None Include="NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl" />
   </ItemGroup>
