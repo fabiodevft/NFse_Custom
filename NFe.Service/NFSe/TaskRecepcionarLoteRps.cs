@@ -24,6 +24,7 @@ using NFe.Validate;
 using NFSe.Components;
 using System;
 using System.IO;
+using System.Xml;
 #if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
@@ -809,6 +810,9 @@ namespace NFe.Service.NFSe
             }
             catch (Exception ex)
             {
+                var strErro = ex.HResult.ToString();
+                var strMesagemErro = ex.Message;
+                
                 try
                 {
                     //Gravar o arquivo de erro de retorno para o ERP, caso ocorra
@@ -816,6 +820,8 @@ namespace NFe.Service.NFSe
                 }
                 catch
                 {
+                    RetornoErroERP.GeraArquivoErroERP(NomeArquivoXML, strErro, strMesagemErro, Propriedade.ExtRetorno.RetEnvLoteRps_ERR); 
+
                     //Se falhou algo na hora de gravar o retorno .ERR (de erro) para o ERP, infelizmente não posso fazer mais nada.
                     //Wandrey 31/08/2011
                 }
@@ -834,8 +840,9 @@ namespace NFe.Service.NFSe
                 }
             }
         }
+               
 
-#region EncryptAssinatura()
+        #region EncryptAssinatura()
 
         /// <summary>
         /// Encriptar a tag Assinatura quando for município de Blumenau - SC
