@@ -85,6 +85,8 @@ namespace NFe.Service.NFSe
             }
             catch (Exception ex)
             {
+                var strErro = ex.HResult.ToString();
+                var strMesagemErro = ex.Message;
                 try
                 {
                     //Gravar o arquivo de erro de retorno para o ERP, caso ocorra
@@ -96,6 +98,7 @@ namespace NFe.Service.NFSe
                 {
                     //Se falhou algo na hora de gravar o retorno .ERR (de erro) para o ERP, infelizmente não posso fazer mais nada.
                     //Wandrey 31/08/2011
+                    RetornoErroERP.GeraArquivoErroERP(NomeArquivoXML, strErro, strMesagemErro, Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeTom).RetornoERR);
                 }
             }
             finally
