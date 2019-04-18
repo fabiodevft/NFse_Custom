@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>C:\Unimake\UniNFe\</OutputPath>
     <DefineConstants>TRACE;DEBUG;_fw46</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -558,12 +558,20 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PCanoasRSConsultarSituacaoLoteRps.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PCanoasRSRecepcionarLoteRps.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PGINFES.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItapevaSP-PRODATA.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItaquaquecetubaSP-WSEntrada.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItaquaquecetubaSP-WSSaida.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItaquaquecetubaSP-WSUtil.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PParacambiRJ-FINTEL.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaLoteRPS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaNfse.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaNfseRPS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaSituacaoLoteRPS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaSituacaoNfse.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAEnvioLoteRPS.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantoAntonioPatrulha-NFSEcancelamento.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantoAntonioPatrulha-NFSEremessa.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PThemaCancelamento.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PThemaConsulta.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PThemaRemessa.wsdl" />
@@ -4433,6 +4441,12 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PLinsSP-ISSONLINE.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HTeodoroSampaioSP-PRONIN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PTeodoroSampaioSP-PRONIN.wsdl" />
+    <EmbeddedResource Include="NFse\schemas\NFSe\INDAIATUBA_SP\nfse_v2-03 2016.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\INDAIATUBA_SP\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HIndaiatubaSP-INDAIATUBA_SP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PIndaiatubaSP-INDAIATUBA_SP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PDracenaSP-ISSONLINE.wsdl" />
@@ -4459,14 +4473,21 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoBorjaRS-DBSELLER.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HGuaraSP.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PGuaraSP.wsdl" />
-    <None Include="NFse\schemas\NFSe\INDAIATUBA_SP\nfse_v2-03 2016.xsd">
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HItapevaSP-PRODATA-NotapdfWSService.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HItapevaSP-PRODATA.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItapevaSP-PRODATA-NotapdfWSService.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="NFse\schemas\NFSe\INDAIATUBA_SP\xmldsig-core-schema20020212.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl" />
-    <None Include="NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl" />
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEcancelamento.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEremessa.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HParacambiRJ-FINTEL.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPetropolisRJ-SIGCORP.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPetropolisRJ-SIGCORP.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

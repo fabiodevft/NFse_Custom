@@ -128,12 +128,12 @@ namespace NFe.Components.Fiorilli
                                 fiorilliService = new FernandopolisSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
+                            case 3544004: //Rio das Pedras-SP
+                                fiorilliService = new RioPedrasSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+
                             case 3500501: //Águas de Lindóia - SP
                                 fiorilliService = new AguasDeLindoiaSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
-                                break;
-							
-							case 3544004: //Rio das Pedras-SP
-                                fiorilliService = new RioPedrasSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
                             default:

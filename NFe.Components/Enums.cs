@@ -274,6 +274,7 @@ namespace NFe.Components
         NFSeSubstituirNfse,
 
         //FULLTIME - FABIO
+
         /// <summary>
         /// Consultar Status NFS-e
         /// </summary>

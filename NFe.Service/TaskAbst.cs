@@ -1366,6 +1366,14 @@ namespace NFe.Service
                         case Servicos.NFSeConsultarURLSerie:
                             retorna = "";
                             break;
+
+                        case Servicos.NFSeGerarNfse:
+                            retorna = "GerarNfse";
+                            break;
+
+                        case Servicos.NFSeConsultarNFSePDF:
+                            retorna = "ConsultarNotapdf";
+                            break;
                     }
                     break;
 
@@ -1757,6 +1765,10 @@ namespace NFe.Service
 
                         case Servicos.NFSeRecepcionarLoteRps:
                             retorna = "RecepcionarLoteRps";
+                            break;
+
+                        case Servicos.NFSeConsultarNFSeTomados:
+                            retorna = "ConsultarNfseServicoTomado";
                             break;
                     }
                     break;
@@ -2241,7 +2253,7 @@ namespace NFe.Service
                     }
                     break;
 
-                    #endregion INDAIATUBA_SP
+                #endregion INDAIATUBA_SP
 
                 #region SISPMJP
 
@@ -2369,6 +2381,16 @@ namespace NFe.Service
             {
                 //Fazer uma leitura de algumas tags do XML
                 DadosNFeClass dadosNFe = LerXMLNFe(conteudoXML);
+
+                RespTecnico respTecnico = new RespTecnico(Empresas.Configuracoes[emp].RespTecCNPJ,
+                    Empresas.Configuracoes[emp].RespTecXContato,
+                    Empresas.Configuracoes[emp].RespTecEmail,
+                    Empresas.Configuracoes[emp].RespTecTelefone,
+                    Empresas.Configuracoes[emp].RespTecIdCSRT,
+                    Empresas.Configuracoes[emp].RespTecCSRT);
+
+                respTecnico.AdicionarResponsavelTecnico(conteudoXML);
+
                 string ChaveNfe = dadosNFe.chavenfe;
                 string TpEmis = dadosNFe.tpEmis;
 
@@ -2959,7 +2981,8 @@ namespace NFe.Service
                         cMunicipio == 3530300 ||
                         cMunicipio == 4308904 ||
                         cMunicipio == 4118501 ||
-                        cMunicipio == 3554300)
+                        cMunicipio == 3554300 ||
+                        cMunicipio == 3542404)
                         retorno = false;
                     break;
 
@@ -3131,6 +3154,7 @@ namespace NFe.Service
                     break;
 
                 case PadroesNFSe.CARIOCA:
+                case PadroesNFSe.PRODATA:
                     if (servico == Servicos.NFSeRecepcionarLoteRps)
                     {
                         switch (doc.DocumentElement.Name)

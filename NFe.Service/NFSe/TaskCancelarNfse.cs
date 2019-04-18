@@ -490,7 +490,8 @@ namespace NFe.Service.NFSe
                             oDadosPedCanNfse.cMunicipio == 3530300 ||
                             oDadosPedCanNfse.cMunicipio == 4308904 ||
                             oDadosPedCanNfse.cMunicipio == 4118501 ||
-                            oDadosPedCanNfse.cMunicipio == 3554300)
+                            oDadosPedCanNfse.cMunicipio == 3554300 ||
+                            oDadosPedCanNfse.cMunicipio == 3542404)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -573,7 +574,12 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.SOFTPLAN:
                         Components.SOFTPLAN.SOFTPLAN softplan = new Components.SOFTPLAN.SOFTPLAN((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                           Empresas.Configuracoes[emp].PastaXmlRetorno,
-                                          Empresas.Configuracoes[emp].TokenNFse);
+                                          Empresas.Configuracoes[emp].TokenNFse,
+                                          Empresas.Configuracoes[emp].TokenNFSeExpire,
+                                          Empresas.Configuracoes[emp].UsuarioWS,
+                                          Empresas.Configuracoes[emp].SenhaWS,
+                                          Empresas.Configuracoes[emp].ClientID,
+                                          Empresas.Configuracoes[emp].ClientSecret);
 
                         AssinaturaDigital softplanAssinatura = new AssinaturaDigital();
                         softplanAssinatura.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio);
@@ -591,6 +597,18 @@ namespace NFe.Service.NFSe
                         softplanAss.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio, AlgorithmType.Sha256);
 
                         softplan.CancelarNfse(NomeArquivoXML);
+
+                        if (Empresas.Configuracoes[emp].TokenNFse != softplan.Token)
+                        {
+                            Empresas.Configuracoes[emp].SalvarConfiguracoesNFSeSoftplan(softplan.Usuario,
+                                                                                        softplan.Senha,
+                                                                                        softplan.ClientID,
+                                                                                        softplan.ClientSecret,
+                                                                                        softplan.Token,
+                                                                                        softplan.TokenExpire,
+                                                                                        Empresas.Configuracoes[emp].CNPJ);
+                        }
+
                         break;
 
                     #endregion SOFTPLAN
@@ -695,7 +713,7 @@ namespace NFe.Service.NFSe
             }
             catch (Exception ex)
             {
-                var strErro = ex.HResult.ToString();
+				var strErro = ex.HResult.ToString();
                 var strMesagemErro = ex.Message;
 
                 try

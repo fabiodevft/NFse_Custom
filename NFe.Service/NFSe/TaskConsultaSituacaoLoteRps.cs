@@ -24,9 +24,6 @@ namespace NFe.Service.NFSe
         /// Esta herança que deve ser utilizada fora da classe para obter os valores das tag´s do pedido de consulta da situação do lote rps
         /// </summary>
         private DadosPedSitLoteRps oDadosPedSitLoteRps;
-        private string arquivo;
-
-        
 
         #endregion Objeto com os dados do XML de consulta situação do lote rps
 
@@ -282,7 +279,8 @@ namespace NFe.Service.NFSe
                             oDadosPedSitLoteRps.cMunicipio == 3530300 ||
                             oDadosPedSitLoteRps.cMunicipio == 4308904 ||
                             oDadosPedSitLoteRps.cMunicipio == 4118501 ||
-                            oDadosPedSitLoteRps.cMunicipio == 3554300)
+                            oDadosPedSitLoteRps.cMunicipio == 3554300 ||
+                            oDadosPedSitLoteRps.cMunicipio == 3542404)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
