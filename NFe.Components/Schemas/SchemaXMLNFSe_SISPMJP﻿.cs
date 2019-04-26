@@ -11,7 +11,7 @@ namespace NFe.Components.Schemas
         public static void CriarListaIDXML()
         {
             #region XML de Consulta de NFSe por Rps
-            SchemaXML.InfSchemas.Add("NFSE-SISPMJP﻿﻿-ConsultarNfsePorRps", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-SISPMJP-ConsultarNfseRpsEnvio", new InfSchema()
             {
                 Tag = "ConsultarNfsePorRps",
                 ID = SchemaXML.InfSchemas.Count + 1,

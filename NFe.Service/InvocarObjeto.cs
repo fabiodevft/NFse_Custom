@@ -830,7 +830,7 @@ namespace NFe.Service
                     strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cnpjcpfprestador, docXML.OuterXml, versaoXml });
                     break;
 
-                case PadroesNFSe.SALVADOR_BA://FABIO - FULLTIME
+                case PadroesNFSe.SALVADOR_BA:
 
                     switch (metodo)
                     {
