@@ -868,22 +868,22 @@ namespace NFe.Service
 
             #region gerar arquivos assinados(somente debug)
 
-#if DEBUG
-            string path = Application.StartupPath + "\\teste_assintura\\";
+//#if DEBUG
+//            string path = Application.StartupPath + "\\teste_assintura\\";
 
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
+//            if (!Directory.Exists(path))
+//            {
+//                Directory.CreateDirectory(path);
+//            }
 
-            StreamWriter sw = new StreamWriter(path + "nfseMsg_assinado.xml", true);
-            sw.Write(docXML.OuterXml);
-            sw.Close();
+//            StreamWriter sw = new StreamWriter(path + "nfseMsg_assinado.xml", true);
+//            sw.Write(docXML.OuterXml);
+//            sw.Close();
 
-            StreamWriter sw2 = new StreamWriter(path + "cabecMsg_assinado.xml", true);
-            sw2.Write(cabecMsg.ToString());
-            sw2.Close();
-#endif
+//            StreamWriter sw2 = new StreamWriter(path + "cabecMsg_assinado.xml", true);
+//            sw2.Write(cabecMsg.ToString());
+//            sw2.Close();
+//#endif
 
             #endregion gerar arquivos assinados(somente debug)
 
