@@ -322,7 +322,7 @@ namespace NFe.Components
             PedSubstNfse,
             PedSitNFSeRec,
             PedSitNFSeTom,
-			PedStaNFse,//FABIO - FULLTIME
+			PedStaNFse,
             /// <summary>
             /// CFSe
             /// </summary>

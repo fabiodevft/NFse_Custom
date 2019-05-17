@@ -823,7 +823,6 @@ namespace NFe.Service
     #endregion DadosPedSitNfse
 
     #region DadosPedStaNfse
-	//FABIO - FULLTIME
     /// <summary>
     /// Classe com os dados do XML da consulta de status da nfse por numero da nfse
     /// </summary>

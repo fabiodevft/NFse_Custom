@@ -1201,7 +1201,6 @@
       <ConsultarLoteRps>wsdl\homologacao\HSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
-	<!--FABIO FULLTIME-->
 	  <ConsultarStatusNFse>wsdl\homologacao\HSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalHomologacao>
     <LocalProducao>
@@ -1212,7 +1211,6 @@
       <ConsultarLoteRps>wsdl\producao\PSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
-	<!--FABIO FULLTIME-->	
   	<ConsultarStatusNFse>wsdl\producao\PSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalProducao>
   </Estado>

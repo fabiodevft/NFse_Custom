@@ -227,6 +227,9 @@
     <Compile Include="Pronin\VeraCruzRS\p\ProninP.cs" />
     <Compile Include="Pronin\ViamaoRS\h\ProninH.cs" />
     <Compile Include="Pronin\ViamaoRS\p\ProninP.cs" />
+    <Compile Include="SALVADOR_BA\SALVADOR_BA.cs" />
+    <Compile Include="SALVADOR_BA\SALVADOR_BABase.cs" />
+    <Compile Include="SALVADOR_BA\Salvador_BA\p\SalvadorP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_MEGASOFT.cs" />
@@ -686,6 +689,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\br.com.rlz.saturno.santafedosul.h\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\br.com.salvadorba.consultasituacao.p\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -2301,6 +2309,14 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.rlz.saturno.santafedosul.h\santafedosul.wsdl" />
+    <None Include="Web References\br.com.salvadorba.consultasituacao.p\ConsultaSituacaoNfse.wsdl" />
+    <None Include="Web References\br.com.salvadorba.consultasituacao.p\ConsultaSituacaoNfse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\br.com.salvadorba.consultasituacao.p\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\br.com.sigiss.barretos.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -6607,6 +6623,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PIconhaES_RpsServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfse.salvador.ba.gov.br/rps/CONSULTASITUACAONFSE/ConsultaSituacaoNfse.svc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.salvadorba.consultasituacao.p\</RelPath>
+      <UpdateFromURL>https://nfse.salvador.ba.gov.br/rps/CONSULTASITUACAONFSE/ConsultaSituacaoNfse.svc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_br_com_salvadorba_consultasituacao_p_ConsultaSituacaoNfse</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://testebotucatu.sigiss.com.br/botucatu/ws/sigiss_ws.php%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

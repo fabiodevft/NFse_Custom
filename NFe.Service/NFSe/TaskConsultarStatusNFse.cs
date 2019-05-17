@@ -1,12 +1,14 @@
 ﻿using NFe.Certificado;
 using NFe.Components;
 using NFe.Settings;
+using NFe.Components.SALVADOR_BA;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace NFe.Service.NFSe
 {
@@ -18,6 +20,12 @@ namespace NFe.Service.NFSe
         /// Esta herança que deve ser utilizada fora da classe para obter os valores das tag´s da consulta nfse
         /// </summary>
         private DadosPedStaNfse oDadosPedStaNfse;
+
+        public TaskConsultarStatusNFse(string arquivo)
+        {
+            Servico = Servicos.NFSeConsultarStatusNota;
+            NomeArquivoXML = arquivo;
+        }
 
         #endregion Objeto com os dados do XML da consulta nfse
 
@@ -50,7 +58,7 @@ namespace NFe.Service.NFSe
                 object pedStaNota = null;
                 if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, oDadosPedStaNfse.cMunicipio))
                 {
-                    wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosPedStaNfse.cMunicipio, 
+                    wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosPedStaNfse.cMunicipio,
                             oDadosPedStaNfse.tpAmb, oDadosPedStaNfse.tpEmis, padraoNFSe, oDadosPedStaNfse.cMunicipio);
                     if (wsProxy != null)
                         pedStaNota = wsProxy.CriarObjeto(wsProxy.NomeClasseWS);
@@ -64,10 +72,22 @@ namespace NFe.Service.NFSe
                 {
                     case PadroesNFSe.SALVADOR_BA:
 
+                        SALVADOR_BA salvador = new SALVADOR_BA((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                            Empresas.Configuracoes[emp].PastaXmlRetorno, 
+                            oDadosPedStaNfse.cMunicipio,
+                            Empresas.Configuracoes[emp].UsuarioWS,
+                            Empresas.Configuracoes[emp].SenhaWS,
+                            ConfiguracaoApp.ProxyUsuario,
+                            ConfiguracaoApp.ProxySenha,
+                            ConfiguracaoApp.ProxyServidor,
+                            Empresas.Configuracoes[emp].X509Certificado);
+
+                        //AssinaturaDigital ass = new AssinaturaDigital();
+                        //ass.Assinar(NomeArquivoXML, emp, oDadosPedStaNfse.cMunicipio);
                         
+                        salvador.ConsultarSituacaoNFSe(NomeArquivoXML);
                         break;
                 }
-
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosPedStaNfse.cMunicipio))
                 {

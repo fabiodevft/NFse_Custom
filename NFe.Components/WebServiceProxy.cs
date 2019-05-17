@@ -1051,7 +1051,7 @@ namespace NFe.Components
             RecepcionarLoteRps =
             ConsultaSequenciaLoteNotaRPS =
             ConsultarStatusNFse =
-            //FABIO - FULLTIME
+            
 
             ///
             /// CFS-e
@@ -1216,9 +1216,8 @@ namespace NFe.Components
         /// </summary>
         public string ConsultaNFSeRecebidas { get; set; }
 
-        //FABIO - FULLTIME
         /// <summary>
-        /// Substituir Nfse
+        /// Consultar status Nfse
         /// </summary>
         public string ConsultarStatusNFse { get; set; }
 

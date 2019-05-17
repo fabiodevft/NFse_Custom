@@ -846,7 +846,7 @@ namespace NFe.Service
                             retorna = "EnviarLoteRPS";
                             break;
 
-                        case Servicos.NFSeConsultarStatusNota: //FABIO - FULLTIME
+                        case Servicos.NFSeConsultarStatusNota:
                             retorna = "ConsultarSituacaoNfse";
                             break;
                     }
@@ -3032,6 +3032,11 @@ namespace NFe.Service
                             retorno = true;
                             break;
                     }
+                    break;
+                case PadroesNFSe.SALVADOR_BA:
+                    if(servico == Servicos.NFSeConsultarStatusNota)
+                        retorno = false;
+
                     break;
             }
 
