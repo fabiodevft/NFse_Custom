@@ -97,6 +97,20 @@ namespace NFSe.Components
                 //TagLoteAtributoId = "LoteRps",
                 TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
             });
+
+            SchemaXML.InfSchemas.Add("NFSE-GOVDIGITAL-EnviarLoteRpsSincronoEnvio", new InfSchema()
+            {
+                Tag = "EnviarLoteRpsSincronoEnvio",
+                ID = SchemaXML.InfSchemas.Count + 1,
+                ArquivoXSD = "NFSe\\GOVDIGITAL\\nfse.xsd",
+                Descricao = "XML de Lote RPS",
+                TagAssinatura = "EnviarLoteRpsSincronoEnvio",
+                TagAtributoId = "LoteRps",
+                TagLoteAssinatura = "Rps",
+                TagLoteAtributoId = "InfDeclaracaoPrestacaoServico",
+                TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
+            });
+
             #endregion
         }
     }

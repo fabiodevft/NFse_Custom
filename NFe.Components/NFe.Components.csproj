@@ -7209,6 +7209,8 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Coplan\RondonopolisMT\h\" />
+    <Folder Include="Coplan\RondonopolisMT\p\" />
     <Folder Include="EloTech\" />
     <Folder Include="EL\ColatinaES\h\" />
     <Folder Include="EL\SimoesFilhoBA\h\" />
