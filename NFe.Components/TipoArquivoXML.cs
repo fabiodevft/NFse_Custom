@@ -163,6 +163,22 @@ namespace NFe.Components
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3303609-";
                                 break;
 
+                            case 5005707: //Naviraí-MS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-5005707-";
+                                break;
+
+                            case 4314423: //Picada Café-RS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4314423-";
+                                break;
+
+                            case 3511102: //Catanduva-SP
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3511102-";
+                                break;
+
+                            case 3535804: //Paranapanema-SP
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3535804-";
+                                break;
+
                             default:
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-";
                                 break;
@@ -241,6 +257,7 @@ namespace NFe.Components
                                         {
                                             case "110110":  //XML de Evento da CCe
                                             case "110111":  //XML de Envio de evento de cancelamento
+                                            case "110112":  //XML de Envio de evento de cancelamento por substituição
                                             case "110113":  //XML de Envio do evento de contingencia EPEC, CTe
                                             case "110160":  //XML de Envio do evento de Registro Multimodal, CTe
                                             case "111500":  //Evento pedido de prorrogação 1º. prazo

@@ -157,14 +157,23 @@ namespace NFe.ConvertTxt
     }
     public enum TpcnOrigemMercadoria
     {
+        [Description("0 - Nacional")]
         oeNacional = 0,
+        [Description("1 - Estrangeira - Importação direta")]
         oeEstrangeiraImportacaoDireta = 1,
+        [Description("2 - Estrangeira - Adquirida no mercado interno")]
         oeEstrangeiraAdquiridaBrasil = 2,
+        [Description("3 - Nacional - Mercadoria ou bem com Conteúdo de Importação > 40 % e < 70 % ")]
 		oeNacional_Mercadoria_ou_bem_com_Conteúdo_de_Importação_superior_a_40 = 3,
+        [Description("4 - Nacional - Cuja produção tenha sido feita em conformidade com o PPB")]
         oeNacional_Cuja_produção_tenha_sido_feita_em_conformidade_com_o_PPB = 4,
+        [Description("5 - Nacional - Mercadoria com bem ou conteúdo de importação inferior a 40%")]
         oeNacional_Mercadoria_com_bem_ou_conteúdo_de_importação_inferior_a_40 = 5,
+        [Description("6 - Estrangeira - Importação direta, sem similar nacional")]
         oeEstrangeira_Importação_direta_sem_similar_nacional = 6,
+        [Description("7 - Estrangeira - Adquirida no mercado interno com similar nacional.")]
         oeEstrangeira_Adquirida_no_mercado_interno_com_similar_nacional = 7,
+        [Description("8 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70%")]
         oeEstrangeira_Nacional_Conteúdo_de_Importação_superior_a_70 = 8
     }
     public enum TpcnTipoArma 
@@ -255,6 +264,8 @@ namespace NFe.ConvertTxt
         tpEvCCe = 110110,
         [Description("Cancelamento")]
         tpEvCancelamentoNFe = 110111,
+        [Description("Cancelamento por substituicao")]
+        tpEvCancelamentoSubstituicaoNFCe = 110112,
         [Description("Confirmacao da Operacao")]
         tpEvConfirmacaoOperacao = 210200,
         [Description("Ciencia da Operacao")]
@@ -266,7 +277,7 @@ namespace NFe.ConvertTxt
         [Description("Operação nao Realizada")]
         tpEvOperacaoNaoRealizada = 210240,
         [Description("Encerramento MDFe")]
-        tpEvEncerramentoMDFe = 110112,
+        tpEvEncerramentoMDFe = 1101120, //O código correto do evento é 110112, mas como tem o evento de cancelamento por substituição da nfce que tem o mesmo número acrescentamos um zero no final para não gerar conflito. Wandrey/André
         [Description("Inclusao de condutor")]
         tpEvInclusaoCondutor = 110114,
         [Description("Registro de passagem")]

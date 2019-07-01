@@ -61,6 +61,22 @@ namespace NFe.Components.Pronin
                                 proninService = new RegenteFeijoSP.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
+                            case 5005707: //Navirai-SP
+                                proninService = new NaviraiMS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4314423: //Picada Café-RS
+                                proninService = new PicadaCafeRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 3511102: //Catanduva-SP
+                                proninService = new Catanduva.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 3535804: //Paranapanema-SP
+                                proninService = new ParanapanemaSP.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
@@ -117,6 +133,22 @@ namespace NFe.Components.Pronin
 
                             case 3542404: //Regente Feijó-SP
                                 proninService = new RegenteFeijoSP.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 5005707: //Naviraí-MS
+                                proninService = new NaviraiMS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4314423: //Picada Café-RS
+                                proninService = new PicadaCafeRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 3511102: //Catanduva-SP 
+                                proninService = new Catanduva.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 3535804: //Paranapanema-SP
+                                proninService = new ParanapanemaSP.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             default:

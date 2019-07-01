@@ -22,7 +22,6 @@ namespace NFe.Service
         #endregion Objetos
 
         #region Métodos
-
         #region Invocar()
 
         /// <summary>
@@ -830,7 +829,19 @@ namespace NFe.Service
                     strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cnpjcpfprestador, docXML.OuterXml, versaoXml });
                     break;
 
-                case PadroesNFSe.SALVADOR_BA:
+                case PadroesNFSe.SMARAPD_204:
+#if _fw46
+                    dynamic smarapdOutput = Activator.CreateInstance(servicoWS.GetType().GetMethod(metodo).ReturnType);
+                    dynamic smarapdInput = Activator.CreateInstance(servicoWS.GetType().GetMethod(metodo).GetParameters()[0].ParameterType);
+                    smarapdInput.nfseCabecMsg = cabecMsg;
+                    smarapdInput.nfseDadosMsg = docXML.OuterXml;
+
+                    smarapdOutput = wsProxy.Invoke(servicoWS, metodo, new object[] { smarapdInput });
+                    strRetorno = smarapdOutput.outputXML;
+#endif
+                    break;
+				
+				case PadroesNFSe.SALVADOR_BA:
 
                     switch (metodo)
                     {
@@ -868,22 +879,22 @@ namespace NFe.Service
 
             #region gerar arquivos assinados(somente debug)
 
-//#if DEBUG
-//            string path = Application.StartupPath + "\\teste_assintura\\";
+#if DEBUG
+            string path = Application.StartupPath + "\\teste_assintura\\";
 
-//            if (!Directory.Exists(path))
-//            {
-//                Directory.CreateDirectory(path);
-//            }
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
 
-//            StreamWriter sw = new StreamWriter(path + "nfseMsg_assinado.xml", true);
-//            sw.Write(docXML.OuterXml);
-//            sw.Close();
+            StreamWriter sw = new StreamWriter(path + "nfseMsg_assinado.xml", true);
+            sw.Write(docXML.OuterXml);
+            sw.Close();
 
-//            StreamWriter sw2 = new StreamWriter(path + "cabecMsg_assinado.xml", true);
-//            sw2.Write(cabecMsg.ToString());
-//            sw2.Close();
-//#endif
+            StreamWriter sw2 = new StreamWriter(path + "cabecMsg_assinado.xml", true);
+            sw2.Write(cabecMsg.ToString());
+            sw2.Close();
+#endif
 
             #endregion gerar arquivos assinados(somente debug)
 

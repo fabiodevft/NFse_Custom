@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Xml;
 
 namespace NFSe.Components
 {
@@ -95,6 +96,14 @@ namespace NFSe.Components
 
                 case 4211801: // Ouro-SC
                     return 8231;
+
+                case 4119152: // Pinhais-PR
+                    return 5453;
+
+                case 4127205: // Terra Boa - PR
+
+                case 4313508: // Osório-RS 
+                    return 8773;
             }
 
             return 0;
@@ -125,6 +134,12 @@ namespace NFSe.Components
         public override void ConsultarNfse(string file)
         {
             string result = EnviaXML(file);
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(result);
+            doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
+
+            result = doc.OuterXml;
 
             GerarRetorno(file, result, Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSe).EnvioXML,
                 Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSe).RetornoXML);

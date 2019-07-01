@@ -790,11 +790,23 @@ namespace NFe.Components
         SIGCORP_SIGISS,
 
         /// <summary>
+        /// SigCorp_SigISS versao 2.03
+        /// </summary>
+        [Description("SigCorp/SigISS")]
+        SIGCORP_SIGISS_203,
+
+        /// <summary>
         /// Padrão SmaraPD
         /// Prefeitura de Sertãozinho - SP
         /// </summary>
         [Description("SmaraPD")]
         SMARAPD,
+
+        /// <summary>
+        /// SMARAPD na versão 2.04
+        /// </summary>
+        [Description("SmaraPD")]
+        SMARAPD_204,
 
         /// <summary>
         /// Padrão Fiorilli

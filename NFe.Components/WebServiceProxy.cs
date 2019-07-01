@@ -172,7 +172,11 @@ namespace NFe.Components
                                     cMunicipio == 4308904 ||
                                     cMunicipio == 4118501 ||
                                     cMunicipio == 3554300 ||
-                                    cMunicipio == 3542404)
+                                    cMunicipio == 3542404 ||
+                                    cMunicipio == 5005707 ||
+                                    cMunicipio == 4314423 ||
+                                    cMunicipio == 3511102 ||
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEGeracao";
                                 else
                                     return "basic_INFSEGeracao";
@@ -184,9 +188,13 @@ namespace NFe.Components
                                     cMunicipio == 4322509 ||
                                     cMunicipio == 3512803 ||
                                     cMunicipio == 4308904 ||
-                                    cMunicipio == 4118501 || 
+                                    cMunicipio == 4118501 ||
                                     cMunicipio == 3554300 ||
-                                    cMunicipio == 3542404)
+                                    cMunicipio == 3542404 ||
+                                    cMunicipio == 5005707 ||
+                                    cMunicipio == 4314423 ||
+                                    cMunicipio == 3511102 ||
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEGeracao";
                                 else
                                     return "basic_INFSEGeracao";
@@ -197,7 +205,11 @@ namespace NFe.Components
                                     cMunicipio == 4303004 ||
                                     cMunicipio == 4322509 ||
                                     cMunicipio == 3556602 ||
-                                    cMunicipio == 4308904)
+                                    cMunicipio == 4308904 ||
+                                    cMunicipio == 5005707 ||
+                                    cMunicipio == 4314423 ||
+                                    cMunicipio == 3511102 ||
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEConsultas";
                                 else
                                     return "basic_INFSEConsultas";
@@ -516,7 +528,11 @@ namespace NFe.Components
 #else
             SecurityProtocolType securityProtocolType = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
 #endif
-            if (cUF == 2910800) //Feira de Santana
+
+            string cUFs = "3106200 / "; // Belo Horizonte
+            cUFs += "2910800 / "; //Feira de Santana
+
+            if (cUFs.Contains(cUF.ToString()))
             {
                 securityProtocolType = SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
             }
@@ -1051,7 +1067,6 @@ namespace NFe.Components
             RecepcionarLoteRps =
             ConsultaSequenciaLoteNotaRPS =
             ConsultarStatusNFse =
-            
 
             ///
             /// CFS-e
@@ -1221,7 +1236,7 @@ namespace NFe.Components
         /// </summary>
         public string ConsultarStatusNFse { get; set; }
 
-		/// <summary>
+        /// <summary>
         /// Consultar as NFS-e tomados
         /// </summary>
         public string ConsultaNFSeTomados { get; set; }

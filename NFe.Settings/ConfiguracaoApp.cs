@@ -1389,13 +1389,13 @@ namespace NFe.Settings
                                             if ((erro = this.AddEmpresaNaLista(emp.PastaBackup)) == "")
                                                 erro = this.AddEmpresaNaLista(emp.PastaDownloadNFeDest);
 
-                if ((emp.Servico == TipoAplicativo.Nfe ||
-                    emp.Servico == TipoAplicativo.NFCe ||
-                    emp.Servico == TipoAplicativo.Todos)
-                    && emp.UnidadeFederativaCodigo == 35 && emp.IndSinc == true)
-                {
-                    erro += "\r\nEstado de São Paulo não dispõe do serviço síncrono para emissão de NFe.".TrimStart(new char[] { '\r', '\n' });
-                }
+                //if ((emp.Servico == TipoAplicativo.Nfe ||
+                //    emp.Servico == TipoAplicativo.NFCe ||
+                //    emp.Servico == TipoAplicativo.Todos)
+                //    && emp.UnidadeFederativaCodigo == 35 && emp.IndSinc == true)
+                //{
+                //    erro += "\r\nEstado de São Paulo não dispõe do serviço síncrono para emissão de NFe.".TrimStart(new char[] { '\r', '\n' });
+                //}
 
                 if (erro != "")
                 {
@@ -2026,7 +2026,6 @@ namespace NFe.Settings
                         /// salva a configuracao da empresa
                         ///
 
-                        //Na reconfiguração enviada pelo ERP, não vou validar o certificado, vou deixar gravar mesmo que o certificado esteja com problema. Wandrey 05/10/2012
                         Empresas.Configuracoes[emp].SalvarConfiguracao(false, true);
 
                         /// salva o arquivo da lista de empresas

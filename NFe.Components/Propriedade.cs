@@ -323,6 +323,7 @@ namespace NFe.Components
             PedSitNFSeRec,
             PedSitNFSeTom,
 			PedStaNFse,
+
             /// <summary>
             /// CFSe
             /// </summary>
@@ -704,7 +705,6 @@ namespace NFe.Components
                     "-stanfse.xml", "",
                     "",
                     "Pedido de Status da nota (NFSe)"));
-
 
                 #endregion Extensoes da NFSe
 

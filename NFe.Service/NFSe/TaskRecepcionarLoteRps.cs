@@ -226,19 +226,9 @@ namespace NFe.Service.NFSe
                                     envLoteRps = new Components.PSenadorCanedoGO.nfseWS();
                                     break;
                             }
-
                         }
                         else
-                        {
-                            switch (oDadosEnvLoteRps.cMunicipio)
-                            {
-                                case 5211800: //Jaraguá - GO
-                                    throw new Exception("Município de Jaraguá-GO não dispõe de ambiente de homologação para envio de NFS-e em teste.");
-                                    
-                                case 5220454: //Senador Canedo - GO
-                                    throw new Exception("Município de Senador Canedo-GO não dispõe de ambiente de homologação para envio de NFS-e em teste.");
-                            }
-                        }                            
+                            throw new Exception("Este município não dispõe de ambiente de homologação para envio de NFS-e em teste.");
                         break;
 
                     case PadroesNFSe.PORTOVELHENSE:
@@ -282,16 +272,17 @@ namespace NFe.Service.NFSe
                     #endregion SystemPro
 
                     case PadroesNFSe.SIGCORP_SIGISS:
-
-                        #region SigCorp
-
                         SigCorp sigcorp = new SigCorp((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                             Empresas.Configuracoes[emp].PastaXmlRetorno,
                             oDadosEnvLoteRps.cMunicipio);
                         sigcorp.EmiteNF(NomeArquivoXML);
                         break;
 
-                    #endregion SigCorp
+                    case PadroesNFSe.SIGCORP_SIGISS_203:
+                        Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.SIGCORP_SIGISS_203);
+
+                        cabecMsg = "<cabecalho versao=\"2.03\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.03</versaoDados></cabecalho>";
+                        break;
 
                     case PadroesNFSe.FIORILLI:
 
@@ -581,7 +572,11 @@ namespace NFe.Service.NFSe
                             oDadosEnvLoteRps.cMunicipio == 4308904 ||
                             oDadosEnvLoteRps.cMunicipio == 4118501 ||
                             oDadosEnvLoteRps.cMunicipio == 3554300 ||
-                            oDadosEnvLoteRps.cMunicipio == 3542404)
+                            oDadosEnvLoteRps.cMunicipio == 3542404 ||
+                            oDadosEnvLoteRps.cMunicipio == 5005707 ||
+                            oDadosEnvLoteRps.cMunicipio == 4314423 ||
+                            oDadosEnvLoteRps.cMunicipio == 3511102 ||
+                            oDadosEnvLoteRps.cMunicipio == 3535804)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -803,6 +798,11 @@ namespace NFe.Service.NFSe
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.SISPMJP);
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
+
+                    case PadroesNFSe.SMARAPD_204:
+                        Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.SMARAPD_204);
+                        cabecMsg = "<cabecalho versao=\"2.04\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))
@@ -858,9 +858,8 @@ namespace NFe.Service.NFSe
                 }
             }
         }
-               
 
-        #region EncryptAssinatura()
+#region EncryptAssinatura()
 
         /// <summary>
         /// Encriptar a tag Assinatura quando for município de Blumenau - SC

@@ -61,7 +61,9 @@ namespace NFe.Service.NFSe
                     wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosPedStaNfse.cMunicipio,
                             oDadosPedStaNfse.tpAmb, oDadosPedStaNfse.tpEmis, padraoNFSe, oDadosPedStaNfse.cMunicipio);
                     if (wsProxy != null)
+                    {
                         pedStaNota = wsProxy.CriarObjeto(wsProxy.NomeClasseWS);
+                    }
                 }
 
                 System.Net.SecurityProtocolType securityProtocolType = WebServiceProxy.DefinirProtocoloSeguranca(oDadosPedStaNfse.cMunicipio, oDadosPedStaNfse.tpAmb, oDadosPedStaNfse.tpEmis, padraoNFSe, Servico);
@@ -106,7 +108,9 @@ namespace NFe.Service.NFSe
                     string filenameFTP = Path.Combine(Empresas.Configuracoes[emp].PastaXmlRetorno,
                                                         Functions.ExtrairNomeArq(NomeArquivoXML, Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSe).EnvioXML) + Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSe).RetornoXML);
                     if (File.Exists(filenameFTP))
+                    {
                         new GerarXML(emp).XmlParaFTP(emp, filenameFTP);
+                    }
                 }
             }
             catch (Exception ex)

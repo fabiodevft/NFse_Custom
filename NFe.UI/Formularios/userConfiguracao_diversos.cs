@@ -154,17 +154,17 @@ namespace NFe.UI.Formularios
                 checkBoxGravarEventosCancelamentoNaPastaEnviadosNFe.Checked = this.empresa.GravarEventosCancelamentoNaPastaEnviadosNFe;
                 checkBoxArqNSU.Checked = this.empresa.ArqNSU;
 
-                // São Paulo não possui processo síncrono
-                if (this.empresa.UnidadeFederativaCodigo == 35)
-                {
-                    cbIndSinc.Checked =
-                    cbIndSinc.Enabled = false;
-                }
-                else
-                {
-                    cbIndSinc.Enabled = true;
-                    cbIndSinc.Checked = this.empresa.IndSinc;
-                }
+                //// São Paulo não possui processo síncrono
+                //if (this.empresa.UnidadeFederativaCodigo == 35)
+                //{
+                //    cbIndSinc.Checked =
+                //    cbIndSinc.Enabled = false;
+                //}
+                //else
+                //{
+                cbIndSinc.Enabled = true;
+                cbIndSinc.Checked = this.empresa.IndSinc;
+                //}
 
                 edtIdentificadorCSC.Text = this.empresa.IdentificadorCSC;
                 edtTokenCSC.Text = this.empresa.TokenCSC;
@@ -179,7 +179,7 @@ namespace NFe.UI.Formularios
 #if _fw46
                 if (empresa.UnidadeFederativaCodigo.Equals(4205407))
                 {
-                    var result = empresa.RecuperarConfiguracaoNFSeSoftplan(empresa.CNPJ);
+                    Empresa result = empresa.RecuperarConfiguracaoNFSeSoftplan(empresa.CNPJ);
 
                     txtClienteID.Text = result.ClientID;
                     txtClientSecret.Text = result.ClientSecret;
@@ -310,7 +310,9 @@ namespace NFe.UI.Formularios
                 string.IsNullOrEmpty(txtSenhaWS.Text) ||
                 string.IsNullOrEmpty(txtClienteID.Text) ||
                 string.IsNullOrEmpty(txtClientSecret.Text))
+                {
                     throw new Exception("As seguintes informações tem que estarem todas informadas: Usuário, Senha, ClientID e ClientSecret");
+                }
 
                 IWebProxy proxy = null;
 
@@ -337,14 +339,14 @@ namespace NFe.UI.Formularios
                     url = @"https://nfps-e.pmf.sc.gov.br/api/v1/";
                 }
 
-                var token = Token.GerarToken(proxy,
+                Token token = Token.GerarToken(proxy,
                                              txtUsuarioWS.Text,
                                              txtSenhaWS.Text,
                                              txtClienteID.Text,
                                              txtClientSecret.Text,
                                              url);
 
-                var tokenNFSeExpire = DateTime.Now.AddSeconds(token.ExpiresIn);
+                DateTime tokenNFSeExpire = DateTime.Now.AddSeconds(token.ExpiresIn);
 
                 empresa.SalvarConfiguracoesNFSeSoftplan(txtUsuarioWS.Text,
                                                         txtSenhaWS.Text,
@@ -413,7 +415,6 @@ namespace NFe.UI.Formularios
                            ufCod == 4104204 /*Campo Largo*/||
                            ufCod == 3537305 /*Penapolis*/||
                            ufCod == 4309209 /*Gravataí*/||
-                           ufCod == 3551702 /*Sertãozinho*/||
                            ufCod == 3201308 /*Cariacica*/||
                            ufCod == 3538709 /*Piracicaba*/||
                            ufCod == 2930709 /*Simões Filho*/||
@@ -425,7 +426,6 @@ namespace NFe.UI.Formularios
                            ufCod == 3201506 /*Colatina*/||
                            ufCod == 4118204 /*Paranaguá*/||
                            ufCod == 3130309 /*Iguatama*/||
-                           ufCod == 3504503 /*Avaré*/||
                            ufCod == 3541406 /*Presidente Prudente-SP*/||
                            ufCod == 4217808 /*Taió-SC*/||
                            ufCod == 4101101 /*Andirá-PR*/||
@@ -469,7 +469,16 @@ namespace NFe.UI.Formularios
                            ufCod == 4207502 /*Indaial-SC*/ ||
                            ufCod == 4211801 /*Ouro-SC*/ ||
                            ufCod == 3500501 /*Aguas de Lindoia-SP*/ ||
-                           ufCod == 3523107 /*Itaquaquecetuba-SP*/;
+                           ufCod == 3523107 /*Itaquaquecetuba-SP*/ ||
+                           ufCod == 3143104 /*Monte Carnmelo-MG*/||
+                           ufCod == 2931350 /*Teixeira de Freitas-BA*/||
+                           ufCod == 3205101 /*Viana-ES*/ ||
+                           ufCod == 3202405 /*Guarapari-ES*/ ||
+                           ufCod == 3157005 /*Salinas-MG*/ ||
+                           ufCod == 3141108 /*Matozinhos-MG*/||
+                           ufCod == 4119152 /*Pinhais-PR*/||
+                           ufCod == 4127205 /*Terra Boa-PR*/||
+                           ufCod == 4313508 /*Osório-RS */;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
@@ -682,7 +691,7 @@ namespace NFe.UI.Formularios
                     lbl_udDiasLimpeza.Location = new System.Drawing.Point(3, 147);
                     udDiasLimpeza.Location = new System.Drawing.Point(3, 166);
                     break;
-
+              
                 default:
                     labelUF.Visible = true;
                     labelUF.Text = "Unidade Federativa (UF)";
