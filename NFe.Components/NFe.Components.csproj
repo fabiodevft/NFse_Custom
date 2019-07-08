@@ -48,7 +48,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>C:\Unimake\Compile\</OutputPath>
+    <OutputPath>C:\Unimake\Executavel\</OutputPath>
     <DefineConstants>TRACE;_fw46</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -241,9 +241,9 @@
     <Compile Include="Pronin\ViamaoRS\p\ProninP.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\h\Rlz_InformaticaH.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\p\Rlz_InformaticaP.cs" />
-	<Compile Include="SALVADOR_BA\SALVADOR_BA.cs" />
-	<Compile Include="SALVADOR_BA\SALVADOR_BABase.cs" />
-	<Compile Include="SALVADOR_BA\Salvador_BA\p\SalvadorP.cs" />
+    <Compile Include="SALVADOR_BA\SALVADOR_BA.cs" />
+    <Compile Include="SALVADOR_BA\SALVADOR_BABase.cs" />
+    <Compile Include="SALVADOR_BA\Salvador_BA\p\SalvadorP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_MEGASOFT.cs" />
@@ -698,7 +698,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-	<Compile Include="Web References\br.com.salvadorba.consultasituacao.p\Reference.cs">
+    <Compile Include="Web References\br.com.salvadorba.consultasituacao.p\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
