@@ -50,9 +50,9 @@ namespace NFe.Settings
         public static void WriteLog(string msg, bool gravarStackTrace)
         {
             if (string.IsNullOrEmpty(msg)) return;
-#if DEBUG
-            System.Diagnostics.Debug.WriteLine(msg);
-#endif
+//#if DEBUG
+//            System.Diagnostics.Debug.WriteLine(msg);
+//#endif
             if (ConfiguracaoApp.GravarLogOperacoesRealizadas)
             {
                 int emp = -1;

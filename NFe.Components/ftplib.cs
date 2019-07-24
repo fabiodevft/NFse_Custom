@@ -304,12 +304,12 @@ namespace NFe.Components
         {
             Byte[] cmd = Encoding.ASCII.GetBytes((command + "\r\n").ToCharArray());
 
-#if (FTP_DEBUG)
-			if (command.Length > 3 && command.Substring(0, 4) == "PASS")
-				Console.WriteLine("\rPASS xxx");
-			else
-				Console.WriteLine("\r" + command);
-#endif
+//#if (FTP_DEBUG)
+//			if (command.Length > 3 && command.Substring(0, 4) == "PASS")
+//				Console.WriteLine("\rPASS xxx");
+//			else
+//				Console.WriteLine("\r" + command);
+//#endif
 
             main_sock.Send(cmd, cmd.Length, 0);
         }
@@ -380,9 +380,9 @@ namespace NFe.Components
                 //buf = GetLineFromBucket();
                 buf = GetLineFromBucket();
 
-#if (FTP_DEBUG)
-				Console.WriteLine(buf);
-#endif
+//#if (FTP_DEBUG)
+//				Console.WriteLine(buf);
+//#endif
                 // the server will respond with "000-Foo bar" on multi line responses
                 // "000 Foo bar" would be the last line it sent for that response.
                 // Better example:
@@ -445,31 +445,31 @@ namespace NFe.Components
 
                 try
                 {
-#if (FTP_DEBUG)
-					Console.WriteLine("Data socket: {0}:{1}", server, port);
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Data socket: {0}:{1}", server, port);
+//#endif
                     CloseDataSocket();
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Creating socket...");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Creating socket...");
+//#endif
                     data_sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Resolving host");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Resolving host");
+//#endif
 
                     data_ipEndPoint = new IPEndPoint(Dns.GetHostEntry(server).AddressList[0], port);
 
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Connecting..");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Connecting..");
+//#endif
                     data_sock.Connect(data_ipEndPoint);
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Connected.");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Connected.");
+//#endif
                 }
                 catch (Exception ex)
                 {
@@ -482,19 +482,19 @@ namespace NFe.Components
 
                 try
                 {
-#if (FTP_DEBUG)
-					Console.WriteLine("Data socket (active mode)");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Data socket (active mode)");
+//#endif
                     CloseDataSocket();
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Creating listening socket...");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Creating listening socket...");
+//#endif
                     listening_sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-#if (FTP_DEBUG)
-					Console.WriteLine("Binding it to local address/port");
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Binding it to local address/port");
+//#endif
                     // for the PORT command we need to send our IP address; let's extract it
                     // from the LocalEndPoint of the main socket, that's already connected
                     string sLocAddr = main_sock.LocalEndPoint.ToString();
@@ -515,9 +515,9 @@ namespace NFe.Components
                         throw new Exception("Failed to parse the local address: " + sLocAddr);
                     }
                     int nPort = int.Parse(sLocAddr.Substring(ix + 1));
-#if (FTP_DEBUG)
-					Console.WriteLine("Listening on {0}:{1}", sIPAddr, nPort);
-#endif
+//#if (FTP_DEBUG)
+//					Console.WriteLine("Listening on {0}:{1}", sIPAddr, nPort);
+//#endif
                     // start to listen for a connection request from the host (note that
                     // Listen is not blocking) and send the PORT command
                     listening_sock.Listen(1);
@@ -544,9 +544,9 @@ namespace NFe.Components
 
             try
             {
-#if (FTP_DEBUG)
-				Console.WriteLine("Accepting the data connection.");
-#endif
+//#if (FTP_DEBUG)
+//				Console.WriteLine("Accepting the data connection.");
+//#endif
                 data_sock = listening_sock.Accept();	// Accept is blocking
                 listening_sock.Close();
                 listening_sock = null;
@@ -556,9 +556,9 @@ namespace NFe.Components
                     throw new Exception("Winsock error: " +
                         Convert.ToString(System.Runtime.InteropServices.Marshal.GetLastWin32Error()));
                 }
-#if (FTP_DEBUG)
-				Console.WriteLine("Connected.");
-#endif
+//#if (FTP_DEBUG)
+//				Console.WriteLine("Connected.");
+//#endif
             }
             catch (Exception ex)
             {
@@ -569,20 +569,20 @@ namespace NFe.Components
 
         private void CloseDataSocket()
         {
-#if (FTP_DEBUG)
-			Console.WriteLine("Attempting to close data channel socket...");
-#endif
+//#if (FTP_DEBUG)
+//			Console.WriteLine("Attempting to close data channel socket...");
+//#endif
             if (data_sock != null)
             {
                 if (data_sock.Connected)
                 {
-#if (FTP_DEBUG)
-						Console.WriteLine("Closing data channel socket!");
-#endif
+//#if (FTP_DEBUG)
+//						Console.WriteLine("Closing data channel socket!");
+//#endif
                     data_sock.Close();
-#if (FTP_DEBUG)
-						Console.WriteLine("Data channel socket closed!");
-#endif
+//#if (FTP_DEBUG)
+//						Console.WriteLine("Data channel socket closed!");
+//#endif
                 }
                 data_sock = null;
             }
@@ -819,9 +819,9 @@ namespace NFe.Components
             ReadResponse();
             if (response != 213)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
 
@@ -894,9 +894,9 @@ namespace NFe.Components
 
             if (response != 250)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
         }
@@ -925,9 +925,9 @@ namespace NFe.Components
                 case 250:
                     break;
                 default:
-#if (FTP_DEBUG)
-                    Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//                    Console.Write("\r" + responseStr);
+//#endif
                     throw new Exception(responseStr);
             }
         }
@@ -962,9 +962,9 @@ namespace NFe.Components
             ReadResponse();
             if (response != 250)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
         }
@@ -979,9 +979,9 @@ namespace NFe.Components
             ReadResponse();
             if (response != 250)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
         }
@@ -997,9 +997,9 @@ namespace NFe.Components
             ReadResponse();
             if (response != 350)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
             else
@@ -1008,9 +1008,9 @@ namespace NFe.Components
                 ReadResponse();
                 if (response != 250)
                 {
-#if (FTP_DEBUG)
-					Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//					Console.Write("\r" + responseStr);
+//#endif
                     throw new Exception(responseStr);
                 }
             }
@@ -1027,9 +1027,9 @@ namespace NFe.Components
             ReadResponse();
             if (response != 213)
             {
-#if (FTP_DEBUG)
-				Console.Write("\r" + responseStr);
-#endif
+//#if (FTP_DEBUG)
+//				Console.Write("\r" + responseStr);
+//#endif
                 throw new Exception(responseStr);
             }
 

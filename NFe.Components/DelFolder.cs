@@ -47,9 +47,9 @@ namespace NFe.Components
         #region Build directory and file list
         private static bool BuildDirectoryList(string path)
         {
-#if DEBUG
-            Console.WriteLine(Environment.NewLine + "DELTREE deleting tree structure " + "'" + path + "' ..." + Environment.NewLine);
-#endif
+//#if DEBUG
+//            Console.WriteLine(Environment.NewLine + "DELTREE deleting tree structure " + "'" + path + "' ..." + Environment.NewLine);
+//#endif
             try
             {
                 var directories = new List<string> { path };
@@ -63,13 +63,13 @@ namespace NFe.Components
             }
             catch (Exception ex)
             {
-#if DEBUG
-                Console.WriteLine("DELTREE error: " + ex.Message);
-                return false;
-#else
+//#if DEBUG
+//                Console.WriteLine("DELTREE error: " + ex.Message);
+//                return false;
+//#else
                 if (!_quiet)
                     throw ex;
-#endif
+//#endif
             }
             return true;
         }
@@ -81,9 +81,9 @@ namespace NFe.Components
             /* Nothing to do */
             if (StackTree.Count == 0)
             {
-#if DEBUG
-                Console.WriteLine("DELTREE error: Nothing to delete!");
-#endif
+//#if DEBUG
+//                Console.WriteLine("DELTREE error: Nothing to delete!");
+//#endif
                 return;
             }
             var fileCount = 0;
@@ -98,56 +98,56 @@ namespace NFe.Components
                 {
                     foreach (var f in dtData.Files)
                     {
-#if DEBUG
-                        if (!_quiet) { Console.WriteLine("Deleting file: " + f); }
-#endif
+//#if DEBUG
+//                        if (!_quiet) { Console.WriteLine("Deleting file: " + f); }
+//#endif
                         try
                         {
                             File.Delete(f);
                         }
                         catch (Exception ex)
                         {
-#if DEBUG
-                            Console.WriteLine("DELTREE error: " + ex.Message);
-                            return;
-#else
+//#if DEBUG
+//                            Console.WriteLine("DELTREE error: " + ex.Message);
+//                            return;
+//#else
                             if (!_quiet)
                                 throw ex;
-#endif
+//#endif
                         }
                         ++fileCount;
                     }
                 }
 
-#if DEBUG
-                /* Remove directory */
-                if (!_quiet)
-                {
-                    Console.WriteLine("Removing directory: " + dtData.PathName);
-                }
-#endif
+//#if DEBUG
+//                /* Remove directory */
+//                if (!_quiet)
+//                {
+//                    Console.WriteLine("Removing directory: " + dtData.PathName);
+//                }
+//#endif
                 try
                 {
                     Directory.Delete(dtData.PathName);
                 }
                 catch (Exception ex)
                 {
-#if DEBUG
-                    Console.WriteLine("DELTREE error: " + ex.Message);
-                    return;
-#else
+//#if DEBUG
+//                    Console.WriteLine("DELTREE error: " + ex.Message);
+//                    return;
+//#else
                     if (!_quiet)
                         throw ex;
-#endif
+//#endif
                 }
                 ++directoryCount;
             }
-#if DEBUG
-            Console.WriteLine(
-                (!_quiet ? Environment.NewLine : null) +
-                "DELTREE removed {0} file(s) and {1} directory(ies) ({2} total objects removed)",
-                fileCount, directoryCount, fileCount + directoryCount);
-#endif
+//#if DEBUG
+//            Console.WriteLine(
+//                (!_quiet ? Environment.NewLine : null) +
+//                "DELTREE removed {0} file(s) and {1} directory(ies) ({2} total objects removed)",
+//                fileCount, directoryCount, fileCount + directoryCount);
+//#endif
         }
         #endregion
     }

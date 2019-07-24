@@ -348,16 +348,16 @@ namespace NFe.Threadings
                 //need to do something?
             }
 
-#if DEBUG
-            Debug.WriteLine(String.Format("ThreadItem Dipose(disposing: {0});", disposing));
-#endif
+//#if DEBUG
+//            Debug.WriteLine(String.Format("ThreadItem Dipose(disposing: {0});", disposing));
+//#endif
         }
 
         ~ThreadItem()
         {
-#if DEBUG
-            Debug.WriteLine("ThreadItem ~Destructor");
-#endif
+//#if DEBUG
+//            Debug.WriteLine("ThreadItem ~Destructor");
+//#endif
 
             Dispose(false);
         }

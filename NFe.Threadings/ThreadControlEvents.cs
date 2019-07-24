@@ -25,9 +25,9 @@ namespace NFe.Threadings
         /// <param name="item"></param>
         protected void ThreadItem_OnStarted(ThreadItem item)
         {
-#if DEBUG
-            Debug.WriteLine(String.Format("Contagem em processamento: '{0}'.", FileSystemWatcher._pool.GetLifetimeService()));
-#endif
+//#if DEBUG
+//            Debug.WriteLine(String.Format("Contagem em processamento: '{0}'.", FileSystemWatcher._pool.GetLifetimeService()));
+//#endif
             Auxiliar.WriteLog("O arquivo " + item.FileInfo.FullName + " iniciou o processamento (Data criação: " + item.FileInfo.LastWriteTime + ")", false);
             Processar(item);
         }
