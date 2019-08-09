@@ -4555,6 +4555,21 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSabaraMG-SUPERNOVA.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HRondonopolisMT-COPLAN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PRondonopolisMT-COPLAN.wsdl" />
+    <None Include="NFse\schemas\NFSe\VERSATECNOLOGIA\nfse_v201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_CancelarNfse.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfse.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_RecepcionarLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_CancelarNfse.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfse.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_RecepcionarLoteRps.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">
@@ -4570,6 +4585,7 @@
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HJoinvilleSC.wsdl" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

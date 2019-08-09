@@ -902,24 +902,6 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3169901" Nome="Ubá - MG" UF="MG" Padrao="GINFES">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="4209300" Nome="Lages - SC" UF="SC" Padrao="BETHA">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
@@ -7750,6 +7732,64 @@
       <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2503209" Nome="Cabedelo - PB" UF="PB" Padrao="TINUS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCabedeloPB_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCabedeloPB_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCabedeloPB_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCabedeloPB_TINUS_CancelarNfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCabedeloPB_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCabedeloPB_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCabedeloPB_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCabedeloPB_TINUS_CancelarNfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3169901" Nome="Ubá - MG" UF="MG" Padrao="VERSATECNOLOGIA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4106407" Nome="Cornélio Procópio - PR" UF="SC" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>

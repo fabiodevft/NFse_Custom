@@ -3216,6 +3216,7 @@ namespace NFe.Service
                 case PadroesNFSe.AVMB_ASTEN:
                 case PadroesNFSe.ADM_SISTEMAS:
                 case PadroesNFSe.SIMPLE:
+                case PadroesNFSe.VERSATECNOLOGIA:
                     retorno = false;
                     break;
 

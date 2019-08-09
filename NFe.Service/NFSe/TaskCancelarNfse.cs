@@ -23,6 +23,7 @@ using NFe.Validate;
 using NFSe.Components;
 using System;
 using System.IO;
+using NFe.Components.VersaTecnologia;
 #if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
@@ -700,6 +701,27 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.SISPMJP:
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
+
+
+                    case PadroesNFSe.VERSATECNOLOGIA:
+
+                        VersaTecnologia versa = new VersaTecnologia((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                            Empresas.Configuracoes[emp].PastaXmlRetorno,
+                            oDadosPedCanNfse.cMunicipio,
+                            ConfiguracaoApp.ProxyUsuario,
+                            ConfiguracaoApp.ProxySenha,
+                            ConfiguracaoApp.ProxyServidor,
+                            Empresas.Configuracoes[emp].X509Certificado);
+
+                        AssinaturaDigital assVersa = new AssinaturaDigital();
+                        assVersa.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio);
+
+                        versa.CancelarNfse(NomeArquivoXML);
+
+                        break;
+
+                        
+
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))

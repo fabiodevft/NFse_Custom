@@ -893,9 +893,9 @@ namespace NFe.Components
         {
             if (string.IsNullOrEmpty(msg)) return;
 
-//#if DEBUG
-//            System.Diagnostics.Debug.WriteLine(msg);
-//#endif
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine(msg);
+#endif
             if (geraLog)
             {
                 if (!string.IsNullOrEmpty(CNPJEmpresa))

@@ -19,6 +19,7 @@ using NFe.Components.SimplISS;
 using NFe.Components.Simple;
 using NFe.Components.SystemPro;
 using NFe.Components.Tinus;
+using NFe.Components.VersaTecnologia;
 using NFe.Settings;
 using NFe.Validate;
 using NFSe.Components;
@@ -803,6 +804,29 @@ namespace NFe.Service.NFSe
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.SMARAPD_204);
                         cabecMsg = "<cabecalho versao=\"2.04\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.04</versaoDados></cabecalho>";
                         break;
+
+                    case PadroesNFSe.VERSATECNOLOGIA:
+
+                        #region VersaTecnologia
+
+                        VersaTecnologia versa = new VersaTecnologia((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                            Empresas.Configuracoes[emp].PastaXmlRetorno,
+                            oDadosEnvLoteRps.cMunicipio,
+                            ConfiguracaoApp.ProxyUsuario,
+                            ConfiguracaoApp.ProxySenha,
+                            ConfiguracaoApp.ProxyServidor,
+                            Empresas.Configuracoes[emp].X509Certificado);
+
+                        AssinaturaDigital assVersa = new AssinaturaDigital();
+                        assVersa.Assinar(NomeArquivoXML, emp, oDadosEnvLoteRps.cMunicipio);
+
+                        versa.EmiteNF(NomeArquivoXML);
+                        break;
+
+                        #endregion VersaTecnologia
+
+
+
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))

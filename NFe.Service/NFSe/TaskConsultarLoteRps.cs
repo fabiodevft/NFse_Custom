@@ -19,7 +19,8 @@ using NFSe.Components;
 using NFe.Components.Coplan;
 using System;
 using System.IO;
-#if _fw46
+using NFe.Components.VersaTecnologia;
+#if _fw46               
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
 #endif
@@ -511,6 +512,28 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.SMARAPD_204:
                         cabecMsg = "<cabecalho versao=\"2.04\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.04</versaoDados></cabecalho>";
                         break;
+
+                    case PadroesNFSe.VERSATECNOLOGIA:
+
+                        #region VersaTecnologia
+
+                        VersaTecnologia versa = new VersaTecnologia((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                            Empresas.Configuracoes[emp].PastaXmlRetorno,
+                            ler.oDadosPedSitNfseRps.cMunicipio,
+                            ConfiguracaoApp.ProxyUsuario,
+                            ConfiguracaoApp.ProxySenha,
+                            ConfiguracaoApp.ProxyServidor,
+                            Empresas.Configuracoes[emp].X509Certificado);
+
+                        AssinaturaDigital assVersa = new AssinaturaDigital();
+                        assVersa.Assinar(NomeArquivoXML, emp, ler.oDadosPedSitNfseRps.cMunicipio);
+
+                        versa.ConsultarLoteRps(NomeArquivoXML);
+                        break;
+
+                        #endregion VersaTecnologia
+
+
                 }
 
                 if (base.IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

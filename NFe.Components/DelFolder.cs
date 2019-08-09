@@ -98,34 +98,34 @@ namespace NFe.Components
                 {
                     foreach (var f in dtData.Files)
                     {
-//#if DEBUG
-//                        if (!_quiet) { Console.WriteLine("Deleting file: " + f); }
-//#endif
+#if DEBUG
+                        if (!_quiet) { Console.WriteLine("Deleting file: " + f); }
+#endif
                         try
                         {
                             File.Delete(f);
                         }
                         catch (Exception ex)
                         {
-//#if DEBUG
-//                            Console.WriteLine("DELTREE error: " + ex.Message);
-//                            return;
-//#else
+#if DEBUG
+                            Console.WriteLine("DELTREE error: " + ex.Message);
+                            return;
+#else
                             if (!_quiet)
                                 throw ex;
-//#endif
+#endif
                         }
                         ++fileCount;
                     }
                 }
 
-//#if DEBUG
-//                /* Remove directory */
-//                if (!_quiet)
-//                {
-//                    Console.WriteLine("Removing directory: " + dtData.PathName);
-//                }
-//#endif
+#if DEBUG
+                /* Remove directory */
+                if (!_quiet)
+                {
+                    Console.WriteLine("Removing directory: " + dtData.PathName);
+                }
+#endif
                 try
                 {
                     Directory.Delete(dtData.PathName);
@@ -142,12 +142,12 @@ namespace NFe.Components
                 }
                 ++directoryCount;
             }
-//#if DEBUG
-//            Console.WriteLine(
-//                (!_quiet ? Environment.NewLine : null) +
-//                "DELTREE removed {0} file(s) and {1} directory(ies) ({2} total objects removed)",
-//                fileCount, directoryCount, fileCount + directoryCount);
-//#endif
+#if DEBUG
+            Console.WriteLine(
+                (!_quiet ? Environment.NewLine : null) +
+                "DELTREE removed {0} file(s) and {1} directory(ies) ({2} total objects removed)",
+                fileCount, directoryCount, fileCount + directoryCount);
+#endif
         }
         #endregion
     }

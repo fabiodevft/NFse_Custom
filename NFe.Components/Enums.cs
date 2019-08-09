@@ -1155,8 +1155,14 @@ namespace NFe.Components
         /// Padrão utilizado pela prefeitura de João Pessoa-PB
         /// </summary>
         [Description("SISPMJP")]
-        SISPMJP
+        SISPMJP,
 
+
+        /// <summary>
+        /// Padrão utilizado pela prefeitura de Ubá-MG
+        /// </summary>
+        [Description("VERSATECNOLOGIA")]
+        VERSATECNOLOGIA
 
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao

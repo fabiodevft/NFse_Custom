@@ -261,6 +261,7 @@
     <Compile Include="Schemas\SchemaXMLNFSe_MANAUS_AM.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_AVMB_ASTEN.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SOFTPLAN.cs" />
+    <Compile Include="Schemas\SchemaXMLNFSe_VERSATECNOLOGIA.cs" />
     <Compile Include="Service References\HAmargosaBA\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +288,8 @@
     <Compile Include="SOFTPLAN\SOFTPLAN.cs" />
     <Compile Include="SOFTPLAN\Token.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INTERSOL.cs" />
+    <Compile Include="Tinus\CabedeloPE\h\TinusH.cs" />
+    <Compile Include="Tinus\CabedeloPE\p\TinusP.cs" />
     <Compile Include="Tinus\CaboDeSantoAgostinhoPE\h\TinusH.cs" />
     <Compile Include="Tinus\CaboDeSantoAgostinhoPE\p\TinusP.cs" />
     <Compile Include="Tinus\GoianaPE\h\TinusH.cs" />
@@ -488,6 +491,9 @@
     <Compile Include="Tinus\TinusBase.cs" />
     <Compile Include="TipoArquivoXML.cs" />
     <Compile Include="UniNFeUpdate.cs" />
+    <Compile Include="VersaTecnologia\UbaMG\h\VersaTecnologiaH.cs" />
+    <Compile Include="VersaTecnologia\VersaTecnologia.cs" />
+    <Compile Include="VersaTecnologia\VersaTecnologiaBase.cs" />
     <Compile Include="Web References\br.com.bauru_sp.baurusp.h\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -823,6 +829,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\br.com.versatecnologia.homolog.uba.h\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\br.gov.egoverne.isscuritiba.curitiba.p\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -924,6 +935,36 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\HBastosSP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_CancelarNfse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_ConsultarLoteRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_ConsultarNfsePorRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_ConsultarNfse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HCabedeloPB_TINUS_RecepcionarLoteRps\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -1190,6 +1231,36 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PBastosSP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_CancelarNfse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_ConsultarLoteRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_ConsultarNfsePorRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_ConsultarNfse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCabedeloPB_TINUS_RecepcionarLoteRps\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -2882,6 +2953,11 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\br.com.versatecnologia.homolog.uba.h\nfse.wsdl" />
+    <None Include="Web References\br.com.versatecnologia.homolog.uba.h\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\br.gov.egoverne.isscuritiba.curitiba.p\CancelarLoteNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -3400,6 +3476,54 @@
     <None Include="Web References\HBastosSP\Services0.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\HCabedeloPB_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_CancelarNfse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_CancelarNfse\WSNFSE.wsdl" />
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarLoteRps\ConsultarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarLoteRps\WSNFSE.wsdl" />
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfsePorRps\ConsultarNfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfsePorRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfsePorRps\WSNFSE.wsdl" />
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfse\ConsultarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarNfse\WSNFSE.wsdl" />
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps\ConsultarSituacaoLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps\WSNFSE.wsdl" />
+    <None Include="Web References\HCabedeloPB_TINUS_RecepcionarLoteRps\EnviarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_RecepcionarLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HCabedeloPB_TINUS_RecepcionarLoteRps\WSNFSE.wsdl" />
     <None Include="Web References\HCaboDeSantoAgostinhoPE_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -4180,6 +4304,54 @@
     <None Include="Web References\PBastosSP\Services0.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\PCabedeloPB_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_CancelarNfse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_CancelarNfse\WSNFSE.wsdl" />
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarLoteRps\ConsultarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarLoteRps\WSNFSE.wsdl" />
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfsePorRps\ConsultarNfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfsePorRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfsePorRps\WSNFSE.wsdl" />
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfse\ConsultarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarNfse\WSNFSE.wsdl" />
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps\ConsultarSituacaoLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps\WSNFSE.wsdl" />
+    <None Include="Web References\PCabedeloPB_TINUS_RecepcionarLoteRps\EnviarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_RecepcionarLoteRps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PCabedeloPB_TINUS_RecepcionarLoteRps\WSNFSE.wsdl" />
     <None Include="Web References\PCaboDeSantoAgostinhoPE_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -6391,6 +6563,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_bauru_sp_baurusp_h_WebService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://homologacaouba.versatecnologia.com.br/webservice/nfse.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.versatecnologia.homolog.uba.h\</RelPath>
+      <UpdateFromURL>http://homologacaouba.versatecnologia.com.br/webservice/nfse.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_br_com_versatecnologia_homolog_uba_h_NfseWSService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://jaragua.bsit-br.com.br/integracao/services/nfseWS%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PJaraguaGO\</RelPath>
@@ -6456,6 +6639,72 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PParaguacuPaulistaSP_NfseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.CancelarNfse.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_CancelarNfse\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.CancelarNfse.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_CancelarNfse_CancelarNfse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_ConsultarLoteRps\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_ConsultarLoteRps_ConsultarLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarNfse.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_ConsultarNfse\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarNfse.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_ConsultarNfse_ConsultarNfse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarNfsePorRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_ConsultarNfsePorRps\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarNfsePorRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_ConsultarNfsePorRps_ConsultarNfsePorRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarSituacaoLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.ConsultarSituacaoLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_ConsultarSituacaoLoteRps_ConsultarSituacaoLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.RecepcionarLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCabedeloPB_TINUS_RecepcionarLoteRps\</RelPath>
+      <UpdateFromURL>http://www.tinus.com.br/csp/cabedelo/WSNFSE.RecepcionarLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCabedeloPB_TINUS_RecepcionarLoteRps_RecepcionarLoteRps</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://www.tinus.com.br/csp/goiana/WSNFSE.CancelarNfse.CLS%3fWSDL=1">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -6588,6 +6837,72 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HCaboDeSantoAgostinhoPE_TINUS_RecepcionarLoteRps_RecepcionarLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.CancelarNfse.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_CancelarNfse\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.CancelarNfse.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_CancelarNfse_CancelarNfse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_ConsultarLoteRps\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_ConsultarLoteRps_ConsultarLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarNfse.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_ConsultarNfse\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarNfse.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_ConsultarNfse_ConsultarNfse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarNfsePorRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_ConsultarNfsePorRps\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarNfsePorRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_ConsultarNfsePorRps_ConsultarNfsePorRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarSituacaoLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.ConsultarSituacaoLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_ConsultarSituacaoLoteRps_ConsultarSituacaoLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testecbd/WSNFSE.RecepcionarLoteRps.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCabedeloPB_TINUS_RecepcionarLoteRps\</RelPath>
+      <UpdateFromURL>http://www2.tinus.com.br/csp/testecbd/WSNFSE.RecepcionarLoteRps.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCabedeloPB_TINUS_RecepcionarLoteRps_RecepcionarLoteRps</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://www2.tinus.com.br/csp/testegoi/WSNFSE.CancelarNfse.CLS%3fWSDL=1">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -7617,6 +7932,7 @@
     <Folder Include="EloTech\" />
     <Folder Include="EL\ColatinaES\h\" />
     <Folder Include="EL\SimoesFilhoBA\h\" />
+    <Folder Include="VersaTecnologia\UbaMG\p\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

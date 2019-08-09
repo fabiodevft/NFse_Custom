@@ -609,9 +609,9 @@ namespace NFe.Service
 
         public static void ExecutaUniDanfe(string nomeArquivoRecebido, DateTime dataEmissaoNFe, NFe.Settings.Empresa emp, Dictionary<string, string> args = null)
         {
-//#if DEBUG
-//            Auxiliar.WriteLog("ExecutaUniDanfe: Preparando a execução do UniDANFe p/ o arquivo: \"" + nomeArquivoRecebido + "\"", false);
-//#endif
+#if DEBUG
+            Auxiliar.WriteLog("ExecutaUniDanfe: Preparando a execução do UniDANFe p/ o arquivo: \"" + nomeArquivoRecebido + "\"", false);
+#endif
             const string erroMsg = "Arquivo {0} não encontrado para impressão do DANFE/DACTE/CCe/DAMDFe {1}";
 
             //Disparar a geração/impressão do UniDanfe. 03/02/2010 - Wandrey
