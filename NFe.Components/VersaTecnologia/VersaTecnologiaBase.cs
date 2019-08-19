@@ -25,11 +25,11 @@ namespace NFe.Components.VersaTecnologia
                         case 3169901: //Ubá - MG
                             versaService = tpAmb == TipoAmbiente.taHomologacao ?
                                 new UbaMG.h.VersaTecnologiaH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado) as EmiteNFSeBase :
-                                throw new Exceptions.ServicoInexistenteException();
-                            
+                                    new UbaMG.p.VersaTecnologiaP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado) as EmiteNFSeBase;
+
                             break;
 
-                        
+
 
                         default:
                             throw new Exceptions.ServicoInexistenteException();

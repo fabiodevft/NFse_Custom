@@ -719,7 +719,6 @@ namespace NFe.Service.NFSe
                         versa.CancelarNfse(NomeArquivoXML);
 
                         break;
-
                         
 
                 }

@@ -7765,13 +7765,13 @@
       <CancelarNfse>wsdl\homologacao\HUbaMG_VERSATECNOLOGIA.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\PUbaMG_VERSATECNOLOGIA.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4106407" Nome="Cornélio Procópio - PR" UF="SC" Padrao="BETHA">

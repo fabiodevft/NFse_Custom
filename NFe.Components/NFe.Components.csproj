@@ -492,6 +492,7 @@
     <Compile Include="TipoArquivoXML.cs" />
     <Compile Include="UniNFeUpdate.cs" />
     <Compile Include="VersaTecnologia\UbaMG\h\VersaTecnologiaH.cs" />
+    <Compile Include="VersaTecnologia\UbaMG\p\VersaTecnologiaP.cs" />
     <Compile Include="VersaTecnologia\VersaTecnologia.cs" />
     <Compile Include="VersaTecnologia\VersaTecnologiaBase.cs" />
     <Compile Include="Web References\br.com.bauru_sp.baurusp.h\Reference.cs">
@@ -830,6 +831,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\br.com.versatecnologia.homolog.uba.h\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\br.com.versatecnologia.producao.ubamg.p\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -2955,6 +2961,11 @@
     </None>
     <None Include="Web References\br.com.versatecnologia.homolog.uba.h\nfse.wsdl" />
     <None Include="Web References\br.com.versatecnologia.homolog.uba.h\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.versatecnologia.producao.ubamg.p\nfse.wsdl" />
+    <None Include="Web References\br.com.versatecnologia.producao.ubamg.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -6607,6 +6618,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_metropolisweb_lftributos_p_Nfse</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://nfe.uba.mg.gov.br/webservice/nfse.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.versatecnologia.producao.ubamg.p\</RelPath>
+      <UpdateFromURL>http://nfe.uba.mg.gov.br/webservice/nfse.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_br_com_versatecnologia_producao_ubamg_p_NfseWSService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://simple.camboriu.sc.gov.br/LISIPMC/NFSePrefeituraCamboriu.wso%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PCamboriuSC\</RelPath>
@@ -7932,7 +7954,6 @@
     <Folder Include="EloTech\" />
     <Folder Include="EL\ColatinaES\h\" />
     <Folder Include="EL\SimoesFilhoBA\h\" />
-    <Folder Include="VersaTecnologia\UbaMG\p\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

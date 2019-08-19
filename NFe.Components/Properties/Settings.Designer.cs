@@ -2393,5 +2393,15 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PCabedeloPB_TINUS_CancelarNfse_CancelarNfse"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://nfe.uba.mg.gov.br/webservice/servicos")]
+        public string NFe_Components_br_com_versatecnologia_producao_ubamg_p_NfseWSService {
+            get {
+                return ((string)(this["NFe_Components_br_com_versatecnologia_producao_ubamg_p_NfseWSService"]));
+            }
+        }
     }
 }

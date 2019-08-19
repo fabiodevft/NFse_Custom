@@ -4570,6 +4570,7 @@
     <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl" />
     <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl" />
     <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_RecepcionarLoteRps.wsdl" />
+    <None Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">
