@@ -4555,22 +4555,49 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSabaraMG-SUPERNOVA.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HRondonopolisMT-COPLAN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PRondonopolisMT-COPLAN.wsdl" />
-    <None Include="NFse\schemas\NFSe\VERSATECNOLOGIA\nfse_v201.xsd">
+    <EmbeddedResource Include="NFse\schemas\NFSe\VERSATECNOLOGIA\nfse_v201.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_CancelarNfse.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfse.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_RecepcionarLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_CancelarNfse.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfse.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_RecepcionarLoteRps.wsdl" />
-    <None Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl" />
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_CancelarNfse.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfse.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCabedeloPB_TINUS_RecepcionarLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_CancelarNfse.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfse.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarNfsePorRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_ConsultarSituacaoLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCabedeloPB_TINUS_RecepcionarLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

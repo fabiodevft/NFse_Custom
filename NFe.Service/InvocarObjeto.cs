@@ -370,6 +370,15 @@ namespace NFe.Service
             //Definir novamente o protocolo de segurança, pois é uma propriedade estática e o seu valor pode ser alterado antes do envio. Wandrey 03/05/2016
             ServicePointManager.SecurityProtocol = securityProtocolType;
 
+//#if DEBUG
+//            if (padraoNFSe == PadroesNFSe.GINFES)
+//            {
+//                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
+//            }    
+//#endif
+
+
+
             // Montar o XML de Lote de envio de Notas fiscais
             docXML.Load(XmlNfeDadosMsg);
 
