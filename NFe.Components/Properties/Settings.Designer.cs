@@ -2403,5 +2403,25 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_br_com_versatecnologia_producao_ubamg_p_NfseWSService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_duartinasp_p_IssWebWS {
+            get {
+                return ((string)(this["NFe_Components_br_com_fiorilli_duartinasp_p_IssWebWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS {
+            get {
+                return ((string)(this["NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS"]));
+            }
+        }
     }
 }

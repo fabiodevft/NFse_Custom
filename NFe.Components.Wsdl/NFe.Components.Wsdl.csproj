@@ -4598,6 +4598,8 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="NFse\WSDL\Producao\PDuartinaSP-FIORILLI.wsdl" />
+    <None Include="NFse\WSDL\Producao\PGarçaSP-FIORILLI.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">
