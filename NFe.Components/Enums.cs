@@ -16,7 +16,8 @@ namespace NFe.Components
     {
         EmProcessamento,
         Autorizados,
-        Denegados
+        Denegados,
+        Originais
     }
 
     #endregion SubPastas da pasta de enviados
@@ -369,9 +370,14 @@ namespace NFe.Components
         MDFeConsultaStatusServico,
 
         /// <summary>
-        /// Envia os lotes de MDFe para os webservices
+        /// Envia os lotes de MDFe para os webservices Assincrono
         /// </summary>
         MDFeEnviarLote,
+
+        /// <summary>
+        /// Envia os lotes de MDFe para os webservices Sincrono
+        /// </summary>
+        MDFeEnviarLoteSinc,
 
         /// <summary>
         /// Montar lote de um MDFe
@@ -1157,13 +1163,23 @@ namespace NFe.Components
         [Description("SISPMJP")]
         SISPMJP,
 
+         /// <summary>s
+         /// Padrão D2TI
+         /// </summary>
+        [Description("D2TI")]
+        D2TI,
 
-        /// <summary>
+        /// <summary>s
+        /// Padrão IIBRASIL
+        /// </summary>
+        [Description("IIBRASIL")]
+        IIBRASIL,
+
+		/// <summary>
         /// Padrão utilizado pela prefeitura de Ubá-MG
         /// </summary>
         [Description("VERSATECNOLOGIA")]
-        VERSATECNOLOGIA
-
+        VERSATECNOLOGIA,
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
     }

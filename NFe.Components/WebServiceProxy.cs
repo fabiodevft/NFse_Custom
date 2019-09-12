@@ -528,13 +528,15 @@ namespace NFe.Components
 #else
             SecurityProtocolType securityProtocolType = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
 #endif
-
-            string cUFs = "3106200 / "; // Belo Horizonte
-            cUFs += "2910800 / "; //Feira de Santana
-
-            if (cUFs.Contains(cUF.ToString()))
+            if (cUF.ToString().Length >= 7) //Somente para muncípios, não pode fazer para Estados
             {
-                securityProtocolType = SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
+                string cUFs = "3106200 / "; // Belo Horizonte
+                cUFs += "2910800 / "; //Feira de Santana
+
+                if (cUFs.Contains(cUF.ToString()))
+                {
+                    securityProtocolType = SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
+                }
             }
 
             return securityProtocolType;
@@ -654,6 +656,7 @@ namespace NFe.Components
                 case PadroesNFSe.GIF:
                 case PadroesNFSe.PRONIN:
                 case PadroesNFSe.INTERSOL:
+                case PadroesNFSe.D2TI:
 
                     //Tive que utilizar a WebClient para que a OpenRead funcionasse, não foi possível fazer funcionar com a SecureWebClient. Tem que analisar melhor. Wandrey e Renan 10/09/2013
                     WebClient client = new WebClient();
@@ -1094,6 +1097,7 @@ namespace NFe.Components
             ///
             /// MDF-e
             MDFeRecepcao =
+            MDFeRecepcaoSinc =
             MDFeRetRecepcao =
             MDFeConsulta =
             MDFeStatusServico =
@@ -1290,10 +1294,14 @@ namespace NFe.Components
         #region MDF-e
 
         /// <summary>
-        /// Recepção do MDFe
+        /// Recepção do MDFe Assíncrono
         /// </summary>
         public string MDFeRecepcao { get; set; }
 
+        /// <summary>
+        /// Recepção do MDFe Síncrono
+        /// </summary>
+        public string MDFeRecepcaoSinc { get; set; }
         /// <summary>
         /// Consulta Recibo do lote de MDFe enviado
         /// </summary>

@@ -2,20 +2,56 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://des36.el.com.br:8080/el-issonline/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="RpsServiceService" targetNamespace="http://des36.el.com.br:8080/el-issonline/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="https://nf-iconha-es.el.com.br:443/RpsService?xsd=1" namespace="http://des36.el.com.br:8080/el-issonline/" />
+      <xsd:import schemaLocation="http://es-iconha-pm-nfs.cloud.el.com.br:80/RpsService?xsd=1" namespace="http://des36.el.com.br:8080/el-issonline/" />
     </xsd:schema>
   </types>
+  <message name="fecharConexao">
+    <part name="parameters" element="tns:fecharConexao" />
+  </message>
+  <message name="fecharConexaoResponse">
+    <part name="parameters" element="tns:fecharConexaoResponse" />
+  </message>
   <message name="requisitarAidf">
     <part name="parameters" element="tns:requisitarAidf" />
   </message>
   <message name="requisitarAidfResponse">
     <part name="parameters" element="tns:requisitarAidfResponse" />
   </message>
-  <message name="fecharConexao">
-    <part name="parameters" element="tns:fecharConexao" />
+  <message name="ListarServicosMunicipaisPrestador">
+    <part name="parameters" element="tns:ListarServicosMunicipaisPrestador" />
   </message>
-  <message name="fecharConexaoResponse">
-    <part name="parameters" element="tns:fecharConexaoResponse" />
+  <message name="ListarServicosMunicipaisPrestadorResponse">
+    <part name="parameters" element="tns:ListarServicosMunicipaisPrestadorResponse" />
+  </message>
+  <message name="ListarServicos116Municipal">
+    <part name="parameters" element="tns:ListarServicos116Municipal" />
+  </message>
+  <message name="ListarServicos116MunicipalResponse">
+    <part name="parameters" element="tns:ListarServicos116MunicipalResponse" />
+  </message>
+  <message name="ConsultarSituacaoLoteRpsEnvio">
+    <part name="parameters" element="tns:ConsultarSituacaoLoteRpsEnvio" />
+  </message>
+  <message name="ConsultarSituacaoLoteRpsEnvioResponse">
+    <part name="parameters" element="tns:ConsultarSituacaoLoteRpsEnvioResponse" />
+  </message>
+  <message name="validarAidf">
+    <part name="parameters" element="tns:validarAidf" />
+  </message>
+  <message name="validarAidfResponse">
+    <part name="parameters" element="tns:validarAidfResponse" />
+  </message>
+  <message name="verificarEmpresa">
+    <part name="parameters" element="tns:verificarEmpresa" />
+  </message>
+  <message name="verificarEmpresaResponse">
+    <part name="parameters" element="tns:verificarEmpresaResponse" />
+  </message>
+  <message name="verificarContribuinte">
+    <part name="parameters" element="tns:verificarContribuinte" />
+  </message>
+  <message name="verificarContribuinteResponse">
+    <part name="parameters" element="tns:verificarContribuinteResponse" />
   </message>
   <message name="autenticarContribuinte">
     <part name="parameters" element="tns:autenticarContribuinte" />
@@ -40,24 +76,6 @@
   </message>
   <message name="ListarServicosMunicipaisResponse">
     <part name="parameters" element="tns:ListarServicosMunicipaisResponse" />
-  </message>
-  <message name="ListarServicosMunicipaisPrestador">
-    <part name="parameters" element="tns:ListarServicosMunicipaisPrestador" />
-  </message>
-  <message name="ListarServicosMunicipaisPrestadorResponse">
-    <part name="parameters" element="tns:ListarServicosMunicipaisPrestadorResponse" />
-  </message>
-  <message name="ListarServicos116Municipal">
-    <part name="parameters" element="tns:ListarServicos116Municipal" />
-  </message>
-  <message name="ListarServicos116MunicipalResponse">
-    <part name="parameters" element="tns:ListarServicos116MunicipalResponse" />
-  </message>
-  <message name="ConsultarSituacaoLoteRpsEnvio">
-    <part name="parameters" element="tns:ConsultarSituacaoLoteRpsEnvio" />
-  </message>
-  <message name="ConsultarSituacaoLoteRpsEnvioResponse">
-    <part name="parameters" element="tns:ConsultarSituacaoLoteRpsEnvioResponse" />
   </message>
   <message name="ConsultarNfseRpsEnvio">
     <part name="parameters" element="tns:ConsultarNfseRpsEnvio" />
@@ -107,24 +125,6 @@
   <message name="ConsultarUltimaRpsResponse">
     <part name="parameters" element="tns:ConsultarUltimaRpsResponse" />
   </message>
-  <message name="verificarContribuinte">
-    <part name="parameters" element="tns:verificarContribuinte" />
-  </message>
-  <message name="verificarContribuinteResponse">
-    <part name="parameters" element="tns:verificarContribuinteResponse" />
-  </message>
-  <message name="validarAidf">
-    <part name="parameters" element="tns:validarAidf" />
-  </message>
-  <message name="validarAidfResponse">
-    <part name="parameters" element="tns:validarAidfResponse" />
-  </message>
-  <message name="verificarEmpresa">
-    <part name="parameters" element="tns:verificarEmpresa" />
-  </message>
-  <message name="verificarEmpresaResponse">
-    <part name="parameters" element="tns:verificarEmpresaResponse" />
-  </message>
   <message name="ValidarLoteRps">
     <part name="parameters" element="tns:ValidarLoteRps" />
   </message>
@@ -132,13 +132,37 @@
     <part name="parameters" element="tns:ValidarLoteRpsResponse" />
   </message>
   <portType name="RpsService">
+    <operation name="fecharConexao">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/fecharConexaoRequest" message="tns:fecharConexao" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/fecharConexaoResponse" message="tns:fecharConexaoResponse" />
+    </operation>
     <operation name="requisitarAidf">
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/requisitarAidfRequest" message="tns:requisitarAidf" />
       <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/requisitarAidfResponse" message="tns:requisitarAidfResponse" />
     </operation>
-    <operation name="fecharConexao">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/fecharConexaoRequest" message="tns:fecharConexao" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/fecharConexaoResponse" message="tns:fecharConexaoResponse" />
+    <operation name="ListarServicosMunicipaisPrestador">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisPrestadorRequest" message="tns:ListarServicosMunicipaisPrestador" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisPrestadorResponse" message="tns:ListarServicosMunicipaisPrestadorResponse" />
+    </operation>
+    <operation name="ListarServicos116Municipal">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicos116MunicipalRequest" message="tns:ListarServicos116Municipal" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicos116MunicipalResponse" message="tns:ListarServicos116MunicipalResponse" />
+    </operation>
+    <operation name="ConsultarSituacaoLoteRpsEnvio">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarSituacaoLoteRpsEnvioRequest" message="tns:ConsultarSituacaoLoteRpsEnvio" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarSituacaoLoteRpsEnvioResponse" message="tns:ConsultarSituacaoLoteRpsEnvioResponse" />
+    </operation>
+    <operation name="validarAidf">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/validarAidfRequest" message="tns:validarAidf" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/validarAidfResponse" message="tns:validarAidfResponse" />
+    </operation>
+    <operation name="verificarEmpresa">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarEmpresaRequest" message="tns:verificarEmpresa" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarEmpresaResponse" message="tns:verificarEmpresaResponse" />
+    </operation>
+    <operation name="verificarContribuinte">
+      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarContribuinteRequest" message="tns:verificarContribuinte" />
+      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarContribuinteResponse" message="tns:verificarContribuinteResponse" />
     </operation>
     <operation name="autenticarContribuinte">
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/autenticarContribuinteRequest" message="tns:autenticarContribuinte" />
@@ -155,18 +179,6 @@
     <operation name="ListarServicosMunicipais">
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisRequest" message="tns:ListarServicosMunicipais" />
       <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisResponse" message="tns:ListarServicosMunicipaisResponse" />
-    </operation>
-    <operation name="ListarServicosMunicipaisPrestador">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisPrestadorRequest" message="tns:ListarServicosMunicipaisPrestador" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicosMunicipaisPrestadorResponse" message="tns:ListarServicosMunicipaisPrestadorResponse" />
-    </operation>
-    <operation name="ListarServicos116Municipal">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicos116MunicipalRequest" message="tns:ListarServicos116Municipal" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ListarServicos116MunicipalResponse" message="tns:ListarServicos116MunicipalResponse" />
-    </operation>
-    <operation name="ConsultarSituacaoLoteRpsEnvio">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarSituacaoLoteRpsEnvioRequest" message="tns:ConsultarSituacaoLoteRpsEnvio" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarSituacaoLoteRpsEnvioResponse" message="tns:ConsultarSituacaoLoteRpsEnvioResponse" />
     </operation>
     <operation name="ConsultarNfseRpsEnvio">
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarNfseRpsEnvioRequest" message="tns:ConsultarNfseRpsEnvio" />
@@ -200,18 +212,6 @@
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarUltimaRpsRequest" message="tns:ConsultarUltimaRps" />
       <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ConsultarUltimaRpsResponse" message="tns:ConsultarUltimaRpsResponse" />
     </operation>
-    <operation name="verificarContribuinte">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarContribuinteRequest" message="tns:verificarContribuinte" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarContribuinteResponse" message="tns:verificarContribuinteResponse" />
-    </operation>
-    <operation name="validarAidf">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/validarAidfRequest" message="tns:validarAidf" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/validarAidfResponse" message="tns:validarAidfResponse" />
-    </operation>
-    <operation name="verificarEmpresa">
-      <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarEmpresaRequest" message="tns:verificarEmpresa" />
-      <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/verificarEmpresaResponse" message="tns:verificarEmpresaResponse" />
-    </operation>
     <operation name="ValidarLoteRps">
       <input wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ValidarLoteRpsRequest" message="tns:ValidarLoteRps" />
       <output wsam:Action="http://des36.el.com.br:8080/el-issonline/RpsService/ValidarLoteRpsResponse" message="tns:ValidarLoteRpsResponse" />
@@ -219,6 +219,15 @@
   </portType>
   <binding name="RpsServicePortBinding" type="tns:RpsService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="fecharConexao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="requisitarAidf">
       <soap:operation soapAction="" />
       <input>
@@ -228,7 +237,52 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="fecharConexao">
+    <operation name="ListarServicosMunicipaisPrestador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarServicos116Municipal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ConsultarSituacaoLoteRpsEnvio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarAidf">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarContribuinte">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -265,33 +319,6 @@
       </output>
     </operation>
     <operation name="ListarServicosMunicipais">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarServicosMunicipaisPrestador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarServicos116Municipal">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ConsultarSituacaoLoteRpsEnvio">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -372,33 +399,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="verificarContribuinte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="validarAidf">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="verificarEmpresa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ValidarLoteRps">
       <soap:operation soapAction="" />
       <input>
@@ -411,7 +411,7 @@
   </binding>
   <service name="RpsServiceService">
     <port name="RpsServicePort" binding="tns:RpsServicePortBinding">
-      <soap:address location="https://nf-iconha-es.el.com.br:443/RpsService" />
+      <soap:address location="http://es-iconha-pm-nfs.cloud.el.com.br:80/RpsService" />
     </port>
   </service>
 </definitions>

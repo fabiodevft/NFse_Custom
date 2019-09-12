@@ -1993,9 +1993,6 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="NFse\schemas\NFSe\SIMPLISS\nfse_3.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -3843,6 +3840,15 @@
     <EmbeddedResource Include="NFe\schemas\MDFe\retMDFe_v3.00.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFe\schemas\CTe\evCancCECTe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\schemas\CTe\evCECTe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\schemas\CTe\retCTe_v3.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="NFse\schemas\NFSe\BETHA\nfse_v202.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -3984,8 +3990,6 @@
     <EmbeddedResource Include="NFse\schemas\NFSe\SUPERNOVA\xmldsig-core-schema20020212.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PNovaLimaMG_SuperNova.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HNovaLimaMG_SuperNova.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PPatrocinioMG-SIMPLISS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPatrocinioMG-SIMPLISS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HMirassolandiaSP-FIORILLI.wsdl" />
@@ -4115,18 +4119,6 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HEusebioCE-Intersol.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPotirendabaSP-FIORILLI.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PPotirendabaSP-FIORILLI.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPcancelarnfse-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPconsultaloterps-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPconsultanfse-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPconsultanfseporrps-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPconsultarsituacaoloterps-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirimSPrecepcionarloterps-FISSLEX.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXcancelarnfse.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXconsultaloterps.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXconsultanfse.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXconsultanfseporrps.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXconsultarsituacaoloterps.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HFISSLEXrecepcionarloterps.wsdl" />
     <EmbeddedResource Include="NFse\schemas\NFSe\FISSLEX\xmldsig-core-schema20020212.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4555,6 +4547,66 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSabaraMG-SUPERNOVA.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HRondonopolisMT-COPLAN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PRondonopolisMT-COPLAN.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HItapetiningaSP-cancelarnfse.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HItapetiningaSP-consultarnfseporrps.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HItapetiningaSP-recepcionarloterpssincrono.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-cancelarnfse.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-consultarnfseporrps.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-recepcionarloterpssincrono.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSjbicas-GovDigital.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSjbicas-GovDigital.wsdl" />
+    <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\CancelamentoNFSe_v1.00.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\RecepcaoNFSe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\RetornoCancelamentoNFse_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\RetornoRecepcaoNFse_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\tiposBasicosCTA_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PImperatrizMA-CancelamentoNFSe.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PImperatrizMA-RecepcaoNFSe.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PLimeiraSP-IIBrasil.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HLimeiraSP-IIBrasil.wsdl" />
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_cancelar_nfse_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_consultar_lote_rps_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_consultar_nfse_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_consultar_nfse_rps_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_consultar_situacao_lote_rps_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\servico_enviar_lote_rps_envio.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\tipos_complexos.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\tipos_simples.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantanaLivramentoRS-DBSELLER.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantanaLivramentoRS-DBSELLER.wsdl" />
     <EmbeddedResource Include="NFse\schemas\NFSe\VERSATECNOLOGIA\nfse_v201.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4598,8 +4650,16 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="NFse\schemas\NFSe\DSF\SJCSP\nfse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\schemas\NFSe\DSF\SJCSP\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\WSDL\Homologacao\HNovaLimaMG_SuperNova.wsdl" />
     <None Include="NFse\WSDL\Producao\PDuartinaSP-FIORILLI.wsdl" />
     <None Include="NFse\WSDL\Producao\PGarçaSP-FIORILLI.wsdl" />
+    <None Include="NFse\WSDL\Producao\PNovaLimaMG_SuperNova.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">
@@ -4615,7 +4675,12 @@
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HJoinvilleSC.wsdl" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="NFe\WSDL\Producao\MDFe\PMDFeRecepcaoSinc.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NFe\WSDL\Homologacao\MDFe\HMDFeRecepcaoSinc.wsdl" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

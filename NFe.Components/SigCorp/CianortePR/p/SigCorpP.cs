@@ -75,7 +75,7 @@ namespace NFe.Components.SigCorp.CianortePR.p
         {
             throw new Exceptions.ServicoInexistenteException();
         }
-        
+
         private T ReadXML<T>(string file)
             where T : new()
         {

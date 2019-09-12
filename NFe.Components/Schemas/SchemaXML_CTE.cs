@@ -111,6 +111,36 @@
 
             #endregion XML Cancelamento
 
+            #region XML Comprovante de entrega 
+
+            SchemaXML.InfSchemas.Add("NFE-eventoCTe110180", new InfSchema()
+            {
+                Tag = "eventoCTe",
+                ID = SchemaXML.InfSchemas.Count + 1,
+                ArquivoXSD = "CTe\\eventoCTe_v{0}.xsd",
+                Descricao = "XML de Comprovante de entrega do Conhecimento de Transporte Eletrônico",
+                TagAssinatura = "eventoCTe",
+                TagAtributoId = "infEvento",
+                TargetNameSpace = NFeStrConstants.NAME_SPACE_CTE
+            });
+
+            #endregion XML Comprovante de entrega
+
+            #region XML Cancelamento Comprovante de entrega
+
+            SchemaXML.InfSchemas.Add("NFE-eventoCTe110181", new InfSchema()
+            {
+                Tag = "eventoCTe",
+                ID = SchemaXML.InfSchemas.Count + 1,
+                ArquivoXSD = "CTe\\eventoCTe_v{0}.xsd",
+                Descricao = "XML de Cancelamento Comprovante de entrega do Conhecimento de Transporte Eletrônico",
+                TagAssinatura = "eventoCTe",
+                TagAtributoId = "infEvento",
+                TargetNameSpace = NFeStrConstants.NAME_SPACE_CTE
+            });
+
+            #endregion XML Cancelamento Comprovante de entrega
+
             #region XML Inutilização
 
             SchemaXML.InfSchemas.Add("NFE-inutCTe", new InfSchema()
@@ -203,7 +233,7 @@
 
             #region XML de Envio do evento de contingencia EPEC
 
-            SchemaXML.InfSchemas.Add("NFE-eventoCTe110140", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFE-eventoCTe110113", new InfSchema()
             {
                 Tag = "eventoCTe",
                 ID = SchemaXML.InfSchemas.Count + 1,

@@ -179,6 +179,10 @@ namespace NFe.Components
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3535804-";
                                 break;
 
+                            case 3549904: //São José dos Campos-SP
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3549904-";
+                                break;
+
                             default:
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-";
                                 break;
@@ -269,6 +273,8 @@ namespace NFe.Components
                                             case "411502":  //Evento Fisco Resposta ao Cancelamento de Prorrogação 1º prazo
                                             case "411503":  //Evento Fisco Resposta ao Cancelamento de Prorrogação 2º prazo
                                             case "610110":  //CTe Prestação de Serviços em Desacordo
+                                            case "110180":  //CTe Comprovante de Entrega
+                                            case "110181":  //CTe Cancelamento Comprovante de Entrega
                                                 nome = nome + evento;
                                                 break;
 

@@ -136,7 +136,6 @@ namespace NFSe.Components
                 TagLoteAtributoId = "LoteRps",
                 TargetNameSpace = "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd"
             });
-
             #endregion XML de lote RPS - Cachoeira do Sul-RS
 
             #region XML de lote RPS - Vacari-RS

@@ -49,6 +49,9 @@ namespace NFe.Validate
         /// </summary>
         public void EncryptAssinatura(string arquivoXML)
         {
+            if (TipoArqXml.cArquivoSchema.Contains("DSF\\SJCSP"))
+                return;
+
             if (TipoArqXml.cArquivoSchema.Contains("PAULISTANA") ||
                 TipoArqXml.cArquivoSchema.Contains("BLUMENAU") ||
                 TipoArqXml.cArquivoSchema.Contains("DSF"))
@@ -470,7 +473,7 @@ namespace NFe.Validate
                     conteudoXML.Load(Arquivo);
 
                     QRCodeMDFe qrCodeMDFe = new QRCodeMDFe(conteudoXML);
-                    qrCodeMDFe.MontarLinkQRCode();
+                    qrCodeMDFe.MontarLinkQRCode(Empresas.Configuracoes[emp].X509Certificado);
 
                     StreamWriter sw = File.CreateText(Arquivo);
                     sw.Write(conteudoXML.OuterXml);

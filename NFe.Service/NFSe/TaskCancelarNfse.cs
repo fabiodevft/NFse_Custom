@@ -204,7 +204,14 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.DSF:
-                        EncryptAssinatura();
+                        if (oDadosPedCanNfse.cMunicipio == 3549904)
+                        {
+                            cabecMsg = "<cabecalho versao=\"3\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>3</versaoDados></cabecalho>";
+                        }
+                        else
+                        {
+                            EncryptAssinatura();
+                        }
                         break;
 
                     case PadroesNFSe.TECNOSISTEMAS:

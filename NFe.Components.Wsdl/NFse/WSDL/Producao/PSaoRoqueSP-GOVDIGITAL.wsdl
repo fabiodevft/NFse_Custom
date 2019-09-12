@@ -4,6 +4,24 @@
 <xsd:import namespace="http://nfse.abrasf.org.br" schemaLocation="https://ws.govdigital.com.br:443/ws/saoRoque?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="ConsultarLoteRps">
+<part name="parameters" element="tns:ConsultarLoteRpsRequest"/>
+</message>
+<message name="ConsultarLoteRpsResponse">
+<part name="parameters" element="tns:ConsultarLoteRpsResponse"/>
+</message>
+<message name="ConsultarNfseServicoPrestado">
+<part name="parameters" element="tns:ConsultarNfseServicoPrestadoRequest"/>
+</message>
+<message name="ConsultarNfseServicoPrestadoResponse">
+<part name="parameters" element="tns:ConsultarNfseServicoPrestadoResponse"/>
+</message>
+<message name="ConsultarNfseServicoTomado">
+<part name="parameters" element="tns:ConsultarNfseServicoTomadoRequest"/>
+</message>
+<message name="ConsultarNfseServicoTomadoResponse">
+<part name="parameters" element="tns:ConsultarNfseServicoTomadoResponse"/>
+</message>
 <message name="ConsultarNfsePorFaixa">
 <part name="parameters" element="tns:ConsultarNfsePorFaixaRequest"/>
 </message>
@@ -40,24 +58,6 @@
 <message name="RecepcionarLoteRpsSincronoResponse">
 <part name="parameters" element="tns:RecepcionarLoteRpsSincronoResponse"/>
 </message>
-<message name="ConsultarLoteRps">
-<part name="parameters" element="tns:ConsultarLoteRpsRequest"/>
-</message>
-<message name="ConsultarLoteRpsResponse">
-<part name="parameters" element="tns:ConsultarLoteRpsResponse"/>
-</message>
-<message name="ConsultarNfseServicoPrestado">
-<part name="parameters" element="tns:ConsultarNfseServicoPrestadoRequest"/>
-</message>
-<message name="ConsultarNfseServicoPrestadoResponse">
-<part name="parameters" element="tns:ConsultarNfseServicoPrestadoResponse"/>
-</message>
-<message name="ConsultarNfseServicoTomado">
-<part name="parameters" element="tns:ConsultarNfseServicoTomadoRequest"/>
-</message>
-<message name="ConsultarNfseServicoTomadoResponse">
-<part name="parameters" element="tns:ConsultarNfseServicoTomadoResponse"/>
-</message>
 <message name="CancelarNfse">
 <part name="parameters" element="tns:CancelarNfseRequest"/>
 </message>
@@ -65,6 +65,18 @@
 <part name="parameters" element="tns:CancelarNfseResponse"/>
 </message>
 <portType name="nfse">
+<operation name="ConsultarLoteRps">
+<input wsam:Action="http://nfse.abrasf.org.br/ConsultarLoteRps" message="tns:ConsultarLoteRps"/>
+<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarLoteRpsResponse" message="tns:ConsultarLoteRpsResponse"/>
+</operation>
+<operation name="ConsultarNfseServicoPrestado">
+<input wsam:Action="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado" message="tns:ConsultarNfseServicoPrestado"/>
+<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarNfseServicoPrestadoResponse" message="tns:ConsultarNfseServicoPrestadoResponse"/>
+</operation>
+<operation name="ConsultarNfseServicoTomado">
+<input wsam:Action="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado" message="tns:ConsultarNfseServicoTomado"/>
+<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarNfseServicoTomadoResponse" message="tns:ConsultarNfseServicoTomadoResponse"/>
+</operation>
 <operation name="ConsultarNfsePorFaixa">
 <input wsam:Action="http://nfse.abrasf.org.br/ConsultarNfsePorFaixa" message="tns:ConsultarNfsePorFaixa"/>
 <output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarNfsePorFaixaResponse" message="tns:ConsultarNfsePorFaixaResponse"/>
@@ -89,18 +101,6 @@
 <input wsam:Action="http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono" message="tns:RecepcionarLoteRpsSincrono"/>
 <output wsam:Action="http://nfse.abrasf.org.br/nfse/RecepcionarLoteRpsSincronoResponse" message="tns:RecepcionarLoteRpsSincronoResponse"/>
 </operation>
-<operation name="ConsultarLoteRps">
-<input wsam:Action="http://nfse.abrasf.org.br/ConsultarLoteRps" message="tns:ConsultarLoteRps"/>
-<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarLoteRpsResponse" message="tns:ConsultarLoteRpsResponse"/>
-</operation>
-<operation name="ConsultarNfseServicoPrestado">
-<input wsam:Action="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado" message="tns:ConsultarNfseServicoPrestado"/>
-<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarNfseServicoPrestadoResponse" message="tns:ConsultarNfseServicoPrestadoResponse"/>
-</operation>
-<operation name="ConsultarNfseServicoTomado">
-<input wsam:Action="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado" message="tns:ConsultarNfseServicoTomado"/>
-<output wsam:Action="http://nfse.abrasf.org.br/nfse/ConsultarNfseServicoTomadoResponse" message="tns:ConsultarNfseServicoTomadoResponse"/>
-</operation>
 <operation name="CancelarNfse">
 <input wsam:Action="http://nfse.abrasf.org.br/CancelarNfse" message="tns:CancelarNfse"/>
 <output wsam:Action="http://nfse.abrasf.org.br/nfse/CancelarNfseResponse" message="tns:CancelarNfseResponse"/>
@@ -108,6 +108,33 @@
 </portType>
 <binding name="nfseSaoRoquePortBinding" type="tns:nfse">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="ConsultarLoteRps">
+<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarLoteRps"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="ConsultarNfseServicoPrestado">
+<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="ConsultarNfseServicoTomado">
+<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="ConsultarNfsePorFaixa">
 <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfsePorFaixa"/>
 <input>
@@ -155,33 +182,6 @@
 </operation>
 <operation name="RecepcionarLoteRpsSincrono">
 <soap:operation soapAction="http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono"/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="ConsultarLoteRps">
-<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarLoteRps"/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="ConsultarNfseServicoPrestado">
-<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado"/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="ConsultarNfseServicoTomado">
-<soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado"/>
 <input>
 <soap:body use="literal"/>
 </input>
