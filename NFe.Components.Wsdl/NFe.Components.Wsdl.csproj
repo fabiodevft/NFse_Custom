@@ -4655,6 +4655,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\GINFES_V03\tipos_v03.xsd">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\GINFES_V03\xmldsig-core-schema20020212_v03.xsd">
       <SubType>Designer</SubType>
