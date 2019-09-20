@@ -450,7 +450,7 @@ namespace NFe.Service.NFSe
                         if (ler.oDadosPedSitNfseRps.tpAmb == 2)
                             pedLoteRps = new Components.HJoinvilleSC.Servicos();
                         else
-                            throw new Exception("Ambiente de produção de Joinville-SC ainda não foi implementado no UniNFe.");
+                            pedLoteRps = new Components.PJoinvilleSC.Servicos();
                         break;
 
                     case PadroesNFSe.AVMB_ASTEN:
@@ -540,7 +540,9 @@ namespace NFe.Service.NFSe
 
                         #endregion VersaTecnologia
 
-
+						case PadroesNFSe.IIBRASIL:
+                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        break;
                 }
 
                 if (base.IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

@@ -644,7 +644,7 @@ namespace NFe.Service.NFSe
                         if (oDadosPedCanNfse.tpAmb == 2)
                             pedCanNfse = new Components.HJoinvilleSC.Servicos();
                         else
-                            throw new Exception("Ambiente de produção de Joinville-SC ainda não foi implementado no UniNFe.");
+                            pedCanNfse = new Components.PJoinvilleSC.Servicos();
                         break;
 
                     case PadroesNFSe.AVMB_ASTEN:
@@ -709,6 +709,9 @@ namespace NFe.Service.NFSe
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\" ><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 
+                    case PadroesNFSe.D2TI:
+                        cabecMsg = "<cabecalhoCancelamentoNfseLote xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.ctaconsult.com/nfse\"><versao>1.00</versao><ambiente>2</ambiente></cabecalhoCancelamentoNfseLote>";
+                        break;
 
                     case PadroesNFSe.VERSATECNOLOGIA:
 
@@ -727,7 +730,20 @@ namespace NFe.Service.NFSe
 
                         break;
                         
+					case PadroesNFSe.IIBRASIL:
+                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        //wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
 
+                        //if (oDadosPedCanNfse.tpAmb == 2)
+                        //{
+                        //    pedCanNfse = new Components.HLimeiraSP.NfseWSService();
+                        //}
+                        //else
+                        //{
+                        //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                        //}
+
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))
@@ -738,7 +754,7 @@ namespace NFe.Service.NFSe
                     ad.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio);
 
                     //Invocar o método que envia o XML para o SEFAZ
-                    oInvocarObj.InvocarNFSe(wsProxy, pedCanNfse, NomeMetodoWS(Servico, oDadosPedCanNfse.cMunicipio), cabecMsg, this,
+                   oInvocarObj.InvocarNFSe(wsProxy, pedCanNfse, NomeMetodoWS(Servico, oDadosPedCanNfse.cMunicipio), cabecMsg, this,
                                             Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML,   //"-ped-cannfse",
                                             Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).RetornoXML,   //"-cannfse",
                                             padraoNFSe, Servico, securityProtocolType);

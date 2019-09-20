@@ -151,6 +151,10 @@ namespace NFe.Components.Pronin
                                 proninService = new ParanapanemaSP.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
+                            case 3302205: //Itaperuna-RJ
+                                proninService = new  ItaperunaRJ.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }

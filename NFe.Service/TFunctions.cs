@@ -105,7 +105,7 @@ namespace NFe.Service
             {
             }
 
-            File.WriteAllText(arqErro, erroMessage); 
+            File.WriteAllText(arqErro, erroMessage);
 
             // grava o arquivo de erro no FTP
             new GerarXML(emp).XmlParaFTP(emp, arqErro);
@@ -247,6 +247,14 @@ namespace NFe.Service
                         destinoArquivo = Path.Combine(nomePastaEnviado, Functions.ExtrairNomeArq(arquivo, Propriedade.Extensao(Propriedade.TipoEnvio.NFe).EnvioXML) + Propriedade.ExtRetorno.Den);
                     goto default;
 
+                case PastaEnviados.Originais:
+                    nomePastaEnviado = Empresas.Configuracoes[emp].PastaXmlEnviado + "\\" +
+                                       PastaEnviados.Originais.ToString() + "\\" +
+                                       Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
+
+                    destinoArquivo = nomePastaEnviado + Path.GetFileName(arquivo);
+                    goto default;
+
                 default:
                     if (!Directory.Exists(nomePastaEnviado))
                     {
@@ -314,14 +322,20 @@ namespace NFe.Service
                         {
                             case PastaEnviados.Autorizados:
                                 nomePastaBackup = Empresas.Configuracoes[emp].PastaBackup + "\\" +
-                                                    PastaEnviados.Autorizados + "\\" +
-                                                    Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
+                                    PastaEnviados.Autorizados.ToString() + "\\" +
+                                    Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
                                 goto default;
 
                             case PastaEnviados.Denegados:
                                 nomePastaBackup = Empresas.Configuracoes[emp].PastaBackup + "\\" +
-                                                    PastaEnviados.Denegados + "\\" +
-                                                    Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
+                                    PastaEnviados.Denegados.ToString() + "\\" +
+                                    Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
+                                goto default;
+
+                            case PastaEnviados.Originais:
+                                nomePastaBackup = Empresas.Configuracoes[emp].PastaBackup + "\\" +
+                                    PastaEnviados.Originais.ToString() + "\\" +
+                                    Empresas.Configuracoes[emp].DiretorioSalvarComo.ToString(emissao);
                                 goto default;
 
                             default:
@@ -782,6 +796,7 @@ namespace NFe.Service
                                         break;
 
                                     case ConvertTxt.tpEventos.tpEvCancelamentoNFe:
+                                    case ConvertTxt.tpEventos.tpEvCancelamentoSubstituicaoNFCe:
                                         temCancelamento = true;
                                         switch (doc.DocumentElement.Name)
                                         {
@@ -1049,6 +1064,7 @@ namespace NFe.Service
                             int ndias = 0;
                             while (ndias < 60)
                             {
+                                //TODO André/Wandrey: Tem que fazer o tratamento do cancelamento por substituição da nfce, por enquanto, não vai funcionar a impressão quando cancelamento for por substuituição
                                 string filenameCancelamento = tempFile +
                                                                 string.Format("_{0}_01{1}",
                                                                     ((int)NFe.ConvertTxt.tpEventos.tpEvCancelamentoNFe).ToString(),

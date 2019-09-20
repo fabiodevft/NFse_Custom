@@ -2403,5 +2403,26 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_HSjbicas_NfseServiceImplSjbicasService"]));
             }
         }
+        
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://162.144.112.126/NFSe.Portal.Integracao/Services.svc")]
+        public string NFe_Components_PItaperunaRJ_NFSeIntegracao {
+            get {
+                return ((string)(this["NFe_Components_PItaperunaRJ_NFSeIntegracao"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://nfemws.joinville.sc.gov.br/NotaFiscal/Servicos.asmx")]
+        public string NFe_Components_PJoinvilleSC_Servicos {
+            get {
+                return ((string)(this["NFe_Components_PJoinvilleSC_Servicos"]));
+            }
+        }
     }
 }
