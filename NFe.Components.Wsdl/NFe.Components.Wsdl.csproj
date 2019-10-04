@@ -4672,6 +4672,20 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PItaperunaRJ-PRONINServices.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PJoinvilleSC.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoaoBoaVistaSP-SIMPLISS.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantaIsabelSP-CECAM.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="NFse\WSDL\Producao\PItajobiSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantaIsabelSP-CECAM.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

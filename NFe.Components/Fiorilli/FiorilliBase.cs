@@ -36,6 +36,7 @@ namespace NFe.Components.Fiorilli
                             case 3530409: //Mirassolândia-SP
                             case 3514502: //Duartina-SP
                             case 3516705: //Garça-SP
+                            case 3521903: //Itajobi-SP
                                 fiorilliService = new MirassolandiaSP.h.FiorilliH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
@@ -138,6 +139,10 @@ namespace NFe.Components.Fiorilli
                                 fiorilliService = new GarcaSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
                                 break;
 
+                            case 3521903: //Itajobi-SP
+                                fiorilliService = new ItajobiSP.p.FiorilliP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer, Certificado);
+                                break;
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
@@ -194,6 +199,11 @@ namespace NFe.Components.Fiorilli
         public override void ConsultarNfsePorRps(string file)
         {
             FiorilliService.ConsultarNfsePorRps(file);
+        }
+
+        public override void ConsultarNfseServicoTomado(string file)
+        {
+            FiorilliService.ConsultarNfseServicoTomado(file);
         }
 
         #endregion Métodos

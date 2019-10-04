@@ -85,6 +85,10 @@ namespace NFe.Components.SimplISS
                                 simplissService = new MonteCarmeloMG.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
 
+                            case 3549102: //São João da Boa Vista - SP
+                                simplissService = new SaoJoaoDaBoaVistaSP.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
+                                break;
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
