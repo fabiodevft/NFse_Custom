@@ -155,9 +155,7 @@ namespace NFSe.Components
                 TagAtributoId = "",
                 TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
             });
-            #endregion
 
-            #region XML de lote RPS
             SchemaXML.InfSchemas.Add("NFSE-DSF-3549904-EnviarLoteRpsEnvio", new InfSchema()
             {
                 Tag = "EnviarLoteRpsEnvio",
@@ -168,10 +166,10 @@ namespace NFSe.Components
                 TagLoteAtributoId = "LoteRps",
                 TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
             });
-            #endregion
 
             #endregion
 
+            #endregion São José dos Campos-SP
         }
     }
 }
