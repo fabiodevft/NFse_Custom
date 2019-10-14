@@ -23,7 +23,6 @@ using NFe.Settings;
 using NFSe.Components;
 using System;
 using System.IO;
-using NFe.Components.WEBFISCO_TECNOLOGIA;
 using NFe.Components.VersaTecnologia;
 #if _fw46
 using System.ServiceModel;
@@ -432,8 +431,7 @@ namespace NFe.Service.NFSe
                             oDadosPedSitNfse.cMunicipio == 5005707 ||
                             oDadosPedSitNfse.cMunicipio == 4314423 ||
                             oDadosPedSitNfse.cMunicipio == 3511102 ||
-                            oDadosPedSitNfse.cMunicipio == 3535804 ||
-                            oDadosPedSitNfse.cMunicipio == 4306932)
+                            oDadosPedSitNfse.cMunicipio == 3535804)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -584,14 +582,6 @@ namespace NFe.Service.NFSe
                         {
                             cabecMsg = "<cabecalho versao=\"3\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>3</versaoDados></cabecalho>";
                         }
-                        break;
-					case PadroesNFSe.WEBFISCO_TECNOLOGIA:
-                        WEBFISCO_TECNOLOGIA webTecnologia = new WEBFISCO_TECNOLOGIA((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
-                                           Empresas.Configuracoes[emp].PastaXmlRetorno,
-                                           oDadosPedSitNfse.cMunicipio,
-                                           Empresas.Configuracoes[emp].UsuarioWS,
-                                           Empresas.Configuracoes[emp].SenhaWS);
-                        webTecnologia.ConsultarNfse(NomeArquivoXML);
                         break;
 
                     case PadroesNFSe.VERSATECNOLOGIA:

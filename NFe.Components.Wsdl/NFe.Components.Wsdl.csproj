@@ -558,7 +558,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PCanoasRSConsultarSituacaoLoteRps.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PCanoasRSRecepcionarLoteRps.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PGINFES.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PJoinvilleSC.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaLoteRPS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaNfse.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSalvadorBAConsultaNfseRPS.wsdl" />
@@ -634,6 +633,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PBlumenauSC.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PISSOnLineApucarana.wsdl" />
   </ItemGroup>
   <ItemGroup>
@@ -644,6 +644,62 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\ISSNET\servico_consultar_url_visualizacao_nfse_resposta.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HBlumenauSC.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoCancelamentoLote_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoCancelamentoNFe_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoConsultaCNPJ_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoConsultaLote_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoConsultaNFePeriodo_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoConsultaNFe_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoEnvioLoteRPS_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoEnvioRPS_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\PedidoInformacoesLote_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoCancelamentoNFe_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoConsultaCNPJ_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoConsulta_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoEnvioLoteRPS_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoEnvioRPS_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\RetornoInformacoesLote_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\TiposNFe_v01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\BLUMENAU_SC\xmldsig-core-schema_v01.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -1303,6 +1359,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PTresCoroasRS-Dueto.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HUruguaianaRS-Dueto.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PUruguaianaRS-Dueto.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantaMariaRS-ISSNet.wsdl" />
@@ -4546,6 +4606,12 @@
     <EmbeddedResource Include="NFse\schemas\NFSe\IIBRASIL\xmldsig-core-schema20020212.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantanaLivramentoRS-DBSELLER.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantanaLivramentoRS-DBSELLER.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\VERSATECNOLOGIA\nfse_v201.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4589,13 +4655,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PUbaMG_VERSATECNOLOGIA.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantanaLivramentoRS-DBSELLER.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSantanaLivramentoRS-DBSELLER.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PIjuiRS-Dueto.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HJoinvilleSC.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PCacapavaRS-DUETOServices.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoJoseDosCamposSP.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoseDosCamposSP.wsdl" />
     <EmbeddedResource Include="NFse\schemas\NFSe\DSF\SJCSP\nfse.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4613,6 +4672,9 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PItaperunaRJ-PRONINServices.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PJoinvilleSC.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoaoBoaVistaSP-SIMPLISS.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -4624,24 +4686,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSantaIsabelSP-CECAM.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HWebFiscoTecnologia.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PWebFiscoTecnologia-Cancelar.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PWebFiscoTecnologia-ConsultarNfe.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PWebFiscoTecnologia-Enviar.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PUruguaianaRS-PRONIN.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HIlheusBA-METROPOLIS.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSilvaniaGO-MEGASOFT.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSilvaniaGO-MEGASOFT.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HBlumenauSC.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PBlumenauSC.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HEntreIjuisRS-PRONIN.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PEntreIjuisRS-PRONIN.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HEstacaoRS-SYSTEMPRO.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PEstacaoRS-SYSTEMPRO.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HTramandaiRS-DBSELLER.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PTramandaiRS-DBSELLER.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

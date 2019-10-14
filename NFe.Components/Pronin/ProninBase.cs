@@ -77,10 +77,6 @@ namespace NFe.Components.Pronin
                                 proninService = new ParanapanemaSP.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
-                            case 4306932: //Entre-Ijuís-RS
-                                proninService = new EntreIjuisRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
-                                break;
-
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
@@ -154,15 +150,11 @@ namespace NFe.Components.Pronin
                             case 3535804: //Paranapanema-SP
                                 proninService = new ParanapanemaSP.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
-							
-							 case 4306932: //Entre-Ijuís-RS
-                                proninService = new EntreIjuisRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
-                                break;
 
                             case 3302205: //Itaperuna-RJ
                                 proninService = new  ItaperunaRJ.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
-							
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }

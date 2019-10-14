@@ -30,10 +30,6 @@ namespace NFe.Components.SystemPro
                             case 4301701:
                                 systemProService = new HBaraoDeCotegipeRS.NfseService_Homolog();
                                 break;
-
-                            case 4307559:
-                                systemProService = new HEstacaoRS.NfseService_Homolog();
-                                break;
                         }
                     }
                     else
@@ -46,10 +42,6 @@ namespace NFe.Components.SystemPro
 
                             case 4301701:
                                 systemProService = new PBaraoDeCotegipeRS.NfseService();
-                                break;
-
-                            case 4307559:
-                                systemProService = new PEstacaoRS.NfseService();
                                 break;
                         }
                     }

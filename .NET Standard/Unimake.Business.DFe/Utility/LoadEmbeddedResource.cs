@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Unimake.Business.DFe.ConfigurationManager;
 
 namespace Unimake.Business.DFe.Utility
 {
@@ -51,12 +50,14 @@ namespace Unimake.Business.DFe.Utility
                 var directoryAssembly = Path.GetDirectoryName(assembly.Location);
 
                 //Estrair schemas de XML
-                var resourcePath = "Unimake.Business.DFe.Xml.NFe.Schemas";                
-                ExtrairRecurso(resourcePath, recursos, assembly, CurrentConfig.SchemaPasta);
+                var resourcePath = "Unimake.Business.DFe.Xml.NFe.Schemas";
+                var path = Path.Combine(directoryAssembly, @"Xml\\NFe\\Schemas");
+                ExtrairRecurso(resourcePath, recursos, assembly, path);
 
                 //Extrair os XMLs de configuração
                 resourcePath = "Unimake.Business.DFe.Servicos.NFe.Config";
-                ExtrairRecurso(resourcePath, recursos, assembly, CurrentConfig.PastaArqConfig);
+                path = Path.Combine(directoryAssembly, @"Servicos\\NFe\\Config");
+                ExtrairRecurso(resourcePath, recursos, assembly, path);
             }
         }
 

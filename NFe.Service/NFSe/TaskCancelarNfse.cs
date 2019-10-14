@@ -23,7 +23,6 @@ using NFe.Validate;
 using NFSe.Components;
 using System;
 using System.IO;
-using NFe.Components.WEBFISCO_TECNOLOGIA;
 using NFe.Components.VersaTecnologia;
 #if _fw46
 using System.ServiceModel;
@@ -171,6 +170,10 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.ABACO:
                     case PadroesNFSe.CANOAS_RS:
                         cabecMsg = "<cabecalho versao=\"201001\"><versaoDados>V2010</versaoDados></cabecalho>";
+                        break;
+
+                    case PadroesNFSe.BLUMENAU_SC:
+                        EncryptAssinatura();
                         break;
 
                     case PadroesNFSe.BHISS:
@@ -503,8 +506,7 @@ namespace NFe.Service.NFSe
                             oDadosPedCanNfse.cMunicipio == 5005707 ||
                             oDadosPedCanNfse.cMunicipio == 4314423 ||
                             oDadosPedCanNfse.cMunicipio == 3511102 ||
-                            oDadosPedCanNfse.cMunicipio == 3535804 ||
-                            oDadosPedCanNfse.cMunicipio == 4306932)
+                            oDadosPedCanNfse.cMunicipio == 3535804)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -742,16 +744,6 @@ namespace NFe.Service.NFSe
                         //}
 
                         break;
-
-                    case PadroesNFSe.WEBFISCO_TECNOLOGIA:
-                        WEBFISCO_TECNOLOGIA webTecnologia = new WEBFISCO_TECNOLOGIA((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
-                                           Empresas.Configuracoes[emp].PastaXmlRetorno,
-                                           oDadosPedCanNfse.cMunicipio,
-                                           Empresas.Configuracoes[emp].UsuarioWS,
-                                           Empresas.Configuracoes[emp].SenhaWS);
-                        webTecnologia.CancelarNfse(NomeArquivoXML);
-                        break;
-
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))
@@ -762,10 +754,10 @@ namespace NFe.Service.NFSe
                     ad.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio);
 
                     //Invocar o método que envia o XML para o SEFAZ
-                    oInvocarObj.InvocarNFSe(wsProxy, pedCanNfse, NomeMetodoWS(Servico, oDadosPedCanNfse.cMunicipio), cabecMsg, this,
-                                             Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML,   //"-ped-cannfse",
-                                             Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).RetornoXML,   //"-cannfse",
-                                             padraoNFSe, Servico, securityProtocolType);
+                   oInvocarObj.InvocarNFSe(wsProxy, pedCanNfse, NomeMetodoWS(Servico, oDadosPedCanNfse.cMunicipio), cabecMsg, this,
+                                            Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML,   //"-ped-cannfse",
+                                            Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).RetornoXML,   //"-cannfse",
+                                            padraoNFSe, Servico, securityProtocolType);
 
                     /// grava o arquivo no FTP
                     string filenameFTP = Path.Combine(Empresas.Configuracoes[emp].PastaXmlRetorno,

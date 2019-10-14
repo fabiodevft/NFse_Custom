@@ -68,11 +68,10 @@ namespace Unimake.Business.DFe.Servicos
                                     foreach(var nodeTipo in listTipo)
                                     {
                                         var elementTipo = (XmlElement)nodeTipo;
-                                        var idSchemaEspecifico = elementTipo.GetElementsByTagName("ID")[0].InnerText;
 
-                                        Configuracoes.SchemasEspecificos.Add(idSchemaEspecifico, new SchemaEspecifico
+                                        Configuracoes.SchemasEspecificos.Add(new SchemaEspecifico
                                         {
-                                            Id = idSchemaEspecifico,
+                                            Id = elementTipo.GetElementsByTagName("ID")[0].InnerText,
                                             SchemaArquivo = elementTipo.GetElementsByTagName("SchemaArquivo")[0].InnerText.Replace("{0}", Configuracoes.SchemaVersao),
                                             SchemaArquivoEspecifico = elementTipo.GetElementsByTagName("SchemaArquivoEspecifico")[0].InnerText.Replace("{0}", Configuracoes.SchemaVersao)
                                         });

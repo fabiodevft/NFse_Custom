@@ -564,6 +564,47 @@ namespace NFe.Service
 
                 #endregion ISSONLINE
 
+                #region Blumenau-SC
+
+                case PadroesNFSe.BLUMENAU_SC:
+                    switch (servico)
+                    {
+                        case Servicos.NFSeConsultarLoteRps:
+                            retorna = "ConsultaLote";
+                            break;
+
+                        case Servicos.NFSeConsultar:
+                            retorna = "ConsultaNFeEmitidas";
+                            break;
+
+                        case Servicos.NFSeConsultarPorRps:
+                            retorna = "ConsultaNFe";
+                            break;
+
+                        case Servicos.NFSeConsultarSituacaoLoteRps:
+                            retorna = "ConsultaInformacoesLote";
+                            break;
+
+                        case Servicos.NFSeCancelar:
+                            retorna = "CancelamentoNFe";
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRps:
+                            if (Empresas.Configuracoes[Empresas.FindEmpresaByThread()].AmbienteCodigo == (int)NFe.Components.TipoAmbiente.taHomologacao)
+                            {
+                                retorna = "TesteEnvioLoteRPS";
+                            }
+                            else
+                            {
+                                retorna = "EnvioLoteRPS";
+                            }
+
+                            break;
+                    }
+                    break;
+
+                #endregion Blumenau-SC
+
                 #region BHISS
 
                 case PadroesNFSe.BHISS:
@@ -931,7 +972,9 @@ namespace NFe.Service
 
                             default:
                                 throw new NFe.Components.Exceptions.ServicoInexistenteException();
+
                         }
+
                     }
                     else
                     {
@@ -946,7 +989,6 @@ namespace NFe.Service
                                 {
                                     retorna = "consultarLote";
                                 }
-
                                 break;
 
                             case Servicos.NFSeConsultar:
@@ -958,7 +1000,6 @@ namespace NFe.Service
                                 {
                                     retorna = "consultarNota";
                                 }
-
                                 break;
 
                             case Servicos.NFSeConsultarPorRps:
@@ -967,10 +1008,9 @@ namespace NFe.Service
                                     throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
                                 }
                                 else
-                                {
+                                {                                   
                                     retorna = "consultarNFSeRps";
                                 }
-
                                 break;
 
                             case Servicos.NFSeConsultarSituacaoLoteRps:
@@ -982,7 +1022,6 @@ namespace NFe.Service
                                 {
                                     retorna = "consultarSequencialRps";
                                 }
-
                                 break;
 
                             case Servicos.NFSeCancelar:
@@ -994,7 +1033,6 @@ namespace NFe.Service
                                 {
                                     retorna = "cancelar";
                                 }
-
                                 break;
 
                             case Servicos.NFSeRecepcionarLoteRps:
@@ -1015,7 +1053,6 @@ namespace NFe.Service
                                 {
                                     retorna = "enviar";
                                 }
-
                                 break;
 
                             default:
@@ -1023,6 +1060,7 @@ namespace NFe.Service
                         }
                     }
                     break;
+
 
                 #endregion DSF
 
@@ -2666,7 +2704,6 @@ namespace NFe.Service
                     qrCode.GerarLinkConsulta(url, Empresas.Configuracoes[emp].IdentificadorCSC, Empresas.Configuracoes[emp].TokenCSC, linkUFManual);
                 }
                 #endregion
-
                 #region Adicionar a tag do QrCode no MDFe
                 else if (dadosNFe.mod == "58") // MDFe
                 {
@@ -3242,8 +3279,7 @@ namespace NFe.Service
                         cMunicipio == 5005707 ||
                         cMunicipio == 4314423 ||
                         cMunicipio == 3511102 ||
-                        cMunicipio == 3535804 ||
-                        cMunicipio == 4306932)
+                        cMunicipio == 3535804)
                     {
                         retorno = false;
                     }
@@ -3281,7 +3317,6 @@ namespace NFe.Service
                 case PadroesNFSe.SIMPLE:
                 case PadroesNFSe.VERSATECNOLOGIA:
 				case PadroesNFSe.IIBRASIL:
-				case PadroesNFSe.WEBFISCO_TECNOLOGIA:
                     retorno = false;
                     break;
 
@@ -3331,7 +3366,7 @@ namespace NFe.Service
                 case PadroesNFSe.JOINVILLE_SC:
                 case PadroesNFSe.AVMB_ASTEN:
                 case PadroesNFSe.ADM_SISTEMAS:
-                case PadroesNFSe.IIBRASIL:
+				case PadroesNFSe.IIBRASIL:
                     invocar = true;
                     break;
             }

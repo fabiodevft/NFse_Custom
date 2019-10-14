@@ -104,20 +104,23 @@ namespace NFe.Components
                         switch (servico)
                         {
                             case Servicos.NFSeConsultarLoteRps:
+                                return "BasicHttpBinding_INFSEConsultas";
+
                             case Servicos.NFSeConsultar:
+                                return "BasicHttpBinding_INFSEConsultas";
+
                             case Servicos.NFSeConsultarPorRps:
+                                return "BasicHttpBinding_INFSEConsultas";
+
                             case Servicos.NFSeConsultarSituacaoLoteRps:
-                                if (cMunicipio == 4302808)
-                                    return "basic_INFSEConsultas";
-                                else
-                                    return "BasicHttpBinding_INFSEConsultas";
+                                return "BasicHttpBinding_INFSEConsultas";
 
                             case Servicos.NFSeCancelar:
+                                return "BasicHttpBinding_INFSEGeracao";
+
                             case Servicos.NFSeRecepcionarLoteRps:
-                                if (cMunicipio == 4302808)
-                                    return "basic_INFSEGeracao";
-                                else
-                                    return "BasicHttpBinding_INFSEGeracao";
+                                return "BasicHttpBinding_INFSEGeracao";
+
                             default:
                                 return _NomeClasseWS;
                         }
@@ -173,8 +176,7 @@ namespace NFe.Components
                                     cMunicipio == 5005707 ||
                                     cMunicipio == 4314423 ||
                                     cMunicipio == 3511102 ||
-                                    cMunicipio == 3535804 ||
-                                    cMunicipio == 4306932)
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEGeracao";
                                 else
                                     return "basic_INFSEGeracao";
@@ -192,8 +194,7 @@ namespace NFe.Components
                                     cMunicipio == 5005707 ||
                                     cMunicipio == 4314423 ||
                                     cMunicipio == 3511102 ||
-                                    cMunicipio == 3535804 || 
-                                    cMunicipio == 4306932)
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEGeracao";
                                 else
                                     return "basic_INFSEGeracao";
@@ -208,8 +209,7 @@ namespace NFe.Components
                                     cMunicipio == 5005707 ||
                                     cMunicipio == 4314423 ||
                                     cMunicipio == 3511102 ||
-                                    cMunicipio == 3535804 ||
-                                    cMunicipio == 4306932)
+                                    cMunicipio == 3535804)
                                     return "BasicHttpBinding_INFSEConsultas";
                                 else
                                     return "basic_INFSEConsultas";
