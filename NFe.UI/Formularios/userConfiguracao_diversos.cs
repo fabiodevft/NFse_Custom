@@ -481,7 +481,9 @@ namespace NFe.UI.Formularios
                            ufCod == 4313508 /*Osório-RS */ ||
                            ufCod == 4118006 /*Paraíso do Norte-PR*/ ||
                            ufCod == 4300604 /*Alvorada-RS*/ ||
-                           ufCod == 4104907 /*Castro-PR*/;
+                           ufCod == 4104907 /*Castro-PR*/ ||
+                           ufCod == 3516705 /*Garça-SP*/ ||
+                           ufCod == 3514502 /*Duartina-SP*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
