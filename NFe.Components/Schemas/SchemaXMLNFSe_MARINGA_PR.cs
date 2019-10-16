@@ -21,6 +21,23 @@ namespace NFSe.Components
                 TagLoteAtributoId = "LoteRps",
                 TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
             });
+
+
+             #region XML de lote RPS
+            SchemaXML.InfSchemas.Add("NFSE-MARINGA_PR-GerarNfseEnvio", new InfSchema()
+            {
+                Tag = "GerarNfseEnvio",
+                ID = SchemaXML.InfSchemas.Count + 1,
+                ArquivoXSD = "NFSe\\FIORILLI\\nfse_v2.01.xsd",
+                Descricao = "XML de Lote RPS",
+                TagLoteAtributoId = "InfDeclaracaoPrestacaoServico",
+                TagLoteAssinatura = "Rps",
+                TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
+            });
+            #endregion
+
+
+
             #endregion
 
             #region XML de Consulta de Lote RPS

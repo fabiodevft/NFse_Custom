@@ -2397,10 +2397,20 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://162.144.112.126/NFSe.Portal.Integracao/Services.svc")]
-        public string NFe_Components_PItaperunaRJ_NFSeIntegracao {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:80/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS {
             get {
-                return ((string)(this["NFe_Components_PItaperunaRJ_NFSeIntegracao"]));
+                return ((string)(this["NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wssaojoao.simplissweb.com.br/nfseservice.svc")]
+        public string NFe_Components_PSaoJoaoBoaVistaSP_NfseService {
+            get {
+                return ((string)(this["NFe_Components_PSaoJoaoBoaVistaSP_NfseService"]));
             }
         }
         
@@ -2421,36 +2431,6 @@ namespace NFe.Components.Properties {
         public string NFe_Components_PJoinvilleSC_Servicos {
             get {
                 return ((string)(this["NFe_Components_PJoinvilleSC_Servicos"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:80/IssWeb-ejb/IssWebWS/IssWebWS")]
-        public string NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS {
-            get {
-                return ((string)(this["NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://nfemwshomologacao.joinville.sc.gov.br/NotaFiscal/Servicos.asmx")]
-        public string NFe_Components_HJoinvilleSC1_Servicos {
-            get {
-                return ((string)(this["NFe_Components_HJoinvilleSC1_Servicos"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://wssaojoao.simplissweb.com.br/nfseservice.svc")]
-        public string NFe_Components_PSaoJoaoBoaVistaSP_NfseService {
-            get {
-                return ((string)(this["NFe_Components_PSaoJoaoBoaVistaSP_NfseService"]));
             }
         }
     }

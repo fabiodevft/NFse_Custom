@@ -221,7 +221,6 @@
     <Compile Include="Pronin\CosmopolisSP\p\ProninP.cs" />
     <Compile Include="Pronin\GetulioVargasRS\h\ProninH.cs" />
     <Compile Include="Pronin\GetulioVargasRS\p\ProninP.cs" />
-    <Compile Include="Pronin\ItaperunaRJ\p\ProninP.cs" />
     <Compile Include="Pronin\MirassolSP\p\ProninP.cs" />
     <Compile Include="Pronin\PatoBrancoPR\h\ProninH.cs" />
     <Compile Include="Pronin\PatoBrancoPR\p\ProninP.cs" />
@@ -1141,11 +1140,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\HJoinvilleSC1\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
     <Compile Include="Web References\HJoinvilleSC\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1433,11 +1427,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PItaitubaPA\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\PItaperunaRJ\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -3996,23 +3985,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\HJoinvilleSC1\CancelarNfseResposta.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\HJoinvilleSC1\ConsultarLoteRpsResposta.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\HJoinvilleSC1\ConsultarNfseRpsResposta.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\HJoinvilleSC1\EnviarLoteRpsResposta.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\HJoinvilleSC1\HJoinvilleSC.wsdl" />
-    <None Include="Web References\HJoinvilleSC1\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Web References\HJoinvilleSC\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -4859,17 +4831,6 @@
     </None>
     <None Include="Web References\PItaitubaPA\SubstituirNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\PItaperunaRJ\NFSeIntegracao.wsdl" />
-    <None Include="Web References\PItaperunaRJ\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\PItaperunaRJ\Services.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\PItaperunaRJ\Services0.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PJaboataoDosGuararapesPE_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -5771,17 +5732,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HJalesSP_Webservice_Prefeitura</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\HJoinvilleSC\</RelPath>
-      <UpdateFromURL>C:\Projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_HJoinvilleSC_Servicos</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="C:\Projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HNaviraiMS-PRONIN.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HNaviraiMS\</RelPath>
@@ -6431,21 +6381,21 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_gov_sp_presidenteprudente_sistemas_www_p_NfseService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\UniNFe_UNIMAKE\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\HJoinvilleSC1\</RelPath>
-      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\UniNFe_UNIMAKE\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl</UpdateFromURL>
+      <RelPath>Web References\HJoinvilleSC\</RelPath>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HJoinvilleSC.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_HJoinvilleSC1_Servicos</CachedSettingsPropName>
+      <CachedSettingsPropName>NFe_Components_HJoinvilleSC_Servicos</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\UniNFe_UNIMAKE\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PJoinvilleSC.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PJoinvilleSC.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PJoinvilleSC\</RelPath>
-      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\UniNFe_UNIMAKE\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PJoinvilleSC.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PJoinvilleSC.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6540,17 +6490,6 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://162.144.112.126/NFSe.Portal.Integracao/Services.svc%3fwsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\PItaperunaRJ\</RelPath>
-      <UpdateFromURL>http://162.144.112.126/NFSe.Portal.Integracao/Services.svc%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_PItaperunaRJ_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

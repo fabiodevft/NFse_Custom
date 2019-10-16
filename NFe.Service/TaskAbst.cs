@@ -1926,6 +1926,10 @@ namespace NFe.Service
                         case Servicos.NFSeConsultar:
                             retorna = "ConsultarNfseFaixa";
                             break;
+
+                        case Servicos.NFSeGerarNfse:
+                            retorna = "GerarNfse";
+                            break;
                     }
                     break;
 
@@ -3563,6 +3567,10 @@ namespace NFe.Service
 
                             case "EnviarLoteRpsEnvio":
                                 result = Servicos.NFSeRecepcionarLoteRps;
+                                break;
+
+                            case "GerarNfseEnvio":
+                                result = Servicos.NFSeGerarNfse;
                                 break;
 
                             default:
