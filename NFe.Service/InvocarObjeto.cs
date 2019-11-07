@@ -415,9 +415,23 @@ namespace NFe.Service
                         break;
 
                     case PadroesNFSe.DSF:
-                        if (docXML.DocumentElement.GetElementsByTagName("versao")[0].InnerText == "3.00")
+                        string valorTag = string.Empty;
+                        try
+                        {
+                            valorTag = docXML.DocumentElement.GetElementsByTagName("versao")[0].InnerText;
+                        }
+                        catch (Exception)
+                        {
+                            valorTag = string.Empty;
+                        }
+
+                        if (valorTag == "3.00")
                         {
                             wsProxy.SetProp(servicoWS, "Timeout", 240000);
+                        }
+                        else
+                        {
+                            wsProxy.SetProp(servicoWS, "Timeout", 120000);
                         }
                         break;
 

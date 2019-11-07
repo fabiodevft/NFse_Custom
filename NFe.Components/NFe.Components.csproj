@@ -6896,10 +6896,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_net_cosmorama_fiorilli_p_IssWebWS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://191.209.11.231:5661/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
+    <WebReferenceUrl Include="http://179.108.80.218:5661/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.fiorilli.aguasdelindoiasp.p\</RelPath>
-      <UpdateFromURL>http://191.209.11.231:5661/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>http://179.108.80.218:5661/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
