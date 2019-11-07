@@ -94,24 +94,6 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ConsultarSituacaoLoteRpsEnvio">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
-      <xs:element minOccurs="0" name="numeroProtocolo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ConsultarSituacaoLoteRpsEnvioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:situacaoLoteRps" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="situacaoLoteRps">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="mensagens" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="numeroLote" type="xs:string" />
-      <xs:element minOccurs="0" name="situacaoLoteRps" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="verificarContribuinte">
     <xs:sequence>
       <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
@@ -145,6 +127,24 @@
       <xs:element minOccurs="0" name="tipoLogradouro" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ConsultarSituacaoLoteRpsEnvio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroProtocolo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConsultarSituacaoLoteRpsEnvioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:situacaoLoteRps" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="situacaoLoteRps">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="mensagens" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroLote" type="xs:string" />
+      <xs:element minOccurs="0" name="situacaoLoteRps" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ConsultarNfseEnvio">
     <xs:sequence>
       <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
@@ -175,37 +175,6 @@
   <xs:complexType name="ConsultarNfseRpsEnvioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:nfseRpsResposta" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarServicos116Municipal">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarServicos116MunicipalResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:servico116Municipal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="servico116Municipal">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:servicoMunic">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="atividadePrincipal" type="xs:string" />
-          <xs:element minOccurs="0" name="codigoCnae" type="xs:string" />
-          <xs:element minOccurs="0" name="codigoServico116" type="xs:string" />
-          <xs:element minOccurs="0" name="nomeCnae" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="servicoMunic">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="aliquota" type="xs:string" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="denominacao" type="xs:string" />
-      <xs:element minOccurs="0" name="retencao" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoServico" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="autenticarContribuinte">
@@ -246,6 +215,37 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="mensagens" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="numeroLote" type="xs:string" />
       <xs:element minOccurs="0" name="numeroProtocolo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarServicos116Municipal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacaoPrestador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarServicos116MunicipalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:servico116Municipal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="servico116Municipal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:servicoMunic">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="atividadePrincipal" type="xs:string" />
+          <xs:element minOccurs="0" name="codigoCnae" type="xs:string" />
+          <xs:element minOccurs="0" name="codigoServico116" type="xs:string" />
+          <xs:element minOccurs="0" name="nomeCnae" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="servicoMunic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aliquota" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="denominacao" type="xs:string" />
+      <xs:element minOccurs="0" name="retencao" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoServico" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarServicosMunicipais">

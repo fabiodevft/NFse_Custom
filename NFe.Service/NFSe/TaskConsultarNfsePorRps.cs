@@ -141,6 +141,10 @@ namespace NFe.Service.NFSe
                         cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 
+                    case PadroesNFSe.IIBRASIL:
+                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        break;
+
                     case PadroesNFSe.FIORILLI:
                         Fiorilli fiorilli = new Fiorilli((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                                         Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -359,7 +363,8 @@ namespace NFe.Service.NFSe
                             ler.oDadosPedSitNfseRps.cMunicipio == 5005707 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 4314423 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 3511102 ||
-                            ler.oDadosPedSitNfseRps.cMunicipio == 3535804)
+                            ler.oDadosPedSitNfseRps.cMunicipio == 3535804 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4306932)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,

@@ -63,3 +63,8 @@
 /NFe.Service/bin/Release
 /UniNFeServico/bin/Release
 /NFe.Components/obj/x64/Release46_x64
+/.NET Framework/Unimake.Security.Platform/bin/Debug
+/.NET Standard/Unimake.Business.DFe/obj
+/.NET Framework/Unimake.Security.Platform/obj/Debug
+/Unimake.DFe/bin/Debug
+/Unimake.DFe/obj/Debug

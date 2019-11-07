@@ -58,7 +58,7 @@ namespace NFe.Service.NFSe
 
                 if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))
                 {
-                    wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, ler.oDadosPedSitNfseRps.cMunicipio, ler.oDadosPedSitNfseRps.tpAmb, ler.oDadosPedSitNfseRps.tpEmis, padraoNFSe, 0); ;
+                    wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, ler.oDadosPedSitNfseRps.cMunicipio, ler.oDadosPedSitNfseRps.tpAmb, ler.oDadosPedSitNfseRps.tpEmis, padraoNFSe, ler.oDadosPedSitNfseRps.cMunicipio);
                     if (wsProxy != null) pedLoteRps = wsProxy.CriarObjeto(wsProxy.NomeClasseWS);
                 }
 
@@ -381,7 +381,8 @@ namespace NFe.Service.NFSe
                             ler.oDadosPedSitNfseRps.cMunicipio == 5005707 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 4314423 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 3511102 ||
-                            ler.oDadosPedSitNfseRps.cMunicipio == 3535804)
+                            ler.oDadosPedSitNfseRps.cMunicipio == 3535804 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4306932)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -543,6 +544,7 @@ namespace NFe.Service.NFSe
 						case PadroesNFSe.IIBRASIL:
                         cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
                         break;
+					
                 }
 
                 if (base.IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

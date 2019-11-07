@@ -54,6 +54,9 @@ namespace Unimake.Business.DFe.Xml.NFe
     [XmlType(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
     public class InfEventoRetEvento
     {
+        [XmlAttribute(AttributeName = "Id", DataType = "ID")]
+        public string Id { get; set; }
+
         [XmlElement("tpAmb", Order = 0)]
         public TipoAmbiente TpAmb { get; set; }
 
@@ -82,7 +85,7 @@ namespace Unimake.Business.DFe.Xml.NFe
         [XmlElement("tpEvento", Order = 6)]
         public TipoEventoNFe TpEvento { get; set; }
 
-        [XmlElement("XEvento", Order = 7)]
+        [XmlElement("xEvento", Order = 7)]
         public string XEvento { get; set; }
 
         [XmlElement("nSeqEvento", Order = 8)]
@@ -109,9 +112,6 @@ namespace Unimake.Business.DFe.Xml.NFe
 
         [XmlElementAttribute("nProt", Order = 13)]
         public string NProt { get; set; }
-
-        [XmlAttribute(DataType = "ID")]
-        public string Id { get; set; }
 
         #region ShouldSerialize
 

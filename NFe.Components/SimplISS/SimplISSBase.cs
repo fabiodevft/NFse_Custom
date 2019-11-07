@@ -26,6 +26,10 @@ namespace NFe.Components.SimplISS
                                 simplissService = new PresidentePrudenteSP.h.SimplISSH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
 
+                            case 4202404: //Blumenau-SC
+                                simplissService = new BlumenauSC.h.SimplISSH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
+                                break;
+
                             default:
                                 simplissService = new Homologacao.SimplISSH(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
@@ -87,6 +91,10 @@ namespace NFe.Components.SimplISS
 
                             case 3549102: //São João da Boa Vista - SP
                                 simplissService = new SaoJoaoDaBoaVistaSP.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
+                                break;
+							
+							case 4202404: //Blumenau-SC
+                                simplissService = new BlumenauSC.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
 
                             default:

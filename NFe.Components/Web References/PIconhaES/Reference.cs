@@ -29,15 +29,9 @@ namespace NFe.Components.PIconhaES {
     [System.Web.Services.WebServiceBindingAttribute(Name="RpsServicePortBinding", Namespace="http://des36.el.com.br:8080/el-issonline/")]
     public partial class RpsServiceService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback fecharConexaoOperationCompleted;
-        
         private System.Threading.SendOrPostCallback requisitarAidfOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ListarServicosMunicipaisPrestadorOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarServicos116MunicipalOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ConsultarSituacaoLoteRpsEnvioOperationCompleted;
+        private System.Threading.SendOrPostCallback fecharConexaoOperationCompleted;
         
         private System.Threading.SendOrPostCallback validarAidfOperationCompleted;
         
@@ -70,6 +64,12 @@ namespace NFe.Components.PIconhaES {
         private System.Threading.SendOrPostCallback ConsultarUltimaRpsOperationCompleted;
         
         private System.Threading.SendOrPostCallback ValidarLoteRpsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarServicosMunicipaisPrestadorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarServicos116MunicipalOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultarSituacaoLoteRpsEnvioOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -110,19 +110,10 @@ namespace NFe.Components.PIconhaES {
         }
         
         /// <remarks/>
-        public event fecharConexaoCompletedEventHandler fecharConexaoCompleted;
-        
-        /// <remarks/>
         public event requisitarAidfCompletedEventHandler requisitarAidfCompleted;
         
         /// <remarks/>
-        public event ListarServicosMunicipaisPrestadorCompletedEventHandler ListarServicosMunicipaisPrestadorCompleted;
-        
-        /// <remarks/>
-        public event ListarServicos116MunicipalCompletedEventHandler ListarServicos116MunicipalCompleted;
-        
-        /// <remarks/>
-        public event ConsultarSituacaoLoteRpsEnvioCompletedEventHandler ConsultarSituacaoLoteRpsEnvioCompleted;
+        public event fecharConexaoCompletedEventHandler fecharConexaoCompleted;
         
         /// <remarks/>
         public event validarAidfCompletedEventHandler validarAidfCompleted;
@@ -173,30 +164,13 @@ namespace NFe.Components.PIconhaES {
         public event ValidarLoteRpsCompletedEventHandler ValidarLoteRpsCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void fecharConexao() {
-            this.Invoke("fecharConexao", new object[0]);
-        }
+        public event ListarServicosMunicipaisPrestadorCompletedEventHandler ListarServicosMunicipaisPrestadorCompleted;
         
         /// <remarks/>
-        public void fecharConexaoAsync() {
-            this.fecharConexaoAsync(null);
-        }
+        public event ListarServicos116MunicipalCompletedEventHandler ListarServicos116MunicipalCompleted;
         
         /// <remarks/>
-        public void fecharConexaoAsync(object userState) {
-            if ((this.fecharConexaoOperationCompleted == null)) {
-                this.fecharConexaoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfecharConexaoOperationCompleted);
-            }
-            this.InvokeAsync("fecharConexao", new object[0], this.fecharConexaoOperationCompleted, userState);
-        }
-        
-        private void OnfecharConexaoOperationCompleted(object arg) {
-            if ((this.fecharConexaoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.fecharConexaoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event ConsultarSituacaoLoteRpsEnvioCompletedEventHandler ConsultarSituacaoLoteRpsEnvioCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -248,93 +222,27 @@ namespace NFe.Components.PIconhaES {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public servicoMunic[] ListarServicosMunicipaisPrestador([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador) {
-            object[] results = this.Invoke("ListarServicosMunicipaisPrestador", new object[] {
-                        identificacaoPrestador});
-            return ((servicoMunic[])(results[0]));
+        public void fecharConexao() {
+            this.Invoke("fecharConexao", new object[0]);
         }
         
         /// <remarks/>
-        public void ListarServicosMunicipaisPrestadorAsync(string identificacaoPrestador) {
-            this.ListarServicosMunicipaisPrestadorAsync(identificacaoPrestador, null);
+        public void fecharConexaoAsync() {
+            this.fecharConexaoAsync(null);
         }
         
         /// <remarks/>
-        public void ListarServicosMunicipaisPrestadorAsync(string identificacaoPrestador, object userState) {
-            if ((this.ListarServicosMunicipaisPrestadorOperationCompleted == null)) {
-                this.ListarServicosMunicipaisPrestadorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarServicosMunicipaisPrestadorOperationCompleted);
+        public void fecharConexaoAsync(object userState) {
+            if ((this.fecharConexaoOperationCompleted == null)) {
+                this.fecharConexaoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfecharConexaoOperationCompleted);
             }
-            this.InvokeAsync("ListarServicosMunicipaisPrestador", new object[] {
-                        identificacaoPrestador}, this.ListarServicosMunicipaisPrestadorOperationCompleted, userState);
+            this.InvokeAsync("fecharConexao", new object[0], this.fecharConexaoOperationCompleted, userState);
         }
         
-        private void OnListarServicosMunicipaisPrestadorOperationCompleted(object arg) {
-            if ((this.ListarServicosMunicipaisPrestadorCompleted != null)) {
+        private void OnfecharConexaoOperationCompleted(object arg) {
+            if ((this.fecharConexaoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarServicosMunicipaisPrestadorCompleted(this, new ListarServicosMunicipaisPrestadorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public servico116Municipal[] ListarServicos116Municipal([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador) {
-            object[] results = this.Invoke("ListarServicos116Municipal", new object[] {
-                        identificacaoPrestador});
-            return ((servico116Municipal[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarServicos116MunicipalAsync(string identificacaoPrestador) {
-            this.ListarServicos116MunicipalAsync(identificacaoPrestador, null);
-        }
-        
-        /// <remarks/>
-        public void ListarServicos116MunicipalAsync(string identificacaoPrestador, object userState) {
-            if ((this.ListarServicos116MunicipalOperationCompleted == null)) {
-                this.ListarServicos116MunicipalOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarServicos116MunicipalOperationCompleted);
-            }
-            this.InvokeAsync("ListarServicos116Municipal", new object[] {
-                        identificacaoPrestador}, this.ListarServicos116MunicipalOperationCompleted, userState);
-        }
-        
-        private void OnListarServicos116MunicipalOperationCompleted(object arg) {
-            if ((this.ListarServicos116MunicipalCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarServicos116MunicipalCompleted(this, new ListarServicos116MunicipalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public situacaoLoteRps ConsultarSituacaoLoteRpsEnvio([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string numeroProtocolo) {
-            object[] results = this.Invoke("ConsultarSituacaoLoteRpsEnvio", new object[] {
-                        identificacaoPrestador,
-                        numeroProtocolo});
-            return ((situacaoLoteRps)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ConsultarSituacaoLoteRpsEnvioAsync(string identificacaoPrestador, string numeroProtocolo) {
-            this.ConsultarSituacaoLoteRpsEnvioAsync(identificacaoPrestador, numeroProtocolo, null);
-        }
-        
-        /// <remarks/>
-        public void ConsultarSituacaoLoteRpsEnvioAsync(string identificacaoPrestador, string numeroProtocolo, object userState) {
-            if ((this.ConsultarSituacaoLoteRpsEnvioOperationCompleted == null)) {
-                this.ConsultarSituacaoLoteRpsEnvioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarSituacaoLoteRpsEnvioOperationCompleted);
-            }
-            this.InvokeAsync("ConsultarSituacaoLoteRpsEnvio", new object[] {
-                        identificacaoPrestador,
-                        numeroProtocolo}, this.ConsultarSituacaoLoteRpsEnvioOperationCompleted, userState);
-        }
-        
-        private void OnConsultarSituacaoLoteRpsEnvioOperationCompleted(object arg) {
-            if ((this.ConsultarSituacaoLoteRpsEnvioCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ConsultarSituacaoLoteRpsEnvioCompleted(this, new ConsultarSituacaoLoteRpsEnvioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.fecharConexaoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -853,6 +761,98 @@ namespace NFe.Components.PIconhaES {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public servicoMunic[] ListarServicosMunicipaisPrestador([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador) {
+            object[] results = this.Invoke("ListarServicosMunicipaisPrestador", new object[] {
+                        identificacaoPrestador});
+            return ((servicoMunic[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarServicosMunicipaisPrestadorAsync(string identificacaoPrestador) {
+            this.ListarServicosMunicipaisPrestadorAsync(identificacaoPrestador, null);
+        }
+        
+        /// <remarks/>
+        public void ListarServicosMunicipaisPrestadorAsync(string identificacaoPrestador, object userState) {
+            if ((this.ListarServicosMunicipaisPrestadorOperationCompleted == null)) {
+                this.ListarServicosMunicipaisPrestadorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarServicosMunicipaisPrestadorOperationCompleted);
+            }
+            this.InvokeAsync("ListarServicosMunicipaisPrestador", new object[] {
+                        identificacaoPrestador}, this.ListarServicosMunicipaisPrestadorOperationCompleted, userState);
+        }
+        
+        private void OnListarServicosMunicipaisPrestadorOperationCompleted(object arg) {
+            if ((this.ListarServicosMunicipaisPrestadorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarServicosMunicipaisPrestadorCompleted(this, new ListarServicosMunicipaisPrestadorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public servico116Municipal[] ListarServicos116Municipal([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador) {
+            object[] results = this.Invoke("ListarServicos116Municipal", new object[] {
+                        identificacaoPrestador});
+            return ((servico116Municipal[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarServicos116MunicipalAsync(string identificacaoPrestador) {
+            this.ListarServicos116MunicipalAsync(identificacaoPrestador, null);
+        }
+        
+        /// <remarks/>
+        public void ListarServicos116MunicipalAsync(string identificacaoPrestador, object userState) {
+            if ((this.ListarServicos116MunicipalOperationCompleted == null)) {
+                this.ListarServicos116MunicipalOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarServicos116MunicipalOperationCompleted);
+            }
+            this.InvokeAsync("ListarServicos116Municipal", new object[] {
+                        identificacaoPrestador}, this.ListarServicos116MunicipalOperationCompleted, userState);
+        }
+        
+        private void OnListarServicos116MunicipalOperationCompleted(object arg) {
+            if ((this.ListarServicos116MunicipalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarServicos116MunicipalCompleted(this, new ListarServicos116MunicipalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://des36.el.com.br:8080/el-issonline/", ResponseNamespace="http://des36.el.com.br:8080/el-issonline/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public situacaoLoteRps ConsultarSituacaoLoteRpsEnvio([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string identificacaoPrestador, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string numeroProtocolo) {
+            object[] results = this.Invoke("ConsultarSituacaoLoteRpsEnvio", new object[] {
+                        identificacaoPrestador,
+                        numeroProtocolo});
+            return ((situacaoLoteRps)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultarSituacaoLoteRpsEnvioAsync(string identificacaoPrestador, string numeroProtocolo) {
+            this.ConsultarSituacaoLoteRpsEnvioAsync(identificacaoPrestador, numeroProtocolo, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultarSituacaoLoteRpsEnvioAsync(string identificacaoPrestador, string numeroProtocolo, object userState) {
+            if ((this.ConsultarSituacaoLoteRpsEnvioOperationCompleted == null)) {
+                this.ConsultarSituacaoLoteRpsEnvioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarSituacaoLoteRpsEnvioOperationCompleted);
+            }
+            this.InvokeAsync("ConsultarSituacaoLoteRpsEnvio", new object[] {
+                        identificacaoPrestador,
+                        numeroProtocolo}, this.ConsultarSituacaoLoteRpsEnvioOperationCompleted, userState);
+        }
+        
+        private void OnConsultarSituacaoLoteRpsEnvioOperationCompleted(object arg) {
+            if ((this.ConsultarSituacaoLoteRpsEnvioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultarSituacaoLoteRpsEnvioCompleted(this, new ConsultarSituacaoLoteRpsEnvioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -872,76 +872,136 @@ namespace NFe.Components.PIconhaES {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(servico116Municipal))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
-    public partial class servicoMunic {
+    public partial class empresa {
         
-        private string aliquotaField;
+        private string enderecoField;
         
-        private string codigoField;
+        private byte[] logoField;
         
-        private string denominacaoField;
+        private string numDiasCoversaoRpsField;
         
-        private string retencaoField;
+        private string utilizaIntermediarioField;
         
-        private string tipoServicoField;
+        private string utilizaListaCnaeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string aliquota {
+        public string endereco {
             get {
-                return this.aliquotaField;
+                return this.enderecoField;
             }
             set {
-                this.aliquotaField = value;
+                this.enderecoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+        public byte[] logo {
+            get {
+                return this.logoField;
+            }
+            set {
+                this.logoField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo {
+        public string numDiasCoversaoRps {
             get {
-                return this.codigoField;
+                return this.numDiasCoversaoRpsField;
             }
             set {
-                this.codigoField = value;
+                this.numDiasCoversaoRpsField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string denominacao {
+        public string utilizaIntermediario {
             get {
-                return this.denominacaoField;
+                return this.utilizaIntermediarioField;
             }
             set {
-                this.denominacaoField = value;
+                this.utilizaIntermediarioField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string retencao {
+        public string utilizaListaCnae {
             get {
-                return this.retencaoField;
+                return this.utilizaListaCnaeField;
             }
             set {
-                this.retencaoField = value;
+                this.utilizaListaCnaeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
+    public partial class situacaoLoteRps {
+        
+        private string[] mensagensField;
+        
+        private string numeroLoteField;
+        
+        private int situacaoLoteRps1Field;
+        
+        private bool situacaoLoteRps1FieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("mensagens", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] mensagens {
+            get {
+                return this.mensagensField;
+            }
+            set {
+                this.mensagensField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string tipoServico {
+        public string numeroLote {
             get {
-                return this.tipoServicoField;
+                return this.numeroLoteField;
             }
             set {
-                this.tipoServicoField = value;
+                this.numeroLoteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("situacaoLoteRps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int situacaoLoteRps1 {
+            get {
+                return this.situacaoLoteRps1Field;
+            }
+            set {
+                this.situacaoLoteRps1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool situacaoLoteRps1Specified {
+            get {
+                return this.situacaoLoteRps1FieldSpecified;
+            }
+            set {
+                this.situacaoLoteRps1FieldSpecified = value;
             }
         }
     }
@@ -1212,6 +1272,142 @@ namespace NFe.Components.PIconhaES {
             }
             set {
                 this.nfeRpsNotaFiscalField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(servico116Municipal))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
+    public partial class servicoMunic {
+        
+        private string aliquotaField;
+        
+        private string codigoField;
+        
+        private string denominacaoField;
+        
+        private string retencaoField;
+        
+        private string tipoServicoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string aliquota {
+            get {
+                return this.aliquotaField;
+            }
+            set {
+                this.aliquotaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string denominacao {
+            get {
+                return this.denominacaoField;
+            }
+            set {
+                this.denominacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string retencao {
+            get {
+                return this.retencaoField;
+            }
+            set {
+                this.retencaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string tipoServico {
+            get {
+                return this.tipoServicoField;
+            }
+            set {
+                this.tipoServicoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
+    public partial class servico116Municipal : servicoMunic {
+        
+        private string atividadePrincipalField;
+        
+        private string codigoCnaeField;
+        
+        private string codigoServico116Field;
+        
+        private string nomeCnaeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string atividadePrincipal {
+            get {
+                return this.atividadePrincipalField;
+            }
+            set {
+                this.atividadePrincipalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigoCnae {
+            get {
+                return this.codigoCnaeField;
+            }
+            set {
+                this.codigoCnaeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigoServico116 {
+            get {
+                return this.codigoServico116Field;
+            }
+            set {
+                this.codigoServico116Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nomeCnae {
+            get {
+                return this.nomeCnaeField;
+            }
+            set {
+                this.nomeCnaeField = value;
             }
         }
     }
@@ -1534,206 +1730,6 @@ namespace NFe.Components.PIconhaES {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
-    public partial class empresa {
-        
-        private string enderecoField;
-        
-        private byte[] logoField;
-        
-        private string numDiasCoversaoRpsField;
-        
-        private string utilizaIntermediarioField;
-        
-        private string utilizaListaCnaeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string endereco {
-            get {
-                return this.enderecoField;
-            }
-            set {
-                this.enderecoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
-        public byte[] logo {
-            get {
-                return this.logoField;
-            }
-            set {
-                this.logoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string numDiasCoversaoRps {
-            get {
-                return this.numDiasCoversaoRpsField;
-            }
-            set {
-                this.numDiasCoversaoRpsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string utilizaIntermediario {
-            get {
-                return this.utilizaIntermediarioField;
-            }
-            set {
-                this.utilizaIntermediarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string utilizaListaCnae {
-            get {
-                return this.utilizaListaCnaeField;
-            }
-            set {
-                this.utilizaListaCnaeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
-    public partial class situacaoLoteRps {
-        
-        private string[] mensagensField;
-        
-        private string numeroLoteField;
-        
-        private int situacaoLoteRps1Field;
-        
-        private bool situacaoLoteRps1FieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("mensagens", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string[] mensagens {
-            get {
-                return this.mensagensField;
-            }
-            set {
-                this.mensagensField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string numeroLote {
-            get {
-                return this.numeroLoteField;
-            }
-            set {
-                this.numeroLoteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("situacaoLoteRps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int situacaoLoteRps1 {
-            get {
-                return this.situacaoLoteRps1Field;
-            }
-            set {
-                this.situacaoLoteRps1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool situacaoLoteRps1Specified {
-            get {
-                return this.situacaoLoteRps1FieldSpecified;
-            }
-            set {
-                this.situacaoLoteRps1FieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://des36.el.com.br:8080/el-issonline/")]
-    public partial class servico116Municipal : servicoMunic {
-        
-        private string atividadePrincipalField;
-        
-        private string codigoCnaeField;
-        
-        private string codigoServico116Field;
-        
-        private string nomeCnaeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string atividadePrincipal {
-            get {
-                return this.atividadePrincipalField;
-            }
-            set {
-                this.atividadePrincipalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigoCnae {
-            get {
-                return this.codigoCnaeField;
-            }
-            set {
-                this.codigoCnaeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigoServico116 {
-            get {
-                return this.codigoServico116Field;
-            }
-            set {
-                this.codigoServico116Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nomeCnae {
-            get {
-                return this.nomeCnaeField;
-            }
-            set {
-                this.nomeCnaeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void fecharConexaoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void requisitarAidfCompletedEventHandler(object sender, requisitarAidfCompletedEventArgs e);
     
@@ -1769,81 +1765,7 @@ namespace NFe.Components.PIconhaES {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ListarServicosMunicipaisPrestadorCompletedEventHandler(object sender, ListarServicosMunicipaisPrestadorCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarServicosMunicipaisPrestadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarServicosMunicipaisPrestadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public servicoMunic[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((servicoMunic[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ListarServicos116MunicipalCompletedEventHandler(object sender, ListarServicos116MunicipalCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarServicos116MunicipalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarServicos116MunicipalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public servico116Municipal[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((servico116Municipal[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ConsultarSituacaoLoteRpsEnvioCompletedEventHandler(object sender, ConsultarSituacaoLoteRpsEnvioCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarSituacaoLoteRpsEnvioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ConsultarSituacaoLoteRpsEnvioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public situacaoLoteRps Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((situacaoLoteRps)(this.results[0]));
-            }
-        }
-    }
+    public delegate void fecharConexaoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
@@ -2251,6 +2173,84 @@ namespace NFe.Components.PIconhaES {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((loteRpsResposta)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ListarServicosMunicipaisPrestadorCompletedEventHandler(object sender, ListarServicosMunicipaisPrestadorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarServicosMunicipaisPrestadorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarServicosMunicipaisPrestadorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public servicoMunic[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((servicoMunic[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ListarServicos116MunicipalCompletedEventHandler(object sender, ListarServicos116MunicipalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarServicos116MunicipalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarServicos116MunicipalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public servico116Municipal[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((servico116Municipal[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ConsultarSituacaoLoteRpsEnvioCompletedEventHandler(object sender, ConsultarSituacaoLoteRpsEnvioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarSituacaoLoteRpsEnvioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarSituacaoLoteRpsEnvioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public situacaoLoteRps Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((situacaoLoteRps)(this.results[0]));
             }
         }
     }

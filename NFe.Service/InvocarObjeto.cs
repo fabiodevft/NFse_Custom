@@ -126,7 +126,7 @@ namespace NFe.Service
                         {
                             try
                             {
-                                wsProxy.SetProp(servicoWS, "cteCabecMsg", cabecMsg);
+                                wsProxy.SetProp2(servicoWS, "cteCabecMsg", cabecMsg);
                             }
                             catch //Se der erro é pq não está no ambiente normal então tem que ser o nome padrão pois Mato Grosso do Sul fugiu o padrão nacional.
                             {
@@ -414,6 +414,13 @@ namespace NFe.Service
                     case PadroesNFSe.BETHA:
                         break;
 
+                    case PadroesNFSe.DSF:
+                        if (docXML.DocumentElement.GetElementsByTagName("versao")[0].InnerText == "3.00")
+                        {
+                            wsProxy.SetProp(servicoWS, "Timeout", 240000);
+                        }
+                        break;
+
                     default:
                         wsProxy.SetProp(servicoWS, "Timeout", 120000);
                         break;
@@ -497,14 +504,6 @@ namespace NFe.Service
                     break;
 
                 #endregion Padrão ISSONLINE
-
-                #region Padrão Blumenau-SC
-
-                case PadroesNFSe.BLUMENAU_SC:
-                    strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { 1, docXML.OuterXml });
-                    break;
-
-                #endregion Padrão Blumenau-SC
 
                 #region Padrão Paulistana
 
@@ -752,7 +751,10 @@ namespace NFe.Service
                         switch (metodo)
                         {
                             case "RecepcionarLoteRps":
-                                strRetorno = SerializarObjeto((Components.HJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, null }));
+                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[0];
+                                docXML.DocumentElement.RemoveChild(docXML.GetElementsByTagName("Signature")[0]);
+
+                                strRetorno = SerializarObjeto((Components.HJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, joXmlAssinatura }));
                                 break;
 
                             case "CancelarNfse":
@@ -799,12 +801,15 @@ namespace NFe.Service
                                     }));
                                 break;
                         }
-                    } 
+                    }
                     else
                         switch (metodo)
                         {
                             case "RecepcionarLoteRps":
-                                strRetorno = SerializarObjeto((Components.PJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, null }));
+                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[0];
+                                docXML.DocumentElement.RemoveChild(docXML.GetElementsByTagName("Signature")[0]);
+
+                                strRetorno = SerializarObjeto((Components.PJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, joXmlAssinatura }));
                                 break;
 
                             case "CancelarNfse":
@@ -935,7 +940,7 @@ namespace NFe.Service
                     if (string.IsNullOrEmpty(cabecMsg))
                         strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { docXML.OuterXml });
                     else
-                       strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cabecMsg.ToString(), docXML.OuterXml });
+                        strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cabecMsg.ToString(), docXML.OuterXml });
                     break;
 
                     #endregion Demais padrões

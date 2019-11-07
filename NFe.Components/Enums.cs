@@ -673,13 +673,7 @@ namespace NFe.Components
         /// </summary>
         [Description("ISS On-line/Assessor Público")]
         ISSONLINE_ASSESSORPUBLICO,
-
-        /// <summary>
-        /// Padrão da prefeitura de Blumenau-SC
-        /// </summary>
-        [Description("Blumenau-SC")]
-        BLUMENAU_SC,
-
+             
         /// <summary>
         /// Padrão da prefeitura de Juiz de Fora-MG
         /// </summary>

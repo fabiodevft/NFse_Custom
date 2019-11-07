@@ -279,17 +279,18 @@ namespace NFe.Components.QRCode
             {
                 string tpAmb = GetValueXML("ide", "tpAmb").Trim();
                 string tpEmis = GetValueXML("ide", "tpEmis").Trim();
-                string chCTe = GetAttributeXML("infCte", "Id").Substring(4).Trim();
+                string chCTe = GetAttributeXML("infCte", "Id").Substring(3).Trim();
 
                 string linkQRCode = UrlCTe +
                     "?chCTe=" + chCTe +
                     "&amp;tpAmb=" + tpAmb;
 
-                if (tpEmis.Equals("2")) //Contingência
+                if (tpEmis.Equals("4") || tpEmis.Equals("5")) //Contingência EPEC ou FS-DA
                 {
                     linkQRCode += "&amp;sign=" + Criptografia.SignWithRSASHA1(certificado, chCTe);
                 }
-//                AddLinkQRCode(linkQRCode);
+
+                AddLinkQRCode(linkQRCode);
             }
         }
 

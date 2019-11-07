@@ -311,12 +311,6 @@
     <Setting Name="NFe_Components_HJaboataoDosGuararapesPE_TINUS_RecepcionarLoteRps_RecepcionarLoteRps" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://www.tinus.com.br/csp/jaboatao/WSNFSE.RecepcionarLoteRps.cls</Value>
     </Setting>
-    <Setting Name="NFe_Components_PCachoeiraSulRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://177.84.147.222:8091/NFSe.Portal.Integracao/Services.svc</Value>
-    </Setting>
-    <Setting Name="NFe_Components_HCachoeiraSulRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://177.84.147.222:8091/NFSe.Portal.Integracao.Teste/Services.svc</Value>
-    </Setting>
     <Setting Name="NFe_Components_PJaboataoDosGuararapesPE_TINUS_CancelarNfse_CancelarNfse" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://www.tinus.com.br/csp/jaboatao/WSNFSE.CancelarNfse.cls</Value>
     </Setting>
@@ -698,12 +692,6 @@
     <Setting Name="NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
-    <Setting Name="NFe_Components_PSjbicas_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/sjbicas</Value>
-    </Setting>
-    <Setting Name="NFe_Components_HSjbicas_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://homolog.govdigital.com.br/ws/sjbicas</Value>
-    </Setting>
     <Setting Name="NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:80/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
@@ -715,6 +703,48 @@
     </Setting>
     <Setting Name="NFe_Components_PJoinvilleSC_Servicos" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://nfemws.joinville.sc.gov.br/NotaFiscal/Servicos.asmx</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HIlheusBA_Nfse" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://lftributos.metropolisweb.com.br:9090/webservicenfse/nfse/services</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HEntreIjuisRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://pmei-rs.ddns.net:8089/NFSe.Portal.Integracao.Teste/Services.svc</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PEntreIjuisRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://pmei-rs.ddns.net:8089/NFSe.Portal.Integracao/Services.svc</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.homolog.govdigital.com.br/ws/fabriciano</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/fabriciano</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HVargemGrandePaulistaSP_NfseServiceImplVgpService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.homolog.govdigital.com.br/ws/vgp</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PVargemGrandePaulistaSP_NfseServiceImplVgpService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/vgp</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PPeixotoAzevedoMT_nfse_web_service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.gp.srv.br/tributario_peixotodeazevedo/servlet/anfse_web_service</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HPeixotoAzevedoMT_nfse_web_service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.gp.srv.br/tributario_homologacao/servlet/anfse_web_service</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HBlumenauSC_NfseService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wshomologacaoabrasf.simplissweb.com.br/nfseservice.svc</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PBlumenauSC_NfseService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HSjbicas1_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://homolog.govdigital.com.br/ws/sjbicas</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PSjbicas_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/sjbicas</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PCachoeiraSulRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cachoeiradosul-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc</Value>
     </Setting>
   </Settings>
 </SettingsFile>

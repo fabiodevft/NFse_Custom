@@ -201,11 +201,6 @@ namespace NFe.Components.Fiorilli
             FiorilliService.ConsultarNfsePorRps(file);
         }
 
-        public override void ConsultarNfseServicoTomado(string file)
-        {
-            FiorilliService.ConsultarNfseServicoTomado(file);
-        }
-
         #endregion Métodos
     }
 }
