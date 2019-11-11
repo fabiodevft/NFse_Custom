@@ -1952,7 +1952,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://179.108.80.218:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
         public string NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS {
             get {
                 return ((string)(this["NFe_Components_br_com_fiorilli_aguasdelindoiasp_p_IssWebWS"]));
@@ -2337,7 +2337,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://186.224.0.62:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
         public string NFe_Components_br_com_fiorilli_duartinasp_p_IssWebWS {
             get {
                 return ((string)(this["NFe_Components_br_com_fiorilli_duartinasp_p_IssWebWS"]));
@@ -2347,7 +2347,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5661/IssWeb-ejb/IssWebWS/IssWebWS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS")]
         public string NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS {
             get {
                 return ((string)(this["NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS"]));
