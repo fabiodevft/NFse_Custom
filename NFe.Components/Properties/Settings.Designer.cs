@@ -12,7 +12,7 @@ namespace NFe.Components.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -869,16 +869,6 @@ namespace NFe.Components.Properties {
         public string NFe_Components_br_com_simplissweb_wspatrociniomg_p_NfseService {
             get {
                 return ((string)(this["NFe_Components_br_com_simplissweb_wspatrociniomg_p_NfseService"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS")]
-        public string NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS {
-            get {
-                return ((string)(this["NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS"]));
             }
         }
         
@@ -2347,16 +2337,6 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS")]
-        public string NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS {
-            get {
-                return ((string)(this["NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:80/IssWeb-ejb/IssWebWS/IssWebWS")]
         public string NFe_Components_br_com_fiorilli_itajobisp_p_IssWebWS {
             get {
@@ -2532,6 +2512,26 @@ namespace NFe.Components.Properties {
         public string NFe_Components_PCachoeiraSulRS_NFSeIntegracao {
             get {
                 return ((string)(this["NFe_Components_PCachoeiraSulRS_NFSeIntegracao"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS {
+            get {
+                return ((string)(this["NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS")]
+        public string NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS {
+            get {
+                return ((string)(this["NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS"]));
             }
         }
     }

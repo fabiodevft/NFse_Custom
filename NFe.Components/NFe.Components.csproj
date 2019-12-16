@@ -6544,6 +6544,28 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PSerafinaCorreaRS_IssWebWS</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HMirassolandiaSP-FIORILLI.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.fiorilli.mirassolandiasp.h\</RelPath>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HMirassolandiaSP-FIORILLI.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Producao\PGarcaSP-FIORILLI.WSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.fiorilli.garcasp.p\</RelPath>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Producao\PGarcaSP-FIORILLI.WSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="C:\Users\renan\Desktop\Itaporanga\PItaporanga-SIMPLISS.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.simplissweb.wsitaporanga2.p\</RelPath>
@@ -6819,17 +6841,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\br.com.fiorilli.garcasp.p\</RelPath>
-      <UpdateFromURL>http://179.96.132.27:2014/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="http://186.224.0.62:5661/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.fiorilli.duartinasp.p\</RelPath>
@@ -7038,17 +7049,6 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_betha_egov_p_NfseWSService</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\br.com.fiorilli.mirassolandiasp.h\</RelPath>
-      <UpdateFromURL>http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_br_com_fiorilli_mirassolandiasp_h_IssWebWS</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://homologacao.bauru.sp.gov.br/nfe_ws/%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

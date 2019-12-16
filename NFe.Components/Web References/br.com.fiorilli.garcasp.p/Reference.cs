@@ -53,7 +53,7 @@ namespace NFe.Components.br.com.fiorilli.garcasp.p {
         
         /// <remarks/>
         public IssWebWS() {
-            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_br_com_fiorilli_duartinasp_p_IssWebWS;
+            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_br_com_fiorilli_garcasp_p_IssWebWS;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
