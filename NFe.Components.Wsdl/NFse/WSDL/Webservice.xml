@@ -8115,7 +8115,7 @@
       <CancelarNfse>wsdl\producao\PSantaIsabelSP-CECAM.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-	<Estado ID="2913606" Nome="Ilhéus - BA" UF="BA" Padrao="METROPOLIS">
+  <Estado ID="2913606" Nome="Ilhéus - BA" UF="BA" Padrao="METROPOLIS">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HIlheusBA-METROPOLIS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HIlheusBA-METROPOLIS.wsdl</ConsultarSituacaoLoteRps>
@@ -8178,5 +8178,43 @@
       <ConsultarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
-   </Estado>
+  </Estado>
+  <Estado ID="5210208" Nome="Iporá - GO" UF="GO" Padrao="MEGASOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HIporaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HIporaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PIporaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PIporaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3546306" Nome="Santa Cruz das Palmeiras - SP" UF="SP" Padrao="ISSONLINE_ASSESSORPUBLICO">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2504009" Nome="Campina Grande - PB" UF="PB" Padrao="WEBISS_202">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HCampinaGrandePB-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PCampinaGrandePB-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

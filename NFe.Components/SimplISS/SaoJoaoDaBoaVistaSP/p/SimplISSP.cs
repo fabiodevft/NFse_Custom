@@ -2,6 +2,7 @@
 using NFe.Components.Abstract;
 using NFe.Components.PSaoJoaoBoaVistaSP;
 using System.Net;
+using System.Xml;
 
 namespace NFe.Components.SimplISS.SaoJoaoDaBoaVistaSP.p
 {
@@ -52,12 +53,24 @@ namespace NFe.Components.SimplISS.SaoJoaoDaBoaVistaSP.p
         #region Métodos
         public override void EmiteNF(string file)
         {
-            GerarNovaNfseEnvio envio = DeserializarObjeto<GerarNovaNfseEnvio>(file);              
-            string strResult = SerializarObjeto(Service.GerarNfse(envio, DadosConexao));
+            XmlDocument doc = new XmlDocument();
+            doc.Load(file);
+            string strResult = string.Empty;
+            switch (doc.DocumentElement.Name)
+            {
+                case "GerarNovaNfseEnvio":
+                    GerarNovaNfseEnvio envio = DeserializarObjeto<GerarNovaNfseEnvio>(file);
+                    strResult = SerializarObjeto(Service.GerarNfse(envio, DadosConexao));
+                    break;
+
+                case "EnviarLoteRpsEnvio":
+                    EnviarLoteRpsEnvio envioLote = DeserializarObjeto<EnviarLoteRpsEnvio>(file);
+                    strResult = SerializarObjeto(Service.RecepcionarLoteRps(envioLote, DadosConexao));
+                    break;
+            }
 
             GerarRetorno(file, strResult, Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).EnvioXML,
                                           Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).RetornoXML);
-
         }
 
         public override void CancelarNfse(string file)
