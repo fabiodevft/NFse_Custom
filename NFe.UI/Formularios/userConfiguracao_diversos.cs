@@ -483,7 +483,8 @@ namespace NFe.UI.Formularios
                            ufCod == 4300604 /*Alvorada-RS*/ ||
                            ufCod == 4104907 /*Castro-PR*/ ||
                            ufCod == 3516705 /*Garça-SP*/ ||
-                           ufCod == 3514502 /*Duartina-SP*/;
+                           ufCod == 3514502 /*Duartina-SP*/ ||
+                           ufCod == 3549102 /*São João da Boa Vista-SP*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
