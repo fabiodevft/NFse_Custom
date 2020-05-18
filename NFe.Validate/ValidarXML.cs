@@ -54,7 +54,8 @@ namespace NFe.Validate
 
             if (TipoArqXml.cArquivoSchema.Contains("PAULISTANA") ||
                 TipoArqXml.cArquivoSchema.Contains("BLUMENAU") ||
-                TipoArqXml.cArquivoSchema.Contains("DSF"))
+                TipoArqXml.cArquivoSchema.Contains("DSF") ||
+                TipoArqXml.cArquivoSchema.Contains("SIAT"))
             {
                 if (arquivoXML.EndsWith(Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).EnvioXML, StringComparison.InvariantCultureIgnoreCase) ||
                     arquivoXML.EndsWith(Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML, StringComparison.InvariantCultureIgnoreCase))
@@ -78,11 +79,22 @@ namespace NFe.Validate
                             {
                                 found = true;
                                 //Encryptar a tag Assinatura
-                                int len = TipoArqXml.cArquivoSchema.Contains("DSF") ? 94 : 86;
+                                
+                                //int len = TipoArqXml.cArquivoSchema.Contains("DSF") ? 94 : 86;
+                                int len;
+                                if (TipoArqXml.cArquivoSchema.Contains("DSF") || TipoArqXml.cArquivoSchema.Contains("SIAT"))
+                                {
+                                    len = 94;
+                                }
+                                else
+                                {
+                                    len = 86;
+                                }
+                                
                                 if (rpsElement.GetElementsByTagName(Assinatura)[0].InnerText.Length == len)    //jah assinado?
                                 {
                                     bSave = true;
-                                    if (TipoArqXml.cArquivoSchema.Contains("DSF"))
+                                    if (TipoArqXml.cArquivoSchema.Contains("DSF") || TipoArqXml.cArquivoSchema.Contains("SIAT"))
                                     {
                                         sh1 = Criptografia.GetSHA1HashData(rpsElement.GetElementsByTagName(Assinatura)[0].InnerText);
                                     }
@@ -106,7 +118,7 @@ namespace NFe.Validate
                         }
                     }
                     else if (arquivoXML.EndsWith(NFe.Components.Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML, StringComparison.InvariantCultureIgnoreCase) &&
-                            !TipoArqXml.cArquivoSchema.Contains("DSF"))
+                            !TipoArqXml.cArquivoSchema.Contains("DSF") && !TipoArqXml.cArquivoSchema.Contains("SIAT"))
                     {
                         const string AssinaturaCancelamento = "AssinaturaCancelamento";
 

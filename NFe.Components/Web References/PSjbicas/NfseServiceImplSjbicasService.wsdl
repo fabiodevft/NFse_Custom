@@ -232,7 +232,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseServiceImplSjbicasService">
     <wsdl:port name="nfseSjbicasPort" binding="tns:NfseServiceImplSjbicasServiceSoapBinding">
-      <soap:address location="https://ws.govdigital.com.br/ws/sjbicas" />
+      <soap:address location="https://ws.nfe-cidades.com.br/ws/sjbicas" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

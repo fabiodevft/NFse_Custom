@@ -249,12 +249,14 @@
     <Compile Include="Schemas\SchemaXMLNFSe_IIBRASIL.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />
+    <Compile Include="Schemas\SchemaXMLNFSe_ISSNet_202.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_MEGASOFT.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_D2TI.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_PUBLIC_SOFT.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_ADM_SISTEMAS.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_E_RECEITA.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_MODERNIZACAO_PUBLICA.cs" />
+    <Compile Include="Schemas\SchemaXMLNFSe_SIAT.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SMARAPD_204.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SISPMJP﻿.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SIGCORP_SIGISS_203.cs" />
@@ -2417,26 +2419,17 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.fisslex.demo.aws_consultarsituacaoloterps.h\WS_ConsultarSituacaoLoteRps.wsdl" />
-    <None Include="Web References\br.com.govdigital.homolog.lavras.h\lavr.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog.lavras.h\NfseServiceImplLavrService.wsdl" />
     <None Include="Web References\br.com.govdigital.homolog.lavras.h\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.homolog.paracatu.h\NfseServiceImplPctuService.wsdl" />
-    <None Include="Web References\br.com.govdigital.homolog.paracatu.h\pctu.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog.paracatu.h\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.homolog.pedroleopoldo.h\NfseServiceImplPlService.wsdl" />
-    <None Include="Web References\br.com.govdigital.homolog.pedroleopoldo.h\pl.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog.pedroleopoldo.h\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2450,17 +2443,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.homolog.pocos.h\NfseServiceImplPocosService.wsdl" />
-    <None Include="Web References\br.com.govdigital.homolog.pocos.h\pocos.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog.pocos.h\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.homolog.prata.h\NfseServiceImplPrataService.wsdl" />
-    <None Include="Web References\br.com.govdigital.homolog.prata.h\prata.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog.prata.h\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2470,19 +2457,10 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\br.com.govdigital.homolog.saojosedalapa.h\sjl.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\br.com.govdigital.homolog1\div.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.homolog1\NfseServiceImplDivService.wsdl" />
     <None Include="Web References\br.com.govdigital.homolog1\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\br.com.govdigital.ws.lavras.p\lavr.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\br.com.govdigital.ws.lavras.p\NfseServiceImplLavrService.wsdl" />
     <None Include="Web References\br.com.govdigital.ws.lavras.p\Reference.map">
@@ -2490,17 +2468,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.ws.paracatu.p\NfseServiceImplPctuService.wsdl" />
-    <None Include="Web References\br.com.govdigital.ws.paracatu.p\pctu.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.ws.paracatu.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.ws.pedroleopoldo.p\NfseServiceImplPlService.wsdl" />
-    <None Include="Web References\br.com.govdigital.ws.pedroleopoldo.p\pl.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.ws.pedroleopoldo.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2514,17 +2486,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.ws.pocos.p\NfseServiceImplPocosService.wsdl" />
-    <None Include="Web References\br.com.govdigital.ws.pocos.p\pocos.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.ws.pocos.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.govdigital.ws.prata.p\NfseServiceImplPrataService.wsdl" />
-    <None Include="Web References\br.com.govdigital.ws.prata.p\prata.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\br.com.govdigital.ws.prata.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2533,12 +2499,6 @@
     <None Include="Web References\br.com.govdigital.ws.saojosedalapa.p\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\br.com.govdigital.ws.saojosedalapa.p\sjl.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\br.com.govdigital.ws\div.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\br.com.govdigital.ws\NfseServiceImplDivService.wsdl" />
     <None Include="Web References\br.com.govdigital.ws\Reference.map">
@@ -3638,9 +3598,6 @@
     <None Include="Web References\FiorilliH\SubstituirNfseResposta1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\HAndradasMG\andradas.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\HAndradasMG\NfseServiceImpleAndradasService.wsdl" />
     <None Include="Web References\HAndradasMG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -3973,9 +3930,6 @@
     </None>
     <None Include="Web References\HGovernadorValadaresMG\tcRetornoNota.datasource">
       <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\HGuaxupeMG\guax.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\HGuaxupeMG\NfseServiceImplGuaxService.wsdl" />
     <None Include="Web References\HGuaxupeMG\Reference.map">
@@ -4327,9 +4281,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\HSaoRoqueSP\saoRoque.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\HSerafinaCorreaRS\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -4396,9 +4347,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\HViamaoRS\Services0.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\PAndradasMG\andradas.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PAndradasMG\NfseServiceImpleAndradasService.wsdl" />
@@ -4932,9 +4880,6 @@
     <None Include="Web References\PGuarantaNorteMT\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\PGuaxupeMG\guax.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PGuaxupeMG\NfseServiceImplGuaxService.wsdl" />
     <None Include="Web References\PGuaxupeMG\Reference.map">
@@ -5541,9 +5486,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\PSaoRoqueSP\saoRoque.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\PSenadorCanedoGO\nfseWS.wsdl" />
     <None Include="Web References\PSenadorCanedoGO\nfseWS0.wsdl" />
     <None Include="Web References\PSenadorCanedoGO\Reference.map">
@@ -5752,10 +5694,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HAndradasMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HAndradasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HAndradasMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HAndradasMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HAndradasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -5829,10 +5771,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HGovernadorValadaresMG_WebService_SigISS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HGuaxupeMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6005,10 +5947,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HRondonopolisMT_nfse_web_service</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PAndradasMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PAndradasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PAndradasMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PAndradasMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PAndradasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6159,10 +6101,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PGovernadorValadaresMG_WebService_SigISS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PGuaxupeMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6632,10 +6574,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_gov_sp_presidenteprudente_sistemas_www_p_NfseService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSjbicas-GovDigital.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSjbicas-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HSjbicas\</RelPath>
-      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSjbicas-GovDigital.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSjbicas-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6654,10 +6596,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PCachoeiraSulRS_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSjbicas-GovDigital.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSjbicas-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PSjbicas\</RelPath>
-      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSjbicas-GovDigital.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSjbicas-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6665,10 +6607,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PSjbicas_NfseServiceImplSjbicasService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HVargemGrandePaulistaSP\</RelPath>
-      <UpdateFromURL>D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6676,10 +6618,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HVargemGrandePaulistaSP_NfseServiceImplVgpService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HCoronelFabricianoMG\</RelPath>
-      <UpdateFromURL>D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6764,10 +6706,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HRegenteFeijoSP_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HSaoRoqueSP\</RelPath>
-      <UpdateFromURL>D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6775,10 +6717,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PVargemGrandePaulistaSP\</RelPath>
-      <UpdateFromURL>D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6786,10 +6728,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PVargemGrandePaulistaSP_NfseServiceImplVgpService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PCoronelFabricianoMG\</RelPath>
-      <UpdateFromURL>D:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6830,10 +6772,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PRegenteFeijoSP_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PSaoRoqueSP\</RelPath>
-      <UpdateFromURL>D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7787,10 +7729,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_fisslex_demo_aws_consultarsituacaoloterps_h_WS_ConsultarSituacaoLoteRps</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/div%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HDivinopolisMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog1\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/div%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7798,10 +7740,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog1_NfseServiceImplDivService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/lavr%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HLavrasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.lavras.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/lavr%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HLavrasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7809,10 +7751,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog_lavras_h_NfseServiceImplLavrService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/pctu%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HParacatuMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.paracatu.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/pctu%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HParacatuMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7820,10 +7762,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog_paracatu_h_NfseServiceImplPctuService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/pl%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.pedroleopoldo.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/pl%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7842,10 +7784,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog_pelotas_h_NfseServiceImplPelotasService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/pocos%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.pocos.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/pocos%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7853,10 +7795,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog_pocos_h_NfseServiceImplPocosService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/prata%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPrataMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.prata.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/prata%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HPrataMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -7864,10 +7806,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_homolog_prata_h_NfseServiceImplPrataService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://homolog.govdigital.com.br/ws/sjl%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.homolog.saojosedalapa.h\</RelPath>
-      <UpdateFromURL>https://homolog.govdigital.com.br/ws/sjl%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8084,10 +8026,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_sigiss_tremembe_p_WebService_SigISS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/div%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PDivinopolisMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/div%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PDivinopolisMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8095,10 +8037,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_NfseServiceImplDivService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/lavr%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PLavrasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.lavras.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/lavr%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PLavrasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8106,10 +8048,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_lavras_p_NfseServiceImplLavrService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/pctu%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PParacatuMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.paracatu.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/pctu%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PParacatuMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8117,10 +8059,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_paracatu_p_NfseServiceImplPctuService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/pl%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.pedroleopoldo.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/pl%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8139,10 +8081,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_pelotas_p_NfseServiceImplPelotasService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/pocos%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.pocos.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/pocos%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8150,10 +8092,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_pocos_p_NfseServiceImplPocosService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/prata%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPrataMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.prata.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/prata%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PPrataMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -8161,10 +8103,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_com_govdigital_ws_prata_p_NfseServiceImplPrataService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="https://ws.govdigital.com.br/ws/sjl%3fwsdl">
+    <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.govdigital.ws.saojosedalapa.p\</RelPath>
-      <UpdateFromURL>https://ws.govdigital.com.br/ws/sjl%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

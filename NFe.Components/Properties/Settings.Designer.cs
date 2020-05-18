@@ -12,7 +12,7 @@ namespace NFe.Components.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -248,7 +248,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/div")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/div")]
         public string NFe_Components_br_com_govdigital_ws_NfseServiceImplDivService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_NfseServiceImplDivService"]));
@@ -258,7 +258,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/div")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/div")]
         public string NFe_Components_br_com_govdigital_homolog1_NfseServiceImplDivService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog1_NfseServiceImplDivService"]));
@@ -340,7 +340,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/pocos")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/pocos")]
         public string NFe_Components_br_com_govdigital_ws_pocos_p_NfseServiceImplPocosService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_pocos_p_NfseServiceImplPocosService"]));
@@ -350,7 +350,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/pocos")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/pocos")]
         public string NFe_Components_br_com_govdigital_homolog_pocos_h_NfseServiceImplPocosService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_pocos_h_NfseServiceImplPocosService"]));
@@ -360,7 +360,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/pctu")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/pctu")]
         public string NFe_Components_br_com_govdigital_ws_paracatu_p_NfseServiceImplPctuService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_paracatu_p_NfseServiceImplPctuService"]));
@@ -370,7 +370,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/pctu")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/pctu")]
         public string NFe_Components_br_com_govdigital_homolog_paracatu_h_NfseServiceImplPctuService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_paracatu_h_NfseServiceImplPctuService"]));
@@ -390,7 +390,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/lavr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/lavr")]
         public string NFe_Components_br_com_govdigital_ws_lavras_p_NfseServiceImplLavrService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_lavras_p_NfseServiceImplLavrService"]));
@@ -400,7 +400,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/lavr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/lavr")]
         public string NFe_Components_br_com_govdigital_homolog_lavras_h_NfseServiceImplLavrService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_lavras_h_NfseServiceImplLavrService"]));
@@ -410,7 +410,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/prata")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/prata")]
         public string NFe_Components_br_com_govdigital_ws_prata_p_NfseServiceImplPrataService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_prata_p_NfseServiceImplPrataService"]));
@@ -420,7 +420,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/prata")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/prata")]
         public string NFe_Components_br_com_govdigital_homolog_prata_h_NfseServiceImplPrataService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_prata_h_NfseServiceImplPrataService"]));
@@ -430,7 +430,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/sjl")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/sjl")]
         public string NFe_Components_br_com_govdigital_ws_saojosedalapa_p_NfseServiceImplSjlService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_saojosedalapa_p_NfseServiceImplSjlService"]));
@@ -440,7 +440,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/sjl")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/sjl")]
         public string NFe_Components_br_com_govdigital_homolog_saojosedalapa_h_NfseServiceImplSjlService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_saojosedalapa_h_NfseServiceImplSjlServic" +
@@ -451,7 +451,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/pl")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/pl")]
         public string NFe_Components_br_com_govdigital_ws_pedroleopoldo_p_NfseServiceImplPlService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_ws_pedroleopoldo_p_NfseServiceImplPlService"]));
@@ -461,7 +461,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/pl")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/pl")]
         public string NFe_Components_br_com_govdigital_homolog_pedroleopoldo_h_NfseServiceImplPlService {
             get {
                 return ((string)(this["NFe_Components_br_com_govdigital_homolog_pedroleopoldo_h_NfseServiceImplPlService" +
@@ -1342,7 +1342,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/guax")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/guax")]
         public string NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService {
             get {
                 return ((string)(this["NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService"]));
@@ -1352,7 +1352,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/guax")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/guax")]
         public string NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService {
             get {
                 return ((string)(this["NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService"]));
@@ -1362,7 +1362,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/andradas")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/andradas")]
         public string NFe_Components_HAndradasMG_NfseServiceImpleAndradasService {
             get {
                 return ((string)(this["NFe_Components_HAndradasMG_NfseServiceImpleAndradasService"]));
@@ -1372,7 +1372,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/andradas")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/andradas")]
         public string NFe_Components_PAndradasMG_NfseServiceImpleAndradasService {
             get {
                 return ((string)(this["NFe_Components_PAndradasMG_NfseServiceImpleAndradasService"]));
@@ -1952,7 +1952,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/saoRoque")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/saoRoque")]
         public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
                 return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
@@ -1962,7 +1962,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/saoRoque")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/saoRoque")]
         public string NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
                 return ((string)(this["NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
@@ -2407,7 +2407,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.govdigital.com.br/ws/fabriciano")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/fabriciano")]
         public string NFe_Components_HCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService {
             get {
                 return ((string)(this["NFe_Components_HCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService"]));
@@ -2417,7 +2417,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br/ws/fabriciano")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/fabriciano")]
         public string NFe_Components_PCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService {
             get {
                 return ((string)(this["NFe_Components_PCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService"]));
@@ -2427,7 +2427,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.govdigital.com.br/ws/vgp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/vgp")]
         public string NFe_Components_HVargemGrandePaulistaSP_NfseServiceImplVgpService {
             get {
                 return ((string)(this["NFe_Components_HVargemGrandePaulistaSP_NfseServiceImplVgpService"]));
@@ -2437,7 +2437,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br/ws/vgp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/vgp")]
         public string NFe_Components_PVargemGrandePaulistaSP_NfseServiceImplVgpService {
             get {
                 return ((string)(this["NFe_Components_PVargemGrandePaulistaSP_NfseServiceImplVgpService"]));
@@ -2487,7 +2487,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br/ws/sjbicas")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/sjbicas")]
         public string NFe_Components_HSjbicas1_NfseServiceImplSjbicasService {
             get {
                 return ((string)(this["NFe_Components_HSjbicas1_NfseServiceImplSjbicasService"]));
@@ -2497,7 +2497,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br/ws/sjbicas")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/sjbicas")]
         public string NFe_Components_PSjbicas_NfseServiceImplSjbicasService {
             get {
                 return ((string)(this["NFe_Components_PSjbicas_NfseServiceImplSjbicasService"]));

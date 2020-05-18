@@ -232,7 +232,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseServiceImplCoronelFabricianoService">
     <wsdl:port name="nfseFabricianoPort" binding="tns:NfseServiceImplCoronelFabricianoServiceSoapBinding">
-      <soap:address location="https://ws.homolog.govdigital.com.br/ws/fabriciano" />
+      <soap:address location="https://ws.homolog.nfe-cidades.com.br/ws/fabriciano" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

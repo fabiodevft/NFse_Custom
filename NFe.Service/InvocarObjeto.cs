@@ -414,6 +414,7 @@ namespace NFe.Service
                     case PadroesNFSe.BETHA:
                         break;
 
+                    case PadroesNFSe.SIAT:
                     case PadroesNFSe.DSF:
                         string valorTag = string.Empty;
                         try
@@ -514,7 +515,8 @@ namespace NFe.Service
                             break;
                     }
 
-                    strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { Convert.ToSByte(operacao), Empresas.Configuracoes[emp].UsuarioWS, senhaWs, docXML.OuterXml });
+                    strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] {
+                            Convert.ToSByte(operacao), Empresas.Configuracoes[emp].UsuarioWS, senhaWs, docXML.OuterXml });
                     break;
 
                 #endregion Padrão ISSONLINE
