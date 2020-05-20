@@ -53,7 +53,7 @@ namespace NFe.Components.PGuaxupeMG {
         
         /// <remarks/>
         public NfseServiceImplGuaxService() {
-            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService;
+            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
