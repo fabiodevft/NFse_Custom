@@ -523,6 +523,10 @@
     <EmbeddedResource Include="NFse\schemas\NFSe\GINFES\xmldsig-core-schema_v02.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\ISSNET_202\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBethaCancelarNFSe.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBethaConsultarLoteRPS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBethaConsultarNFSe.wsdl" />
@@ -1748,7 +1752,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PBelemPA-DSFLoteRps.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFe\schemas\DFe\distDFeInt_v1.00.xsd">
@@ -2088,18 +2091,12 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PPresidentePrudenteSP-SIMPLISS.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HDivinopolisMG-GOVDigital.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="NFse\schemas\NFSe\GOVDIGITAL\nfse.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\GOVDIGITAL\xmldsig-core-schema20020212.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PDivinopolisMG-GOVDigital.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFe\WSDL\Homologacao\SVRS\HSVRSNFeAutorizacao_C.wsdl" />
@@ -2272,12 +2269,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCariacicaES-WSEntrada.wsdl">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2287,12 +2278,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PCariacicaES-WSUtil.wsdl">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PParacatuMG-GOVDIGITAL.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HParacatuMG-GOVDIGITAL.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFe\schemas\LMC\autorizacaoRetorno_v1.00.xsd">
@@ -2357,28 +2342,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HLavrasMG-GOVDIGITAL.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PLavrasMG-GOVDIGITAL.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPrataMG-GovDigital.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PPrataMG-GovDigital.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoseDaLapaMG-GovDigital.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPedroLeopoldoMG.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PPedroLeopoldoMG.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPenapolisSP-MGM.wsdl" />
@@ -4195,8 +4158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HItaitubaPA-FIORILLI.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PItaitubaPA-FIORILLI.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HGuaxupeMG-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PGuaxupeMG-GOVDIGITAL.wsdl" />
     <EmbeddedResource Include="NFse\schemas\NFSe\E_RECEITA\nfse v2 02.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4205,7 +4166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Producao\PMontesClarosMG-E_RECEITA.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HMontesClarosMG-E_RECEITA.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HAndradasMG-GOVDIGITAL.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PAndradasMG-GOVDIGITAL.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBastosSP-PRONIN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PBastosSP-PRONIN.wsdl" />
@@ -4418,10 +4378,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PItapevaSP-PRODATA.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEcancelamento.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantoAntonioPatrulha-NFSEremessa.wsdl" />
@@ -4490,8 +4446,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-cancelarnfse.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-consultarnfseporrps.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PItapetiningaSP-recepcionarloterpssincrono.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PSjbicas-GovDigital.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSjbicas-GovDigital.wsdl" />
     <EmbeddedResource Include="NFse\schemas\NFSe\D2TI\CancelamentoNFSe_v1.00.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4617,24 +4571,163 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoaoBoaVistaSP-SIMPLISS.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ConsultaSeqRps.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ReqCancelamentoNFSe.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ReqConsultaLote.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ReqConsultaNFSeRPS.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ReqConsultaNotas.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\ReqEnvioLoteRPS.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoCancelamentoNFSe.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoConsultaLote.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoConsultaNFSeRPS.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoConsultaNotas.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoConsultaSeqRps.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\RetornoEnvioLoteRPS.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\Tipos.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\SIAT\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HGuaxupeMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HDivinopolisMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HAndradasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\schemas\NFSe\ISSNET_202\nfsev202.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HParacatuMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HLavrasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPrataMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSjbicas-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
-    <None Include="NFse\WSDL\Producao\PIporaGO-MEGASOFT.wsdl" />
-    <None Include="NFse\WSDL\Producao\PItajobiSP-Fiorilli.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PAndradasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="NFse\WSDL\PGuaxupeMG-GOVDIGITAL.wsdl" />
+    <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PIporaGO-MEGASOFT.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PItajobiSP-Fiorilli.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HIlheusBA-METROPOLIS.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HEntreIjuisRS-PRONIN.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PEntreIjuisRS-PRONIN.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl" />
-    <EmbeddedResource Include="NFse\WSDL\Producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PBlumenauSC.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HBlumenauSC.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PPeixotoAzevedoMT-COPLAN.WSDL" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPeixotoAzevedoMT-COPLAN.WSDL" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PGuaxupeMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PDivinopolisMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PLavrasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="NFse\WSDL\Producao\PParacatuMG-NFE-CIDADES.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPrataMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPontaPora-ISSNET_202.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl" />
-    <None Include="NFse\WSDL\Producao\PSantaIsabelSP-CECAM.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSantaIsabelSP-CECAM.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSjbicas-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">
@@ -4653,6 +4746,7 @@
   <ItemGroup>
     <EmbeddedResource Include="NFe\WSDL\Homologacao\MDFe\HMDFeRecepcaoSinc.wsdl" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
