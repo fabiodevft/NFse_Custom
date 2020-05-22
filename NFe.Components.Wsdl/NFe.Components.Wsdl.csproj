@@ -4676,7 +4676,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PAndradasMG-NFE-CIDADES.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="NFse\WSDL\PGuaxupeMG-GOVDIGITAL.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
