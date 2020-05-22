@@ -2100,24 +2100,24 @@
       <CancelarNfse>WSDL\Producao\PTeresinaPI-DSFLoteRps.WSDL</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="1501402" Nome="Belém - PA" UF="PA" Padrao="SIAT">
+  <Estado ID="1501402" Nome="Belém - PA" UF="PA" Padrao="DSF">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
+      <RecepcionarLoteRps>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <CancelarNfse>WSDL\Homologacao\HBelemPA-DSFLoteRps.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PBelemPA-SIATLoteRps.wsdl</CancelarNfse>
+      <CancelarNfse>WSDL\Producao\PBelemPA-DSFLoteRps.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3507506" Nome="Botucatu - SP" UF="SP" Padrao="SIGCORP_SIGISS">
@@ -2653,25 +2653,24 @@
       <CancelarNfse>WSDL\Producao\PPresidentePrudenteSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3122306" Nome="Divinópolis - MG" UF="MG" Padrao="
-  ">
+  <Estado ID="3122306" Nome="Divinópolis - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HDivinopolisMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PDivinopolisMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PDivinopolisMG-GOVDigital.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4209003" Nome="Joaçaba - SC" UF="SC" Padrao="BETHA">
@@ -3402,22 +3401,22 @@
   </Estado>
   <Estado ID="3151800" Nome="Poços de Caldas - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HPocosdeCaldasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PPocosdeCaldasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3201308" Nome="Cariacica - ES" UF="ES" Padrao="SMARAPD">
@@ -3442,22 +3441,22 @@
   </Estado>
   <Estado ID="3147006" Nome="Paracatu - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HParacatuMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HParacatuMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PParacatuMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PParacatuMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3126109" Nome="Formiga - MG" UF="MG" Padrao="WEBISS">
@@ -3502,82 +3501,82 @@
   </Estado>
   <Estado ID="3138203" Nome="Lavras - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3152808" Nome="Prata - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HLavrasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HLavrasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PLavrasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PLavrasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3162955" Nome="São José da Lapa - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HSaoJoseDaLapaMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoJoseDaLapaMG-GovDigital.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PSaoJoseDaLapaMG-GovDigital.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3149309" Nome="Pedro Leopoldo - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HPedroLeopoldoMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPedroLeopoldoMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPedroLeopoldoMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPedroLeopoldoMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPedroLeopoldoMG.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HPedroLeopoldoMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HPedroLeopoldoMG.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PPedroLeopoldoMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPedroLeopoldoMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPedroLeopoldoMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPedroLeopoldoMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPedroLeopoldoMG.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PPedroLeopoldoMG.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3537305" Nome="Penápolis - SP" UF="SP" Padrao="MGM">
@@ -6671,22 +6670,22 @@
   </Estado>
   <Estado ID="3128709" Nome="Guaxupé - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PGuaxupeMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PGuaxupeMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3143302" Nome="Montes Claros - MG" UF="MG" Padrao="E_RECEITA">
@@ -6713,22 +6712,22 @@
   </Estado>
   <Estado ID="3102605" Nome="Andradas - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HAndradasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HAndradasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PAndradasMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PAndradasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3505807" Nome="Bastos - SP" UF="SP" Padrao="PRONIN">
@@ -7329,22 +7328,22 @@
   </Estado>
   <Estado ID="3550605" Nome="São Roque - SP" UF="SP" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PSaoRoqueSP-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4317608" Nome="Santo Antônio da Patrulha - RS" UF="RS" Padrao="THEMA">
@@ -7732,22 +7731,22 @@
   </Estado>
   <Estado ID="3162922" Nome="São Joaquim de Bicas - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HSjbicas-NFE-CIDADES.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HSjbicas-GovDigital.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PSjbicas-NFE-CIDADES.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4304705" Nome="Carazinho - RS" UF="RS" Padrao="DBSELLER">
@@ -8146,38 +8145,38 @@
   </Estado>
   <Estado ID="3119401" Nome="Coronel Fabriciano - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HCoronelFabricianoMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HCoronelFabricianoMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PCoronelFabricianoMG-NFE-CIDADES.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PCoronelFabricianoMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3556453" Nome="Vargem Grande Paulista - SP" UF="SP" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-NFE-CIDADES.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PVargemGrandePaulistaSP-NFE-CIDADES.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="5210208" Nome="Iporá - GO" UF="GO" Padrao="MEGASOFT">
@@ -8234,26 +8233,6 @@
       <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
-  <Estado ID="5006606" Nome="Ponta Porã - MS" UF="MS" Padrao="ISSNET_202">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HPontaPora-ISSNET_202.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>

@@ -23,31 +23,31 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="NfseServiceImplDivServiceSoapBinding", Namespace="http://nfse.abrasf.org.br")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="nfseDivPortBinding", Namespace="http://nfse.abrasf.org.br")]
     public partial class NfseServiceImplDivService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback ConsultarNfsePorRpsOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ConsultarNfseServicoTomadoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RecepcionarLoteRpsOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RecepcionarLoteRpsSincronoOperationCompleted;
+        private System.Threading.SendOrPostCallback ConsultarLoteRpsOperationCompleted;
         
         private System.Threading.SendOrPostCallback ConsultarNfseServicoPrestadoOperationCompleted;
         
-        private System.Threading.SendOrPostCallback CancelarNfseOperationCompleted;
+        private System.Threading.SendOrPostCallback ConsultarNfseServicoTomadoOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ConsultarLoteRpsOperationCompleted;
+        private System.Threading.SendOrPostCallback ConsultarNfsePorFaixaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultarNfsePorRpsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RecepcionarLoteRpsOperationCompleted;
         
         private System.Threading.SendOrPostCallback GerarNfseOperationCompleted;
         
         private System.Threading.SendOrPostCallback SubstituirNfseOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ConsultarNfsePorFaixaOperationCompleted;
+        private System.Threading.SendOrPostCallback RecepcionarLoteRpsSincronoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CancelarNfseOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -88,25 +88,22 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
         }
         
         /// <remarks/>
-        public event ConsultarNfsePorRpsCompletedEventHandler ConsultarNfsePorRpsCompleted;
-        
-        /// <remarks/>
-        public event ConsultarNfseServicoTomadoCompletedEventHandler ConsultarNfseServicoTomadoCompleted;
-        
-        /// <remarks/>
-        public event RecepcionarLoteRpsCompletedEventHandler RecepcionarLoteRpsCompleted;
-        
-        /// <remarks/>
-        public event RecepcionarLoteRpsSincronoCompletedEventHandler RecepcionarLoteRpsSincronoCompleted;
+        public event ConsultarLoteRpsCompletedEventHandler ConsultarLoteRpsCompleted;
         
         /// <remarks/>
         public event ConsultarNfseServicoPrestadoCompletedEventHandler ConsultarNfseServicoPrestadoCompleted;
         
         /// <remarks/>
-        public event CancelarNfseCompletedEventHandler CancelarNfseCompleted;
+        public event ConsultarNfseServicoTomadoCompletedEventHandler ConsultarNfseServicoTomadoCompleted;
         
         /// <remarks/>
-        public event ConsultarLoteRpsCompletedEventHandler ConsultarLoteRpsCompleted;
+        public event ConsultarNfsePorFaixaCompletedEventHandler ConsultarNfsePorFaixaCompleted;
+        
+        /// <remarks/>
+        public event ConsultarNfsePorRpsCompletedEventHandler ConsultarNfsePorRpsCompleted;
+        
+        /// <remarks/>
+        public event RecepcionarLoteRpsCompletedEventHandler RecepcionarLoteRpsCompleted;
         
         /// <remarks/>
         public event GerarNfseCompletedEventHandler GerarNfseCompleted;
@@ -115,133 +112,40 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
         public event SubstituirNfseCompletedEventHandler SubstituirNfseCompleted;
         
         /// <remarks/>
-        public event ConsultarNfsePorFaixaCompletedEventHandler ConsultarNfsePorFaixaCompleted;
+        public event RecepcionarLoteRpsSincronoCompletedEventHandler RecepcionarLoteRpsSincronoCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfsePorRps", RequestElementName="ConsultarNfsePorRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public event CancelarNfseCompletedEventHandler CancelarNfseCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarLoteRps", RequestElementName="ConsultarLoteRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ConsultarNfsePorRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("ConsultarNfsePorRps", new object[] {
+        public string ConsultarLoteRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("ConsultarLoteRps", new object[] {
                         nfseCabecMsg,
                         nfseDadosMsg});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void ConsultarNfsePorRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.ConsultarNfsePorRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
+        public void ConsultarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.ConsultarLoteRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
         }
         
         /// <remarks/>
-        public void ConsultarNfsePorRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.ConsultarNfsePorRpsOperationCompleted == null)) {
-                this.ConsultarNfsePorRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfsePorRpsOperationCompleted);
+        public void ConsultarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.ConsultarLoteRpsOperationCompleted == null)) {
+                this.ConsultarLoteRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarLoteRpsOperationCompleted);
             }
-            this.InvokeAsync("ConsultarNfsePorRps", new object[] {
+            this.InvokeAsync("ConsultarLoteRps", new object[] {
                         nfseCabecMsg,
-                        nfseDadosMsg}, this.ConsultarNfsePorRpsOperationCompleted, userState);
+                        nfseDadosMsg}, this.ConsultarLoteRpsOperationCompleted, userState);
         }
         
-        private void OnConsultarNfsePorRpsOperationCompleted(object arg) {
-            if ((this.ConsultarNfsePorRpsCompleted != null)) {
+        private void OnConsultarLoteRpsOperationCompleted(object arg) {
+            if ((this.ConsultarLoteRpsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ConsultarNfsePorRpsCompleted(this, new ConsultarNfsePorRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfseServicoTomado", RequestElementName="ConsultarNfseServicoTomadoRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ConsultarNfseServicoTomado([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("ConsultarNfseServicoTomado", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ConsultarNfseServicoTomadoAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.ConsultarNfseServicoTomadoAsync(nfseCabecMsg, nfseDadosMsg, null);
-        }
-        
-        /// <remarks/>
-        public void ConsultarNfseServicoTomadoAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.ConsultarNfseServicoTomadoOperationCompleted == null)) {
-                this.ConsultarNfseServicoTomadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfseServicoTomadoOperationCompleted);
-            }
-            this.InvokeAsync("ConsultarNfseServicoTomado", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg}, this.ConsultarNfseServicoTomadoOperationCompleted, userState);
-        }
-        
-        private void OnConsultarNfseServicoTomadoOperationCompleted(object arg) {
-            if ((this.ConsultarNfseServicoTomadoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ConsultarNfseServicoTomadoCompleted(this, new ConsultarNfseServicoTomadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/RecepcionarLoteRps", RequestElementName="RecepcionarLoteRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string RecepcionarLoteRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("RecepcionarLoteRps", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RecepcionarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.RecepcionarLoteRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
-        }
-        
-        /// <remarks/>
-        public void RecepcionarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.RecepcionarLoteRpsOperationCompleted == null)) {
-                this.RecepcionarLoteRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecepcionarLoteRpsOperationCompleted);
-            }
-            this.InvokeAsync("RecepcionarLoteRps", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg}, this.RecepcionarLoteRpsOperationCompleted, userState);
-        }
-        
-        private void OnRecepcionarLoteRpsOperationCompleted(object arg) {
-            if ((this.RecepcionarLoteRpsCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RecepcionarLoteRpsCompleted(this, new RecepcionarLoteRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono", RequestElementName="RecepcionarLoteRpsSincronoRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string RecepcionarLoteRpsSincrono([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("RecepcionarLoteRpsSincrono", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RecepcionarLoteRpsSincronoAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.RecepcionarLoteRpsSincronoAsync(nfseCabecMsg, nfseDadosMsg, null);
-        }
-        
-        /// <remarks/>
-        public void RecepcionarLoteRpsSincronoAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.RecepcionarLoteRpsSincronoOperationCompleted == null)) {
-                this.RecepcionarLoteRpsSincronoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecepcionarLoteRpsSincronoOperationCompleted);
-            }
-            this.InvokeAsync("RecepcionarLoteRpsSincrono", new object[] {
-                        nfseCabecMsg,
-                        nfseDadosMsg}, this.RecepcionarLoteRpsSincronoOperationCompleted, userState);
-        }
-        
-        private void OnRecepcionarLoteRpsSincronoOperationCompleted(object arg) {
-            if ((this.RecepcionarLoteRpsSincronoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RecepcionarLoteRpsSincronoCompleted(this, new RecepcionarLoteRpsSincronoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ConsultarLoteRpsCompleted(this, new ConsultarLoteRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -278,66 +182,130 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/CancelarNfse", RequestElementName="CancelarNfseRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfseServicoTomado", RequestElementName="ConsultarNfseServicoTomadoRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string CancelarNfse([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("CancelarNfse", new object[] {
+        public string ConsultarNfseServicoTomado([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("ConsultarNfseServicoTomado", new object[] {
                         nfseCabecMsg,
                         nfseDadosMsg});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void CancelarNfseAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.CancelarNfseAsync(nfseCabecMsg, nfseDadosMsg, null);
+        public void ConsultarNfseServicoTomadoAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.ConsultarNfseServicoTomadoAsync(nfseCabecMsg, nfseDadosMsg, null);
         }
         
         /// <remarks/>
-        public void CancelarNfseAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.CancelarNfseOperationCompleted == null)) {
-                this.CancelarNfseOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCancelarNfseOperationCompleted);
+        public void ConsultarNfseServicoTomadoAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.ConsultarNfseServicoTomadoOperationCompleted == null)) {
+                this.ConsultarNfseServicoTomadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfseServicoTomadoOperationCompleted);
             }
-            this.InvokeAsync("CancelarNfse", new object[] {
+            this.InvokeAsync("ConsultarNfseServicoTomado", new object[] {
                         nfseCabecMsg,
-                        nfseDadosMsg}, this.CancelarNfseOperationCompleted, userState);
+                        nfseDadosMsg}, this.ConsultarNfseServicoTomadoOperationCompleted, userState);
         }
         
-        private void OnCancelarNfseOperationCompleted(object arg) {
-            if ((this.CancelarNfseCompleted != null)) {
+        private void OnConsultarNfseServicoTomadoOperationCompleted(object arg) {
+            if ((this.ConsultarNfseServicoTomadoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.CancelarNfseCompleted(this, new CancelarNfseCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ConsultarNfseServicoTomadoCompleted(this, new ConsultarNfseServicoTomadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarLoteRps", RequestElementName="ConsultarLoteRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfsePorFaixa", RequestElementName="ConsultarNfsePorFaixaRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ConsultarLoteRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("ConsultarLoteRps", new object[] {
+        public string ConsultarNfsePorFaixa([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("ConsultarNfsePorFaixa", new object[] {
                         nfseCabecMsg,
                         nfseDadosMsg});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void ConsultarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.ConsultarLoteRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
+        public void ConsultarNfsePorFaixaAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.ConsultarNfsePorFaixaAsync(nfseCabecMsg, nfseDadosMsg, null);
         }
         
         /// <remarks/>
-        public void ConsultarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.ConsultarLoteRpsOperationCompleted == null)) {
-                this.ConsultarLoteRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarLoteRpsOperationCompleted);
+        public void ConsultarNfsePorFaixaAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.ConsultarNfsePorFaixaOperationCompleted == null)) {
+                this.ConsultarNfsePorFaixaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfsePorFaixaOperationCompleted);
             }
-            this.InvokeAsync("ConsultarLoteRps", new object[] {
+            this.InvokeAsync("ConsultarNfsePorFaixa", new object[] {
                         nfseCabecMsg,
-                        nfseDadosMsg}, this.ConsultarLoteRpsOperationCompleted, userState);
+                        nfseDadosMsg}, this.ConsultarNfsePorFaixaOperationCompleted, userState);
         }
         
-        private void OnConsultarLoteRpsOperationCompleted(object arg) {
-            if ((this.ConsultarLoteRpsCompleted != null)) {
+        private void OnConsultarNfsePorFaixaOperationCompleted(object arg) {
+            if ((this.ConsultarNfsePorFaixaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ConsultarLoteRpsCompleted(this, new ConsultarLoteRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ConsultarNfsePorFaixaCompleted(this, new ConsultarNfsePorFaixaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfsePorRps", RequestElementName="ConsultarNfsePorRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ConsultarNfsePorRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("ConsultarNfsePorRps", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultarNfsePorRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.ConsultarNfsePorRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultarNfsePorRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.ConsultarNfsePorRpsOperationCompleted == null)) {
+                this.ConsultarNfsePorRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfsePorRpsOperationCompleted);
+            }
+            this.InvokeAsync("ConsultarNfsePorRps", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg}, this.ConsultarNfsePorRpsOperationCompleted, userState);
+        }
+        
+        private void OnConsultarNfsePorRpsOperationCompleted(object arg) {
+            if ((this.ConsultarNfsePorRpsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultarNfsePorRpsCompleted(this, new ConsultarNfsePorRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/RecepcionarLoteRps", RequestElementName="RecepcionarLoteRpsRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string RecepcionarLoteRps([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("RecepcionarLoteRps", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RecepcionarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.RecepcionarLoteRpsAsync(nfseCabecMsg, nfseDadosMsg, null);
+        }
+        
+        /// <remarks/>
+        public void RecepcionarLoteRpsAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.RecepcionarLoteRpsOperationCompleted == null)) {
+                this.RecepcionarLoteRpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecepcionarLoteRpsOperationCompleted);
+            }
+            this.InvokeAsync("RecepcionarLoteRps", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg}, this.RecepcionarLoteRpsOperationCompleted, userState);
+        }
+        
+        private void OnRecepcionarLoteRpsOperationCompleted(object arg) {
+            if ((this.RecepcionarLoteRpsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RecepcionarLoteRpsCompleted(this, new RecepcionarLoteRpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -406,34 +374,66 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/ConsultarNfsePorFaixa", RequestElementName="ConsultarNfsePorFaixaRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono", RequestElementName="RecepcionarLoteRpsSincronoRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ConsultarNfsePorFaixa([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
-            object[] results = this.Invoke("ConsultarNfsePorFaixa", new object[] {
+        public string RecepcionarLoteRpsSincrono([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("RecepcionarLoteRpsSincrono", new object[] {
                         nfseCabecMsg,
                         nfseDadosMsg});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void ConsultarNfsePorFaixaAsync(string nfseCabecMsg, string nfseDadosMsg) {
-            this.ConsultarNfsePorFaixaAsync(nfseCabecMsg, nfseDadosMsg, null);
+        public void RecepcionarLoteRpsSincronoAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.RecepcionarLoteRpsSincronoAsync(nfseCabecMsg, nfseDadosMsg, null);
         }
         
         /// <remarks/>
-        public void ConsultarNfsePorFaixaAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
-            if ((this.ConsultarNfsePorFaixaOperationCompleted == null)) {
-                this.ConsultarNfsePorFaixaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultarNfsePorFaixaOperationCompleted);
+        public void RecepcionarLoteRpsSincronoAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.RecepcionarLoteRpsSincronoOperationCompleted == null)) {
+                this.RecepcionarLoteRpsSincronoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecepcionarLoteRpsSincronoOperationCompleted);
             }
-            this.InvokeAsync("ConsultarNfsePorFaixa", new object[] {
+            this.InvokeAsync("RecepcionarLoteRpsSincrono", new object[] {
                         nfseCabecMsg,
-                        nfseDadosMsg}, this.ConsultarNfsePorFaixaOperationCompleted, userState);
+                        nfseDadosMsg}, this.RecepcionarLoteRpsSincronoOperationCompleted, userState);
         }
         
-        private void OnConsultarNfsePorFaixaOperationCompleted(object arg) {
-            if ((this.ConsultarNfsePorFaixaCompleted != null)) {
+        private void OnRecepcionarLoteRpsSincronoOperationCompleted(object arg) {
+            if ((this.RecepcionarLoteRpsSincronoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ConsultarNfsePorFaixaCompleted(this, new ConsultarNfsePorFaixaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.RecepcionarLoteRpsSincronoCompleted(this, new RecepcionarLoteRpsSincronoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://nfse.abrasf.org.br/CancelarNfse", RequestElementName="CancelarNfseRequest", RequestNamespace="http://nfse.abrasf.org.br", ResponseNamespace="http://nfse.abrasf.org.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("outputXML", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string CancelarNfse([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseCabecMsg, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string nfseDadosMsg) {
+            object[] results = this.Invoke("CancelarNfse", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CancelarNfseAsync(string nfseCabecMsg, string nfseDadosMsg) {
+            this.CancelarNfseAsync(nfseCabecMsg, nfseDadosMsg, null);
+        }
+        
+        /// <remarks/>
+        public void CancelarNfseAsync(string nfseCabecMsg, string nfseDadosMsg, object userState) {
+            if ((this.CancelarNfseOperationCompleted == null)) {
+                this.CancelarNfseOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCancelarNfseOperationCompleted);
+            }
+            this.InvokeAsync("CancelarNfse", new object[] {
+                        nfseCabecMsg,
+                        nfseDadosMsg}, this.CancelarNfseOperationCompleted, userState);
+        }
+        
+        private void OnCancelarNfseOperationCompleted(object arg) {
+            if ((this.CancelarNfseCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CancelarNfseCompleted(this, new CancelarNfseCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -457,167 +457,11 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ConsultarNfsePorRpsCompletedEventHandler(object sender, ConsultarNfsePorRpsCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarNfsePorRpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ConsultarNfsePorRpsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ConsultarNfseServicoTomadoCompletedEventHandler(object sender, ConsultarNfseServicoTomadoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarNfseServicoTomadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ConsultarNfseServicoTomadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void RecepcionarLoteRpsCompletedEventHandler(object sender, RecepcionarLoteRpsCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RecepcionarLoteRpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RecepcionarLoteRpsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void RecepcionarLoteRpsSincronoCompletedEventHandler(object sender, RecepcionarLoteRpsSincronoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RecepcionarLoteRpsSincronoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RecepcionarLoteRpsSincronoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ConsultarNfseServicoPrestadoCompletedEventHandler(object sender, ConsultarNfseServicoPrestadoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarNfseServicoPrestadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ConsultarNfseServicoPrestadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void CancelarNfseCompletedEventHandler(object sender, CancelarNfseCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CancelarNfseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal CancelarNfseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void ConsultarLoteRpsCompletedEventHandler(object sender, ConsultarLoteRpsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ConsultarLoteRpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -639,11 +483,141 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ConsultarNfseServicoPrestadoCompletedEventHandler(object sender, ConsultarNfseServicoPrestadoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarNfseServicoPrestadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarNfseServicoPrestadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ConsultarNfseServicoTomadoCompletedEventHandler(object sender, ConsultarNfseServicoTomadoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarNfseServicoTomadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarNfseServicoTomadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ConsultarNfsePorFaixaCompletedEventHandler(object sender, ConsultarNfsePorFaixaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarNfsePorFaixaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarNfsePorFaixaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ConsultarNfsePorRpsCompletedEventHandler(object sender, ConsultarNfsePorRpsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarNfsePorRpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarNfsePorRpsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void RecepcionarLoteRpsCompletedEventHandler(object sender, RecepcionarLoteRpsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RecepcionarLoteRpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RecepcionarLoteRpsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void GerarNfseCompletedEventHandler(object sender, GerarNfseCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GerarNfseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -665,11 +639,11 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SubstituirNfseCompletedEventHandler(object sender, SubstituirNfseCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SubstituirNfseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -691,18 +665,44 @@ namespace NFe.Components.br.com.govdigital.homolog1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ConsultarNfsePorFaixaCompletedEventHandler(object sender, ConsultarNfsePorFaixaCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void RecepcionarLoteRpsSincronoCompletedEventHandler(object sender, RecepcionarLoteRpsSincronoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarNfsePorFaixaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class RecepcionarLoteRpsSincronoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal ConsultarNfsePorFaixaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal RecepcionarLoteRpsSincronoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void CancelarNfseCompletedEventHandler(object sender, CancelarNfseCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CancelarNfseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CancelarNfseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

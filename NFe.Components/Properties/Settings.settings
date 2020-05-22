@@ -69,10 +69,10 @@
       <Value Profile="(Default)">http://issprudente.sp.gov.br/ws_nfse/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_NfseServiceImplDivService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/div</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/div</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog1_NfseServiceImplDivService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/div</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/div</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_sigiss_cianorte_p_WebService_SigISS" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://cianorte.sigiss.com.br:443/cianorte/ws/sigiss_ws.php</Value>
@@ -96,43 +96,43 @@
       <Value Profile="(Default)">http://demo.fisslex.com.br/fiss-lex/servlet/aws_consultarsituacaoloterps</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_pocos_p_NfseServiceImplPocosService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/pocos</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/pocos</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_pocos_h_NfseServiceImplPocosService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/pocos</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/pocos</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_paracatu_p_NfseServiceImplPctuService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/pctu</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/pctu</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_paracatu_h_NfseServiceImplPctuService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/pctu</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/pctu</Value>
     </Setting>
     <Setting Name="NFe_Components_br_gov_sp_embudasartes_sistemas_www_p_NfseService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://187.45.245.217/ws_nfse_embu_artes/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_lavras_p_NfseServiceImplLavrService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/lavr</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/lavr</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_lavras_h_NfseServiceImplLavrService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/lavr</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/lavr</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_prata_p_NfseServiceImplPrataService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/prata</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/prata</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_prata_h_NfseServiceImplPrataService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/prata</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/prata</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_saojosedalapa_p_NfseServiceImplSjlService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/sjl</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/sjl</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_saojosedalapa_h_NfseServiceImplSjlService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/sjl</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/sjl</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_pedroleopoldo_p_NfseServiceImplPlService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/pl</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/pl</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_homolog_pedroleopoldo_h_NfseServiceImplPlService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/pl</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/pl</Value>
     </Setting>
     <Setting Name="NFe_Components_br_com_govdigital_ws_pelotas_p_NfseServiceImplPelotasService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/pelotas</Value>
@@ -393,16 +393,16 @@
       <Value Profile="(Default)">http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
     <Setting Name="NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/guax</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/guax</Value>
     </Setting>
     <Setting Name="NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/guax</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/guax</Value>
     </Setting>
     <Setting Name="NFe_Components_HAndradasMG_NfseServiceImpleAndradasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/andradas</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/andradas</Value>
     </Setting>
     <Setting Name="NFe_Components_PAndradasMG_NfseServiceImpleAndradasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/andradas</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/andradas</Value>
     </Setting>
     <Setting Name="NFe_Components_HBastosSP_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://189.56.95.154/NFSe.Portal.Integracao.Teste/Services.svc</Value>
@@ -573,10 +573,10 @@
       <Value Profile="(Default)">http://179.108.80.218:5661/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
     <Setting Name="NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/saoRoque</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/saoRoque</Value>
     </Setting>
     <Setting Name="NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/saoRoque</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/saoRoque</Value>
     </Setting>
     <Setting Name="NFe_Components_PRegenteFeijoSP_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://nfse.regentefeijo.sp.gov.br:81/NFSe.Portal.Integracao/Services.svc</Value>
@@ -708,16 +708,16 @@
       <Value Profile="(Default)">http://pmei-rs.ddns.net:8089/NFSe.Portal.Integracao/Services.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_HCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/fabriciano</Value>
+      <Value Profile="(Default)">https://ws.homolog.govdigital.com.br/ws/fabriciano</Value>
     </Setting>
     <Setting Name="NFe_Components_PCoronelFabricianoMG_NfseServiceImplCoronelFabricianoService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/fabriciano</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/fabriciano</Value>
     </Setting>
     <Setting Name="NFe_Components_HVargemGrandePaulistaSP_NfseServiceImplVgpService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/vgp</Value>
+      <Value Profile="(Default)">https://ws.homolog.govdigital.com.br/ws/vgp</Value>
     </Setting>
     <Setting Name="NFe_Components_PVargemGrandePaulistaSP_NfseServiceImplVgpService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/vgp</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/vgp</Value>
     </Setting>
     <Setting Name="NFe_Components_PPeixotoAzevedoMT_nfse_web_service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://www.gp.srv.br/tributario_peixotodeazevedo/servlet/anfse_web_service</Value>
@@ -732,10 +732,10 @@
       <Value Profile="(Default)">http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_HSjbicas1_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/sjbicas</Value>
+      <Value Profile="(Default)">https://homolog.govdigital.com.br/ws/sjbicas</Value>
     </Setting>
     <Setting Name="NFe_Components_PSjbicas_NfseServiceImplSjbicasService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/sjbicas</Value>
+      <Value Profile="(Default)">https://ws.govdigital.com.br/ws/sjbicas</Value>
     </Setting>
     <Setting Name="NFe_Components_PCachoeiraSulRS_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://cachoeiradosul-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc</Value>

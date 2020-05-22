@@ -838,15 +838,7 @@ namespace NFe.Service.NFSe
                         versa.EmiteNF(NomeArquivoXML);
                         break;
 
-                    #endregion VersaTecnologia
-
-                    case PadroesNFSe.SIAT:
-                        EncryptAssinatura();
-                        break;
-
-                    case PadroesNFSe.ISSNet_202:
-                        Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.ISSNet_202);
-                        break;
+                        #endregion VersaTecnologia
 
 
 
