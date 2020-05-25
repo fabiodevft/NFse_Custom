@@ -520,6 +520,7 @@ namespace NFe.Service
                 #region ISSNET
 
                 case PadroesNFSe.ISSNET:
+                case PadroesNFSe.ISSNet_202:
                     switch (servico)
                     {
                         case Servicos.NFSeConsultarLoteRps:
@@ -544,6 +545,10 @@ namespace NFe.Service
 
                         case Servicos.NFSeRecepcionarLoteRps:
                             retorna = "RecepcionarLoteRps";
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRpsSincrono:
+                            retorna = "RecepcionarLoteRpsSincrono";
                             break;
 
                         case Servicos.NFSeConsultarURL:
@@ -2508,8 +2513,95 @@ namespace NFe.Service
                             break;
 
                     }
-                    #endregion IIBRASIL
+                   
                     break;
+                #endregion IIBRASIL
+
+                #region SIAT
+
+                case PadroesNFSe.SIAT:
+
+                    switch (servico)
+                    {
+                        case Servicos.NFSeConsultarLoteRps:
+                            if (taHomologacao)
+                            {
+                                throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
+                            }
+                            else
+                            {
+                                retorna = "consultarLote";
+                            }
+
+                            break;
+
+                        case Servicos.NFSeConsultar:
+                            if (taHomologacao)
+                            {
+                                throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
+                            }
+                            else
+                            {
+                                retorna = "consultarNota";
+                            }
+
+                            break;
+
+                        case Servicos.NFSeConsultarPorRps:
+                            if (taHomologacao)
+                            {
+                                throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
+                            }
+                            else
+                            {
+                                retorna = "consultarNFSeRps";
+                            }
+
+                            break;
+
+                        case Servicos.NFSeConsultarSituacaoLoteRps:
+                            if (taHomologacao)
+                            {
+                                throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
+                            }
+                            else
+                            {
+                                retorna = "consultarSequencialRps";
+                            }
+
+                            break;
+
+                        case Servicos.NFSeCancelar:
+                            if (taHomologacao)
+                            {
+                                throw new NFe.Components.Exceptions.ServicoInexistenteHomologacaoException(servico);
+                            }
+                            else
+                            {
+                                retorna = "cancelar";
+                            }
+
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRps:
+                            if (taHomologacao)
+                            {
+                                retorna = "testeEnviar";
+                            }
+                            else
+                            {
+                                retorna = "enviar";
+                            }
+
+                            break;
+
+                        default:
+                            throw new NFe.Components.Exceptions.ServicoInexistenteException();
+                    }
+
+                    break;
+
+                    #endregion SIAT
             }
             return retorna;
         }
@@ -3389,6 +3481,7 @@ namespace NFe.Service
                 case PadroesNFSe.SIGCORP_SIGISS_203:
                 case PadroesNFSe.SMARAPD_204:
                 case PadroesNFSe.IIBRASIL:
+                case PadroesNFSe.ISSNet_202:
                     if (servico == Servicos.NFSeRecepcionarLoteRps)
                     {
                         switch (doc.DocumentElement.Name)

@@ -414,6 +414,7 @@ namespace NFe.Service
                     case PadroesNFSe.BETHA:
                         break;
 
+                    case PadroesNFSe.SIAT:
                     case PadroesNFSe.DSF:
                         string valorTag = string.Empty;
                         try

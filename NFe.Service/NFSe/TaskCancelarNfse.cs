@@ -740,7 +740,11 @@ namespace NFe.Service.NFSe
                         //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
                         //}
 
-                        break;					
+                        break;
+                    case PadroesNFSe.SIAT:
+                        EncryptAssinatura();
+
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))

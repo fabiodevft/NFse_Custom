@@ -1174,8 +1174,23 @@ namespace NFe.Components
         /// </summary>
         [Description("VERSATECNOLOGIA")]
         VERSATECNOLOGIA,
+
+        /// <summary>
+        /// Padrão Nota Fiscal eletrônica SIAT
+        /// Prefeitura de Belém - PA
+        /// </summary>
+        [Description("SIAT")]
+        SIAT,
+
+        /// <summary>
+        /// Padrão Nota Fiscal eletrônica ISSNet versão 2.02
+        /// Prefeitura de Ponta Porã - MS
+        /// </summary>
+        [Description("ISSNet_202")]
+        ISSNet_202,
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
+        ///
     }
 
     #endregion Padrão NFSe
