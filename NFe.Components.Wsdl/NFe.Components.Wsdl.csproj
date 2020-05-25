@@ -4667,7 +4667,6 @@
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
-    <None Include="NFse\WSDL\PGuaxupeMG-GOVDIGITAL.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
