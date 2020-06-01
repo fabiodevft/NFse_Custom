@@ -1054,24 +1054,24 @@
       <CancelarNfse>wsdl\producao\PMonteNegroRSCancelarNFSE.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="4303103" Nome="Cachoeirinha - RS" UF="RS" Padrao="THEMA">
+  <Estado ID="4303103" Nome="Cachoeirinha - RS" UF="RS" Padrao="IPM">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HThemaCachoerinhaRSRemessa.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HThemaCachoerinhaRSCancelamento.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PThemaCachoerinhaRSRemessa.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PThemaCachoerinhaRSCancelamento.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4311403" Nome="Lajeado - RS" UF="RS" Padrao="THEMA">

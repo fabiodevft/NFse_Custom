@@ -3976,9 +3976,6 @@
     <None Include="Web References\HGovernadorValadaresMG\tcRetornoNota.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\HGuaxupeMG\guax.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\HGuaxupeMG\NfseServiceImplGuaxService.wsdl" />
     <None Include="Web References\HGuaxupeMG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -4328,9 +4325,6 @@
     <None Include="Web References\HSaoRoqueSP\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\HSaoRoqueSP\saoRoque.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\HSerafinaCorreaRS\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -4934,9 +4928,6 @@
     <None Include="Web References\PGuarantaNorteMT\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\PGuaxupeMG\guax.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\PGuaxupeMG\NfseServiceImplGuaxService.wsdl" />
     <None Include="Web References\PGuaxupeMG\Reference.map">
@@ -5543,9 +5534,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\PSaoRoqueSP\saoRoque.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\PSenadorCanedoGO\nfseWS.wsdl" />
     <None Include="Web References\PSenadorCanedoGO\nfseWS0.wsdl" />
     <None Include="Web References\PSenadorCanedoGO\Reference.map">
@@ -5831,10 +5819,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HGovernadorValadaresMG_WebService_SigISS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HGuaxupeMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HGuaxupeMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HGuaxupeMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HGuaxupeMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6161,10 +6149,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PGovernadorValadaresMG_WebService_SigISS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Producao\PGuaxupeMG-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PGuaxupeMG\</RelPath>
-      <UpdateFromURL>C:\Projetos\UniNFe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PGuaxupeMG-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Producao\PGuaxupeMG-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6766,10 +6754,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HRegenteFeijoSP_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\HSaoRoqueSP\</RelPath>
-      <UpdateFromURL>D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Homologacao\HSaoRoqueSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -6832,10 +6820,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PRegenteFeijoSP_NFSeIntegracao</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl">
+    <WebReferenceUrl Include="C:\Unimake\UniNFe\nfse\wsdl\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PSaoRoqueSP\</RelPath>
-      <UpdateFromURL>D:\projetos\uninfe\trunk\fontes\NFe.Components.Wsdl\NFse\WSDL\Producao\PSaoRoqueSP-GOVDIGITAL.wsdl</UpdateFromURL>
+      <UpdateFromURL>C:\Unimake\UniNFe\nfse\wsdl\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

@@ -12,7 +12,7 @@ namespace NFe.Components.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -1342,7 +1342,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/guax")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/guax")]
         public string NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService {
             get {
                 return ((string)(this["NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService"]));
@@ -1352,7 +1352,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/guax")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/guax")]
         public string NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService {
             get {
                 return ((string)(this["NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService"]));
@@ -1952,7 +1952,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://homolog.govdigital.com.br:443/ws/saoRoque")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/saoRoque")]
         public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
                 return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
@@ -1962,7 +1962,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.govdigital.com.br:443/ws/saoRoque")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/saoRoque")]
         public string NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
                 return ((string)(this["NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService"]));

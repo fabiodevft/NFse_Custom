@@ -393,10 +393,10 @@
       <Value Profile="(Default)">http://fi1.fiorilli.com.br:5663/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
     <Setting Name="NFe_Components_PGuaxupeMG_NfseServiceImplGuaxService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/guax</Value>
+      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/guax</Value>
     </Setting>
     <Setting Name="NFe_Components_HGuaxupeMG_NfseServiceImplGuaxService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/guax</Value>
+      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/guax</Value>
     </Setting>
     <Setting Name="NFe_Components_HAndradasMG_NfseServiceImpleAndradasService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/andradas</Value>
@@ -573,10 +573,10 @@
       <Value Profile="(Default)">http://179.108.80.218:5661/IssWeb-ejb/IssWebWS/IssWebWS</Value>
     </Setting>
     <Setting Name="NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://homolog.govdigital.com.br:443/ws/saoRoque</Value>
+      <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/saoRoque</Value>
     </Setting>
     <Setting Name="NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ws.govdigital.com.br:443/ws/saoRoque</Value>
+      <Value Profile="(Default)">https://ws.nfe-cidades.com.br/ws/saoRoque</Value>
     </Setting>
     <Setting Name="NFe_Components_PRegenteFeijoSP_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://nfse.regentefeijo.sp.gov.br:81/NFSe.Portal.Integracao/Services.svc</Value>
