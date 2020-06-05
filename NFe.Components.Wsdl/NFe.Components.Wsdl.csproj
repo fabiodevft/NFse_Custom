@@ -4666,6 +4666,7 @@
     </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl" />
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4698,9 +4699,6 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PPrataMG-NFE-CIDADES.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PPontaPora-ISSNET_202.wsdl">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Producao\PSantaIsabelSP-CECAM.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoRoqueSP-NFE-CIDADES.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4712,6 +4710,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NFse\WSDL\Producao\PSaoJoseDaLapaMG-NFE-CIDADES.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PPontaPora-ISSNET_202.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl" />
