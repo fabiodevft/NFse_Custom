@@ -4666,7 +4666,12 @@
     </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
-    <None Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4716,6 +4721,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

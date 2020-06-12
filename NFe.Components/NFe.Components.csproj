@@ -297,6 +297,7 @@
     <Compile Include="SimplISS\MonteCarmeloMG\p\SimplISSP.cs" />
     <Compile Include="SimplISS\ParaguacuPaulistaSP\p\SimplISSP.cs" />
     <Compile Include="SimplISS\SaoJoaoDaBoaVistaSP\p\SimplISSP.cs" />
+    <Compile Include="SimplISS\VargemGrandeDoSulSP\p\SimplISSP.cs" />
     <Compile Include="SOFTPLAN\SOFTPLAN.cs" />
     <Compile Include="SOFTPLAN\Token.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INTERSOL.cs" />
@@ -1302,6 +1303,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PSjbicas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PVargemGrandeDoSulSP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -4624,6 +4630,45 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\CancelarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\ConsultarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\ConsultarNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\ConsultarNfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\ConsultarSituacaoLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\EnviarLoteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\GerarNovaNfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\NfseService.wsdl" />
+    <None Include="Web References\PVargemGrandeDoSulSP\nfseservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\nfseservice0.wsdl" />
+    <None Include="Web References\PVargemGrandeDoSulSP\nfseservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\nfseservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\nfseservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PVargemGrandeDoSulSP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\PVargemGrandePaulistaSP\NfseServiceImplVgpService.wsdl" />
     <None Include="Web References\PVargemGrandePaulistaSP\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -7160,6 +7205,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PSaoJoaoBoaVistaSP_NfseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wsvargemgrandedosul.simplissweb.com.br/nfseservice.svc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PVargemGrandeDoSulSP\</RelPath>
+      <UpdateFromURL>http://wsvargemgrandedosul.simplissweb.com.br/nfseservice.svc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PVargemGrandeDoSulSP_NfseService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://www.tinus.com.br/csp/cabedelo/WSNFSE.CancelarNfse.CLS%3fWSDL=1">
       <UrlBehavior>Dynamic</UrlBehavior>

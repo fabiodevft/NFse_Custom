@@ -8058,13 +8058,13 @@
   </Estado>
   <Estado ID="3549102" Nome="São João da Boa Vista - SP" UF="SP" Padrao="SIMPLISS">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
+      <RecepcionarLoteRps>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <CancelarNfse>WSDL\Homologacao\HSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
@@ -8254,6 +8254,26 @@
       <ConsultarLoteRps>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PPontaPora-ISSNET_202.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3556404" Nome="Vargem Grande do Sul" UF="SP" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
