@@ -4672,6 +4672,9 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

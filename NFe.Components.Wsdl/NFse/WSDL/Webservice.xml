@@ -8191,12 +8191,22 @@
     </LocalProducao>
   </Estado>
   <Estado ID="3546306" Nome="Santa Cruz das Palmeiras - SP" UF="SP" Padrao="ISSONLINE_ASSESSORPUBLICO">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</CancelarNfse>
+    </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSantaCruzDasPalmeirasSP-ISSONLINE.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
