@@ -81,6 +81,11 @@ namespace NFe.Components.Pronin
                                 proninService = new EntreIjuisRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
+                            case 4310207: //Ijuí-RS
+                                proninService = new IjuiRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }
@@ -157,6 +162,10 @@ namespace NFe.Components.Pronin
 
                             case 4306932: //Entre-Ijuís-RS
                                 proninService = new EntreIjuisRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4310207: //Ijuí-RS
+                                proninService = new IjuiRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             default:

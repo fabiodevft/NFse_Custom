@@ -98,7 +98,7 @@ namespace NFe.Service.NFSe
                 object pedCanNfse = null;
 
                 //Criar objetos das classes dos serviços dos webservices do SEFAZ
-                if (IsUtilizaCompilacaoWs(padraoNFSe))
+                if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, oDadosPedCanNfse.cMunicipio))
                 {
                     wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosPedCanNfse.cMunicipio, oDadosPedCanNfse.tpAmb, oDadosPedCanNfse.tpEmis, padraoNFSe, oDadosPedCanNfse.cMunicipio);
                     if (wsProxy != null)
@@ -503,7 +503,8 @@ namespace NFe.Service.NFSe
                             oDadosPedCanNfse.cMunicipio == 4314423 ||
                             oDadosPedCanNfse.cMunicipio == 3511102 ||
                             oDadosPedCanNfse.cMunicipio == 3535804 ||
-                            oDadosPedCanNfse.cMunicipio == 4306932)
+                            oDadosPedCanNfse.cMunicipio == 4306932 ||
+                            oDadosPedCanNfse.cMunicipio == 4310207)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,

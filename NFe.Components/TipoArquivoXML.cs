@@ -191,6 +191,10 @@ namespace NFe.Components
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4202404-";
                                 break;
 
+                            case 4310207: //Ijuí-RS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4310207-";
+                                break;
+
                             default:
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-";
                                 break;
