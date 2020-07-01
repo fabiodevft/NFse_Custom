@@ -2564,5 +2564,15 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_HIjuiRS_NFSeIntegracao"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://es-piuma-pm-nfs.cloud.el.com.br:80/RpsService")]
+        public string NFe_Components_PPiumaES_RpsServiceService {
+            get {
+                return ((string)(this["NFe_Components_PPiumaES_RpsServiceService"]));
+            }
+        }
     }
 }

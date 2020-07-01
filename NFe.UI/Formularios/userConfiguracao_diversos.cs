@@ -486,7 +486,8 @@ namespace NFe.UI.Formularios
                            ufCod == 3514502 /*Duartina-SP*/ ||
                            ufCod == 3549102 /*São João da Boa Vista-SP*/ ||
                            ufCod == 3546306 /*Santa Cruz das Palmeiras-SP*/ ||
-                           ufCod == 3556404 /*Vargem Grande do Sul-SP*/;
+                           ufCod == 3556404 /*Vargem Grande do Sul-SP*/ ||
+                           ufCod == 3204203 /*Piuma-ES*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
