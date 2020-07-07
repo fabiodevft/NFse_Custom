@@ -8306,4 +8306,15 @@
       <CancelarNfse>wsdl\producao\PIjuiRS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3204203" Nome="Piuma - ES" UF="ES" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPiumaES-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPiumaES-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPiumaES-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPiumaES-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPiumaES-EL.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PPiumaES-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
