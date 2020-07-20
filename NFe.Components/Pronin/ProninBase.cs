@@ -45,9 +45,9 @@ namespace NFe.Components.Pronin
                                 proninService = new BastosSP.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
-                            case 4308904: //Getúlio Vargas-RS
-                                proninService = new GetulioVargasRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
-                                break;
+                            //case 4308904: //Getúlio Vargas-RS
+                            //    proninService = new GetulioVargasRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                            //    break;
 
                             //case 4118501: //Pato Branco-PR
                             //    proninService = new PatoBrancoPR.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
@@ -66,7 +66,7 @@ namespace NFe.Components.Pronin
                                 break;
 
                             case 4314423: //Picada Café-RS
-                                proninService = new PicadaCafeRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                proninService = new PicadaCafe.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             //case 3511102: //Catanduva-SP
@@ -79,6 +79,26 @@ namespace NFe.Components.Pronin
 
                             case 4306932: //Entre-Ijuís-RS
                                 proninService = new EntreIjuisRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4310207: //Ijuí-RS
+                                proninService = new IjuiRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+							case 4322400: // Uruguaiana-RS 
+                                proninService = new Uruguaiana.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+                            
+                            case 4302808: //Caçapava do Sul-RS 
+                                proninService = new CacapavaDoSulRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+					       //case 3501301: //Álvares Machado-SP
+            //                    proninService = new AlvaresMachadoSP.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+            //                    break;
+
+                            case 4300109: //Agudo-RS
+                                proninService = new AgudoRS.h.ProninH(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             default:
@@ -143,8 +163,8 @@ namespace NFe.Components.Pronin
                                 proninService = new NaviraiMS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
-                            case 4314423: //Picada Café-RS
-                                proninService = new PicadaCafeRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                            case 4314423://Picada Café-RS
+                                proninService = new PicadaCafe.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             case 3511102: //Catanduva-SP 
@@ -157,6 +177,30 @@ namespace NFe.Components.Pronin
 
                             case 4306932: //Entre-Ijuís-RS
                                 proninService = new EntreIjuisRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4310207: //Ijuí-RS
+                                proninService = new IjuiRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+							
+							case 4322400: // Uruguaiana-RS 
+                                proninService = new Uruguaiana.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4302808: //Caçapava do Sul-RS 
+                                proninService = new CacapavaDoSulRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+							case 3501301: //Álvares Machado-SP
+                               proninService = new AlvaresMachadoSP.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+						       break;
+
+                            case 4300109: //Agudo-RS
+                                proninService = new AgudoRS.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
+                                break;
+
+                            case 4124053://Santa Terezinha de Itaipu-Pr
+                                proninService = new SantaTerezinhaItaipuPR.p.ProninP(tpAmb, PastaRetorno, UsuarioProxy, SenhaProxy, DomainProxy, Certificado);
                                 break;
 
                             default:

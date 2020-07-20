@@ -18,12 +18,14 @@ using NFe.Components.SimplISS;
 using NFe.Components.SystemPro;
 using NFe.Components.Tinus;
 using NFe.Components.Simple;
+using NFe.Components.Elotech;
 using NFe.Settings;
 using NFe.Validate;
 using NFSe.Components;
 using System;
 using System.IO;
 using NFe.Components.VersaTecnologia;
+using NFe.Components.WEBFISCO_TECNOLOGIA;
 #if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
@@ -98,7 +100,7 @@ namespace NFe.Service.NFSe
                 object pedCanNfse = null;
 
                 //Criar objetos das classes dos serviços dos webservices do SEFAZ
-                if (IsUtilizaCompilacaoWs(padraoNFSe))
+                if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, oDadosPedCanNfse.cMunicipio))
                 {
                     wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosPedCanNfse.cMunicipio, oDadosPedCanNfse.tpAmb, oDadosPedCanNfse.tpEmis, padraoNFSe, oDadosPedCanNfse.cMunicipio);
                     if (wsProxy != null)
@@ -390,6 +392,15 @@ namespace NFe.Service.NFSe
                                 case 5220454:
                                     pedCanNfse = new Components.PSenadorCanedoGO.nfseWS();
                                     break;
+
+
+                                case 3507506:
+                                    pedCanNfse = new Components.PBotucatuSP.nfseWS();
+                                    break;
+
+                                case 5211909:
+                                    pedCanNfse = new Components.PJataiGO.nfseWS();
+                                    break;
                             }
                         }
                         else
@@ -410,7 +421,8 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON_202:
-                        cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
+                        if (oDadosPedCanNfse.cMunicipio != 3169901)
+                            cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON:
@@ -503,7 +515,13 @@ namespace NFe.Service.NFSe
                             oDadosPedCanNfse.cMunicipio == 4314423 ||
                             oDadosPedCanNfse.cMunicipio == 3511102 ||
                             oDadosPedCanNfse.cMunicipio == 3535804 ||
-                            oDadosPedCanNfse.cMunicipio == 4306932)
+                            oDadosPedCanNfse.cMunicipio == 4306932 ||
+                            oDadosPedCanNfse.cMunicipio == 4310207 ||
+                            oDadosPedCanNfse.cMunicipio == 4322400 ||
+                            oDadosPedCanNfse.cMunicipio == 4302808 ||
+                            oDadosPedCanNfse.cMunicipio == 3501301 ||
+                            oDadosPedCanNfse.cMunicipio == 4300109 ||
+                            oDadosPedCanNfse.cMunicipio == 4124053)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -629,6 +647,49 @@ namespace NFe.Service.NFSe
 
                     #endregion SOFTPLAN
 
+                    #region AGILI
+                    case PadroesNFSe.AGILI:
+                        Components.AGILI.AGILI agili = new Components.AGILI.AGILI((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                                          Empresas.Configuracoes[emp].PastaXmlRetorno,
+                                          Empresas.Configuracoes[emp].TokenNFse,
+                                          Empresas.Configuracoes[emp].TokenNFSeExpire,
+                                          Empresas.Configuracoes[emp].UsuarioWS,
+                                          Empresas.Configuracoes[emp].SenhaWS,
+                                          Empresas.Configuracoes[emp].ClientID,
+                                          Empresas.Configuracoes[emp].ClientSecret);
+
+                        AssinaturaDigital agiliAssinatura = new AssinaturaDigital();
+                        agiliAssinatura.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio);
+
+                        // Validar o Arquivo XML
+                        ValidarXML AgiliValidar = new ValidarXML(NomeArquivoXML, Empresas.Configuracoes[emp].UnidadeFederativaCodigo, false);
+                        string validacaoAgili = AgiliValidar.ValidarArqXML(NomeArquivoXML);
+                        if (validacaoAgili != "")
+                            throw new Exception(validacaoAgili);
+
+                        if (ConfiguracaoApp.Proxy)
+                            agili.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
+
+                        AssinaturaDigital AgiliAss = new AssinaturaDigital();
+                        AgiliAss.Assinar(NomeArquivoXML, emp, oDadosPedCanNfse.cMunicipio, AlgorithmType.Sha256);
+
+                        agili.CancelarNfse(NomeArquivoXML);
+
+                        if (Empresas.Configuracoes[emp].TokenNFse != agili.Token)
+                        {
+                            Empresas.Configuracoes[emp].SalvarConfiguracoesNFSeSoftplan(agili.Usuario,
+                                                                                        agili.Senha,
+                                                                                        agili.ClientID,
+                                                                                        agili.ClientSecret,
+                                                                                        agili.Token,
+                                                                                        agili.TokenExpire,
+                                                                                        Empresas.Configuracoes[emp].CNPJ);
+                        }
+
+                        break;
+
+                    #endregion AGILI
+
 #endif
 
                     case PadroesNFSe.INTERSOL:
@@ -684,8 +745,6 @@ namespace NFe.Service.NFSe
 #endif
 
                     case PadroesNFSe.PUBLIC_SOFT:
-                        if (oDadosPedCanNfse.cMunicipio.Equals(2610707))
-                            cabecMsg = "N9M=";
                         break;
 
                     case PadroesNFSe.SIMPLE:
@@ -710,7 +769,42 @@ namespace NFe.Service.NFSe
                         cabecMsg = "<cabecalhoCancelamentoNfseLote xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.ctaconsult.com/nfse\"><versao>1.00</versao><ambiente>2</ambiente></cabecalhoCancelamentoNfseLote>";
                         break;
 
-                    case PadroesNFSe.VERSATECNOLOGIA:
+                    case PadroesNFSe.IIBRASIL:
+                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        //wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+
+                        //if (oDadosPedCanNfse.tpAmb == 2)
+                        //{
+                        //    pedCanNfse = new Components.HLimeiraSP.NfseWSService();
+                        //}
+                        //else
+                        //{
+                        //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
+                        //}
+
+                        break;
+
+                    case PadroesNFSe.WEBFISCO_TECNOLOGIA:
+                        WEBFISCO_TECNOLOGIA webTecnologia = new WEBFISCO_TECNOLOGIA((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                                           Empresas.Configuracoes[emp].PastaXmlRetorno,
+                                           oDadosPedCanNfse.cMunicipio,
+                                           Empresas.Configuracoes[emp].UsuarioWS,
+                                           Empresas.Configuracoes[emp].SenhaWS);
+                        webTecnologia.CancelarNfse(NomeArquivoXML);
+                        break;
+
+                    case PadroesNFSe.ELOTECH:
+                        Elotech elotech = new Elotech((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                                Empresas.Configuracoes[emp].PastaXmlRetorno,
+                                oDadosPedCanNfse.cMunicipio,
+                                ConfiguracaoApp.ProxyUsuario,
+                                ConfiguracaoApp.ProxySenha,
+                                ConfiguracaoApp.ProxyServidor,
+                                Empresas.Configuracoes[emp].X509Certificado);
+
+                        elotech.CancelarNfse(NomeArquivoXML);
+                        break;		
+					case PadroesNFSe.VERSATECNOLOGIA:
 
                         VersaTecnologia versa = new VersaTecnologia((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                             Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -726,21 +820,11 @@ namespace NFe.Service.NFSe
                         versa.CancelarNfse(NomeArquivoXML);
 
                         break;
-                        
-					case PadroesNFSe.IIBRASIL:
-                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
-                        //wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+                    case PadroesNFSe.SIAT:
+                        EncryptAssinatura();
 
-                        //if (oDadosPedCanNfse.tpAmb == 2)
-                        //{
-                        //    pedCanNfse = new Components.HLimeiraSP.NfseWSService();
-                        //}
-                        //else
-                        //{
-                        //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
-                        //}
+                        break;
 
-                        break;					
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))

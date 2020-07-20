@@ -51,7 +51,7 @@
     <OutputPath>C:\Unimake\Executavel\</OutputPath>
     <DefineConstants>TRACE;_fw46</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>0</WarningLevel>
+    <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release35_AnyCPU|AnyCPU'">

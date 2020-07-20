@@ -153,6 +153,7 @@ namespace NFe.ConvertTxt
         dbisListaNeutra = 3, 
         dbisMargemValorAgregado = 4, 
         dbisPauta = 5,
+        dbisValorOperacao = 6,
         NaoInserirTagNoXML = 100 //Quando a tag não é obrigatórioa, vamos retornar este valor para termos controle sobre a situação.
     }
     public enum TpcnOrigemMercadoria
@@ -274,6 +275,8 @@ namespace NFe.ConvertTxt
         tpEvDesconhecimentoOperacao = 210220,
         [Description("EPEC")]
         tpEvEPEC = 110140,
+        [Description("EPEC - CTe")]
+        tpEvEPECCTe = 110113,
         [Description("Operação nao Realizada")]
         tpEvOperacaoNaoRealizada = 210240,
         [Description("Encerramento MDFe")]
@@ -301,7 +304,9 @@ namespace NFe.ConvertTxt
         [Description("Fisco Resposta ao Cancelamento de Prorrogação 1º prazo")]
         tpEvFiscoRespCancPedProrrogacao_ICMS_1 = 411502,
         [Description("Fisco Resposta ao Cancelamento de Prorrogação 2º prazo")]
-        tpEvFiscoRespCancPedProrrogacao_ICMS_2 = 411503
+        tpEvFiscoRespCancPedProrrogacao_ICMS_2 = 411503,
+        [Description("Pagamento Operação MDF-e")]
+        tpEvPagamentoOperacaoMDFe = 110116
     }
 
     public enum TpcnTipoAutor

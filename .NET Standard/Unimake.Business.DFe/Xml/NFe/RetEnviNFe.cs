@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 using Unimake.Business.DFe.Servicos;
 
 namespace Unimake.Business.DFe.Xml.NFe
 {
-    [System.Serializable()]
+    [Serializable()]
     [XmlRoot("retEnviNFe", Namespace = "http://www.portalfiscal.inf.br/nfe", IsNullable = false)]
-    public class RetEnviNFe : XMLBase
+    public class RetEnviNFe: XMLBase
     {
         [XmlAttribute(AttributeName = "versao", DataType = "token")]
         public string Versao { get; set; }
@@ -41,7 +39,7 @@ namespace Unimake.Business.DFe.Xml.NFe
         [XmlElement("dhRecbto")]
         public string DhRecbtoField
         {
-            get => DhRecbto.ToString("yyyy-MM-ddTHH:mm:ssK");
+            get => DhRecbto.ToString("yyyy-MM-ddTHH:mm:sszzz");
             set => DhRecbto = DateTime.Parse(value);
         }
 
@@ -51,6 +49,7 @@ namespace Unimake.Business.DFe.Xml.NFe
         [XmlElement("protNFe")]
         public ProtNFe ProtNFe { get; set; }
     }
+
     public class RetEnviNFeInfRec
     {
         [XmlElement("nRec")]
@@ -58,57 +57,5 @@ namespace Unimake.Business.DFe.Xml.NFe
 
         [XmlElement("tMed")]
         public string TMed { get; set; }
-    }
-
-    public class ProtNFe
-    {
-        [XmlAttribute(AttributeName = "versao", DataType = "token")]
-        public string Versao { get; set; }
-
-        [XmlElement("infProt")]
-        public InfProt InfProt { get; set; }
-    }
-
-    public class InfProt
-    {
-        [XmlAttribute(AttributeName = "Id", DataType = "ID")]
-        public string Id { get; set; }
-
-        [XmlElement("tpAmb")]
-        public TipoAmbiente TpAmb { get; set; }
-
-        [XmlElement("verAplic")]
-        public string VerAplic { get; set; }
-
-        [XmlElement("chNFe")]
-        public string ChNFe { get; set; }
-
-        [XmlIgnore]
-        public DateTime DhRecbto { get; set; }
-
-        [XmlElement("dhRecbto")]
-        public string DhRecbtoField
-        {
-            get => DhRecbto.ToString("yyyy-MM-ddTHH:mm:ssK");
-            set => DhRecbto = DateTime.Parse(value);
-        }
-
-        [XmlElement("nProt")]
-        public string NProt { get; set; }
-
-        [XmlElement("digVal")]
-        public string DigVal { get; set; }
-
-        [XmlElement("cStat")]
-        public int CStat { get; set; }
-
-        [XmlElement("xMotivo")]
-        public string XMotivo { get; set; }
-
-        [XmlElement("cMsg")]
-        public string CMsg { get; set; }
-
-        [XmlElement("xMsg")]
-        public string XMsg { get; set; }
     }
 }

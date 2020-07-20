@@ -662,7 +662,7 @@ namespace NFe.Components
         CANOAS_RS,
 
         /// <summary>
-        /// Padrão da ISS Net / NotaControl
+        /// Padrão da ISS Net / Nota Control Tecnologia
         /// </summary>
         [Description("ISS Net")]
         ISSNET,
@@ -908,7 +908,6 @@ namespace NFe.Components
 
         /// <summary>
         /// Padrão EloTech
-        /// Prefeitura de Quatro Barras - PR
         /// </summary>
         [Description("EloTech")]
         ELOTECH,
@@ -998,9 +997,9 @@ namespace NFe.Components
         PUBLICA,
 
         /// <summary>
-        /// Padrão BSIT-BR
+        /// Padrão BSIT-BR / SIGEP
         /// </summary>
-        [Description("BSIT-BR")]
+        [Description("BSIT-BR / SIGEP")]
         BSITBR,
 
         /// <summary>
@@ -1174,8 +1173,41 @@ namespace NFe.Components
         /// </summary>
         [Description("VERSATECNOLOGIA")]
         VERSATECNOLOGIA,
+
+        /// <summary>
+        /// Padrão Nota Fiscal eletrônica SIAT
+        /// Prefeitura de Belém - PA
+        /// </summary>
+        [Description("SIAT")]
+        SIAT,
+
+        /// <summary>
+        /// Padrão Nota Fiscal eletrônica ISSNet versão 2.02
+        /// Prefeitura de Ponta Porã - MS
+        /// </summary>
+        [Description("ISSNet_202")]
+        ISSNet_202,
+
+		/// <summary>
+        /// Padrão WEBFISCO_TECNOLOGIA
+        /// </summary>
+        [Description("WEBFISCO_TECNOLOGIA")]
+        WEBFISCO_TECNOLOGIA,
+
+        /// <summary>
+        /// Padrão SYSMAR
+        /// </summary>
+        [Description("SYSMAR")]
+        SYSMAR,
+
+         /// <summary>
+         /// Padrão AGILI
+         /// </summary>
+        [Description("AGILI")]
+        AGILI
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
+        ///
     }
 
     #endregion Padrão NFSe

@@ -24,6 +24,7 @@ using NFSe.Components;
 using System;
 using System.IO;
 using NFe.Components.VersaTecnologia;
+using NFe.Components.WEBFISCO_TECNOLOGIA;
 #if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
@@ -432,7 +433,13 @@ namespace NFe.Service.NFSe
                             oDadosPedSitNfse.cMunicipio == 4314423 ||
                             oDadosPedSitNfse.cMunicipio == 3511102 ||
                             oDadosPedSitNfse.cMunicipio == 3535804 ||
-                            oDadosPedSitNfse.cMunicipio == 4306932)
+                            oDadosPedSitNfse.cMunicipio == 4306932 ||
+                            oDadosPedSitNfse.cMunicipio == 4310207 ||
+                            oDadosPedSitNfse.cMunicipio == 4322400 ||
+                            oDadosPedSitNfse.cMunicipio == 4302808 ||
+							oDadosPedSitNfse.cMunicipio == 3501301 ||
+							oDadosPedSitNfse.cMunicipio == 4300109 ||
+                            oDadosPedSitNfse.cMunicipio == 4124053)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -553,8 +560,6 @@ namespace NFe.Service.NFSe
 #endif
 
                     case PadroesNFSe.PUBLIC_SOFT:
-                        if (oDadosPedSitNfse.cMunicipio.Equals(2610707))
-                            cabecMsg = "N9M=";
                         break;
 
                     case PadroesNFSe.SIMPLE:
@@ -583,6 +588,15 @@ namespace NFe.Service.NFSe
                         {
                             cabecMsg = "<cabecalho versao=\"3\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>3</versaoDados></cabecalho>";
                         }
+                        break;
+
+                    case PadroesNFSe.WEBFISCO_TECNOLOGIA:
+                        WEBFISCO_TECNOLOGIA webTecnologia = new WEBFISCO_TECNOLOGIA((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
+                                           Empresas.Configuracoes[emp].PastaXmlRetorno,
+                                           oDadosPedSitNfse.cMunicipio,
+                                           Empresas.Configuracoes[emp].UsuarioWS,
+                                           Empresas.Configuracoes[emp].SenhaWS);
+                        webTecnologia.ConsultarNfse(NomeArquivoXML);
                         break;
 
                     case PadroesNFSe.VERSATECNOLOGIA:

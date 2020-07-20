@@ -20,7 +20,6 @@ namespace NFe.Components.SALVADOR_BA
         {
             get
             {
-
                 if (service == null)
                 {                    
                     service = new Salvador_BA.p.SalvadorP(tpAmb, PastaRetorno, ProxyUser, ProxyPass, ProxyServer, Certificado);

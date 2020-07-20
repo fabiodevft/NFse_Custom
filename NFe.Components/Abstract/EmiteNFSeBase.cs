@@ -146,11 +146,10 @@ namespace NFe.Components.Abstract
         {
         }
 
-        public virtual void ConsultarSituacaoNFSe(string file)
-        {
+        public virtual void ConsultarXml(string file) { }
 
-        }
-
+        public virtual void ConsultarSituacaoNFSe(string file){}
+        
         public object WSGeracao
         {
             get;

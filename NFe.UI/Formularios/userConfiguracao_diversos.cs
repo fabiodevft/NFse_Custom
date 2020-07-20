@@ -188,6 +188,18 @@ namespace NFe.UI.Formularios
                     empresa.TokenNFse = result.TokenNFse;
                     empresa.TokenNFSeExpire = result.TokenNFSeExpire;
                 }
+
+                if (empresa.UnidadeFederativaCodigo.Equals(5107925))
+                {
+                    Empresa result = empresa.RecuperarConfiguracaoNFSeSoftplan(empresa.CNPJ);
+
+                    txtClienteID.Text = result.ClientID;
+                    txtClientSecret.Text = result.ClientSecret;
+                    empresa.ClientID = result.ClientID;
+                    empresa.ClientSecret = result.ClientSecret;
+                    empresa.TokenNFse = result.TokenNFse;
+                    empresa.TokenNFSeExpire = result.TokenNFSeExpire;
+                }
 #endif
 
                 HabilitaUsuarioSenhaWS(this.empresa.UnidadeFederativaCodigo);
@@ -356,6 +368,51 @@ namespace NFe.UI.Formularios
                                                         tokenNFSeExpire,
                                                         edtCNPJ.Text);
             }
+            if (edtCodMun.Text.Equals("5107925"))
+            {
+                if (string.IsNullOrEmpty(txtUsuarioWS.Text) ||
+                string.IsNullOrEmpty(txtSenhaWS.Text) ||
+                string.IsNullOrEmpty(txtClienteID.Text) ||
+                string.IsNullOrEmpty(txtClientSecret.Text))
+                {
+                    throw new Exception("As seguintes informações tem que estarem todas informadas: Usuário, Senha, ClientID e ClientSecret");
+                }
+
+                IWebProxy proxy = null;
+
+                if (ConfiguracaoApp.Proxy)
+                {
+                    if (ConfiguracaoApp.Proxy)
+                    {
+                        proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor,
+                            ConfiguracaoApp.ProxyUsuario,
+                            ConfiguracaoApp.ProxySenha,
+                            ConfiguracaoApp.ProxyPorta,
+                            ConfiguracaoApp.DetectarConfiguracaoProxyAuto);
+                    }
+                }
+
+                string url = "";
+
+                url = @"http://agiliblue.agilicloud.com.br/api/";
+
+                Token token = Token.GerarToken(proxy,
+                                             txtUsuarioWS.Text,
+                                             txtSenhaWS.Text,
+                                             txtClienteID.Text,
+                                             txtClientSecret.Text,
+                                             url);
+
+                DateTime tokenNFSeExpire = DateTime.Now.AddSeconds(token.ExpiresIn);
+
+                empresa.SalvarConfiguracoesNFSeSoftplan(txtUsuarioWS.Text,
+                                                        txtSenhaWS.Text,
+                                                        txtClienteID.Text,
+                                                        txtClientSecret.Text,
+                                                        token.AccessToken,
+                                                        tokenNFSeExpire,
+                                                        edtCNPJ.Text);
+            }
 #endif
 
             return true;
@@ -482,9 +539,20 @@ namespace NFe.UI.Formularios
                            ufCod == 4118006 /*Paraíso do Norte-PR*/ ||
                            ufCod == 4300604 /*Alvorada-RS*/ ||
                            ufCod == 4104907 /*Castro-PR*/ ||
+                           ufCod == 3505302 /*Barra Bonita-SP/*/ ||
+                           ufCod == 4202404 /*Blumenau-SC*/ ||
+                           ufCod == 3520004 /*Igaraçu do Tietê-SP*/ ||
+                           ufCod == 3539400 /*Piratininga-SP*/ ||
                            ufCod == 3516705 /*Garça-SP*/ ||
                            ufCod == 3514502 /*Duartina-SP*/ ||
-                           ufCod == 3549102 /*São João da Boa Vista-SP*/;
+                           ufCod == 3526902 /* Limeira-SP*/||
+                           ufCod == 3146008 /*Ouro Fino-MG*/||
+                           ufCod == 4323804 /*Xangri-la-RS*/||
+                           ufCod == 5107925 /*Sorriso-MT*/ ||
+                           ufCod == 3549102 /*São João da Boa Vista-SP*/ ||
+                           ufCod == 3546306 /*Santa Cruz das Palmeiras-SP*/ ||
+                           ufCod == 3556404 /*Vargem Grande do Sul-SP*/ ||
+                           ufCod == 3204203 /*Piuma-ES*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
@@ -510,6 +578,14 @@ namespace NFe.UI.Formularios
 
                 //Se o município for Florianópolis, temos que demonstrar os campos: ClientID e Client Secret
                 if (edtCodMun.Text.Equals("4205407"))
+                {
+                    lblClienteID.Visible = true;
+                    lblClientSecret.Visible = true;
+                    txtClienteID.Visible = true;
+                    txtClientSecret.Visible = true;
+                }
+                //Se o município for Sorriso, temos que demonstrar os campos: ClientID e Client Secret
+                if (edtCodMun.Text.Equals("5107925"))
                 {
                     lblClienteID.Visible = true;
                     lblClientSecret.Visible = true;
@@ -697,7 +773,7 @@ namespace NFe.UI.Formularios
                     lbl_udDiasLimpeza.Location = new System.Drawing.Point(3, 147);
                     udDiasLimpeza.Location = new System.Drawing.Point(3, 166);
                     break;
-              
+
                 default:
                     labelUF.Visible = true;
                     labelUF.Text = "Unidade Federativa (UF)";

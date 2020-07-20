@@ -76,10 +76,12 @@
             this.cbMacarSAT.ItemHeight = 19;
             this.cbMacarSAT.Items.AddRange(new object[] {
             "BEMATECH",
+            "CONTROL_ID",
             "DARUMA",
             "DIMEP",
             "ELGIN",
             "ELGIN_II",
+            "ELGIN_SMART",
             "EPSON",
             "EMULADOR",
             "NITERE",

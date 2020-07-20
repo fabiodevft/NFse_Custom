@@ -1,23 +1,24 @@
-﻿using System.Xml;
+﻿using System;
+using System.Runtime.InteropServices;
+using Unimake.Business.DFe.Servicos.Interop;
 using Unimake.Business.DFe.Utility;
 using Unimake.Business.DFe.Xml.NFe;
 
 namespace Unimake.Business.DFe.Servicos.NFe
 {
-    public class StatusServico : ServicoBase
+    public class StatusServico: ServicoBase, IInteropService<ConsStatServ>
     {
-        private StatusServico(XmlDocument conteudoXML, Configuracao configuracao)
-            : base(conteudoXML, configuracao) { }
+        #region Protected Methods
 
         /// <summary>
         /// Definir o valor de algumas das propriedades do objeto "Configuracoes"
         /// </summary>
         protected override void DefinirConfiguracao()
         {
-            ConsStatServ xml = new ConsStatServ();
+            var xml = new ConsStatServ();
             xml = xml.LerXML<ConsStatServ>(ConteudoXML);
 
-            if (!Configuracoes.Definida)
+            if(!Configuracoes.Definida)
             {
                 Configuracoes.Servico = Servico.NFeStatusServico;
                 Configuracoes.CodigoUF = (int)xml.CUF;
@@ -28,11 +29,15 @@ namespace Unimake.Business.DFe.Servicos.NFe
             }
         }
 
+        #endregion Protected Methods
+
+        #region Public Properties
+
         public RetConsStatServ Result
         {
             get
             {
-                if (!string.IsNullOrWhiteSpace(RetornoWSString))
+                if(!string.IsNullOrWhiteSpace(RetornoWSString))
                 {
                     return XMLUtility.Deserializar<RetConsStatServ>(RetornoWSXML);
                 }
@@ -45,12 +50,31 @@ namespace Unimake.Business.DFe.Servicos.NFe
             }
         }
 
-        public StatusServico(ConsStatServ consStatServ, Configuracao configuracao)
-                    : this(consStatServ.GerarXML(), configuracao) { }
+        #endregion Public Properties
 
-        public override void GravarXmlDistribuicao(string pasta, string nomeArquivo, string conteudoXML)
+        #region Public Constructors
+
+        public StatusServico()
+            : base()
         {
-            throw new System.Exception("Não existe XML de distribuição para consulta status do serviço.");
         }
+
+        public StatusServico(ConsStatServ consStatServ, Configuracao configuracao)
+                    : base(consStatServ?.GerarXML() ?? throw new ArgumentNullException(nameof(consStatServ)), configuracao) { }
+
+        #endregion Public Constructors
+
+        #region Public Methods
+
+        [ComVisible(true)]
+        public void Executar(ConsStatServ consStatServ, Configuracao configuracao)
+        {
+            PrepararServico(consStatServ?.GerarXML() ?? throw new ArgumentNullException(nameof(consStatServ)), configuracao);
+            Executar();
+        }
+
+        public override void GravarXmlDistribuicao(string pasta, string nomeArquivo, string conteudoXML) => throw new System.Exception("Não existe XML de distribuição para consulta status do serviço.");
+
+        #endregion Public Methods
     }
 }

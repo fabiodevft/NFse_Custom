@@ -646,6 +646,7 @@ namespace NFe.Service
                 bool denegada = false;
                 bool temCancelamento = false;
                 bool isEPEC = false;
+                bool cancelamentoNfe = false;
 
                 if (!File.Exists(nomeArquivoRecebido))
                     throw new Exception(string.Format(erroMsg, nomeArquivoRecebido, ""));
@@ -664,11 +665,6 @@ namespace NFe.Service
                         {
                             if (((XmlElement)el3).GetElementsByTagName(NFe.Components.TpcnResources.tpEmis.ToString())[0] != null)
                             {
-                                //NFe.Components.TipoEmissao tpe = NFe.Components.EnumHelper.StringToEnum<NFe.Components.TipoEmissao>(((XmlElement)el3).GetElementsByTagName(NFe.Components.TpcnResources.tpEmis.ToString())[0].InnerText);
-                                //if (tpe != (NFe.Components.TipoEmissao)emp.tpEmis)
-                                //{
-                                //    throw new Exception("Tipo de emissão do arquivo diferente do tipo de emissão definido na empresa");
-                                //}
                                 tipo = ((XmlElement)el3).GetElementsByTagName(NFe.Components.TpcnResources.mod.ToString())[0].InnerText.Equals("55") ? "nfe" : "nfce";
                             }
                         }
@@ -812,6 +808,7 @@ namespace NFe.Service
 
                                             default:
                                                 tipo = "nfe";
+                                                cancelamentoNfe = true;
                                                 cl = (XmlElement)doc.GetElementsByTagName(TpcnResources.chNFe.ToString())[0];
                                                 break;
                                         }
@@ -1015,8 +1012,18 @@ namespace NFe.Service
                         nfer.ReadFromXml(arqProcNFe);
                         fEmail = nfer.nfe.dest.email;
 
-                        if (tipo == "")
-                            tipo = (nfer.nfe.ide.mod == ConvertTxt.TpcnMod.modNFCe ? "nfce" : "nfe");
+                        if (tipo == "" || cancelamentoNfe)
+                        {
+                            if (nfer.nfe.ide.tpImp == ConvertTxt.TpcnTipoImpressao.tiDANFESimplificado)
+                            {
+                                //DANFE simplificado
+                                tipo = "ds";
+                            }
+                            else
+                            {
+                                tipo = (nfer.nfe.ide.mod == ConvertTxt.TpcnMod.modNFCe ? "nfce" : "nfe");
+                            }
+                        }
                         switch (nfer.nfe.protNFe.cStat)
                         {
                             case 110:
@@ -1043,6 +1050,7 @@ namespace NFe.Service
                         {
                             case "nfe":
                             case "nfce":
+                            case "ds":
                                 fExtensao = Propriedade.ExtRetorno.ProcEventoNFe;
                                 break;
 
@@ -1078,7 +1086,7 @@ namespace NFe.Service
                                                                 "\\" + PastaEnviados.Autorizados.ToString() +
                                                                 "\\" + getSubFolder(dataEmissaoNFe, ndias, emp.DiretorioSalvarComo), //emp.DiretorioSalvarComo.ToString(dataEmissaoNFe.AddDays(ndias * -1)),
                                                             Path.GetFileName(filenameCancelamento));
-                                if (!File.Exists(fTemp) && tipo.Equals("nfe"))
+                                if (!File.Exists(fTemp) && (tipo.Equals("nfe") || tipo.Equals("ds")))
                                 {
                                     ///
                                     /// ops, por evento não foi encontrado, procuramos pelo cancelamento antigo
@@ -1109,7 +1117,7 @@ namespace NFe.Service
                                 }
                                 else
                                 {
-                                    if (!tipo.Equals("nfe") || emp.DiretorioSalvarComo.ToString().Equals("Raiz") || emp.DiretorioSalvarComo.ToString().Equals(""))
+                                    if ((!tipo.Equals("nfe") && !tipo.Equals("ds")) || emp.DiretorioSalvarComo.ToString().Equals("Raiz") || emp.DiretorioSalvarComo.ToString().Equals(""))
 
                                         ///
                                         /// ops!
@@ -1235,6 +1243,12 @@ namespace NFe.Service
                             case "nfce":
                                 Args += " A=\"" + arqProcNFe + "\"";
                                 Args += " T=danfe";
+                                configDanfe = emp.ConfiguracaoDanfe;
+                                break;
+                            
+                            case "ds":
+                                Args += " A=\"" + arqProcNFe + "\"";
+                                Args += " T=ds";
                                 configDanfe = emp.ConfiguracaoDanfe;
                                 break;
 

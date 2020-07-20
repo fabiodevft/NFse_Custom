@@ -166,7 +166,7 @@ namespace NFSe.Components
                 Proxy = Proxy
             })
             {
-                //                                                                                                    informe 1 para retorno em xml
+                //informe 1 para retorno em xml
                 result = post.PostForm("http://sync.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1", new Dictionary<string, string> {
                      {"login", Usuario  },  //CPF/CNPJ, sem separadores}
                      {"senha", Senha},      //Senha de acesso ao sistema: www.nfse.

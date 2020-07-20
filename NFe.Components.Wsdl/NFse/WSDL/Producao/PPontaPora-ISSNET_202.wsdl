@@ -421,7 +421,7 @@
   </binding>
   <service name="IWSPortalIntegservice">
     <port name="IWSPortalIntegPort" binding="tns:IWSPortalIntegbinding">
-      <soap:address location="http://187.53.176.143/tecnosis/portalinteg2.dll/soap/IWSPortalInteg"/>
+      <soap:address location="http://198.15.110.149/tecnosis/portalinteg2.dll/soap/IWSPortalInteg"/>
     </port>
   </service>
 </definitions>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.IO;
 using System.Xml;
 
@@ -189,6 +189,33 @@ namespace NFe.Components
 
                             case 4202404: //Blumenau-SC
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4202404-";
+                                break;
+
+                            case 4310207: //Ijuí-RS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4310207-";
+                                break;
+							case 4322400: //Uruguaiana-RS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4322400-";
+                                break;
+
+                            case 4302808: //Caçapava do Sul-RS 
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4302808-";
+                                break;
+
+	       				    case 3501301: //Álvares Machado-SP
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3501301-";
+                                break;
+
+                            case 3131307: //Ipatinga-MG
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3131307-";
+                                break;
+
+                            case 4300109: //Agudo-RS
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4300109-";
+                                break;
+
+                            case 4124053: //Santa Terezinha de Itaipu-PR
+                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4124053-";
                                 break;
 
                             default:

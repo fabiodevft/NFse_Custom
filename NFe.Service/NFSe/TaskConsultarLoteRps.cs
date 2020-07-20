@@ -253,7 +253,8 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON_202:
-                        cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
+                        if (ler.oDadosPedSitNfseRps.cMunicipio != 3169901)
+                            cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON:
@@ -357,6 +358,14 @@ namespace NFe.Service.NFSe
                                 case 5220454:
                                     pedLoteRps = new Components.PSenadorCanedoGO.nfseWS();
                                     break;
+
+                                case 3507506:
+                                    pedLoteRps = new Components.PBotucatuSP.nfseWS();
+                                    break;
+
+                                case 5211909:
+                                    pedLoteRps = new Components.PJataiGO.nfseWS();
+                                    break;
                             }
                         }
                         else
@@ -382,7 +391,13 @@ namespace NFe.Service.NFSe
                             ler.oDadosPedSitNfseRps.cMunicipio == 4314423 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 3511102 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 3535804 ||
-                            ler.oDadosPedSitNfseRps.cMunicipio == 4306932)
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4306932 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4310207 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4322400 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4302808 ||
+							ler.oDadosPedSitNfseRps.cMunicipio == 3501301 ||
+							ler.oDadosPedSitNfseRps.cMunicipio == 4300109 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4124053)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
                                 Empresas.Configuracoes[emp].PastaXmlRetorno,
@@ -521,7 +536,10 @@ namespace NFe.Service.NFSe
                         }
                         break;
 
-                    case PadroesNFSe.VERSATECNOLOGIA:
+                    case PadroesNFSe.IIBRASIL:
+                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        break;
+					case PadroesNFSe.VERSATECNOLOGIA:
 
                         #region VersaTecnologia
 
@@ -540,11 +558,6 @@ namespace NFe.Service.NFSe
                         break;
 
                         #endregion VersaTecnologia
-
-						case PadroesNFSe.IIBRASIL:
-                        cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
-                        break;
-					
                 }
 
                 if (base.IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

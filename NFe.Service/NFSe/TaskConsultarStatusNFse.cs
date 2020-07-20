@@ -3,12 +3,7 @@ using NFe.Components;
 using NFe.Settings;
 using NFe.Components.SALVADOR_BA;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 
 namespace NFe.Service.NFSe
 {

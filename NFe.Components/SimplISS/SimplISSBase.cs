@@ -97,6 +97,10 @@ namespace NFe.Components.SimplISS
                                 simplissService = new BlumenauSC.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
 
+                            case 3556404: //Vargem Grande do Sul-SP
+                                simplissService = new  VargemGrandeDoSulSP.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
+                                break;
+
                             default:
                                 throw new Exceptions.ServicoInexistenteException();
                         }

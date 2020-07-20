@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using Unimake.Business.DFe.Servicos;
 
 namespace Unimake.Business.DFe.Utility
 {
@@ -21,7 +22,7 @@ namespace Unimake.Business.DFe.Utility
             #endregion Public Properties
         }
 
-        public class Utf8StringWriter : StringWriter
+        public class Utf8StringWriter: StringWriter
         {
             #region Public Properties
 
@@ -37,32 +38,36 @@ namespace Unimake.Business.DFe.Utility
         /// <summary>
         /// Gerar o dígito da chave da NFe, CTe, MDFe ou NFCe
         /// </summary>
-        /// <param name="chave">Chave (sem o dígito) para efetuar o cálculo do dígito verificador</param>
+        /// <param name="chave">Chave do DFe (sem o dígito) que deve ser calculado o dígito verificador.</param>
         /// <returns>Dígito verificador</returns>
         public static int CalcularDVChave(string chave)
         {
+            if(chave is null)
+            {
+                throw new ArgumentNullException(nameof(chave));
+            }
+
             int i, j, Digito;
             const string PESO = "4329876543298765432987654329876543298765432";
 
             chave = chave.Replace("NFe", "");
 
-            if (chave.Length != 43)
+            if(chave.Length != 43)
             {
                 throw new Exception(string.Format("Erro na composição da chave [{0}] para obter o dígito verificador.", chave) + Environment.NewLine);
             }
             else
             {
                 j = 0;
-                Digito = -1;
                 try
                 {
-                    for (i = 0; i < 43; ++i)
+                    for(i = 0; i < 43; ++i)
                     {
                         j += Convert.ToInt32(chave.Substring(i, 1)) * Convert.ToInt32(PESO.Substring(i, 1));
                     }
 
                     Digito = 11 - (j % 11);
-                    if ((j % 11) < 2)
+                    if((j % 11) < 2)
                     {
                         Digito = 0;
                     }
@@ -72,7 +77,7 @@ namespace Unimake.Business.DFe.Utility
                     Digito = -1;
                 }
 
-                if (Digito == -1)
+                if(Digito == -1)
                 {
                     throw new Exception(string.Format("Erro no cálculo do dígito verificador da chave [{0}].", chave) + Environment.NewLine);
                 }
@@ -102,9 +107,40 @@ namespace Unimake.Business.DFe.Utility
         /// <param name="doc">Conteúdo do XML a ser deserilizado</param>
         /// <returns>Retorna o objeto com o conteúdo do XML deserializado</returns>
         public static T Deserializar<T>(XmlDocument doc)
-            where T : new()
+            where T : new() => Deserializar<T>(doc.OuterXml);
+
+        public static TipoDFe DetectDFeType(XmlDocument xml) => DetectDFeType(xml.OuterXml);
+
+        public static TipoDFe DetectDFeType(string xml)
         {
-            return Deserializar<T>(doc.OuterXml);
+            var tipoDFe = TipoDFe.NFe;
+
+            if(xml.Contains("<mod>55</mod>"))
+            {
+                tipoDFe = TipoDFe.NFe;
+            }
+            else if(xml.Contains("<mod>65</mod>"))
+            {
+                tipoDFe = TipoDFe.NFCe;
+            }
+            else if(xml.Contains("<mod>57</mod>"))
+            {
+                tipoDFe = TipoDFe.CTe;
+            }
+            else if(xml.Contains("<mod>67</mod>"))
+            {
+                tipoDFe = TipoDFe.CTeOS;
+            }
+            else if(xml.Contains("infMDFe"))
+            {
+                tipoDFe = TipoDFe.MDFe;
+            }
+            else if(xml.Contains("infCFe"))
+            {
+                tipoDFe = TipoDFe.CFe;
+            }
+
+            return tipoDFe;
         }
 
         /// <summary>
@@ -116,7 +152,7 @@ namespace Unimake.Business.DFe.Utility
         {
             var retorno = 0;
 
-            while (retorno == 0)
+            while(retorno == 0)
             {
                 var rnd = new Random(numeroNF);
 
@@ -124,6 +160,43 @@ namespace Unimake.Business.DFe.Utility
             }
 
             return retorno;
+        }
+
+        public static string GetChaveDFe(string xml) => GetChaveDFe(xml, DetectDFeType(xml));
+
+        public static string GetChaveDFe(string xml, TipoDFe typeDFe)
+        {
+            var typeString = "";
+
+            switch(typeDFe)
+            {
+                case TipoDFe.NFe:
+                case TipoDFe.NFCe:
+                    typeString = "NFe";
+                    break;
+
+                case TipoDFe.CTe:
+                case TipoDFe.CTeOS:
+                    typeString = "CTe";
+                    break;
+
+                case TipoDFe.MDFe:
+                    typeString = "MDFe";
+                    break;
+
+                case TipoDFe.CFe:
+                    typeString = "CFe";
+                    break;
+            }
+
+            var pedacinhos = xml.Split(new string[] { $"Id=\"{typeString}" }, StringSplitOptions.None);
+
+            if(pedacinhos.Length < 1)
+            {
+                return default;
+            }
+
+            return pedacinhos[1].Substring(0, 44);
         }
 
         /// <summary>
@@ -134,10 +207,7 @@ namespace Unimake.Business.DFe.Utility
         /// <param name="nameSpaces">Namespaces a serem adicionados no XML</param>
         /// <returns>XML</returns>
         public static XmlDocument Serializar<T>(T objeto, List<TNameSpace> nameSpaces = null)
-            where T : new()
-        {
-            return Serializar((object)objeto, nameSpaces);
-        }
+            where T : new() => Serializar((object)objeto, nameSpaces);
 
         /// <summary>
         /// Serializar o objeto (Converte o objeto para XML)
@@ -145,22 +215,27 @@ namespace Unimake.Business.DFe.Utility
         /// <param name="objeto">Objeto a ser serializado</param>
         /// <param name="nameSpaces">Namespaces a serem adicionados no XML</param>
         /// <returns>XML</returns>
-        public static XmlDocument Serializar(object obj, List<TNameSpace> nameSpaces = null)
+        public static XmlDocument Serializar(object objeto, List<TNameSpace> nameSpaces = null)
         {
-            var ns = new XmlSerializerNamespaces();
-            if (nameSpaces != null)
+            if(objeto is null)
             {
-                for (var i = 0; i < nameSpaces.Count; i++)
+                throw new ArgumentNullException(nameof(objeto));
+            }
+
+            var ns = new XmlSerializerNamespaces();
+            if(nameSpaces != null)
+            {
+                for(var i = 0; i < nameSpaces.Count; i++)
                 {
                     ns.Add(nameSpaces[i].Prefix, nameSpaces[i].NS);
                 }
             }
 
-            var xmlSerializer = new XmlSerializer(obj.GetType());
+            var xmlSerializer = new XmlSerializer(objeto.GetType());
             var doc = new XmlDocument();
-            using (StringWriter textWriter = new Utf8StringWriter())
+            using(StringWriter textWriter = new Utf8StringWriter())
             {
-                xmlSerializer.Serialize(textWriter, obj, ns);
+                xmlSerializer.Serialize(textWriter, objeto, ns);
                 doc.LoadXml(textWriter.ToString());
             }
 
@@ -173,11 +248,32 @@ namespace Unimake.Business.DFe.Utility
         /// <param name="xmlElement">Elemento do XML onde será pesquisado o Nome da TAG</param>
         /// <param name="tagName">Nome da Tag que será pesquisado</param>
         /// <returns>Conteúdo da tag</returns>
+        public static bool TagExist(XmlElement xmlElement, string tagName)
+        {
+            if(xmlElement is null)
+            {
+                throw new ArgumentNullException(nameof(xmlElement));
+            }
+
+            return xmlElement.GetElementsByTagName(tagName).Count != 0;
+        }
+
+        /// <summary>
+        /// Busca o nome de uma determinada TAG em um Elemento do XML para ver se existe, se existir retorna seu conteúdo da TAG.
+        /// </summary>
+        /// <param name="xmlElement">Elemento do XML onde será pesquisado o Nome da TAG</param>
+        /// <param name="tagName">Nome da Tag que será pesquisado</param>
+        /// <returns>Conteúdo da tag</returns>
         public static string TagRead(XmlElement xmlElement, string tagName)
         {
+            if(xmlElement is null)
+            {
+                throw new ArgumentNullException(nameof(xmlElement));
+            }
+
             var content = string.Empty;
 
-            if (xmlElement.GetElementsByTagName(tagName).Count != 0)
+            if(xmlElement.GetElementsByTagName(tagName).Count != 0)
             {
                 content = xmlElement.GetElementsByTagName(tagName)[0].InnerText;
             }

@@ -414,6 +414,7 @@ namespace NFe.Service
                     case PadroesNFSe.BETHA:
                         break;
 
+                    case PadroesNFSe.SIAT:
                     case PadroesNFSe.DSF:
                         string valorTag = string.Empty;
                         try
@@ -765,9 +766,7 @@ namespace NFe.Service
                         switch (metodo)
                         {
                             case "RecepcionarLoteRps":
-                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[0];
-                                docXML.DocumentElement.RemoveChild(docXML.GetElementsByTagName("Signature")[0]);
-
+                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[docXML.GetElementsByTagName("Signature").Count - 1];
                                 strRetorno = SerializarObjeto((Components.HJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, joXmlAssinatura }));
                                 break;
 
@@ -820,8 +819,7 @@ namespace NFe.Service
                         switch (metodo)
                         {
                             case "RecepcionarLoteRps":
-                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[0];
-                                docXML.DocumentElement.RemoveChild(docXML.GetElementsByTagName("Signature")[0]);
+                                XmlNode joXmlAssinatura = docXML.GetElementsByTagName("Signature")[docXML.GetElementsByTagName("Signature").Count - 1];
 
                                 strRetorno = SerializarObjeto((Components.PJoinvilleSC.EnviarLoteRpsResposta)wsProxy.Invoke(servicoWS, metodo, new object[] { docXML, joXmlAssinatura }));
                                 break;

@@ -1,24 +1,28 @@
-﻿using System.Xml;
-using Unimake.Business.DFe.Security;
+﻿using System;
+using System.Runtime.InteropServices;
+using Unimake.Business.DFe.Servicos.Interop;
 using Unimake.Business.DFe.Utility;
 using Unimake.Business.DFe.Xml.NFe;
 
 namespace Unimake.Business.DFe.Servicos.NFe
 {
-    public class Autorizacao: ServicoBase
+    public class Autorizacao: ServicoBase, IInteropService<EnviNFe>
     {
         #region Private Fields
 
-        private EnviNFe EnviNFe;
+        private EnviNFe _enviNFe;
 
         #endregion Private Fields
 
-        #region Private Constructors
+        #region Protected Properties
 
-        private Autorizacao(XmlDocument conteudoXML, Configuracao configuracao)
-                    : base(conteudoXML, configuracao) { }
+        public EnviNFe EnviNFe
+        {
+            get => _enviNFe ?? (_enviNFe = new EnviNFe().LerXML<EnviNFe>(ConteudoXML));
+            protected set => _enviNFe = value;
+        }
 
-        #endregion Private Constructors
+        #endregion Protected Properties
 
         #region Protected Methods
 
@@ -99,12 +103,13 @@ namespace Unimake.Business.DFe.Servicos.NFe
 
         #region Public Constructors
 
-        public Autorizacao(EnviNFe enviNFe, Configuracao configuracao)
-                            : this(enviNFe.GerarXML(), configuracao)
+        public Autorizacao()
+            : base()
         {
-            EnviNFe = enviNFe;
-            Inicializar();
         }
+
+        public Autorizacao(EnviNFe enviNFe, Configuracao configuracao)
+            : base(enviNFe?.GerarXML() ?? throw new ArgumentNullException(nameof(enviNFe)), configuracao) => Inicializar();
 
         #endregion Public Constructors
 
@@ -113,12 +118,27 @@ namespace Unimake.Business.DFe.Servicos.NFe
         /// <summary>
         /// Executar o serviço
         /// </summary>
+        [ComVisible(false)]
         public override void Executar()
         {
-            new AssinaturaDigital().Assinar(ConteudoXML, Configuracoes.TagAssinatura, Configuracoes.TagAtributoID, Configuracoes.CertificadoDigital, AlgorithmType.Sha1, true, "", "Id");
-            EnviNFe = EnviNFe.LerXML<EnviNFe>(ConteudoXML);
+            if(!Configuracoes.Definida)
+            {
+                if(EnviNFe == null)
+                {
+                    throw new NullReferenceException($"{nameof(EnviNFe)} não pode ser nulo.");
+                }
+
+                DefinirConfiguracao();
+            }
 
             base.Executar();
+        }
+
+        [ComVisible(true)]
+        public void Executar(EnviNFe enviNFe, Configuracao configuracao)
+        {
+            PrepararServico(enviNFe?.GerarXML() ?? throw new ArgumentNullException(nameof(enviNFe)), configuracao);
+            Executar();
         }
 
         /// <summary>
