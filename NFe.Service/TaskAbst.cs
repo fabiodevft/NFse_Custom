@@ -3438,6 +3438,7 @@ namespace NFe.Service
                 case PadroesNFSe.WEBFISCO_TECNOLOGIA:
                 case PadroesNFSe.AGILI:
 				case PadroesNFSe.VERSATECNOLOGIA:
+                //case PadroesNFSe.ELv2:
                     retorno = false;
                     break;
 
@@ -3488,6 +3489,7 @@ namespace NFe.Service
                 case PadroesNFSe.AVMB_ASTEN:
                 case PadroesNFSe.ADM_SISTEMAS:
                 case PadroesNFSe.IIBRASIL:
+                //case PadroesNFSe.ELv2:
                     invocar = true;
                     break;
             }

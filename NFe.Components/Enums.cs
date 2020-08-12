@@ -1204,7 +1204,13 @@ namespace NFe.Components
          /// Padrão AGILI
          /// </summary>
         [Description("AGILI")]
-        AGILI
+        AGILI,
+
+        /// <summary>
+        /// Padrão ELv2
+        /// </summary>
+        [Description("ELv2")]
+        ELv2
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
         ///

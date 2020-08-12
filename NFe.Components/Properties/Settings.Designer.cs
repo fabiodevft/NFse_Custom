@@ -1892,16 +1892,6 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/saoRoque")]
-        public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
-            get {
-                return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://ws.nfe-cidades.com.br/ws/saoRoque")]
         public string NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
@@ -3150,6 +3140,16 @@ namespace NFe.Components.Properties {
         public string NFe_Components_PBotucatuSP_nfseWS {
             get {
                 return ((string)(this["NFe_Components_PBotucatuSP_nfseWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.nfe-cidades.com.br/ws/saoRoque")]
+        public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
+            get {
+                return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
             }
         }
     }

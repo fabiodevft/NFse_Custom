@@ -53,7 +53,7 @@ namespace NFe.Components.HSaoRoqueSP {
         
         /// <remarks/>
         public NfseServiceImplSaoRoqueService() {
-            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_PSaoRoqueSP_NfseServiceImplSaoRoqueService;
+            this.Url = global::NFe.Components.Properties.Settings.Default.NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
