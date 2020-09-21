@@ -351,7 +351,7 @@
       <Value Profile="(Default)">http://wsparaguacupaulista.simplissweb.com.br/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_PCosmopolisSP_NFSeIntegracao" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://187.63.32.18:98/NFSe.Portal.Integracao/Services.svc</Value>
+      <Value Profile="(Default)">http://18.230.49.230/NFSe.Portal.Integracao/Services.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_PGuarantaNorteMT_nfse_web_service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://www.gp.srv.br/tributario_guarantadonorte/servlet/anfse_web_service</Value>
@@ -705,7 +705,7 @@
       <Value Profile="(Default)">http://wshomologacaoabrasf.simplissweb.com.br/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_PBlumenauSC_NfseService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc</Value>
+      <Value Profile="(Default)">http://wsblumenau.simplissweb.com.br/nfseservice.svc</Value>
     </Setting>
     <Setting Name="NFe_Components_HIgarapeMG_NfseServiceImplVgpService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://ws.homolog.govdigital.com.br/ws/vgp</Value>
@@ -928,6 +928,9 @@
     </Setting>
     <Setting Name="NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://ws.homolog.nfe-cidades.com.br/ws/saoRoque</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PValencaBA_RpsServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ba-valenca-pm-nfs.cloud.el.com.br:80/RpsService</Value>
     </Setting>
   </Settings>
 </SettingsFile>

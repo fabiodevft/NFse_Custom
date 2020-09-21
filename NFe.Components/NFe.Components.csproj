@@ -211,6 +211,7 @@
     <Compile Include="EL\IconhaES\p\ELP.cs" />
     <Compile Include="EL\PiumaES\p\ELP.cs" />
     <Compile Include="EL\SaoJoaoParaisoMG\p\ELP.cs" />
+    <Compile Include="EL\ValencaBA\p\ELP.cs" />
     <Compile Include="EL\VianaES\p\ELP.cs" />
     <Compile Include="EL\TeixeiraDeFreitasBA\p\ELP.cs" />
     <Compile Include="EL\TaiobeirasMG\p\ELP.cs" />
@@ -288,7 +289,6 @@
     <Compile Include="Pronin\ViamaoRS\p\ProninP.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\h\Rlz_InformaticaH.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\p\Rlz_InformaticaP.cs" />
-    <Compile Include="Schemas\SchemaXMLNFSe_E_L _V2.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_IIBRASIL.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />
@@ -435,7 +435,6 @@
     <Compile Include="Schemas\SchemaXMLNFSe_PRODATA.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_EQUIPLANO.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_GOVDIGITAL.cs" />
-    <Compile Include="Schemas\SchemaXMLNFSe_E_L.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_E_GOVERNE.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_SIMPLISS.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_ISSWEB.cs" />
@@ -809,11 +808,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\br.com.sigiss.saogoncalo.p\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\br.com.sigiss.testebarretos\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -1615,6 +1609,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PUruguaianaRS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PValencaBA\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -3024,7 +3023,6 @@
     </None>
     <None Include="Web References\br.com.sigiss.testebarretos\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\br.com.sigiss.testebarretos\sigiss_ws.wsdl" />
     <None Include="Web References\br.com.sigiss.testebarretos\tcEstruturaDescricaoErros.datasource">
@@ -3927,6 +3925,9 @@
     <None Include="Web References\HBaraoDeCotegipeRS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HBlumenauSC\CancelarNfseResposta1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\HBlumenauSC\ConsultarNfseFaixaResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -5594,6 +5595,41 @@
     </None>
     <None Include="Web References\PUruguaianaRS\Services0.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PValencaBA\cnae.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\empresa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\loteRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\nfseContribuinte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\nfseResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\nfseRpsResposta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PValencaBA\RpsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PValencaBA\RpsServiceService.wsdl" />
+    <None Include="Web References\PValencaBA\servico116Municipal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\servicoMunic.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PValencaBA\situacaoLoteRps.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\PVargemGrandeDoSulSP\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -8764,6 +8800,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PViamaoRS_NFSeIntegracao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ba-valenca-pm-nfs.cloud.el.com.br/RpsService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PValencaBA\</RelPath>
+      <UpdateFromURL>http://ba-valenca-pm-nfs.cloud.el.com.br/RpsService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PValencaBA_RpsServiceService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://ceiss.rlz.com.br/amfphp/services/RLZ/webservice/server.php%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

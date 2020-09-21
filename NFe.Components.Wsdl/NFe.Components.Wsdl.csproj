@@ -4666,9 +4666,6 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HIjuiRS-PRONIN.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="NFse\schemas\NFSe\EL_V2\nfse_v2-04.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl">
@@ -4736,6 +4733,7 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PVargemGrandeDoSulSP-SIMPLISS.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="NFse\WSDL\Producao\PValencaBA-EL.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NFse\WSDL\Producao\PCamacariBA.wsdl">

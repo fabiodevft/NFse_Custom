@@ -12,7 +12,7 @@ namespace NFe.Components.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -1202,7 +1202,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://187.63.32.18:98/NFSe.Portal.Integracao/Services.svc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://18.230.49.230/NFSe.Portal.Integracao/Services.svc")]
         public string NFe_Components_PCosmopolisSP_NFSeIntegracao {
             get {
                 return ((string)(this["NFe_Components_PCosmopolisSP_NFSeIntegracao"]));
@@ -2396,7 +2396,7 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wsblumenau.simplissweb.com.br/nfseservice.svc")]
         public string NFe_Components_PBlumenauSC_NfseService {
             get {
                 return ((string)(this["NFe_Components_PBlumenauSC_NfseService"]));
@@ -3150,6 +3150,16 @@ namespace NFe.Components.Properties {
         public string NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService {
             get {
                 return ((string)(this["NFe_Components_HSaoRoqueSP_NfseServiceImplSaoRoqueService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ba-valenca-pm-nfs.cloud.el.com.br:80/RpsService")]
+        public string NFe_Components_PValencaBA_RpsServiceService {
+            get {
+                return ((string)(this["NFe_Components_PValencaBA_RpsServiceService"]));
             }
         }
     }

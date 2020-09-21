@@ -64,6 +64,10 @@ namespace NFe.Components.EL
                                 elService = new Piuma.p.ELP(tpAmb, PastaRetorno, UsuarioWs, SenhaWs, UsuarioProxy, SenhaProxy, DomainProxy);
                                 break;
 
+                            case 2932903: //Valença-BA
+                                elService = new ValencaBA.p.ELP(tpAmb, PastaRetorno, UsuarioWs, SenhaWs, UsuarioProxy, SenhaProxy, DomainProxy);
+                                break;
+
 
                             default:
                                 throw new Exceptions.ServicoInexistenteException();

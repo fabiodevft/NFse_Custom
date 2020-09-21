@@ -313,6 +313,7 @@
       <ConsultarNfsePorRps>wsdl\homologacao\HISSNet.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\homologacao\HISSNet.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HISSNet.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
@@ -321,6 +322,7 @@
       <ConsultarNfsePorRps>wsdl\producao\PRibeiraoPretoSP-ISSNET.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PRibeiraoPretoSP-ISSNET.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PRibeiraoPretoSP-ISSNET.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PRibeiraoPretoSP-ISSNET.wsdl</ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PRibeiraoPretoSP-ISSNET.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
@@ -8909,6 +8911,17 @@
       <ConsultarLoteRps>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
       <CancelarNfse>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2932903" Nome="Valença BA" UF="BA" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PValencaBA-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PValencaBA-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PValencaBA-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PValencaBA-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PValencaBA-EL.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>wsdl\producao\PValencaBA-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
