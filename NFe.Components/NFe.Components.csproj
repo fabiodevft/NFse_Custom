@@ -289,7 +289,6 @@
     <Compile Include="Pronin\ViamaoRS\p\ProninP.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\h\Rlz_InformaticaH.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\p\Rlz_InformaticaP.cs" />
-    <Compile Include="Schemas\SchemaXMLNFSe_ELv2.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_IIBRASIL.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />
@@ -472,6 +471,7 @@
     <Compile Include="SigCorp\MogiGuacuSP\h\WebInvokeAttribute.cs" />
     <Compile Include="SigCorp\MogiGuacuSP\h\WebMessageFormat.cs" />
     <Compile Include="SigCorp\MogiGuacuSP\p\SigCorpP.cs" />
+    <Compile Include="SigCorp\BarretosSP\h\SigCorpH.cs" />
     <Compile Include="SigCorp\BarretosSP\p\SigCorpP.cs" />
     <Compile Include="SigCorp\RioGrandeRS\h\SigCorpH.cs" />
     <Compile Include="SigCorp\RioGrandeRS\p\SigCorpP.cs" />

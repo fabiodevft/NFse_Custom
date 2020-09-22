@@ -2568,6 +2568,7 @@ namespace NFe.Service
                     break;
                     #endregion SYSMAR
 
+
                 #region SIAT
 
                 case PadroesNFSe.SIAT:
@@ -2652,45 +2653,7 @@ namespace NFe.Service
 
                     break;
 
-                #endregion SIAT
-
-                #region ELv2
-
-                case PadroesNFSe.ELv2:
-
-                    switch (servico)
-                    {
-                        case Servicos.NFSeConsultarLoteRps:
-                            retorna = "ConsultarLoteRps";
-                            break;
-
-                        case Servicos.NFSeConsultar:
-                            retorna = "ConsultarNfsePorFaixa";
-                            break;
-
-                        case Servicos.NFSeConsultarPorRps:
-                            retorna = "ConsultarNfsePorRps";
-                            break;
-
-                        case Servicos.NFSeCancelar:
-                            retorna = "CancelarNfse";
-                            break;
-
-                        case Servicos.NFSeRecepcionarLoteRpsSincrono:
-                            retorna = "RecepcionarLoteRpsSincrono";
-                            break;
-
-                        case Servicos.NFSeRecepcionarLoteRps:
-                            retorna = "RecepcionarLoteRps";
-                            break;
-
-                        case Servicos.NFSeGerarNfse:
-                            retorna = "GerarNfse";
-                            break;
-                    }
-                    break;
-
-                    #endregion ELv2
+                    #endregion SIAT
 
             }
             return retorna;

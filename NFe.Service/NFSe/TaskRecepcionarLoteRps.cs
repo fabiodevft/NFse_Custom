@@ -792,6 +792,38 @@ namespace NFe.Service.NFSe
                         SignUsingCredentials(emp, envLoteRps);
                         break;
 
+
+                    //case PadroesNFSe.ADM_SISTEMAS:
+                    //    cabecMsg = "<cabecalho versao=\"2.01\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.01</versaoDados></cabecalho>";
+                    //    wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+
+                    //    envLoteRps = oDadosEnvLoteRps.tpAmb == 1 ?
+                    //                    new Components.PAmargosaBA.InfseClient(GetBinding(), new EndpointAddress("https://demo.saatri.com.br/servicos/nfse.svc")) :
+                    //                    new Components.HAmargosaBA.InfseClient(GetBinding(), new EndpointAddress("https://homologa-demo.saatri.com.br/servicos/nfse.svc")) as object;
+
+                    //    SignUsingCredentials(emp, envLoteRps);
+                    //    break;
+
+
+                    #region ELv2
+
+                    //case PadroesNFSe.ELv2:
+
+                    //    cabecMsg = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><ns1:cabecalho xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:ns2=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:ns1=\"http://www.abrasf.org.br/nfse.xsd\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig# abrasfteste/xmldsig-core-schema20020212.xsd http://www.abrasf.org.br/nfse.xsd abrasfteste/nfse_v2-04.xsd\"><ns1:versaoDados>2.04</ns1:versaoDados></ns1:cabecalho>";
+                    //    wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+
+                    //    //envLoteRps = oDadosEnvLoteRps.tpAmb == 1 ?
+                    //    //                new Components.PAmargosaBA.InfseClient(GetBinding(), new EndpointAddress("https://demo.saatri.com.br/servicos/nfse.svc")) :
+                    //    //                new Components.HAmargosaBA.InfseClient(GetBinding(), new EndpointAddress("https://homologa-demo.saatri.com.br/servicos/nfse.svc")) as object;
+
+                    //    envLoteRps = new Components.PPetrolinaPE.nfseClient(GetBinding(), new EndpointAddress("http://pe-petrolina-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl")) as object;
+
+                    //    SignUsingCredentials(emp, envLoteRps);
+
+                    //    break;
+
+                    #endregion ELv2
+
 #endif
 
                     case PadroesNFSe.PUBLIC_SOFT:
@@ -892,11 +924,7 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.ISSNet_202:
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.ISSNet_202);
                         break;
-
-                    case PadroesNFSe.ELv2:
-                        cabecMsg = "<cabecalho versao=\"2.04\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.04</versaoDados></cabecalho>";
-                        break;
-
+                   
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))

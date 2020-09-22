@@ -366,7 +366,6 @@ namespace NFe.Service
                 switch (padraoNFSe)
                 {
                     case PadroesNFSe.SMARAPD:
-                    case PadroesNFSe.ELv2:
                         break;
 
                     default:
@@ -946,32 +945,6 @@ namespace NFe.Service
 
                     break;
 
-                case PadroesNFSe.ELv2:
-                   
-                    var envelope = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:nfse=\"http://nfse.abrasf.org.br\">" +
-                        "<soapenv:Header/>" +
-                        "<soapenv:Body>" +
-                        "<nfse:RecepcionarLoteRps>" +
-                        "<nfse:RecepcionarLoteRpsRequest>" +
-                        "<nfseCabecMsg><![CDATA[" + cabecMsg.ToString() + "]]></nfseCabecMsg>" +
-                        "<nfseDadosMsg><![CDATA[" + docXML.OuterXml + "]]></nfseDadosMsg>" +
-                        "</nfse:RecepcionarLoteRpsRequest>" +
-                        "</nfse:RecepcionarLoteRps> " +
-                        "</soapenv:Body>" +
-                        "</soapenv:Envelope>";
-
-                    strRetorno = wsProxy.strInvokeELv2(envelope,
-                            "http://pe-petrolina-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl",
-                            "http://nfse.abrasf.org.br/RecepcionarLoteRps"
-                            );
-
-
-                    //"http://pe-petrolina-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl",
-                    //        "http://nfse.abrasf.org.br/RecepcionarLoteRps"
-
-
-                    break;
-
                 default:
 
                     #region Demais padrões
@@ -1034,7 +1007,7 @@ namespace NFe.Service
             return textWriter.ToString();
         }
 
-        #endregion Métodos        
+        #endregion Métodos
     }
 }
 
