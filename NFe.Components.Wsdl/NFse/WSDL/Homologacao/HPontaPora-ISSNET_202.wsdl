@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="IWSPortalIntegservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="http://www.borland.com/namespaces/Types">
+  <types>
+    <xs:schema targetNamespace="http://www.borland.com/namespaces/Types" xmlns="http://www.borland.com/namespaces/Types">
+      <xs:complexType name="TWideStringDynArray">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence/>
+            <xs:attribute ref="soapenc:arrayType" n1:arrayType="xs:string[]" xmlns:n1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="SAS_ApplyUpdates0Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="Delta" type="xs:anyType"/>
+    <part name="MaxErrors" type="xs:int"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="SAS_ApplyUpdates0Response">
+    <part name="ErrorCount" type="xs:int"/>
+    <part name="OwnerData" type="xs:anyType"/>
+    <part name="return" type="xs:anyType"/>
+  </message>
+  <message name="SAS_GetRecords1Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="Count" type="xs:int"/>
+    <part name="Options" type="xs:int"/>
+    <part name="CommandText" type="xs:string"/>
+    <part name="Params" type="xs:anyType"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="SAS_GetRecords1Response">
+    <part name="RecsOut" type="xs:int"/>
+    <part name="Params" type="xs:anyType"/>
+    <part name="OwnerData" type="xs:anyType"/>
+    <part name="return" type="xs:anyType"/>
+  </message>
+  <message name="SAS_DataRequest2Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="Data" type="xs:anyType"/>
+  </message>
+  <message name="SAS_DataRequest2Response">
+    <part name="return" type="xs:anyType"/>
+  </message>
+  <message name="SAS_GetProviderNames3Request"/>
+  <message name="SAS_GetProviderNames3Response">
+    <part name="return" type="ns1:TWideStringDynArray"/>
+  </message>
+  <message name="SAS_GetParams4Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="SAS_GetParams4Response">
+    <part name="OwnerData" type="xs:anyType"/>
+    <part name="return" type="xs:anyType"/>
+  </message>
+  <message name="SAS_RowRequest5Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="Row" type="xs:anyType"/>
+    <part name="RequestType" type="xs:int"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="SAS_RowRequest5Response">
+    <part name="OwnerData" type="xs:anyType"/>
+    <part name="return" type="xs:anyType"/>
+  </message>
+  <message name="SAS_Execute6Request">
+    <part name="ProviderName" type="xs:string"/>
+    <part name="CommandText" type="xs:string"/>
+    <part name="Params" type="xs:anyType"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="SAS_Execute6Response">
+    <part name="Params" type="xs:anyType"/>
+    <part name="OwnerData" type="xs:anyType"/>
+  </message>
+  <message name="CancelarNfse7Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="CancelarNfse7Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ConsultarLoteRps8Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="ConsultarLoteRps8Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfseServicoPrestado9Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfseServicoPrestado9Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfseServicoTomado10Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfseServicoTomado10Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfsePorFaixa11Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfsePorFaixa11Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfsePorRps12Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="ConsultarNfsePorRps12Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteRps13Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteRps13Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GerarNfse14Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="GerarNfse14Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="SubstituirNfse15Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="SubstituirNfse15Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteRpsSincrono16Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteRpsSincrono16Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteVoucher17Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="RecepcionarLoteVoucher17Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="FaturaGrutaAtrativos18Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="FaturaGrutaAtrativos18Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="FaturaGrutaAtrativosSituacaoGuia19Request">
+    <part name="nfseDadosMsg" type="xs:string"/>
+  </message>
+  <message name="FaturaGrutaAtrativosSituacaoGuia19Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <portType name="IWSPortalInteg">
+    <operation name="SAS_ApplyUpdates">
+      <input message="tns:SAS_ApplyUpdates0Request"/>
+      <output message="tns:SAS_ApplyUpdates0Response"/>
+    </operation>
+    <operation name="SAS_GetRecords">
+      <input message="tns:SAS_GetRecords1Request"/>
+      <output message="tns:SAS_GetRecords1Response"/>
+    </operation>
+    <operation name="SAS_DataRequest">
+      <input message="tns:SAS_DataRequest2Request"/>
+      <output message="tns:SAS_DataRequest2Response"/>
+    </operation>
+    <operation name="SAS_GetProviderNames">
+      <input message="tns:SAS_GetProviderNames3Request"/>
+      <output message="tns:SAS_GetProviderNames3Response"/>
+    </operation>
+    <operation name="SAS_GetParams">
+      <input message="tns:SAS_GetParams4Request"/>
+      <output message="tns:SAS_GetParams4Response"/>
+    </operation>
+    <operation name="SAS_RowRequest">
+      <input message="tns:SAS_RowRequest5Request"/>
+      <output message="tns:SAS_RowRequest5Response"/>
+    </operation>
+    <operation name="SAS_Execute">
+      <input message="tns:SAS_Execute6Request"/>
+      <output message="tns:SAS_Execute6Response"/>
+    </operation>
+    <operation name="CancelarNfse">
+      <input message="tns:CancelarNfse7Request"/>
+      <output message="tns:CancelarNfse7Response"/>
+    </operation>
+    <operation name="ConsultarLoteRps">
+      <input message="tns:ConsultarLoteRps8Request"/>
+      <output message="tns:ConsultarLoteRps8Response"/>
+    </operation>
+    <operation name="ConsultarNfseServicoPrestado">
+      <input message="tns:ConsultarNfseServicoPrestado9Request"/>
+      <output message="tns:ConsultarNfseServicoPrestado9Response"/>
+    </operation>
+    <operation name="ConsultarNfseServicoTomado">
+      <input message="tns:ConsultarNfseServicoTomado10Request"/>
+      <output message="tns:ConsultarNfseServicoTomado10Response"/>
+    </operation>
+    <operation name="ConsultarNfsePorFaixa">
+      <input message="tns:ConsultarNfsePorFaixa11Request"/>
+      <output message="tns:ConsultarNfsePorFaixa11Response"/>
+    </operation>
+    <operation name="ConsultarNfsePorRps">
+      <input message="tns:ConsultarNfsePorRps12Request"/>
+      <output message="tns:ConsultarNfsePorRps12Response"/>
+    </operation>
+    <operation name="RecepcionarLoteRps">
+      <input message="tns:RecepcionarLoteRps13Request"/>
+      <output message="tns:RecepcionarLoteRps13Response"/>
+    </operation>
+    <operation name="GerarNfse">
+      <input message="tns:GerarNfse14Request"/>
+      <output message="tns:GerarNfse14Response"/>
+    </operation>
+    <operation name="SubstituirNfse">
+      <input message="tns:SubstituirNfse15Request"/>
+      <output message="tns:SubstituirNfse15Response"/>
+    </operation>
+    <operation name="RecepcionarLoteRpsSincrono">
+      <input message="tns:RecepcionarLoteRpsSincrono16Request"/>
+      <output message="tns:RecepcionarLoteRpsSincrono16Response"/>
+    </operation>
+    <operation name="RecepcionarLoteVoucher">
+      <input message="tns:RecepcionarLoteVoucher17Request"/>
+      <output message="tns:RecepcionarLoteVoucher17Response"/>
+    </operation>
+    <operation name="FaturaGrutaAtrativos">
+      <input message="tns:FaturaGrutaAtrativos18Request"/>
+      <output message="tns:FaturaGrutaAtrativos18Response"/>
+    </operation>
+    <operation name="FaturaGrutaAtrativosSituacaoGuia">
+      <input message="tns:FaturaGrutaAtrativosSituacaoGuia19Request"/>
+      <output message="tns:FaturaGrutaAtrativosSituacaoGuia19Response"/>
+    </operation>
+  </portType>
+  <binding name="IWSPortalIntegbinding" type="tns:IWSPortalInteg">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="SAS_ApplyUpdates">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_ApplyUpdates" style="rpc"/>
+      <input message="tns:SAS_ApplyUpdates0Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_ApplyUpdates0Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_GetRecords">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_GetRecords" style="rpc"/>
+      <input message="tns:SAS_GetRecords1Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_GetRecords1Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_DataRequest">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_DataRequest" style="rpc"/>
+      <input message="tns:SAS_DataRequest2Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_DataRequest2Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_GetProviderNames">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_GetProviderNames" style="rpc"/>
+      <input message="tns:SAS_GetProviderNames3Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_GetProviderNames3Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_GetParams">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_GetParams" style="rpc"/>
+      <input message="tns:SAS_GetParams4Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_GetParams4Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_RowRequest">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_RowRequest" style="rpc"/>
+      <input message="tns:SAS_RowRequest5Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_RowRequest5Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SAS_Execute">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SAS_Execute" style="rpc"/>
+      <input message="tns:SAS_Execute6Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SAS_Execute6Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="CancelarNfse">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#CancelarNfse" style="rpc"/>
+      <input message="tns:CancelarNfse7Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:CancelarNfse7Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="ConsultarLoteRps">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#ConsultarLoteRps" style="rpc"/>
+      <input message="tns:ConsultarLoteRps8Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:ConsultarLoteRps8Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="ConsultarNfseServicoPrestado">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#ConsultarNfseServicoPrestado" style="rpc"/>
+      <input message="tns:ConsultarNfseServicoPrestado9Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:ConsultarNfseServicoPrestado9Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="ConsultarNfseServicoTomado">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#ConsultarNfseServicoTomado" style="rpc"/>
+      <input message="tns:ConsultarNfseServicoTomado10Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:ConsultarNfseServicoTomado10Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="ConsultarNfsePorFaixa">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#ConsultarNfsePorFaixa" style="rpc"/>
+      <input message="tns:ConsultarNfsePorFaixa11Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:ConsultarNfsePorFaixa11Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#ConsultarNfsePorRps" style="rpc"/>
+      <input message="tns:ConsultarNfsePorRps12Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:ConsultarNfsePorRps12Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#RecepcionarLoteRps" style="rpc"/>
+      <input message="tns:RecepcionarLoteRps13Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:RecepcionarLoteRps13Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="GerarNfse">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#GerarNfse" style="rpc"/>
+      <input message="tns:GerarNfse14Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:GerarNfse14Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="SubstituirNfse">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#SubstituirNfse" style="rpc"/>
+      <input message="tns:SubstituirNfse15Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:SubstituirNfse15Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="RecepcionarLoteRpsSincrono">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#RecepcionarLoteRpsSincrono" style="rpc"/>
+      <input message="tns:RecepcionarLoteRpsSincrono16Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:RecepcionarLoteRpsSincrono16Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="RecepcionarLoteVoucher">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#RecepcionarLoteVoucher" style="rpc"/>
+      <input message="tns:RecepcionarLoteVoucher17Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:RecepcionarLoteVoucher17Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="FaturaGrutaAtrativos">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#FaturaGrutaAtrativos" style="rpc"/>
+      <input message="tns:FaturaGrutaAtrativos18Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:FaturaGrutaAtrativos18Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+    <operation name="FaturaGrutaAtrativosSituacaoGuia">
+      <soap:operation soapAction="urn:uWSPortalInteg-IWSPortalInteg#FaturaGrutaAtrativosSituacaoGuia" style="rpc"/>
+      <input message="tns:FaturaGrutaAtrativosSituacaoGuia19Request">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </input>
+      <output message="tns:FaturaGrutaAtrativosSituacaoGuia19Response">
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uWSPortalInteg-IWSPortalInteg"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="IWSPortalIntegservice">
+    <port name="IWSPortalIntegPort" binding="tns:IWSPortalIntegbinding">
+      <soap:address location="http://187.53.176.143/tecnosis/portalinteg2.dll/soap/IWSPortalInteg"/>
+    </port>
+  </service>
+</definitions>
+
