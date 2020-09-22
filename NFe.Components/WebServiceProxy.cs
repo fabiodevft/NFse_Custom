@@ -447,6 +447,56 @@ namespace NFe.Components
 
         #endregion InvokeXML()
 
+        #region InvokeObjectELv2()
+
+        public string strInvokeELv2(string envelope, string url, string soapAction)
+        {
+            string retorno = string.Empty;
+
+            //Calling CreateSOAPWebRequest method    
+            HttpWebRequest request = CreateSOAPWebRequest(url, soapAction);
+
+            XmlDocument SOAPReqBody = new XmlDocument();
+            //SOAP Body Request    
+            SOAPReqBody.LoadXml(envelope);
+
+            using (Stream stream = request.GetRequestStream())
+            {
+                SOAPReqBody.Save(stream);
+            }
+
+            //Geting response from request    
+            using (WebResponse Serviceres = request.GetResponse())
+            {
+                using (StreamReader rd = new StreamReader(Serviceres.GetResponseStream()))
+                {
+                    //reading stream    
+                    var ServiceResult = rd.ReadToEnd();
+                    //writting stream result on console    
+                    retorno = ServiceResult;
+                }
+            }
+
+            return retorno;
+        }
+
+        public HttpWebRequest CreateSOAPWebRequest(string url, string sopaAction)
+        {
+            //Making Web Request    
+            HttpWebRequest Req = (HttpWebRequest)WebRequest.Create(url);
+            //SOAPAction    
+            Req.Headers.Add($"SOAPAction:{sopaAction}");
+            //Content_type    
+            Req.ContentType = "text/xml;charset=\"utf-8\"";
+            Req.Accept = "text/xml";
+            //HTTP method    
+            Req.Method = "POST";
+            //return HttpWebRequest    
+            return Req;
+        }
+
+        #endregion
+
         #region SetProp()
 
         /// <summary>
