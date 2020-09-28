@@ -207,6 +207,7 @@
     <Compile Include="EloTech\WS\ElotechService.cs" />
     <Compile Include="EloTech\WS\ElotechServiceResult.cs" />
     <Compile Include="EloTech\WS\SignedXmlWithId.cs" />
+    <Compile Include="ELv2\ELv2.cs" />
     <Compile Include="EL\BarraDeSaoFranciscoES\p\ELP.cs" />
     <Compile Include="EL\IconhaES\p\ELP.cs" />
     <Compile Include="EL\PiumaES\p\ELP.cs" />
@@ -247,6 +248,7 @@
     <Compile Include="Fiorilli\XangrilaRS\p\FiorilliP.cs" />
     <Compile Include="FISSLEX\LucasDoRioVerdeMT\p\FISSLEXP.cs" />
     <Compile Include="GetRequest.cs" />
+    <Compile Include="IELv2.cs" />
     <Compile Include="Interface\IEmiteNFSeAGILI .cs" />
     <Compile Include="Interface\IEmiteNFSeSOFTPLAN.cs" />
     <Compile Include="Interface\IGetRequest.cs" />
@@ -289,6 +291,7 @@
     <Compile Include="Pronin\ViamaoRS\p\ProninP.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\h\Rlz_InformaticaH.cs" />
     <Compile Include="RLZ_INFORMATICA\JalesSP\p\Rlz_InformaticaP.cs" />
+    <Compile Include="Schemas\SchemaXMLNFSe_ELv2.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_IIBRASIL.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_INDAIATUBA_SP.cs" />
     <Compile Include="Schemas\SchemaXMLNFSe_CECAM.cs" />

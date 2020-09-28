@@ -1,4 +1,5 @@
 ﻿using NFe.Components;
+using NFe.Components.br.com.bauru_sp.baurusp.h;
 using NFe.Settings;
 using NFe.Validate;
 using System;
@@ -366,6 +367,7 @@ namespace NFe.Service
                 switch (padraoNFSe)
                 {
                     case PadroesNFSe.SMARAPD:
+                    case PadroesNFSe.ELv2:
                         break;
 
                     default:
@@ -412,6 +414,7 @@ namespace NFe.Service
                 {
                     case PadroesNFSe.NOTAINTELIGENTE:
                     case PadroesNFSe.BETHA:
+                    case PadroesNFSe.ELv2:
                         break;
 
                     case PadroesNFSe.SIAT:
@@ -940,10 +943,39 @@ namespace NFe.Service
                             else
                                 strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { cabecMsg.ToString(), docXML.OuterXml });
                             break;
-
                     }
 
                     break;
+
+                case PadroesNFSe.ELv2:     
+
+                    switch (Empresas.Configuracoes[emp].UnidadeFederativaCodigo.ToString())
+                    {
+                        case "2611101":
+                            wsProxy.ELv2.urlWSDL = "http://pe-petrolina-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl";
+                            break;                                
+                    }
+
+                    switch (metodo)
+                    {
+                        case "ConsultarLoteRps":
+                            strRetorno = wsProxy.ELv2.ConsultarLoteRps(docXML);
+                            break;
+
+                        case "CancelarNfse":
+                            strRetorno = wsProxy.ELv2.CancelarNfse(docXML);
+                            break;
+
+                        case "ConsultarNfsePorRps":
+                            strRetorno = wsProxy.ELv2.ConsultarNfsePorRps(docXML);
+                            break;
+
+                        case "RecepcionarLoteRps":
+                            strRetorno = wsProxy.ELv2.RecepcionarLoteRps(docXML);
+                            break;
+                    }
+                    break;
+
 
                 default:
 
@@ -957,27 +989,6 @@ namespace NFe.Service
 
                     #endregion Demais padrões
             }
-
-            #region gerar arquivos assinados(somente debug)
-
-//#if DEBUG
-//            string path = Application.StartupPath + "\\teste_assintura\\";
-
-//            if (!Directory.Exists(path))
-//            {
-//                Directory.CreateDirectory(path);
-//            }
-
-//            StreamWriter sw = new StreamWriter(path + "nfseMsg_assinado.xml", true);
-//            sw.Write(docXML.OuterXml);
-//            sw.Close();
-
-//            StreamWriter sw2 = new StreamWriter(path + "cabecMsg_assinado.xml", true);
-//            sw2.Write(cabecMsg.ToString());
-//            sw2.Close();
-//#endif
-
-            #endregion gerar arquivos assinados(somente debug)
 
             //Atualizar o atributo do serviço da Nfe com o conteúdo retornado do webservice do sefaz
             typeServicoNFe.InvokeMember("vStrXmlRetorno", System.Reflection.BindingFlags.SetProperty, null, servicoNFe, new object[] { strRetorno });
@@ -1008,6 +1019,7 @@ namespace NFe.Service
         }
 
         #endregion Métodos
+
     }
 }
 

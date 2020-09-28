@@ -825,6 +825,12 @@ namespace NFe.Service.NFSe
 
                         break;
 
+                    case PadroesNFSe.ELv2:
+                        wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+                        wsProxy.ELv2 = new ELv2();
+
+                        break;
+
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, Empresas.Configuracoes[emp].UnidadeFederativaCodigo))

@@ -445,7 +445,7 @@ namespace NFe.Components
             return (string)Invoke(Instance, methodName, parameters);
         }
 
-        #endregion InvokeXML()
+        #endregion InvokeXML()        
 
         #region SetProp()
 
@@ -712,8 +712,12 @@ namespace NFe.Components
             CodeNamespace @namespace = new CodeNamespace();
             CodeCompileUnit unit = new CodeCompileUnit();
             unit.Namespaces.Add(@namespace);
-            ServiceDescriptionImportWarnings warmings = importer.Import(@namespace, unit);
 
+            if (PadraoNFSe != PadroesNFSe.ELv2)
+            {
+                ServiceDescriptionImportWarnings warmings = importer.Import(@namespace, unit);
+            }
+            
             #endregion Gerar o o grafo da classe para depois gerar o código
 
             return @namespace;
@@ -745,6 +749,12 @@ namespace NFe.Components
         public IBetha Betha;
 
         #endregion Objeto da BETHA Sistemas para acessar os WebServices da NFSe
+
+        #region Objeto da ELv2 Sistemas para acessar os WebServices da NFSe
+
+        public IELv2 ELv2;
+
+        #endregion Objeto da ELv2 Sistemas para acessar os WebServices da NFSe
 
         #region CarregaWebServicesList()
 

@@ -557,7 +557,13 @@ namespace NFe.Service.NFSe
                         versa.ConsultarLoteRps(NomeArquivoXML);
                         break;
 
-                        #endregion VersaTecnologia
+                    #endregion VersaTecnologia
+
+                    case PadroesNFSe.ELv2:
+                        wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+                        wsProxy.ELv2 = new ELv2();
+
+                        break;
                 }
 
                 if (base.IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

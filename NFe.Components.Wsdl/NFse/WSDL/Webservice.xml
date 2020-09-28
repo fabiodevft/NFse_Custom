@@ -8904,13 +8904,13 @@
   </Estado>
   <Estado ID="2611101" Nome="Petrolina - SP" UF="SP" Padrao="ELv2">
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PPetrolinaPE-ELv2.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPetrolinaPE-ELv2.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPetrolinaPE-ELv2.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPetrolinaPE-ELv2.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPetrolinaPE-ELv2.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
-      <CancelarNfse>wsdl\producao\PPetrolinaPE-EL_NFSE.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PPetrolinaPE-ELv2.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="2932903" Nome="Valença BA" UF="BA" Padrao="EL">

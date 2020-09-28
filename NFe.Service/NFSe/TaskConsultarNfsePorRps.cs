@@ -533,6 +533,12 @@ namespace NFe.Service.NFSe
 
                         versa.ConsultarNfsePorRps(NomeArquivoXML);
                         break;
+
+                    case PadroesNFSe.ELv2:
+                        wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
+                        wsProxy.ELv2 = new ELv2();
+
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))
