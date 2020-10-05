@@ -1019,7 +1019,7 @@ namespace NFe.Components.HIjuiRS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://tempuri.org/", IsNullable=false)]
+    [System.Xml.Serialization.XmlRootAttribute("cabecalho", Namespace="http://tempuri.org/", IsNullable=false)]
     public partial class Cabecalho : System.Web.Services.Protocols.SoapHeader {
         
         private string versaoDadosField;
