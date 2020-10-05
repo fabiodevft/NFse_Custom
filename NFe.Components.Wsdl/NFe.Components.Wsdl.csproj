@@ -4705,6 +4705,9 @@
     <EmbeddedResource Include="NFse\WSDL\Producao\PIjuiRS-PRONIN.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PParacatuMG-NFE-CIDADES.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
