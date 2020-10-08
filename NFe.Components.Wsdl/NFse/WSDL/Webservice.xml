@@ -8924,4 +8924,26 @@
       <CancelarNfse>wsdl\producao\PValencaBA-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3112802" Nome="Capitólio - MG" UF="MG" Padrao="E_RECEITA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HCapitolioMG-E_RECEITA.wsdl</SubstituirNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</SubstituirNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

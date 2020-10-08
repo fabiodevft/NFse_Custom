@@ -1202,16 +1202,6 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://18.230.49.230/NFSe.Portal.Integracao/Services.svc")]
-        public string NFe_Components_PCosmopolisSP_NFSeIntegracao {
-            get {
-                return ((string)(this["NFe_Components_PCosmopolisSP_NFSeIntegracao"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://www.gp.srv.br/tributario_guarantadonorte/servlet/anfse_web_service")]
         public string NFe_Components_PGuarantaNorteMT_nfse_web_service {
             get {
@@ -2396,16 +2386,6 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://wsblumenau.simplissweb.com.br/nfseservice.svc")]
-        public string NFe_Components_PBlumenauSC_NfseService {
-            get {
-                return ((string)(this["NFe_Components_PBlumenauSC_NfseService"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://ws.homolog.govdigital.com.br/ws/vgp")]
         public string NFe_Components_HIgarapeMG_NfseServiceImplVgpService {
             get {
@@ -3160,6 +3140,26 @@ namespace NFe.Components.Properties {
         public string NFe_Components_PValencaBA_RpsServiceService {
             get {
                 return ((string)(this["NFe_Components_PValencaBA_RpsServiceService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://187.63.32.18:98/NFSe.Portal.Integracao/Services.svc")]
+        public string NFe_Components_PCosmopolisSP_NFSeIntegracao {
+            get {
+                return ((string)(this["NFe_Components_PCosmopolisSP_NFSeIntegracao"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc")]
+        public string NFe_Components_PBlumenauSC_NfseService {
+            get {
+                return ((string)(this["NFe_Components_PBlumenauSC_NfseService"]));
             }
         }
     }
