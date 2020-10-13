@@ -206,9 +206,9 @@ namespace NFe.Components
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3501301-";
                                 break;
 
-                            case 3131307: //Ipatinga-MG
-                                padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3131307-";
-                                break;
+                            //case 3131307: //Ipatinga-MG
+                            //    padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-3131307-";
+                            //    break;
 
                             case 4300109: //Agudo-RS
                                 padraoNFSe = Functions.PadraoNFSe(UFCod).ToString() + "-4300109-";

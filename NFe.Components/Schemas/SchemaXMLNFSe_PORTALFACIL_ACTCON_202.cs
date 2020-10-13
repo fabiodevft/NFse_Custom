@@ -96,7 +96,23 @@ namespace NFSe.Components
             #endregion 2.02
 
             #region 2.04
+
             #region XML de Lote RPS Ipatinga - MG 2.04
+
+            SchemaXML.InfSchemas.Add("NFSE-PORTALFACIL_ACTCON_202-3131307-EnviarLoteRpsEnvio", new InfSchema()
+            {
+                Tag = "EnviarLoteRpsEnvio",
+                ID = SchemaXML.InfSchemas.Count + 1,
+                ArquivoXSD = "", //"NFSe\\ACTCON\\nfse_v202.xsd",
+                Descricao = "XML de Lote RPS",
+                TagAssinatura = "Rps",
+                TagAtributoId = "InfDeclaracaoPrestacaoServico",
+                TagLoteAssinatura = "EnviarLoteRpsEnvio",
+                TagLoteAtributoId = "LoteRps",
+                TargetNameSpace = "" //https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd
+            });
+
+
             SchemaXML.InfSchemas.Add("NFSE-PORTALFACIL_ACTCON_202-3131307-EnviarLoteRpsSincronoEnvio", new InfSchema()
             {
                 Tag = "EnviarLoteRpsEnvio",
