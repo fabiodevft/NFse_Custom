@@ -84,6 +84,7 @@ namespace NFe.Service.NFSe
                 if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))
                 {
                     wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosEnvLoteRps.cMunicipio, oDadosEnvLoteRps.tpAmb, oDadosEnvLoteRps.tpEmis, padraoNFSe, oDadosEnvLoteRps.cMunicipio);
+                    
                     if (wsProxy != null)
                         envLoteRps = wsProxy.CriarObjeto(wsProxy.NomeClasseWS);
                 }
@@ -262,7 +263,17 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.FINTEL:
-                        cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+
+                        switch (oDadosEnvLoteRps.cMunicipio)
+                        {
+                            case 4110706: //Irati - PR
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+
+                            default:
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+                        }
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.FINTEL);
                         break;
 
@@ -915,7 +926,6 @@ namespace NFe.Service.NFSe
                                             Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).RetornoXML,
                                             padraoNFSe, Servico, securityProtocolType);
 
-                    ///
                     /// grava o arquivo no FTP
                     string filenameFTP = Path.Combine(Empresas.Configuracoes[emp].PastaXmlRetorno,
                                                       Functions.ExtrairNomeArq(NomeArquivoXML,

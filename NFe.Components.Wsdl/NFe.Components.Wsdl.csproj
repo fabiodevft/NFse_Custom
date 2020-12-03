@@ -4681,6 +4681,9 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HSantaCruzDasPalmeirasSP-ISSONLINE.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NFse\WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Homologacao\PSantaIsabelSP-CECAM.wsdl" />
     <None Include="NFse\WSDL\Producao\PBelemPA-SIATLoteRps.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4708,6 +4711,9 @@
     </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PCapitolioMG-E_RECEITA.wsdl" />
     <None Include="NFse\WSDL\Producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PParacatuMG-NFE-CIDADES.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PPedroLeopoldoMG-NFE-CIDADES.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

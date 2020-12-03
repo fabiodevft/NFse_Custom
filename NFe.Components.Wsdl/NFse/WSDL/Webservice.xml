@@ -1357,27 +1357,7 @@
       <ConsultarURLNfse/>
       <CancelarNfse>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>
-  <Estado ID="3136702" Nome="Juiz de Fora - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HJuizdeForaMG.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HJuizdeForaMG.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HJuizdeForaMG.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HJuizdeForaMG.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HJuizdeForaMG.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse/>
-      <CancelarNfse>wsdl\homologacao\HJuizdeForaMG.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PJuizdeForaMG.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PJuizdeForaMG.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PJuizdeForaMG.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PJuizdeForaMG.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PJuizdeForaMG.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse/>
-      <CancelarNfse>wsdl\producao\PJuizdeForaMG.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
+  </Estado>  
   <Estado ID="3167202" Nome="Sete Lagoas - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HSeteLagoasMG.wsdl</RecepcionarLoteRps>
@@ -8944,6 +8924,26 @@
       <ConsultarURLNfse/>
       <CancelarNfse>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</CancelarNfse>
       <SubstituirNfse>wsdl\producao\PCapitolioMG-E_RECEITA.wsdl</SubstituirNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3136702" Nome="Juiz de Fora - MG" UF="MG" Padrao="FINTEL">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>WSDL\Homologacao\HJuizdeForaMG-FINTELServices.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
