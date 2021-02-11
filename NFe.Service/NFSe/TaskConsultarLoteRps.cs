@@ -20,7 +20,9 @@ using NFe.Components.Coplan;
 using System;
 using System.IO;
 using NFe.Components.VersaTecnologia;
-#if _fw46               
+using System.Xml;
+using System.Text.RegularExpressions;
+#if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
 #endif
@@ -144,7 +146,17 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.FINTEL:
-                        cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                        switch (ler.oDadosPedSitNfseRps.cMunicipio)
+                        {
+                            case 4110706: //Irati - PR
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+
+                            default:
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+                        }
+                        
                         break;
 
                     case PadroesNFSe.SIGCORP_SIGISS:
@@ -616,6 +628,6 @@ namespace NFe.Service.NFSe
                     //Wandrey 31/08/2011
                 }
             }
-        }
+        }        
     }
 }

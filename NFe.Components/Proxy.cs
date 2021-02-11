@@ -20,7 +20,8 @@ namespace NFe.Components
         /// Autor: Wandrey Mundin Ferreira
         /// Data: 29/09/2009
         /// </remarks>
-        public static System.Net.IWebProxy DefinirProxy(string servidor, string usuario, string senha, int porta, bool detectarAutomaticamente = false)
+        public static System.Net.IWebProxy DefinirProxy(string servidor, string usuario, string senha, int porta, 
+            bool detectarAutomaticamente = false)
         {
             System.Net.IWebProxy proxy = detectarAutomaticamente ? 
                 System.Net.WebRequest.GetSystemWebProxy() 

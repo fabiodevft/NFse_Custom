@@ -195,17 +195,23 @@ namespace NFe.Components
 
         public static string GerarRSASHA512(string value, bool lower = false)
         {
-            var sha512 = SHA512.Create();
-            var bytes = Encoding.UTF8.GetBytes(value);
-            var hash = sha512.ComputeHash(bytes);
-
-            var result = new StringBuilder();
-            for(var i = 0; i < hash.Length; i++)
+            string strRet = string.Empty;
+            try
             {
-                result.Append(hash[i].ToString($"{(lower ? "x" : "X")}2"));
-            }
+                byte[] bt = Encoding.UTF8.GetBytes(value);
 
-            return result.ToString();
+                using (SHA512 i = new SHA512Managed())
+                {
+                    byte[] b = i.ComputeHash(bt);
+                    strRet = BitConverter.ToString(b).Replace("-", "");
+                }
+                strRet = (lower ? strRet.ToLowerInvariant() : strRet);
+            }
+            catch (Exception)
+            {
+                
+            }
+            return strRet;
         }
 
 

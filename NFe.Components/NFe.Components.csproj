@@ -1099,6 +1099,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\HSantarem_SIAP_ConsultarLoteRPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HSantarem_SIAP_RecepcionarLoteRPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HSaoJoseRibamarMA_TINUS_CancelarNfse\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1566,6 +1576,16 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PPiumaES\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PSantarem_SIAP_ConsultarLoteRPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PSantarem_SIAP_RecepcionarLoteRPS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -4200,6 +4220,16 @@
     <None Include="Web References\HPiratiningaSP\SubstituirNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\HSantarem_SIAP_ConsultarLoteRPS\ConsultarLoteRps.wsdl" />
+    <None Include="Web References\HSantarem_SIAP_ConsultarLoteRPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HSantarem_SIAP_RecepcionarLoteRPS\RecepcionarLoteRpsSincrono.wsdl" />
+    <None Include="Web References\HSantarem_SIAP_RecepcionarLoteRPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\HSaoJoseRibamarMA_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -5522,6 +5552,16 @@
     </None>
     <None Include="Web References\PPiumaES\situacaoLoteRps.datasource">
       <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PSantarem_SIAP_ConsultarLoteRPS\ConsultarLoteRps.wsdl" />
+    <None Include="Web References\PSantarem_SIAP_ConsultarLoteRPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PSantarem_SIAP_RecepcionarLoteRPS\RecepcionarLoteRpsSincrono.wsdl" />
+    <None Include="Web References\PSantarem_SIAP_RecepcionarLoteRPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\PSantaTerezinhaItaipuPR\NFSeIntegracao.wsdl" />
     <None Include="Web References\PSantaTerezinhaItaipuPR\Reference.map">
@@ -9748,6 +9788,50 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PGuarantaNorteMT_nfse_web_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PSantarem_SIAP_ConsultarLoteRPS\</RelPath>
+      <UpdateFromURL>https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://siapsistemas.com.br/rpssantarem/servlet/arecepcionarloterpssincrono%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PSantarem_SIAP_RecepcionarLoteRPS\</RelPath>
+      <UpdateFromURL>https://siapsistemas.com.br/rpssantarem/servlet/arecepcionarloterpssincrono%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://siapsistemas.com.br/rpsstmhomologa/servlet/aconsultarloterps%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HSantarem_SIAP_ConsultarLoteRPS\</RelPath>
+      <UpdateFromURL>https://siapsistemas.com.br/rpsstmhomologa/servlet/aconsultarloterps%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://siapsistemas.com.br/rpsstmhomologa/servlet/arecepcionarloterpssincrono%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HSantarem_SIAP_RecepcionarLoteRPS\</RelPath>
+      <UpdateFromURL>https://siapsistemas.com.br/rpsstmhomologa/servlet/arecepcionarloterpssincrono%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://www.gp.srv.br/tributario_homologacao/servlet/anfse_web_service%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

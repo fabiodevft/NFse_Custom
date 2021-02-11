@@ -1210,10 +1210,17 @@ namespace NFe.Components
         /// Padrão ELv2
         /// </summary>
         [Description("ELv2")]
-        ELv2
+        ELv2,
+        
+        /// <summary>
+        /// Padrão SIAP
+        /// </summary>
+        [Description("SIAP")]
+        SIAP
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
         ///
+
     }
 
     #endregion Padrão NFSe

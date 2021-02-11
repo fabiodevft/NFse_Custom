@@ -138,7 +138,17 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.FINTEL:
-                        cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                        switch (oDadosPedSitLoteRps.cMunicipio)
+                        {
+                            case 4110706: //Irati - PR
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+
+                            default:
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+                        }
+                        
                         break;
 
                     case PadroesNFSe.SIMPLISS:

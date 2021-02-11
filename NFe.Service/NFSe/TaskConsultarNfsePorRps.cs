@@ -17,6 +17,8 @@ using NFSe.Components;
 using System;
 using System.IO;
 using NFe.Components.VersaTecnologia;
+using System.Xml;
+using System.Text.RegularExpressions;
 #if _fw46
 using System.ServiceModel;
 using static NFe.Components.Security.SOAPSecurity;
@@ -138,11 +140,22 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.FINTEL:
-                        cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                        switch (ler.oDadosPedSitNfseRps.cMunicipio)
+                        {
+                            case 4110706: //Irati - PR
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://iss.irati.pr.gov.br/Arquivos/nfseV202.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+
+                            default:
+                                cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
+                                break;
+                        }
+                        
                         break;
 
                     case PadroesNFSe.IIBRASIL:
                         cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
+                        GerarTagIntegracao(Empresas.Configuracoes[emp].SenhaWS);
                         break;
 
                     case PadroesNFSe.FIORILLI:
@@ -589,6 +602,55 @@ namespace NFe.Service.NFSe
                     //não posso fazer mais nada, o UniNFe vai tentar mandar o arquivo novamente para o webservice, pois ainda não foi excluido.
                     //Wandrey 31/08/2011
                 }
+            }
+        }
+
+        private void GerarTagIntegracao(string token)
+        {
+            XmlDocument ConteudoXMLAux = new XmlDocument();
+            ConteudoXMLAux.PreserveWhitespace = false;
+            ConteudoXMLAux.Load(NomeArquivoXML);
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(NomeArquivoXML);
+            string conteudoXML, integridade;
+            conteudoXML = doc.GetElementsByTagName("ConsultarNfseRpsEnvio")[0].OuterXml;
+            //conteudoXML = conteudoXML.Replace("<ConsultarNfseRpsEnvio xmlns=\"http://www.abrasf.org.br/nfse.xsd\">", "<ConsultarNfseRpsEnvio>");
+            conteudoXML = Regex.Replace(conteudoXML, "[^\x20-\x7E]+", "");
+            conteudoXML = Regex.Replace(conteudoXML, "[ ]+", "");
+
+            integridade = Criptografia.GerarRSASHA512(conteudoXML + token, true);
+
+            foreach (object item in ConteudoXMLAux)
+            {
+                if (typeof(XmlElement) == item.GetType())
+                {
+                    XmlNode gerarNfseEnvio = (XmlElement)ConteudoXMLAux.GetElementsByTagName("ConsultarNfseRpsEnvio")[0];
+                    XmlNode tagintegridade = ConteudoXMLAux.CreateElement("Integridade", "http://www.abrasf.org.br/nfse.xsd");
+
+                    tagintegridade.InnerXml = (integridade.Trim()).Trim();
+
+                    gerarNfseEnvio.AppendChild(tagintegridade);
+
+                    conteudoXML = gerarNfseEnvio.OuterXml;
+
+                    break;
+                }
+            }
+
+            try
+            {
+                // Atualizar a string do XML já assinada
+                string StringXMLAssinado = conteudoXML;
+
+                // Gravar o XML Assinado no HD
+                StreamWriter SW_2 = File.CreateText(NomeArquivoXML);
+                SW_2.Write(StringXMLAssinado);
+                SW_2.Close();
+            }
+            catch
+            {
+                throw;
             }
         }
     }

@@ -932,5 +932,17 @@
     <Setting Name="NFe_Components_PBlumenauSC_NfseService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://wsblumenaumigracao.simplissweb.com.br/nfseservice.svc</Value>
     </Setting>
+    <Setting Name="NFe_Components_HSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://siapsistemas.com.br/rpsstmhomologa/servlet/arecepcionarloterpssincrono</Value>
+    </Setting>
+    <Setting Name="NFe_Components_HSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://siapsistemas.com.br/rpsstmhomologa/servlet/aconsultarloterps</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://siapsistemas.com.br/rpssantarem/servlet/arecepcionarloterpssincrono</Value>
+    </Setting>
+    <Setting Name="NFe_Components_PSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

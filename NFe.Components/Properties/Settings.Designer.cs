@@ -3162,5 +3162,45 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PBlumenauSC_NfseService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://siapsistemas.com.br/rpsstmhomologa/servlet/arecepcionarloterpssincrono")]
+        public string NFe_Components_HSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono {
+            get {
+                return ((string)(this["NFe_Components_HSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://siapsistemas.com.br/rpsstmhomologa/servlet/aconsultarloterps")]
+        public string NFe_Components_HSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps {
+            get {
+                return ((string)(this["NFe_Components_HSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://siapsistemas.com.br/rpssantarem/servlet/arecepcionarloterpssincrono")]
+        public string NFe_Components_PSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono {
+            get {
+                return ((string)(this["NFe_Components_PSantarem_SIAP_RecepcionarLoteRPS_RecepcionarLoteRpsSincrono"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps")]
+        public string NFe_Components_PSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps {
+            get {
+                return ((string)(this["NFe_Components_PSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps"]));
+            }
+        }
     }
 }

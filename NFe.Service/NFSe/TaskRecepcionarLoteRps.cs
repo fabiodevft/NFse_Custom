@@ -972,8 +972,10 @@ namespace NFe.Service.NFSe
             doc.Load(NomeArquivoXML);
             string conteudoXML, integridade;
             conteudoXML = doc.GetElementsByTagName("Rps")[0].OuterXml;
+            conteudoXML = conteudoXML.Replace("<Rps xmlns=\"http://www.abrasf.org.br/nfse.xsd\">", "<Rps>");
             conteudoXML = Regex.Replace(conteudoXML, "[^\x20-\x7E]+", "");
             conteudoXML = Regex.Replace(conteudoXML, "[ ]+", "");
+            
             integridade = Criptografia.GerarRSASHA512(conteudoXML + token, true);
 
             foreach (object item in ConteudoXML)
