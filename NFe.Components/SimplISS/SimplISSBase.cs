@@ -100,6 +100,9 @@ namespace NFe.Components.SimplISS
                             case 3556404: //Vargem Grande do Sul-SP
                                 simplissService = new  VargemGrandeDoSulSP.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
                                 break;
+                            case 3510609: //Carapicuiba - SP
+                                simplissService = new CarapicuibaSP.p.SimplISSP(tpAmb, PastaRetorno, Usuario, SenhaWs, ProxyUser, ProxyPass, ProxyServer);
+                                break;
 
                             default:
                                 throw new Exceptions.ServicoInexistenteException();

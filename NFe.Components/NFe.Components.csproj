@@ -340,6 +340,8 @@
     <Compile Include="SimplISS\AstorgaPR\p\SimplISSP.cs" />
     <Compile Include="SimplISS\BlumenauSC\h\SimplISSH.cs" />
     <Compile Include="SimplISS\BlumenauSC\p\SimplISSP.cs" />
+    <Compile Include="SimplISS\CarapicuibaSP\h\SimplISSH.cs" />
+    <Compile Include="SimplISS\CarapicuibaSP\p\SimplISSP.cs" />
     <Compile Include="SimplISS\MonteCarmeloMG\p\SimplISSP.cs" />
     <Compile Include="SimplISS\ParaguacuPaulistaSP\p\SimplISSP.cs" />
     <Compile Include="SimplISS\SaoJoaoDaBoaVistaSP\p\SimplISSP.cs" />
@@ -989,6 +991,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\HCarapicuibaSP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HCianortePR\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1471,6 +1478,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PCachoeiraSulRS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PCarapicuibaSP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -3957,6 +3969,11 @@
     <None Include="Web References\HBlumenauSC\ConsultarNfseServicoPrestadoResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\HCarapicuibaSP\NfseService.wsdl" />
+    <None Include="Web References\HCarapicuibaSP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\HCianortePR\HCianortePR-sigiss_ws.wsdl" />
     <None Include="Web References\HCianortePR\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -5266,6 +5283,24 @@
     </None>
     <None Include="Web References\PCachoeiraSulRS\Services0.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PCarapicuibaSP\nfseservice.wsdl" />
+    <None Include="Web References\PCarapicuibaSP\nfseservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PCarapicuibaSP\NfseService0.wsdl" />
+    <None Include="Web References\PCarapicuibaSP\nfseservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PCarapicuibaSP\nfseservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PCarapicuibaSP\nfseservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PCarapicuibaSP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\PColatinaES\cnae.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -9051,6 +9086,28 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PAstorgaPR_NfseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wscarapicuiba.simplissweb.com.br/nfseservice.svc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PCarapicuibaSP\</RelPath>
+      <UpdateFromURL>http://wscarapicuiba.simplissweb.com.br/nfseservice.svc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PCarapicuibaSP_NfseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wshomologacao.simplissweb.com.br/nfseservice.svc%3fsingleWsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HCarapicuibaSP\</RelPath>
+      <UpdateFromURL>http://wshomologacao.simplissweb.com.br/nfseservice.svc%3fsingleWsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HCarapicuibaSP_NfseService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://wsparaguacupaulista.simplissweb.com.br/nfseservice.svc%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

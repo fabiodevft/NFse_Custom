@@ -3202,5 +3202,25 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PSantarem_SIAP_ConsultarLoteRPS_ConsultarLoteRps"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wscarapicuiba.simplissweb.com.br/nfseservice.svc")]
+        public string NFe_Components_PCarapicuibaSP_NfseService {
+            get {
+                return ((string)(this["NFe_Components_PCarapicuibaSP_NfseService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://wshomologacao.simplissweb.com.br/nfseservice.svc")]
+        public string NFe_Components_HCarapicuibaSP_NfseService {
+            get {
+                return ((string)(this["NFe_Components_HCarapicuibaSP_NfseService"]));
+            }
+        }
     }
 }

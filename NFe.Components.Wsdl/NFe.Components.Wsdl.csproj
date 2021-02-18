@@ -4670,6 +4670,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="NFse\WSDL\Homologacao\HCapitolioMG-E_RECEITA.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl">
@@ -4710,6 +4711,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PCapitolioMG-E_RECEITA.wsdl" />
+    <None Include="NFse\WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl" />
     <None Include="NFse\WSDL\Producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
