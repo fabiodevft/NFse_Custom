@@ -8948,22 +8948,22 @@
   </Estado>
   <Estado ID="3510609" Nome="Carapicuiba - SP" UF="SP" Padrao="SIMPLISS">
     <LocalHomologacao>
-      <RecepcionarLoteRps>WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
-      <CancelarNfse>WSDL\Homologacao\HVargemGrandeDoSulSP-SIMPLISS.wsdl</CancelarNfse>
+      <CancelarNfse>WSDL\Homologacao\HCarapicuibaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
-      <CancelarNfse>WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl</CancelarNfse>
+      <CancelarNfse>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
