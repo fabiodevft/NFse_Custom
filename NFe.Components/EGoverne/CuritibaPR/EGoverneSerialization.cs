@@ -393,7 +393,7 @@ namespace NFe.Components.EGoverne.CuritibaPR
             x509.Items = new object[1];
 
             // <- Elemento foreach
-            x509.ItemsElementName = new NFe.Components.br.gov.egoverne.isscuritiba.curitiba.p.ItemsChoiceType[1] { NFe.Components.br.gov.egoverne.isscuritiba.curitiba.p.ItemsChoiceType.X509Certificate };
+            //x509.ItemsElementName = new NFe.Components.br.gov.egoverne.isscuritiba.curitiba.p.ItemsChoiceType[1] { NFe.Components.br.gov.egoverne.isscuritiba.curitiba.p.ItemsChoiceType.X509Certificate };
 
             sign.KeyInfo.Items = new object[1];
             sign.KeyInfo.Items[0] = x509;
