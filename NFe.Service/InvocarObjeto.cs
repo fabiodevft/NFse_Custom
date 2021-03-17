@@ -953,7 +953,12 @@ namespace NFe.Service
                     {
                         case "2611101":
                             wsProxy.ELv2.urlWSDL = "http://pe-petrolina-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl";
-                            break;                                
+                            break;
+
+                        case "3202603":
+                            wsProxy.ELv2.urlWSDL = "https://es-iconha-pm-nfs-backend.cloud.el.com.br/nfse/NfseWSService?wsdl";
+                            break;
+
                     }
 
                     switch (metodo)

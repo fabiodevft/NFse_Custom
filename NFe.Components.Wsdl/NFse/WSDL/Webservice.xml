@@ -1357,7 +1357,7 @@
       <ConsultarURLNfse/>
       <CancelarNfse>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="3167202" Nome="Sete Lagoas - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HSeteLagoasMG.wsdl</RecepcionarLoteRps>
@@ -5804,17 +5804,6 @@
       <CancelarNfse>wsdl\producao\PVacariRS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3202603" Nome="Iconha - ES" UF="ES" Padrao="EL">
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PIconhaES-EL.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PIconhaES-EL.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PIconhaES-EL.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PIconhaES-EL.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PIconhaES-EL.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse/>
-      <CancelarNfse>wsdl\producao\PIconhaES-EL.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="4205407" Nome="Florianópolis - SC" UF="SC" Padrao="SOFTPLAN">
     <LocalHomologacao>
       <RecepcionarLoteRps/>
@@ -8964,6 +8953,17 @@
       <ConsultarLoteRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
       <CancelarNfse>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3202603" Nome="Iconha - ES" UF="ES" Padrao="ELv2">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PIconhaES-ELv2.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PIconhaES-ELv2.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PIconhaES-ELv2.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PIconhaES-ELv2.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PIconhaES-ELv2.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse/>
+      <CancelarNfse>wsdl\producao\PIconhaES-ELv2.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
