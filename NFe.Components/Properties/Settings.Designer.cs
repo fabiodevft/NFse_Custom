@@ -12,7 +12,7 @@ namespace NFe.Components.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -180,17 +180,6 @@ namespace NFe.Components.Properties {
         public string NFe_Components_br_com_rlz_ceiss_santafedosul_p_Webservice_Prefeitura {
             get {
                 return ((string)(this["NFe_Components_br_com_rlz_ceiss_santafedosul_p_Webservice_Prefeitura"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx")]
-        public string NFe_Components_br_gov_egoverne_isscuritiba_curitiba_p_WS_x0020___x0020_NFS_e_x0020_V1_0_0_1 {
-            get {
-                return ((string)(this["NFe_Components_br_gov_egoverne_isscuritiba_curitiba_p_WS_x0020___x0020_NFS_e_x002" +
-                    "0_V1_0_0_1"]));
             }
         }
         
@@ -3220,6 +3209,37 @@ namespace NFe.Components.Properties {
         public string NFe_Components_HCarapicuibaSP_NfseService {
             get {
                 return ((string)(this["NFe_Components_HCarapicuibaSP_NfseService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://srv2-isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx")]
+        public string NFe_Components_br_gov_egoverne_isscuritiba_curitiba_p_WS_x0020___x0020_NFS_e_x0020_V1_0_0_1 {
+            get {
+                return ((string)(this["NFe_Components_br_gov_egoverne_isscuritiba_curitiba_p_WS_x0020___x0020_NFS_e_x002" +
+                    "0_V1_0_0_1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("httpss://nfse-testes.ciga.sc.gov.br/webservice/v1")]
+        public string NFe_Components_HFraiburgoSC_NfseWSService {
+            get {
+                return ((string)(this["NFe_Components_HFraiburgoSC_NfseWSService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("httpss://nfse.ciga.sc.gov.br/webservice/v1")]
+        public string NFe_Components_PFraiburgoSC_NfseWSService {
+            get {
+                return ((string)(this["NFe_Components_PFraiburgoSC_NfseWSService"]));
             }
         }
     }

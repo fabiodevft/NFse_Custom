@@ -7800,10 +7800,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_com_dyndnsserver_pmassis2_p_IssWebWS</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Users\Renan\Desktop\NFSE\curitiba\PCuritibaPR-EGoverne.wsdl">
+    <WebReferenceUrl Include="C:\Users\Fulltime\Desktop\Cidades\Curitiba\PCuritibaPR-EGoverne.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.gov.egoverne.isscuritiba.curitiba.p\</RelPath>
-      <UpdateFromURL>C:\Users\Renan\Desktop\NFSE\curitiba\PCuritibaPR-EGoverne.wsdl</UpdateFromURL>
+      <UpdateFromURL>C:\Users\Fulltime\Desktop\Cidades\Curitiba\PCuritibaPR-EGoverne.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
