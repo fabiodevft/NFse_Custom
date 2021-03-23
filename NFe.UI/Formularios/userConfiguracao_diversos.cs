@@ -554,7 +554,8 @@ namespace NFe.UI.Formularios
                            ufCod == 3556404 /*Vargem Grande do Sul-SP*/ ||
                            ufCod == 3204203 /*Piuma-ES*/ ||
                            ufCod == 2932903 /*Valença-BA*/ ||
-                           ufCod == 3510609 /*Carapicuiba*/;
+                           ufCod == 3510609 /*Carapicuiba-SP*/ ||
+                           ufCod == 4105805 /*Colombo-PR*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }

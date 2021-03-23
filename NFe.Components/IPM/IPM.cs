@@ -113,6 +113,9 @@ namespace NFSe.Components
 
                 case 4104907: //Castro-PR
                     return 7495;
+
+                case 4105805: //Colombo-PR
+                    return 7513;
             }
 
             return 0;
