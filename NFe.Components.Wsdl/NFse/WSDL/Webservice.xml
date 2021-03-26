@@ -3892,8 +3892,8 @@
       <ConsultarNfse>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</CancelarNfse>
-      <SubstituirNfse>wsdl\homologacao\PLimeiraSP-IIBrasil.wsdl</SubstituirNfse>
-      <ConsultarNfseServicoTomado>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarNfseServicoTomado>
+      <SubstituirNfse>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</SubstituirNfse>
+      <ConsultarNfseServicoTomado>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarNfseServicoTomado>
     </LocalProducao>
   </Estado>
   <Estado ID="3554102" Nome="Taubaté - SP" UF="SP" Padrao="CONAM">
@@ -8953,6 +8953,26 @@
       <ConsultarLoteRps>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse/>
       <CancelarNfse>WSDL\Producao\PCarapicuibaSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4105805" Nome="Colombo - PR" UF="PR" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3202603" Nome="Iconha - ES" UF="ES" Padrao="ELv2">
