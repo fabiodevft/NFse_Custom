@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="NfseServices" targetNamespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" />
+  </wsdl:types>
+  <wsdl:message name="EnviarLoteRpsIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteDeducaoSincronoIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteDeducaoSincronoOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsSincronoIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsSincronoOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarNfseIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarNfseOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseRpsIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseRpsOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseFaixaIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseFaixaOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarXmlIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarXmlOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="TesteIn">
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TesteOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:portType name="NfseServicesPort">
+    <wsdl:operation name="EnviarLoteRps">
+      <documentation>Envia lote de RPS para converter em NFS-e</documentation>
+      <wsdl:input message="tns:EnviarLoteRpsIn" />
+      <wsdl:output message="tns:EnviarLoteRpsOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteDeducaoSincrono">
+      <documentation>Envia lote de Notas para dedução da base de cálculo.</documentation>
+      <wsdl:input message="tns:EnviarLoteDeducaoSincronoIn" />
+      <wsdl:output message="tns:EnviarLoteDeducaoSincronoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRpsSincrono">
+      <documentation>Envia lote de RPS e converte em NFS-e</documentation>
+      <wsdl:input message="tns:EnviarLoteRpsSincronoIn" />
+      <wsdl:output message="tns:EnviarLoteRpsSincronoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <documentation>Envia um RPS para converter em NFS-e</documentation>
+      <wsdl:input message="tns:GerarNfseIn" />
+      <wsdl:output message="tns:GerarNfseOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <documentation>Cancela uma Nfs-e</documentation>
+      <wsdl:input message="tns:CancelarNfseIn" />
+      <wsdl:output message="tns:CancelarNfseOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <documentation>Substituir uma NFS-e</documentation>
+      <wsdl:input message="tns:SubstituirNfseIn" />
+      <wsdl:output message="tns:SubstituirNfseOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <documentation>Consulto o lote de NFS-e</documentation>
+      <wsdl:input message="tns:ConsultarLoteRpsIn" />
+      <wsdl:output message="tns:ConsultarLoteRpsOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseRps">
+      <documentation>Consulta NFS-e por RPS</documentation>
+      <wsdl:input message="tns:ConsultarNfseRpsIn" />
+      <wsdl:output message="tns:ConsultarNfseRpsOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <documentation>Consultar a lista de NFS-e Servicos Prestados</documentation>
+      <wsdl:input message="tns:ConsultarNfseServicoPrestadoIn" />
+      <wsdl:output message="tns:ConsultarNfseServicoPrestadoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <documentation>Consultar a lista de NFS-e Servicos Tomados</documentation>
+      <wsdl:input message="tns:ConsultarNfseServicoTomadoIn" />
+      <wsdl:output message="tns:ConsultarNfseServicoTomadoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseFaixa">
+      <documentation>Consultar a lista de NFS-e por faixa</documentation>
+      <wsdl:input message="tns:ConsultarNfseFaixaIn" />
+      <wsdl:output message="tns:ConsultarNfseFaixaOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarXml">
+      <documentation>Valida um XML</documentation>
+      <wsdl:input message="tns:ValidarXmlIn" />
+      <wsdl:output message="tns:ValidarXmlOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Teste">
+      <documentation>Teste</documentation>
+      <wsdl:input message="tns:TesteIn" />
+      <wsdl:output message="tns:TesteOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NfseServicesBinding" type="tns:NfseServicesPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="EnviarLoteRps">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#EnviarLoteRps" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteDeducaoSincrono">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#EnviarLoteDeducaoSincrono" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRpsSincrono">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#EnviarLoteRpsSincrono" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#GerarNfse" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#CancelarNfse" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#SubstituirNfse" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ConsultarLoteRps" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseRps">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ConsultarNfseRps" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ConsultarNfseServicoPrestado" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ConsultarNfseServicoTomado" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseFaixa">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ConsultarNfseFaixa" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarXml">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#ValidarXml" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Teste">
+      <soap:operation soapAction="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01#Teste" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfseServicesService">
+    <wsdl:port name="NfseServicesPort" binding="tns:NfseServicesBinding">
+      <soap:address location="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1011,6 +1011,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\HMaringaPR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HMossoroRN_TINUS_CancelarNfse\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1503,6 +1508,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\PJataiGO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PMaringaPR\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -4014,6 +4024,11 @@
     <None Include="Web References\HIjuiRS\Services0.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\HMaringaPR\NfseServices.wsdl" />
+    <None Include="Web References\HMaringaPR\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\HMossoroRN_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -5367,6 +5382,11 @@
     </None>
     <None Include="Web References\PJataiGO\userNFSEDTO.datasource">
       <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PMaringaPR\NfseServices.wsdl" />
+    <None Include="Web References\PMaringaPR\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\PMossoroRN_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -9845,6 +9865,28 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PGuarantaNorteMT_nfse_web_service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PMaringaPR\</RelPath>
+      <UpdateFromURL>https://nfse-ws.ecity.maringa.pr.gov.br/v2.01%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PMaringaPR_NfseServicesService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfse-ws.hom-ecity.maringa.pr.gov.br/v2.01%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HMaringaPR\</RelPath>
+      <UpdateFromURL>https://nfse-ws.hom-ecity.maringa.pr.gov.br/v2.01%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HMaringaPR_NfseServicesService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
