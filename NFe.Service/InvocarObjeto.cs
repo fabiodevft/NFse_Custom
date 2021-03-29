@@ -368,6 +368,7 @@ namespace NFe.Service
                 {
                     case PadroesNFSe.SMARAPD:
                     case PadroesNFSe.ELv2:
+                    case PadroesNFSe.MARINGA_PR:
                         break;
 
                     default:

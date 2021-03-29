@@ -3242,5 +3242,25 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PFraiburgoSC_NfseWSService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://nfse-ws.ecity.maringa.pr.gov.br/v2.01")]
+        public string NFe_Components_PMaringaPR_NfseServicesService {
+            get {
+                return ((string)(this["NFe_Components_PMaringaPR_NfseServicesService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://nfse-ws.hom-ecity.maringa.pr.gov.br/v2.01")]
+        public string NFe_Components_HMaringaPR_NfseServicesService {
+            get {
+                return ((string)(this["NFe_Components_HMaringaPR_NfseServicesService"]));
+            }
+        }
     }
 }
