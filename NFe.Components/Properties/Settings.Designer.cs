@@ -3256,10 +3256,10 @@ namespace NFe.Components.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://nfse-ws.hom-ecity.maringa.pr.gov.br/v2.01")]
-        public string NFe_Components_HMaringaPR_NfseServicesService {
+        [global::System.Configuration.DefaultSettingValueAttribute("https://aracajuse.webiss.com.br/ws/nfse.asmx")]
+        public string NFe_Components_PAracajuSE_NfseWSService {
             get {
-                return ((string)(this["NFe_Components_HMaringaPR_NfseServicesService"]));
+                return ((string)(this["NFe_Components_PAracajuSE_NfseWSService"]));
             }
         }
     }

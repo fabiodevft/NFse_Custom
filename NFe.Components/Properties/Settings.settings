@@ -956,11 +956,8 @@
     <Setting Name="NFe_Components_PFraiburgoSC_NfseWSService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">httpss://nfse.ciga.sc.gov.br/webservice/v1</Value>
     </Setting>
-    <Setting Name="NFe_Components_PMaringaPR_NfseServicesService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://nfse-ws.ecity.maringa.pr.gov.br/v2.01</Value>
-    </Setting>
-    <Setting Name="NFe_Components_HMaringaPR_NfseServicesService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://nfse-ws.hom-ecity.maringa.pr.gov.br/v2.01</Value>
+    <Setting Name="NFe_Components_PAracajuSE_NfseWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://aracajuse.webiss.com.br/ws/nfse.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
