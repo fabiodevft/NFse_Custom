@@ -552,6 +552,10 @@ namespace NFe.Service.NFSe
                         wsProxy.ELv2 = new ELv2();
 
                         break;
+
+                    case PadroesNFSe.CIGA:
+                        cabecMsg = "<versaoDados>1.00</versaoDados>";
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, ler.oDadosPedSitNfseRps.cMunicipio))

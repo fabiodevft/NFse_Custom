@@ -1002,7 +1002,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\HFraiburgoSC-CIGA\Reference.cs">
+    <Compile Include="Web References\HFraiburgoSC\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -1508,7 +1508,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\PFraiburgoSC-CIGA\Reference.cs">
+    <Compile Include="Web References\PFraiburgoSC\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -4014,8 +4014,8 @@
     <None Include="Web References\HCianortePR\tcRetornoNota.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\HFraiburgoSC-CIGA\nfse.wsdl" />
-    <None Include="Web References\HFraiburgoSC-CIGA\Reference.map">
+    <None Include="Web References\HFraiburgoSC\nfse.wsdl" />
+    <None Include="Web References\HFraiburgoSC\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -5378,8 +5378,8 @@
     <None Include="Web References\PColatinaES\situacaoLoteRps.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\PFraiburgoSC-CIGA\nfse.wsdl" />
-    <None Include="Web References\PFraiburgoSC-CIGA\Reference.map">
+    <None Include="Web References\PFraiburgoSC\nfse.wsdl" />
+    <None Include="Web References\PFraiburgoSC\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -7840,28 +7840,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PAracajuSE_NfseWSService</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Users\Fulltime\Desktop\Cidades\Fraiburgo\HFraiburgoSC-CIGA.wsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\HFraiburgoSC-CIGA\</RelPath>
-      <UpdateFromURL>C:\Users\Fulltime\Desktop\Cidades\Fraiburgo\HFraiburgoSC-CIGA.wsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_HFraiburgoSC_NfseWSService</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="C:\Users\Fulltime\Desktop\Cidades\Fraiburgo\PFraiburgoSC-CIGA.wsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\PFraiburgoSC-CIGA\</RelPath>
-      <UpdateFromURL>C:\Users\Fulltime\Desktop\Cidades\Fraiburgo\PFraiburgoSC-CIGA.wsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>NFe_Components_PFraiburgoSC_NfseWSService</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="C:\Users\renan\Desktop\Itaporanga\PItaporanga-SIMPLISS.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\br.com.simplissweb.wsitaporanga2.p\</RelPath>
@@ -9930,6 +9908,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_PGuarantaNorteMT_nfse_web_service</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfse-testes.ciga.sc.gov.br/webservice/v1%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HFraiburgoSC\</RelPath>
+      <UpdateFromURL>https://nfse-testes.ciga.sc.gov.br/webservice/v1%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_HFraiburgoSC_NfseWSService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://nfse-ws.ecity.maringa.pr.gov.br/v2.01%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PMaringaPR\</RelPath>
@@ -9951,6 +9940,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_HMaringaPR_NfseServicesService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfse.ciga.sc.gov.br/webservice/v1%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PFraiburgoSC\</RelPath>
+      <UpdateFromURL>https://nfse.ciga.sc.gov.br/webservice/v1%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PFraiburgoSC_NfseWSService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://siapsistemas.com.br/rpssantarem/servlet/aconsultarloterps%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>

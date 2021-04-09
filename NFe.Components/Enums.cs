@@ -1216,10 +1216,13 @@ namespace NFe.Components
         /// Padrão SIAP
         /// </summary>
         [Description("SIAP")]
-        SIAP
+        SIAP,
         ///***ATENÇÃO***
         ///o nome deste enum tem que coincidir com o nome da url, pq faço um "IndexOf" deste enum para pegar o padrao
         ///
+
+        [Description("CIGA")]
+        CIGA
 
     }
 

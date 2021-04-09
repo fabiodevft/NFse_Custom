@@ -4004,8 +4004,11 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HGoianiaGO.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HMaringaPR-MARINGA_PR.wsdl">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFse\WSDL\Producao\PMaringaPR-MARINGA_PR.wsdl" />
+    <EmbeddedResource Include="NFse\WSDL\Producao\PMaringaPR-MARINGA_PR.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFse\schemas\NFSe\MARINGA_PR\nfse_v2.01.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4666,10 +4669,20 @@
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HIjuiRS-PRONIN.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="NFse\schemas\NFSe\CIGA\nfse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFse\schemas\NFSe\CIGA\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NFse\schemas\NFSe\ELv2\nfse_v2-04.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="NFse\WSDL\Homologacao\HCapitolioMG-E_RECEITA.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HCarapicuibaSP - SIMPLISS.wsdl" />
+    <None Include="NFse\WSDL\Homologacao\HFraiburgoSC-CIGA.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="NFse\WSDL\Homologacao\HIporaGO-MEGASOFT.wsdl" />
     <None Include="NFse\WSDL\Homologacao\HItajobiSP-Fiorilli.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Homologacao\HPontaPora-ISSNET_202.wsdl">
@@ -4711,6 +4724,9 @@
     </EmbeddedResource>
     <None Include="NFse\WSDL\Producao\PCapitolioMG-E_RECEITA.wsdl" />
     <None Include="NFse\WSDL\Producao\PCarapicuibaSP - SIMPLISS.wsdl" />
+    <None Include="NFse\WSDL\Producao\PFraiburgoSC-CIGA.wsdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="NFse\WSDL\Producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl" />
     <EmbeddedResource Include="NFse\WSDL\Producao\PJuizdeForaMG-FINTELServices.wsdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
