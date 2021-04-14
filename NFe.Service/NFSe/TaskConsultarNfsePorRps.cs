@@ -619,7 +619,8 @@ namespace NFe.Service.NFSe
             doc.Load(NomeArquivoXML);
             string conteudoXML, integridade;
             conteudoXML = doc.GetElementsByTagName("ConsultarNfseRpsEnvio")[0].OuterXml;
-            //conteudoXML = conteudoXML.Replace("<ConsultarNfseRpsEnvio xmlns=\"http://www.abrasf.org.br/nfse.xsd\">", "<ConsultarNfseRpsEnvio>");
+            conteudoXML = conteudoXML.Replace("<ConsultarNfseRpsEnvio xmlns=\"http://www.abrasf.org.br/nfse.xsd\">", "");
+            conteudoXML = conteudoXML.Replace("</ConsultarNfseRpsEnvio>", "");
             conteudoXML = Regex.Replace(conteudoXML, "[^\x20-\x7E]+", "");
             conteudoXML = Regex.Replace(conteudoXML, "[ ]+", "");
 
@@ -629,14 +630,14 @@ namespace NFe.Service.NFSe
             {
                 if (typeof(XmlElement) == item.GetType())
                 {
-                    XmlNode gerarNfseEnvio = (XmlElement)ConteudoXMLAux.GetElementsByTagName("ConsultarNfseRpsEnvio")[0];
+                    XmlNode consultarNfse = (XmlElement)ConteudoXMLAux.GetElementsByTagName("ConsultarNfseRpsEnvio")[0];
                     XmlNode tagintegridade = ConteudoXMLAux.CreateElement("Integridade", "http://www.abrasf.org.br/nfse.xsd");
 
                     tagintegridade.InnerXml = (integridade.Trim()).Trim();
 
-                    gerarNfseEnvio.AppendChild(tagintegridade);
+                    consultarNfse.AppendChild(tagintegridade);
 
-                    conteudoXML = gerarNfseEnvio.OuterXml;
+                    conteudoXML = consultarNfse.OuterXml;
 
                     break;
                 }
