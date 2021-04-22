@@ -2481,7 +2481,11 @@ namespace NFe.Service
 
                     {
                         case Servicos.NFSeCancelar:
-                            retorna = "CancelarNfse";
+
+                            if (cMunicipio == 3526902)
+                                retorna = "MontarNotaCanceladaNfse";
+                            else
+                                retorna = "CancelarNfse";
                             break;
 
                         case Servicos.NFSeConsultarLoteRps:

@@ -373,8 +373,11 @@ namespace NFe.Components
                 RelacCertificado(Instance);
 
                 Type tipoInstance = Instance.GetType();
-
-                object result = tipoInstance.GetMethod(methodName).Invoke(Instance, parameters);
+                object result;
+                if (methodName == "MontarNotaCanceladaNfse")
+                    result = null;
+                else
+                    result = tipoInstance.GetMethod(methodName).Invoke(Instance, parameters);
 
                 return result;
             }
