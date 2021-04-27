@@ -8975,6 +8975,26 @@
       <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="4205506" Nome="Fraiburgo - SC" UF="SC" Padrao="CIGA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HFraiburgoSC-CIGA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PFraiburgoSC-CIGA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PFraiburgoSC-CIGA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PFraiburgoSC-CIGA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PFraiburgoSC-CIGA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PFraiburgoSC-CIGA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PFraiburgoSC-CIGA.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PFraiburgoSC-CIGA.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="3202603" Nome="Iconha - ES" UF="ES" Padrao="ELv2">
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PIconhaES-ELv2.wsdl</RecepcionarLoteRps>

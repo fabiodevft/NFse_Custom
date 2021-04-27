@@ -912,6 +912,10 @@ namespace NFe.Service.NFSe
 
                         break;
 
+                    case PadroesNFSe.CIGA:
+                        cabecMsg = "<versaoDados>1.00</versaoDados>";
+                        break;
+
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))

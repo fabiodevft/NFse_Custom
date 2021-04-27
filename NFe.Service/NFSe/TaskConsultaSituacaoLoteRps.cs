@@ -388,6 +388,10 @@ namespace NFe.Service.NFSe
 
                         versa.ConsultarSituacaoLoteRps(NomeArquivoXML);
                         break;
+
+                    case PadroesNFSe.CIGA:
+                        cabecMsg = "<versaoDados>1.00</versaoDados>";
+                        break;
                 }
 
                 if (IsInvocar(padraoNFSe, Servico, oDadosPedSitLoteRps.cMunicipio))

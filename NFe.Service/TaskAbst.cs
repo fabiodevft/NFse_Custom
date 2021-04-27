@@ -2481,7 +2481,11 @@ namespace NFe.Service
 
                     {
                         case Servicos.NFSeCancelar:
-                            retorna = "CancelarNfse";
+
+                            if (cMunicipio == 3526902)
+                                retorna = "MontarNotaCanceladaNfse";
+                            else
+                                retorna = "CancelarNfse";
                             break;
 
                         case Servicos.NFSeConsultarLoteRps:
@@ -2692,6 +2696,81 @@ namespace NFe.Service
                     break;
 
                 #endregion ELv2
+
+                #region CIGA
+                case PadroesNFSe.CIGA:
+                    switch (servico)
+                    {
+                        case Servicos.NFSeRecepcionarLoteRps:
+                            retorna = "RecepcionarLoteRps";
+                            break;
+
+                        case Servicos.NFSeRecepcionarLoteRpsSincrono:
+                            retorna = "RecepcionarLoteRpsSincrono";
+                            break;
+
+                        case Servicos.NFSeGerarNfse:
+                            retorna = "GerarNfse";
+                            break;
+
+                        case Servicos.NFSeCancelar:
+                            retorna = "CancelarNfse";
+                            break;
+
+                        case Servicos.NFSeConsultarLoteRps:
+                            retorna = "ConsultarLoteRps";
+                            break;
+
+                        case Servicos.NFSeConsultarPorRps:
+                            retorna = "ConsultarNfseRps";
+                            break;
+
+                        case Servicos.NFSeConsultar:
+                            retorna = "ConsultarNfseFaixa";
+                            break;
+
+                        case Servicos.NFSeConsultarSituacaoLoteRps:
+                            retorna = "ConsultarSituacaoLoteRps";
+                            break;
+
+                        case Servicos.RecepcionarLoteCfse:
+                            retorna = "RecepcionarLoteCfse";
+                            break;
+
+                        case Servicos.RecepcionarLoteCfseSincrono:
+                            retorna = "RecepcionarLoteCfseSincrono";
+                            break;
+
+                        case Servicos.CancelarCfse:
+                            retorna = "CancelarCupom";
+                            break;
+
+                        case Servicos.ConsultarLoteCfse:
+                            retorna = "ConsultarLoteCupom";
+                            break;
+
+                        case Servicos.ConsultarCfse:
+                            retorna = "ConsultarCfse";
+                            break;
+
+                        case Servicos.ConfigurarTerminalCfse:
+                            retorna = "ConfigurarTerminal";
+                            break;
+
+                        case Servicos.EnviarInformeManutencaoCfse:
+                            retorna = "InformarManutencaoTerminal";
+                            break;
+
+                        case Servicos.InformeTrasmissaoSemMovimentoCfse:
+                            retorna = "InformeTrasmissaoSemMovimento";
+                            break;
+
+                        case Servicos.ConsultarDadosCadastroCfse:
+                            retorna = "ConsultarDadosCadastro";
+                            break;
+                    }
+                    break;
+                    #endregion CIGA
 
             }
             return retorna;
