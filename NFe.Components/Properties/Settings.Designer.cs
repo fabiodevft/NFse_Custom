@@ -3272,5 +3272,15 @@ namespace NFe.Components.Properties {
                 return ((string)(this["NFe_Components_PFraiburgoSC_NfseWSService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://palmasto.webiss.com.br/ws/nfse.asmx")]
+        public string NFe_Components_PPalmasTO_NfseWSService {
+            get {
+                return ((string)(this["NFe_Components_PPalmasTO_NfseWSService"]));
+            }
+        }
     }
 }

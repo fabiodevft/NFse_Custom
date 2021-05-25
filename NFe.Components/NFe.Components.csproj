@@ -1568,6 +1568,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\PPalmasTO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\PPaulistaPE_TINUS_CancelarNfse\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -5502,6 +5507,11 @@
     <None Include="Web References\POuroFinoMG\SubstituirNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\PPalmasTO\nfse.wsdl" />
+    <None Include="Web References\PPalmasTO\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\PPaulistaPE_TINUS_CancelarNfse\CancelarNfseResposta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -7905,6 +7915,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>NFe_Components_br_gov_sp_presidenteprudente_sistemas_www_p_NfseService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://palmasto.webiss.com.br/ws/nfse.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PPalmasTO\</RelPath>
+      <UpdateFromURL>https://palmasto.webiss.com.br/ws/nfse.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NFe_Components_PPalmasTO_NfseWSService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="D:\DESENVOLVIMENTO\UNINFE\PRODUCAO\Branch_052020\NFse_Custom\NFe.Components.Wsdl\NFse\WSDL\Homologacao\HAgudoRS-PRONIN.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
