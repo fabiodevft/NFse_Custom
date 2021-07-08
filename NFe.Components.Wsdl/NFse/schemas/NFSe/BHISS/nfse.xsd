@@ -871,7 +871,8 @@
 			<xsd:sequence>
 				<xsd:element name="versaoDados" type="tsVersao" minOccurs="1" maxOccurs="1"/>
 			</xsd:sequence>
-			<xsd:attribute name="versao" type="tsVersao" use="required" />		</xsd:complexType>
+			<xsd:attribute name="versao" type="tsVersao" use="required" />
+		</xsd:complexType>
 	</xsd:element>
 
 </xsd:schema>
