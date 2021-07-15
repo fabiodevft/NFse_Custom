@@ -114,8 +114,28 @@ namespace NFSe.Components
                 case 4104907: //Castro-PR
                     return 7495;
 
-                case 4105805: //Colombo-PR
+                case 4104808: //Cascavel-PR
+                    return 74934;
+
+                case 4303103: //Cachoeirinha-SC
+                    return 85618;
+
+                case 4114609: //Marechal Cândido Rondon-PR
+                    return 7683;
+
+                case 4213203: //Pomerode-SC
+                    return 8259;
+
+                case 4213500: //Porto Belo-SC
+                    return 8265;
+
+                case 4215000: //Rio Negrinho-SC
+                    return 8295;
+				
+				case 4105805: //Colombo-PR
                     return 7513;
+
+
             }
 
             return 0;
@@ -125,6 +145,11 @@ namespace NFSe.Components
         {
             string result = EnviaXML(file);
 
+            XmlDocument doc = new XmlDocument();
+            
+           doc.LoadXml(result.Replace("\r\n", "").Replace("\n", "").Replace("\r", ""));
+           doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
+           
             GerarRetorno(file, result, Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).EnvioXML,
                 Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).RetornoXML);
         }
@@ -148,7 +173,7 @@ namespace NFSe.Components
             string result = EnviaXML(file);
 
             XmlDocument doc = new XmlDocument();
-            doc.LoadXml(result);
+            doc.LoadXml(result.Replace("\r\n", "").Replace("\n", "").Replace("\r", ""));
             doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
 
             result = doc.OuterXml;
@@ -158,7 +183,12 @@ namespace NFSe.Components
         }
 
         public override void ConsultarNfsePorRps(string file)
-        { }
+        {
+            string result = EnviaXML(file);
+
+            GerarRetorno(file, result, Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeRps).EnvioXML,
+                Propriedade.Extensao(Propriedade.TipoEnvio.PedSitNFSeRps).RetornoXML);
+        }
 
         private string EnviaXML(string file)
         {
@@ -169,17 +199,26 @@ namespace NFSe.Components
                 Proxy = Proxy
             })
             {
-                //informe 1 para retorno em xml
-                result = post.PostForm(
-"http://sync.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1", 
-
-new Dictionary<string, string> {
-{"login", Usuario  },  //CPF/CNPJ, sem separadores}
-{"senha", Senha},      //Senha de acesso ao sistema: www.nfse.
-{"cidade", Cidade.ToString()},   //Código da cidade na receita federal (TOM), pesquisei o código em http://www.ekwbrasil.com.br/municipio.php3.
-{"f1", file}           //Endereço físico do arquivo
-
+                if (Cidade == 74934 || Cidade == 4104808)
+                {
+                    //                                                                                                    informe 1 para retorno em xml
+                    result = post.PostForm("http://sync-pr.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1", new Dictionary<string, string> {
+                     {"login", Usuario  },  //CPF/CNPJ, sem separadores}
+                     {"senha", Senha},      //Senha de acesso ao sistema: www.nfse.
+                     {"cidade", Cidade.ToString()},   //Código da cidade na receita federal (TOM), pesquisei o código em http://www.ekwbrasil.com.br/municipio.php3.
+                     {"f1", file}           //Endereço físico do arquivo
                 });
+                }
+                else
+                {
+                    //                                                                                                    informe 1 para retorno em xml
+                    result = post.PostForm("http://sync.nfs-e.net/datacenter/include/nfw/importa_nfw/nfw_import_upload.php?eletron=1", new Dictionary<string, string> {
+                     {"login", Usuario  },  //CPF/CNPJ, sem separadores}
+                     {"senha", Senha},      //Senha de acesso ao sistema: www.nfse.
+                     {"cidade", Cidade.ToString()},   //Código da cidade na receita federal (TOM), pesquisei o código em http://www.ekwbrasil.com.br/municipio.php3.
+                     {"f1", file}           //Endereço físico do arquivo
+                });
+                }
             }
 
             return result;
