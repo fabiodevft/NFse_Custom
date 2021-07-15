@@ -9006,4 +9006,24 @@
       <CancelarNfse>wsdl\producao\PIconhaES-ELv2.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3169406" Nome="Três Pontas - MG" UF="MG" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

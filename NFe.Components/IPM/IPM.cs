@@ -135,7 +135,8 @@ namespace NFSe.Components
 				case 4105805: //Colombo-PR
                     return 7513;
 
-
+                case 3169406: //Três Pontas-MG
+                    return 5387;
             }
 
             return 0;

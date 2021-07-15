@@ -555,7 +555,8 @@ namespace NFe.UI.Formularios
                            ufCod == 3204203 /*Piuma-ES*/ ||
                            ufCod == 2932903 /*Valença-BA*/ ||
                            ufCod == 3510609 /*Carapicuiba-SP*/ ||
-                           ufCod == 4105805 /*Colombo-PR*/;
+                           ufCod == 4105805 /*Colombo-PR*/ ||
+                           ufCod == 3169406 /*Três Pontas-Mg*/;
 
             lbl_UsuarioWS.Visible = txtUsuarioWS.Visible = lbl_SenhaWS.Visible = txtSenhaWS.Visible = visible;
         }
