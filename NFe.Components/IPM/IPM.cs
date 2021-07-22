@@ -148,9 +148,11 @@ namespace NFSe.Components
 
             XmlDocument doc = new XmlDocument();
             
-           doc.LoadXml(result.Replace("\r\n", "").Replace("\n", "").Replace("\r", ""));
-           doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
-           
+            doc.LoadXml(result.Replace("\r\n", "").Replace("\n", "").Replace("\r", ""));
+            doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
+
+            result = doc.OuterXml;
+
             GerarRetorno(file, result, Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).EnvioXML,
                 Propriedade.Extensao(Propriedade.TipoEnvio.EnvLoteRps).RetornoXML);
         }
@@ -158,6 +160,13 @@ namespace NFSe.Components
         public override void CancelarNfse(string file)
         {
             string result = EnviaXML(file);
+
+            XmlDocument doc = new XmlDocument();
+
+            doc.LoadXml(result.Replace("\r\n", "").Replace("\n", "").Replace("\r", ""));
+            doc.DocumentElement.RemoveChild(doc.GetElementsByTagName("codigo_html")[0]);
+
+            result = doc.OuterXml;
 
             GerarRetorno(file, result, Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).EnvioXML,
                 Propriedade.Extensao(Propriedade.TipoEnvio.PedCanNFSe).RetornoXML);
