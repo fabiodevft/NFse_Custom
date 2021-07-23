@@ -46,8 +46,8 @@ namespace NFSe.Components
                 ID = SchemaXML.InfSchemas.Count + 1,
                 ArquivoXSD = "NFSe\\DESENVOLVECIDADE\\nfsev203.xsd",
                 Descricao = "XML de Consulta da NFSe por RPS",
-                TagAssinatura = "",
-                TagAtributoId = "",
+                TagAssinatura = "ConsultarNfseRpsEnvio",
+                TagAtributoId = "Prestador",
                 TargetNameSpace = "http://www.abrasf.org.br/nfse.xsd"
             });
 

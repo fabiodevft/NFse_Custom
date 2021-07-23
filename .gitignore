@@ -68,3 +68,12 @@
 /.NET Framework/Unimake.Security.Platform/obj/Debug
 /Unimake.DFe/bin/Debug
 /Unimake.DFe/obj/Debug
+/.NET Framework/Unimake.Security.Platform/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+/NFe.Components/obj/Release35_AnyCPU/NFe.Components.csprojAssemblyReference.cache
+/NFe.Components/obj/Release46_x64/.NETFramework,Version=v4.6.2.AssemblyAttributes.cs
+/NFe.Components/obj/Release46_x86/.NETFramework,Version=v4.6.2.AssemblyAttributes.cs
+/NFe.Components/obj/Release46_x86/NFe.Components.csprojAssemblyReference.cache
+/NFe.Components/obj/x86/Debug/.NETFramework,Version=v4.6.2.AssemblyAttributes.cs
+/NFe.Components/obj/x86/Debug/NFe.Components.csprojAssemblyReference.cache
+/Unimake.DFe/obj/Release/.NETFramework,Version=v4.6.2.AssemblyAttributes.cs
+/Unimake.DFe/obj/Release/Unimake.DFe.csprojAssemblyReference.cache
