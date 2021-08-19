@@ -4714,22 +4714,24 @@
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3205002" Nome="Serra - ES" UF="ES" Padrao="Ginfes">
+  <Estado ID="3205002" Nome="Serra - ES" UF="ES" Padrao="SMARAPD">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps/>
+      <ConsultarSituacaoLoteRps/>
+      <ConsultarNfsePorRps/>
+      <ConsultarNfse/>
+      <ConsultarLoteRps/>
+      <ConsultarURLNfse/>
+      <CancelarNfse/>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Producao\PSerraES-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PSerraES-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps/>
+      <ConsultarNfse>WSDL\Producao\PSerraES-SMARAPDWSSaida.wsdl</ConsultarNfse>
+      <ConsultarLoteRps/>
+      <ConsultarURLNfse>WSDL\Producao\PSerraES-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PSerraES-SMARAPDWSEntrada.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="2906501" Nome="Candeias - BA" UF="BA" Padrao="WEBISS">
