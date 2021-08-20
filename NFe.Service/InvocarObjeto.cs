@@ -441,6 +441,10 @@ namespace NFe.Service
                         }
                         break;
 
+                    case PadroesNFSe.SISPMJP:
+                        wsProxy.SetProp(servicoWS, "Timeout", 240000);
+                        break;
+
                     default:
                         wsProxy.SetProp(servicoWS, "Timeout", 120000);
                         break;
