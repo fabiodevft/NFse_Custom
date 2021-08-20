@@ -547,13 +547,13 @@ namespace NFe.Service
                     if (metodo == "nfdEntradaCancelar")
                     {
                         strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { Empresas.Configuracoes[emp].UsuarioWS,
-                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS),
+                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS.ToUpper()),
                             docXML.OuterXml });
                     }
                     else if (metodo == "nfdSaida")
                     {
                         strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { Empresas.Configuracoes[emp].UsuarioWS,
-                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS),
+                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS.ToUpper()),
                             Empresas.Configuracoes[emp].UnidadeFederativaCodigo.ToString(),
                             docXML.OuterXml });
                     }
@@ -567,7 +567,7 @@ namespace NFe.Service
                     else
                     {
                         strRetorno = wsProxy.InvokeStr(servicoWS, metodo, new object[] { Empresas.Configuracoes[emp].UsuarioWS,
-                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS),
+                            TFunctions.EncryptSHA1(Empresas.Configuracoes[emp].SenhaWS.ToUpper()),
                             Empresas.Configuracoes[emp].UnidadeFederativaCodigo,
                             docXML.OuterXml });
                     }
