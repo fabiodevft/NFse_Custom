@@ -433,7 +433,10 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON_202:
-                        if (oDadosPedCanNfse.cMunicipio != 3169901)
+                        if (oDadosPedCanNfse.cMunicipio == 3131307)
+                            cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
+
+                        else if (oDadosPedCanNfse.cMunicipio != 3169901)
                             cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 

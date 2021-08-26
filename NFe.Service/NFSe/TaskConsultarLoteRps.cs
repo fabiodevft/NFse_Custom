@@ -156,7 +156,7 @@ namespace NFe.Service.NFSe
                                 cabecMsg = "<cabecalho versao=\"2.02\" xmlns=\"http://www.abrasf.org.br/nfse.xsd\"><versaoDados>2.02</versaoDados></cabecalho>";
                                 break;
                         }
-                        
+
                         break;
 
                     case PadroesNFSe.SIGCORP_SIGISS:
@@ -265,7 +265,10 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON_202:
-                        if (ler.oDadosPedSitNfseRps.cMunicipio != 3169901)
+                        if (ler.oDadosPedSitNfseRps.cMunicipio == 3131307)
+                            cabecMsg = "<cabecalho><versaoDados>2.01</versaoDados></cabecalho>";
+
+                        else if (ler.oDadosPedSitNfseRps.cMunicipio != 3169901)
                             cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
                         break;
 
@@ -407,8 +410,8 @@ namespace NFe.Service.NFSe
                             ler.oDadosPedSitNfseRps.cMunicipio == 4310207 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 4322400 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 4302808 ||
-							ler.oDadosPedSitNfseRps.cMunicipio == 3501301 ||
-							ler.oDadosPedSitNfseRps.cMunicipio == 4300109 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 3501301 ||
+                            ler.oDadosPedSitNfseRps.cMunicipio == 4300109 ||
                             ler.oDadosPedSitNfseRps.cMunicipio == 4124053)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
@@ -551,7 +554,7 @@ namespace NFe.Service.NFSe
                     case PadroesNFSe.IIBRASIL:
                         cabecMsg = "<cabecalho xmlns=\"http://www.abrasf.org.br/nfse.xsd\" versao=\"2.04\"><versaoDados>2.04</versaoDados></cabecalho>";
                         break;
-					case PadroesNFSe.VERSATECNOLOGIA:
+                    case PadroesNFSe.VERSATECNOLOGIA:
 
                         #region VersaTecnologia
 
@@ -632,6 +635,6 @@ namespace NFe.Service.NFSe
                     //Wandrey 31/08/2011
                 }
             }
-        }        
+        }
     }
 }

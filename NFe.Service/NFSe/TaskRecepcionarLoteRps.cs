@@ -84,7 +84,7 @@ namespace NFe.Service.NFSe
                 if (IsUtilizaCompilacaoWs(padraoNFSe, Servico, oDadosEnvLoteRps.cMunicipio))
                 {
                     wsProxy = ConfiguracaoApp.DefinirWS(Servico, emp, oDadosEnvLoteRps.cMunicipio, oDadosEnvLoteRps.tpAmb, oDadosEnvLoteRps.tpEmis, padraoNFSe, oDadosEnvLoteRps.cMunicipio);
-                    
+
                     if (wsProxy != null)
                         envLoteRps = wsProxy.CriarObjeto(wsProxy.NomeClasseWS);
                 }
@@ -194,7 +194,7 @@ namespace NFe.Service.NFSe
                         wsProxy = new WebServiceProxy(Empresas.Configuracoes[emp].X509Certificado);
 
                         //if (oDadosEnvLoteRps.tpAmb == 1)
-                        envLoteRps = new Components.PSaoPauloSP.LoteNFe(); 
+                        envLoteRps = new Components.PSaoPauloSP.LoteNFe();
                         //else
                         //    throw new Exception("Município de São Paulo-SP não dispõe de ambiente de homologação para envio de NFS-e em teste.");
 
@@ -283,8 +283,12 @@ namespace NFe.Service.NFSe
                         break;
 
                     case PadroesNFSe.PORTALFACIL_ACTCON_202:
-                        if (oDadosEnvLoteRps.cMunicipio != 3169901)
+                        if (oDadosEnvLoteRps.cMunicipio == 3131307)
+                            cabecMsg = "<cabecalho><versaoDados>2.01</versaoDados></cabecalho>";
+
+                        else if (oDadosEnvLoteRps.cMunicipio != 3169901)
                             cabecMsg = "<cabecalho><versaoDados>2.02</versaoDados></cabecalho>";
+
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.PORTALFACIL_ACTCON_202);
                         break;
 
@@ -429,7 +433,7 @@ namespace NFe.Service.NFSe
                         el.EmiteNF(NomeArquivoXML);
                         break;
 
-                        #endregion E&L
+                    #endregion E&L
 
                     case PadroesNFSe.GOVDIGITAL:
 
@@ -611,8 +615,8 @@ namespace NFe.Service.NFSe
                             oDadosEnvLoteRps.cMunicipio == 4306932 ||
                             oDadosEnvLoteRps.cMunicipio == 4310207 ||
                             oDadosEnvLoteRps.cMunicipio == 4302808 ||
-							oDadosEnvLoteRps.cMunicipio == 3501301 ||
-							oDadosEnvLoteRps.cMunicipio == 4300109 ||
+                            oDadosEnvLoteRps.cMunicipio == 3501301 ||
+                            oDadosEnvLoteRps.cMunicipio == 4300109 ||
                             oDadosEnvLoteRps.cMunicipio == 4124053)
                         {
                             Pronin pronin = new Pronin((TipoAmbiente)Empresas.Configuracoes[emp].AmbienteCodigo,
@@ -807,7 +811,7 @@ namespace NFe.Service.NFSe
 
                     case PadroesNFSe.PUBLIC_SOFT:
                         break;
-                 
+
                     case PadroesNFSe.MEGASOFT:
                         Servico = GetTipoServicoSincrono(Servico, NomeArquivoXML, PadroesNFSe.MEGASOFT);
                         cabecMsg = "<cabecalho versao=\"1.00\" xmlns=\"http://megasoftarrecadanet.com.br/xsd/nfse_v01.xsd\"><versaoDados>1.00</versaoDados></cabecalho>";
@@ -942,7 +946,7 @@ namespace NFe.Service.NFSe
             {
                 var strErro = ex.HResult.ToString();
                 var strMesagemErro = ex.Message;
-                
+
                 try
                 {
                     //Gravar o arquivo de erro de retorno para o ERP, caso ocorra
@@ -950,7 +954,7 @@ namespace NFe.Service.NFSe
                 }
                 catch
                 {
-                    RetornoErroERP.GeraArquivoErroERP(NomeArquivoXML, strErro, strMesagemErro, Propriedade.ExtRetorno.RetEnvLoteRps_ERR); 
+                    RetornoErroERP.GeraArquivoErroERP(NomeArquivoXML, strErro, strMesagemErro, Propriedade.ExtRetorno.RetEnvLoteRps_ERR);
 
                     //Se falhou algo na hora de gravar o retorno .ERR (de erro) para o ERP, infelizmente não posso fazer mais nada.
                     //Wandrey 31/08/2011
@@ -971,7 +975,7 @@ namespace NFe.Service.NFSe
             }
         }
         private void GerarTagIntegracao(string token)
-       {
+        {
             XmlDocument doc = new XmlDocument();
             doc.Load(NomeArquivoXML);
             string conteudoXML, integridade;
@@ -979,7 +983,7 @@ namespace NFe.Service.NFSe
             conteudoXML = conteudoXML.Replace("<Rps xmlns=\"http://www.abrasf.org.br/nfse.xsd\">", "<Rps>");
             conteudoXML = Regex.Replace(conteudoXML, "[^\x20-\x7E]+", "");
             conteudoXML = Regex.Replace(conteudoXML, "[ ]+", "");
-            
+
             integridade = Criptografia.GerarRSASHA512(conteudoXML + token, true);
 
             foreach (object item in ConteudoXML)
